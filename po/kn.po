@@ -1,0 +1,4440 @@
+# translation of gnome-packagekit.master.kn.po to Kannada
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Shankar Prasad <svenkate@redhat.com>, 2008, 2009, 2010, 2012, 2013, 2014.
+# Shankar <svenkate@redhat.com>, 2013. #zanata.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-packagekit.master.kn\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"packagekit&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-09-02 07:12+0000\n"
+"PO-Revision-Date: 2014-09-18 15:01+0530\n"
+"Last-Translator: Shankar Prasad <svenkate AT redhat Dot com>\n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#. TRANSLATORS: user-friendly name for gpk-update-viewer
+#: ../data/appdata/gpk-application.appdata.xml.in.h:1 ../src/gpk-log.c:489
+#| msgid "Package"
+msgid "GNOME Packages"
+msgstr "GNOME ಪ್ಯಾಕೇಜುಗಳು"
+
+#: ../data/appdata/gpk-application.appdata.xml.in.h:2
+msgid ""
+"Packages allows you to install and remove packages on your system. You can "
+"view and search packages by name, details or even file name and also see "
+"dependencies of one package on other packages. Searching by groups is "
+"possible and is an easy way to find software in your favorite desktop "
+"environment."
+msgstr ""
+"ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಮತ್ತು ತೆಗೆದುಹಾಕಲು ಪ್ಯಾಕೇಜಸ್‌ "
+"ನೆರವಾಗುತ್ತದೆ. ನೀವು ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅವುಗಳ ಹೆಸರು, ವಿವರಗಳು ಅಥವ ಕಡತದ ಹೆಸರಿನಿಂದಲೂ "
+"ಸಹ ಹುಡುಕಬಹುದು ಮತ್ತು ಇತರೆ ಪ್ಯಾಕೇಜುಗಳ ಮೇಲೆ ಅವಲಂಬಿತವಾಗಿರುವ ಇನ್ನೊಂದು ಪ್ಯಾಕೇಜನ್ನೂ "
+"ನೋಡಲು ಸಾಧ್ಯವಿರುತ್ತದೆ. ಗುಂಪಿನ ಆಧಾರದಲ್ಲಿ ಹುಡುಕುವುದು ಸಾಧ್ಯವಿರುತ್ತದೆ ಮತ್ತು ಇದು "
+"ನಿಮ್ಮ ಮೆಚ್ಚಿನ ಗಣಕತೆರೆ ಪರಿಸರದಲ್ಲಿನ ತಂತ್ರಾಂಶವನ್ನು ಹುಡುಕಲು ಸುಲಭವಾದ "
+"ಮಾರ್ಗವಾಗಿರುತ್ತದೆ."
+
+#: ../data/appdata/gpk-application.appdata.xml.in.h:3
+msgid ""
+"Packages uses PackageKit and can work on any distribution using the native "
+"package management framework."
+msgstr ""
+"ಪ್ಯಾಕೇಜಸ್‌ PackageKit ಅನ್ನು ಬಳಸುತ್ತದೆ ಮತ್ತು ಸ್ಥಳೀಯ ಪ್ಯಾಕೇಜ್ ವ್ಯವಸ್ಥಾಪನೆ "
+"ಫ್ರೇಮ್‌ವರ್ಕ್‌ ಅನ್ನು ಬಳಸಿಕೊಂಡು ಯಾವುದೆ ವಿತರಣೆಯಲ್ಲಿ ಕೆಲಸ ಮಾಡಬಲ್ಲದು."
+
+#. TRANSLATORS: user-friendly name for gpk-update-viewer
+#: ../data/appdata/gpk-update-viewer.appdata.xml.in.h:1 ../src/gpk-log.c:492
+#| msgid "No packages to update"
+msgid "GNOME Package Updater"
+msgstr "Gnome ಪ್ಯಾಕೇಜ್‌ ಅಪ್‌ಡೇಟರ್"
+
+#: ../data/appdata/gpk-update-viewer.appdata.xml.in.h:2
+msgid ""
+"Package Updater allows you to update packages on your system without "
+"rebooting. You can view details about each update and choose which updates "
+"to apply."
+msgstr ""
+"ನಿಮ್ಮ ಗಣಕವನ್ನು ರಿಬೂಟ್‌ ಮಾಡದೆ ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯಲ್ಲಿನ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅಪ್‌ಡೇಟ್‌ "
+"ಮಾಡಲು ಪ್ಯಾಕೇಜ್ ಅಪ್‌ಡೇಟರ್‌ ನಿಮಗೆ ಅವಕಾಶ ನೀಡುತ್ತದೆ. ನೀವು ಪ್ರತಿಯೊಂದು ಅಪ್‌ಡೇಟ್‌ನ "
+"ವಿವರಗಳನ್ನು ನೋಡಲು ಮತ್ತು ಯಾವ ಅಪ್‌ಡೇಟ್ ಅನ್ನು ಅನ್ವಯಿಸಬೇಕು ಎನ್ನುವುದನ್ನು ಆರಿಸಬಹುದು."
+
+#: ../data/appdata/gpk-update-viewer.appdata.xml.in.h:3
+msgid ""
+"Package Updater uses PackageKit and can work on any distribution using the "
+"native package management framework."
+msgstr ""
+"ಪ್ಯಾಕೇಜ್ ಅಪ್‌ಡೇಟರ್ PackageKit ಅನ್ನು ಬಳಸುತ್ತದೆ ಮತ್ತು ಸ್ಥಳೀಯ ಪ್ಯಾಕೇಜ್ "
+"ವ್ಯವಸ್ಥಾಪನಾ ಫ್ರೇಮ್‌ವರ್ಕ್‌ ಅನ್ನು ಬಳಸಿಕೊಂಡು ಯಾವುದೆ ವಿತರಣೆಯಲ್ಲಿ ಕೆಲಸ ಮಾಡಬಲ್ಲದು."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:1
+msgid "Automatically remove unused dependencies"
+msgstr "ಬಳಸದೆ ಇರುವ ಅವಲಂಬನೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ತೆಗೆದುಹಾಕು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:2
+msgid ""
+"When removing a package, also remove those dependencies that are not "
+"required by other packages."
+msgstr ""
+"ಪ್ಯಾಕೇಜನ್ನು ತೆಗೆದುಹಾಕುವಾಗ, ಇತರೆ ಪ್ಯಾಕೇಜುಗಳಿಗೆ ಅಗತ್ಯವಿರದೆ ಇರುವ ಅವಲಂಬನೆಗಳನ್ನೂ "
+"ಸಹ "
+"ತೆಗೆದುಹಾಕು."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:3
+msgid "Ask the user if additional packages should be installed"
+msgstr "ಹೆಚ್ಚುವರಿ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅನುಸ್ಥಾಪಿಬೇಕಿದ್ದರೆ ಬಳಕೆದಾರನನ್ನು ಕೇಳು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:4
+msgid "Ask the user if additional packages should be installed."
+msgstr "ಹೆಚ್ಚುವರಿ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅನುಸ್ಥಾಪಿಬೇಕೆ ಎಂದು ಬಳಕೆದಾರನನ್ನು ಕೇಳು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:5
+msgid "If search terms should be completed automatically"
+msgstr "ಹುಡುಕು ಪದಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಪೂರ್ಣಗೊಳಿಸಬೇಕಿದ್ದಲ್ಲಿ"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:6
+msgid "If search terms should be completed automatically."
+msgstr "ಹುಡುಕು ಪದಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಪೂರ್ಣಗೊಳಿಸಬೇಕಿದ್ದಲ್ಲಿ."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:7
+msgid "Filter using basename in gpk-application"
+msgstr "gpk-ಅನ್ವಯದಲ್ಲಿನ ಮೂಲಹೆಸರನ್ನು ಬಳಸಿಕೊಂಡು ಸೋಸು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:8
+msgid "Filter package lists using basename in gpk-application."
+msgstr "gpk-ಅನ್ವಯದಲ್ಲಿನ ಮೂಲಹೆಸರನ್ನು ಬಳಸಿಕೊಂಡು ಪ್ಯಾಕೇಜ್ ಪಟ್ಟಿಗಳನ್ನು ಸೋಸು."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:9
+msgid "Only show the newest packages in the file lists"
+msgstr "ಕಡತದ ಪಟ್ಟಿಗಳಲ್ಲಿ ಹೊಸದಾಗಿ ಲಭ್ಯವಿರುವ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:10
+msgid "Only show the newest packages in the file lists."
+msgstr "ಕಡತದ ಪಟ್ಟಿಗಳಲ್ಲಿ ಹೊಸದಾಗಿ ಲಭ್ಯವಿರುವ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸು."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:11
+msgid "Only show supported packages in the file lists"
+msgstr "ಕಡತದ ಪಟ್ಟಿಗಳಲ್ಲಿ ಕೇವಲ ಬೆಂಬಲಿಸಲಾಗುವ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:12
+msgid "Only show supported packages in the file lists."
+msgstr "ಕಡತದ ಪಟ್ಟಿಗಳಲ್ಲಿ ಕೇವಲ ಬೆಂಬಲಿಸಲಾಗುವ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:13
+msgid "Only show native packages in the file lists"
+msgstr "ಕಡತದ ಪಟ್ಟಿಗಳಲ್ಲಿ ಕೇವಲ ಸ್ಥಳೀಯ(ನೇಟೀವ್) ಪ್ಯಾಕೇಜುಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:14
+msgid ""
+"Only show native packages matching the machine architecture in the file "
+"lists."
+msgstr ""
+"ಕಡತದ ಪಟ್ಟಿಗಳಲ್ಲಿ ಗಣಕದ ಆರ್ಕಿಟೆಕ್ಚರಿಗೆ ಹೊಂದಿಕೊಳ್ಳುವ ಸ್ಥಳೀಯ (ನೇಟೀವ್) "
+"ಪ್ಯಾಕೇಜುಗಳನ್ನು ಮಾತ್ರ "
+"ತೋರಿಸು."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:15
+msgid "Show the category group menu"
+msgstr "ವರ್ಗ ಸಮೂಹ ಮೆನುವನ್ನು ತೋರಿಸು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:16
+msgid ""
+"Show the category group menu. This is more complete and custom to the "
+"distribution, but takes longer to populate."
+msgstr ""
+"ವರ್ಗ ಸಮೂಹ ಮೆನುವನ್ನು ತೋರಿಸು. ಇದು ವಿತರಣೆಗೆ ಬಹಳಷ್ಷು ಮಟ್ಟಿಗೆ ಪರಿಪೂರ್ಣ ಹಾಗು "
+"ಅಗತ್ಯಾನುಗುಣವಾಗಿ ಇರುತ್ತದೆ, ಆದರೆ ಒಟ್ಟುಗೂಡಲು ಒಂದಿಷ್ಟು ಸಮಯ ತೆಗೆದುಕೊಳ್ಳುತ್ತದೆ."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:17
+msgid "Show the 'All Packages' group menu"
+msgstr "ವರ್ಗ ಸಮೂಹ ಮೆನುವಿನಲ್ಲಿ 'ಎಲ್ಲಾ ಪ್ಯಾಕೇಜುಗಳನ್ನು' ತೋರಿಸು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:18
+msgid ""
+"Show the all packages menu item. This takes a long time to populate on most "
+"backends and is not generally required by end users."
+msgstr ""
+"ಎಲ್ಲಾ ಪ್ಯಾಕೇಜುಗಳ ಪರಿವಿಡಿ ಅಂಶವನ್ನು ತೋರಿಸು. ಇದಕ್ಕಾಗಿ ಹೆಚ್ಚಿನ ಬ್ಯಾಕೆಂಡ್‌ಗಳಲ್ಲಿ "
+"ಅಂಶಗಳನ್ನು "
+"ತೋರಿಸಲು ಬಹಳ ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಹುದು ಮತ್ತು ಸಾಮಾನ್ಯ ಬಳಕೆದಾರರಿಗೆ ಹೆಚ್ಚಾಗಿ ಇದರ "
+"ಅಗತ್ಯವಿರುವುದಿಲ್ಲ."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:19
+msgid "The search mode used by default"
+msgstr "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲಾಗುವ ಹುಡುಕು ವಿಧಾನ"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:20
+msgid ""
+"The search mode used by default. Options are \"name\", \"details\", or \"file"
+"\"."
+msgstr ""
+"ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲಾಗುವ ಹುಡುಕು ವಿಧಾನ. ಆಯ್ಕೆಗಳೆಂದರೆ \"ಹೆಸರು\", \"ವಿವರಗಳು\", "
+"ಅಥವ \"ಕಡತ\"."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:21
+#| msgid "Show all repositories in the software source viewer"
+msgid "Show all repositories in the package source viewer"
+msgstr "ಪ್ಯಾಕೇಜು ಆಕರ ವೀಕ್ಷಕದಲ್ಲಿನ ಎಲ್ಲಾ ರೆಪೊಸಿಟರಿಗಳನ್ನು ತೋರಿಸು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:22
+#| msgid "Show all repositories in the software source viewer."
+msgid "Show all repositories in the package source viewer."
+msgstr "ಪ್ಯಾಕೇಜು ಆಕರ ವೀಕ್ಷಕದಲ್ಲಿನ ಎಲ್ಲಾ ರೆಪೊಸಿಟರಿಗಳನ್ನು ತೋರಿಸು."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:23
+msgid "Only show the newest updates in the list"
+msgstr "ಪಟ್ಟಿಯಲ್ಲಿ ಲಭ್ಯವಿರುವ ಹೊಚ್ಚ  ಹೊಸ ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:24
+msgid ""
+"Only show the newest packages in the update list, and filter out older "
+"updates that are still available."
+msgstr ""
+"ಅಪ್‌ಡೇಟ್‌ ಪಟ್ಟಿಯಲ್ಲಿ ಕೇವಲ ಹೊಸದಾಗಿ ಲಭ್ಯವಿರುವ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸು, ಹಾಗು "
+"ಇನ್ನೂ ಸಹ "
+"ಲಭ್ಯವಿರುವ ಹಳೆಯ ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ತೋರಿಸಬೇಡ."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:25
+msgid "Scroll to packages as they are downloaded"
+msgstr "ಪ್ಯಾಕೇಜನ್ನು ಇಳಿಸಿಕೊಂಡ ನಂತರ ಪ್ಯಾಕೇಜ್‌ಗೆ ಹೋಗು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:26
+msgid ""
+"Scroll to packages in the update list as they are downloaded or installed."
+msgstr ""
+"ಪ್ಯಾಕೇಜುಗಳನ್ನು ಇಳಿಸಿಕೊಂಡ ನಂತರ ಅಥವ ಅನುಸ್ಥಾಪಿಸಿದ ನಂತರ ಅಪ್‌ಡೇಟ್‌ ಪಟ್ಟಿಯಲ್ಲಿ "
+"ಪ್ಯಾಕೇಜುಗಳಿಗೆ "
+"ಚಲಿಸು."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:27
+msgid "Allow applications to invoke the font installer"
+msgstr "ಅಕ್ಷರಶೈಲಿ ಅನುಸ್ಥಾಪಕವನ್ನು ರದ್ದುಮಾಡಲು ಅನ್ವಯಗಳಿಗೆ ಅನುಮತಿಸು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:28
+msgid "Allow applications to invoke the font installer."
+msgstr "ಅಕ್ಷರಶೈಲಿ ಅನುಸ್ಥಾಪಕವನ್ನು ರದ್ದುಮಾಡಲು ಅನ್ವಯಗಳಿಗೆ ಅನುಮತಿಸು."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:29
+msgid "Programs that should be ignored when they issue session D-Bus requests"
+msgstr "ಅಧಿವೇಶನ D-Bus ಮನವಿಗಳನ್ನು ಸಲ್ಲಿಸಿದಾಗ ಕಡೆಗಣಿಸಬೇಕಿರುವ ಪ್ರೊಗ್ರಾಮ್‌ಗಳು."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:30
+msgid ""
+"Programs that should be ignored when they issue session D-Bus requests, "
+"separated by commas."
+msgstr ""
+"ಅಧಿವೇಶನ D-Bus ಮನವಿಗಳನ್ನು ಸಲ್ಲಿಸಿದಾಗ ಕಡೆಗಣಿಸಬೇಕಿರುವ ಪ್ರೊಗ್ರಾಮ್‌ಗಳು. ಅವುಗಳನ್ನು "
+"ವಿರಾಮಚಿಹ್ನೆಗಳಿಂದ ಬೇರ್ಪಡಿಸಬೇಕು."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:31
+msgid "Allow applications to invoke the codec installer"
+msgstr "ಕೋಡೆಕ್ ಅನುಸ್ಥಾಪಕವನ್ನು ರದ್ದುಮಾಡಲು ಅನ್ವಯಗಳಿಗೆ ಅನುಮತಿಸು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:32
+msgid "Allow applications to invoke the codec installer."
+msgstr "ಕೋಡೆಕ್ ಅನುಸ್ಥಾಪಕವನ್ನು ರದ್ದುಮಾಡಲು ಅನ್ವಯಗಳಿಗೆ ಅನುಮತಿಸು."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:33
+msgid "Allow applications to invoke the mime type installer"
+msgstr "ಮೈಮ್ ಬಗೆ ಅನುಸ್ಥಾಪಕವನ್ನು ರದ್ದುಮಾಡಲು ಅನ್ವಯಗಳಿಗೆ ಅನುಮತಿಸು"
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:34
+msgid "Allow applications to invoke the mime type installer."
+msgstr "ಮೈಮ್ ಬಗೆ ಅನುಸ್ಥಾಪಕವನ್ನು ರದ್ದುಮಾಡಲು ಅನ್ವಯಗಳಿಗೆ ಅನುಮತಿಸು."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:35
+msgid ""
+"When displaying UI from a session D-Bus request, automatically use these "
+"options by default."
+msgstr ""
+"ಅಧಿವೇಶನದ DBus ಮನವಿಯಿಂದ UI ಅನ್ನು ತೋರಿಸುವಾಗ, ಈ ಆಯ್ಕೆಗಳನ್ನು ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ "
+"ಬಳಸು."
+
+#: ../data/org.gnome.packagekit.gschema.xml.h:36
+msgid ""
+"When displaying UI from a session D-Bus request, force these options to be "
+"turned on."
+msgstr ""
+"ಅಧಿವೇಶನದ DBus ಮನವಿಯಿಂದ UI ಅನ್ನು ತೋರಿಸುವಾಗ, ಈ ಆಯ್ಕೆಗಳು ಚಾಲಿತವಾಗಿರುವಂತೆ "
+"ಒತ್ತಾಯಪಡಿಸು."
+
+#: ../data/gpk-application.desktop.in.h:1 ../data/gpk-application.ui.h:1
+#: ../src/gpk-application.c:2567
+#| msgid "Package"
+msgid "Packages"
+msgstr "ಪ್ಯಾಕೇಜುಗಳು"
+
+#: ../data/gpk-application.desktop.in.h:2
+msgid "Add or remove software installed on the system"
+msgstr "ಗಣಕಕ್ಕೆ ತಂತ್ರಾಂಶವನ್ನು ಸೇರಿಸು ಅಥವ ಅನುಸ್ಥಾಪಿತಗೊಂಡಿರುವುದನ್ನು ತೆಗೆದು ಹಾಕು"
+
+#: ../data/gpk-application.desktop.in.h:3
+msgid "Updates;Upgrade;Sources;Repositories;Preferences;Install;Store;"
+msgstr ""
+"ಅಪ್‌ಡೇಟ್‌ಗಳು;ನವೀಕರಣಗಳು;ಆಕರಗಳು;ರೆಪೊಸಿಟರಿಗಳು;ಆದ್ಯತೆಗಳು;ಅನುಸ್ಥಾಪನೆ;ಶೇಖರಣೆ;"
+
+#: ../data/gpk-application.ui.h:2
+msgid "Apply Changes"
+msgstr "ಬದಲಾವನೆಗಳನ್ನು ಅನ್ವಯಿಸು"
+
+#: ../data/gpk-application.ui.h:3
+msgid "Changes are not applied instantly, this button applies all changes"
+msgstr ""
+"ಬದಲಾವಣೆಗಳು ತಕ್ಷಣ ಕಾರ್ಯರೂಪಕ್ಕೆ ಬರುವುದಿಲ್ಲ, ಈ ಗುಂಡಿಯು ಎಲ್ಲಾ ಬದಲಾವಣೆಗಳನ್ನು "
+"ಅನ್ವಯಿಸುತ್ತದೆ"
+
+#: ../data/gpk-application.ui.h:4
+msgid "Clear"
+msgstr "ತೆರವುಗೊಳಿಸು"
+
+#: ../data/gpk-application.ui.h:5
+msgid "Clear current selection"
+msgstr "ಪ್ರಸಕ್ತ ಆಯ್ಕೆಯನ್ನು ಅಳಿಸು"
+
+#: ../data/gpk-application.ui.h:6
+msgid "Cancel search"
+msgstr "ಹುಡುಕನ್ನು ರದ್ದುಗೊಳಿಸು"
+
+#: ../data/gpk-application.ui.h:7
+#| msgid "Licence"
+msgid "License"
+msgstr "ಪರವಾನಗಿ"
+
+#: ../data/gpk-application.ui.h:8
+msgid "Source"
+msgstr "ಆಕರ"
+
+#: ../data/gpk-application.ui.h:9 ../data/gpk-client.ui.h:1
+msgid "Install Package"
+msgstr "ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸು"
+
+#: ../data/gpk-application.ui.h:10
+msgid "Remove Package"
+msgstr "ಪ್ಯಾಕೇಜು ತೆಗೆದುಹಾಕು"
+
+#: ../data/gpk-application.ui.h:11
+msgid "Visit home page for selected package"
+msgstr "ಆಯ್ಕೆ ಮಾಡಲಾದ ಪ್ಯಾಕೇಜಿನ ನೆಲೆ ಪುಟಕ್ಕೆ ಭೇಟಿ ನೀಡು"
+
+#: ../data/gpk-application.ui.h:12
+msgid "Visit Project Website"
+msgstr "ಪರಿಯೋಜನೆ ಜಾಲಪುಟಕ್ಕೆ ಭೇಟಿ ಕೊಡು"
+
+#: ../data/gpk-application.ui.h:13
+msgid "Files"
+msgstr "ಕಡತಗಳು"
+
+#: ../data/gpk-application.ui.h:14
+msgid "Required Packages"
+msgstr "ಅಗತ್ಯವಿರುವ ಪ್ಯಾಕೇಜುಗಳು"
+
+#: ../data/gpk-application.ui.h:15
+msgid "Dependent Packages"
+msgstr "ಅವಲಂಬಿತ ಪ್ಯಾಕೇಜುಗಳು"
+
+#: ../data/gpk-application.ui.h:16
+msgid "Check for Updates"
+msgstr "ಅಪ್‌ಡೇಟ್‌ಗಳಿಗಾಗಿ ಪರಿಶೀಲಿಸು"
+
+#. TRANSLATORS: program name, an application to add and remove software repositories
+#: ../data/gpk-application.ui.h:17 ../data/gpk-prefs.desktop.in.h:1
+#: ../data/gpk-prefs.ui.h:1 ../src/gpk-prefs.c:622
+#| msgid "Package collections"
+msgid "Package Sources"
+msgstr "ಪ್ಯಾಕೇಜ್‌ ಆಕರಗಳು"
+
+#: ../data/gpk-application.ui.h:18
+msgid "Refresh Package Lists"
+msgstr "ಪ್ಯಾಕೇಜು ಪಟ್ಟಿಯನ್ನು ಪುನಶ್ಚೇತನಗೊಳಿಸು"
+
+#: ../data/gpk-application.ui.h:19 ../data/gpk-log.desktop.in.h:1
+#: ../data/gpk-log.ui.h:1
+#| msgid "Package"
+msgid "Package Log"
+msgstr "ಪ್ಯಾಕೇಜ್ ಲಾಗ್"
+
+#: ../data/gpk-application.ui.h:20
+msgid "Only Newest Versions"
+msgstr "ಕೇವಲ ಹೊಸ ಆವೃತ್ತಿಗಳು ಮಾತ್ರ"
+
+#: ../data/gpk-application.ui.h:21
+msgid "Only Native Packages"
+msgstr "ಕೇವಲ ಸ್ಥಳೀಯ ಪ್ಯಾಕೇಜುಗಳು ಮಾತ್ರ"
+
+#: ../data/gpk-application.ui.h:22
+msgid "About"
+msgstr "ಕುರಿತು"
+
+#: ../data/gpk-application.ui.h:23
+msgid "_Quit"
+msgstr "ನಿರ್ಗಮಿಸು (_Q)"
+
+#: ../data/gpk-error.ui.h:1
+msgid "More details"
+msgstr "ಹೆಚ್ಚಿನ ವಿವರಗಳು"
+
+#: ../data/gpk-eula.ui.h:1
+msgid "License Agreement Required"
+msgstr "ಲೈಸನ್ಸ್‍ ಒಡಂಬಡಿಕೆಯ ಅಗತ್ಯವಿದೆ"
+
+#: ../data/gpk-eula.ui.h:2
+msgid "_Accept Agreement"
+msgstr "ಒಡಂಬಡಿಕೆಯನ್ನು ಒಪ್ಪಿಕೊ(_A)"
+
+#. TRANSLATORS: program name: application to install a package to provide a file
+#. TRANSLATORS: program name, a session wide daemon to watch for updates and changing system state
+#: ../data/gpk-dbus-service.desktop.in.h:1 ../src/gpk-dbus-task.c:3198
+#: ../src/gpk-install-local-file.c:67 ../src/gpk-dbus-service.c:137
+#: ../src/gpk-dbus-service.c:140
+msgid "Software Install"
+msgstr "ತಂತ್ರಾಂಶ ಅನುಸ್ಥಾಪನೆ"
+
+#: ../data/gpk-dbus-service.desktop.in.h:2
+msgid "Install selected software on the system"
+msgstr "ಆರಿಸಲಾದ ತಂತ್ರಾಂಶವನ್ನು ಗಣಕದಲ್ಲಿ ಅನುಸ್ಥಾಪಿಸು"
+
+#: ../data/gpk-install-local-file.desktop.in.h:1
+#| msgid "Package installer"
+msgid "Package Install"
+msgstr "ಪ್ಯಾಕೇಜ್ ಅನುಸ್ಥಾಪನೆ"
+
+#: ../data/gpk-install-local-file.desktop.in.h:2
+#| msgid "Install selected software on the system"
+msgid "Install selected packages on the system"
+msgstr "ಆರಿಸಲಾದ ಪ್ಯಾಕೇಜನ್ನು ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ಅನುಸ್ಥಾಪಿಸು"
+
+#: ../data/gpk-log.desktop.in.h:2
+msgid "View past package management tasks"
+msgstr "ಈ ಹಿಂದಿನ ಪ್ಯಾಕೇಜ್ ವ್ಯವಸ್ಥಾಪನಾ ಕಾರ್ಯಗಳನ್ನು ನೋಡು"
+
+#: ../data/gpk-log.ui.h:2
+msgid "Filter"
+msgstr "ಸೋಸುಕ (ಫಿಲ್ಟರ್)"
+
+#: ../data/gpk-prefs.desktop.in.h:2
+#| msgid "Enabled repository"
+msgid "Enable or disable package repositories"
+msgstr "ಪ್ಯಾಕೇಜ್‌ ರೆಪೊಸಿಟರಿಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸು ಅಥವ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು"
+
+#: ../data/gpk-prefs.ui.h:2
+#| msgid ""
+#| "A software source contains packages that can be installed on this "
+#| "computer."
+msgid ""
+"A package source contains packages that can be installed on this computer."
+msgstr ""
+"ಒಂದು ಪ್ಯಾಕೇಜ್ ಆಕರವು ಗಣಕದಲ್ಲಿ ಅನುಸ್ಥಾಪಿಸಬಹುದಾದ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಹೊಂದಿರುತ್ತದೆ."
+
+#. shows extra -source, -debuginfo, and -devel sources
+#: ../data/gpk-prefs.ui.h:4
+#| msgid "_Show debug and development software sources"
+msgid "_Show debug and development package sources"
+msgstr "ಡೀಬಗ್‌ ಮ ವಿಕಸನಾ ಪ್ಯಾಕೇಜು ಆಕರಗಳನ್ನು ತೋರಿಸು (_S)"
+
+#: ../data/gpk-signature.ui.h:1
+msgid "Software signature is required"
+msgstr "ತಂತ್ರಾಂಶ ಸಹಿಯ ಅಗತ್ಯವಿದೆ"
+
+#: ../data/gpk-signature.ui.h:2
+msgid "Do you trust the source of the packages?"
+msgstr "ನೀವು ಈ ಪ್ಯಾಕೇಜುಗಳ ಮೂಲವನ್ನು ನಂಬುತ್ತೀರಾ?"
+
+#: ../data/gpk-signature.ui.h:3
+msgid "Repository name:"
+msgstr "ರೆಪೊಸಿಟರಿಯ ಹೆಸರು:"
+
+#: ../data/gpk-signature.ui.h:4
+msgid "Signature URL:"
+msgstr "ಸಹಿ URL:"
+
+#: ../data/gpk-signature.ui.h:5
+msgid "Signature user identifier:"
+msgstr "ಸಹಿ ಮಾಡಿದವರ ಪತ್ತೆಗಾರ:"
+
+#: ../data/gpk-signature.ui.h:6
+msgid "Signature identifier:"
+msgstr "ಸಹಿ ಪತ್ತೆಗಾರ:"
+
+#: ../data/gpk-signature.ui.h:7
+msgid "Package:"
+msgstr "ಪ್ಯಾಕೇಜ್:"
+
+#: ../data/gpk-signature.ui.h:8
+msgid "Do you recognize the user and trust this key?"
+msgstr "ನೀವು ಈ ಬಳಕೆದಾರನನ್ನು ಗುರುತಿಸುತ್ತೀರಾ ಹಾಗು ಈ ಕೀಲಿಯನ್ನು ನಂಬುತ್ತೀರಾ?"
+
+#. TRANSLATORS: title to pass to the user if there are not enough privs
+#: ../data/gpk-update-viewer.desktop.in.h:1 ../data/gpk-update-viewer.ui.h:1
+#: ../src/gpk-update-viewer.c:3428
+#| msgid "Package installer"
+msgid "Package Updater"
+msgstr "ಪ್ಯಾಕೇಜ್ ಅಪ್‌ಡೇಟರ್"
+
+#: ../data/gpk-update-viewer.desktop.in.h:2
+msgid "Update software installed on the system"
+msgstr "ಗಣಕದಲ್ಲಿ ಅನುಸ್ಥಾಪಿತಗೊಂಡಿರುವ ತಂತ್ರಾಂಶವನ್ನು ಅಪ್ಡೇಟ್ ಮಾಡು"
+
+#: ../data/gpk-update-viewer.ui.h:2
+msgid "_Install Updates"
+msgstr "ಅಪ್‌ಡೇಟುಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸು (_I)"
+
+#: ../data/gpk-update-viewer.ui.h:3
+#| msgid ""
+#| "Software updates correct errors, eliminate security vulnerabilities and "
+#| "provide new features."
+msgid ""
+"Package updates correct errors, eliminate security vulnerabilities, and "
+"provide new features."
+msgstr ""
+"ಪ್ಯಾಕೇಜ್ ಅಪ್‌ಡೇಟುಗಳು ದೋಷಗಳನ್ನು ಸರಿಪಡಿಸುತ್ತವೆ, ಸುರಕ್ಷತಾ ದುರ್ಬಲತೆಗಳನ್ನು "
+"ಹೋಗಲಾಡಿಸುತ್ತವೆ "
+"ಮತ್ತು ಹೊಸ ಸವಲತ್ತುಗಳನ್ನು ಒದಗಿಸುತ್ತವೆ."
+
+#: ../data/gpk-update-viewer.ui.h:4
+msgid "_Upgrade"
+msgstr "ನವೀಕರಣ(_U)"
+
+#. TRANSLATORS: column for what packages were upgraded
+#: ../data/gpk-update-viewer.ui.h:5 ../src/gpk-log.c:313
+msgid "Details"
+msgstr "ವಿವರಣೆಗಳು"
+
+#. TRANSLATORS: this is a menu group of packages in the queue
+#: ../src/gpk-application.c:347
+msgid "Pending"
+msgstr "ಬಾಕಿ ಇರುವ"
+
+#. TRANSLATORS: title: how many files are installed by the application
+#: ../src/gpk-application.c:593
+#, c-format
+msgid "%i file installed by %s"
+msgid_plural "%i files installed by %s"
+msgstr[0] "%i ಕಡತವು %s ಇಂದ ಅನುಸ್ಥಾಪಿಸಲ್ಪಟ್ಟಿದೆ"
+msgstr[1] "%i ಕಡತಗಳು %s ಇಂದ ಅನುಸ್ಥಾಪಿಸಲ್ಪಟ್ಟಿವೆ"
+
+#. TRANSLATORS: no packages returned
+#: ../src/gpk-application.c:895 ../src/gpk-application.c:1024
+#| msgid "All packages"
+msgid "No packages"
+msgstr "ಯಾವುದೆ ಪ್ಯಾಕೇಜುಗಳಿಲ್ಲ"
+
+#. TRANSLATORS: this package is not required by any others
+#: ../src/gpk-application.c:897
+#| msgid "No other software requires this."
+msgid "No other packages require this package"
+msgstr "ಬೇರೆ ಯಾವುದೆ ಪ್ಯಾಕೇಜುಗಳಿಗೆ ಈ ಪ್ಯಾಕೇಜಿನ ಅಗತ್ಯವಿಲ್ಲ"
+
+#. TRANSLATORS: title: how many packages require this package
+#: ../src/gpk-application.c:904
+#, c-format
+#| msgid "Cannot get package requires"
+msgid "%i package requires %s"
+msgid_plural "%i packages require %s"
+msgstr[0] "%i ಪ್ಯಾಕೇಜಿಗೆ %s ಅಗತ್ಯವಿದೆ"
+msgstr[1] "%i ಪ್ಯಾಕೇಜುಗಳಿಗೆ %s ಅಗತ್ಯವಿದೆ"
+
+#. TRANSLATORS: show a array of packages for the package
+#: ../src/gpk-application.c:909
+#, c-format
+#| msgid "The software listed below require %s to function correctly."
+#| msgid_plural "The software listed below require %s to function correctly."
+msgid "Packages listed below require %s to function correctly."
+msgid_plural "Packages listed below require %s to function correctly."
+msgstr[0] ""
+"ಈ ಕೆಳಗೆ ಸೂಚಿಸಲಾದ ಪ್ಯಾಕೇಜುಗಳಿಗಾಗಿ %s ಸರಿಯಾಗಿ ಕೆಲಸ ಮಾಡುವುದು ಅಗತ್ಯವಾಗಿರುತ್ತದೆ."
+msgstr[1] ""
+"ಈ ಕೆಳಗೆ ಸೂಚಿಸಲಾದ ಪ್ಯಾಕೇಜುಗಳಿಗಾಗಿ %s ಸರಿಯಾಗಿ ಕೆಲಸ ಮಾಡುವುದು ಅಗತ್ಯವಾಗಿರುತ್ತದೆ."
+
+#. TRANSLATORS: this package does not depend on any others
+#: ../src/gpk-application.c:1026
+#| msgid "This software does not depend on any other"
+msgid "This package does not depend on any others"
+msgstr "ಈ ಪ್ಯಾಕೇಜ್‌ ಬೇರಾವುದರ ಮೇಲೂ ಅವಲಂಬಿತವಾಗಿಲ್ಲ"
+
+#. TRANSLATORS: title: show the number of other packages we depend on
+#: ../src/gpk-application.c:1033
+#, c-format
+#| msgid "Additional software is required for %s"
+msgid "%i additional package is required for %s"
+msgid_plural "%i additional packages are required for %s"
+msgstr[0] "%i ಹೆಚ್ಚಿನ ಪ್ಯಾಕೇಜಿನ (%s ಗಾಗಿ) ಅಗತ್ಯವಿದೆ"
+msgstr[1] "%i ಹೆಚ್ಚಿನ ಪ್ಯಾಕೇಜುಗಳ (%s ಗಾಗಿ) ಅಗತ್ಯವಿದೆ"
+
+#. TRANSLATORS: message: show the array of dependent packages for this package
+#: ../src/gpk-application.c:1038
+#, c-format
+#| msgid "The software listed below require %s to function correctly."
+#| msgid_plural "The software listed below require %s to function correctly."
+msgid "Packages listed below are required for %s to function correctly."
+msgid_plural "Packages listed below are required for %s to function correctly."
+msgstr[0] ""
+"ಈ ಕೆಳಗೆ ಸೂಚಿಸಲಾದ ಪ್ಯಾಕೇಜುಗಳಿಗಾಗಿ %s ಸರಿಯಾಗಿ ಕೆಲಸ ಮಾಡುವುದು ಅಗತ್ಯವಾಗಿರುತ್ತದೆ."
+msgstr[1] ""
+"ಈ ಕೆಳಗೆ ಸೂಚಿಸಲಾದ ಪ್ಯಾಕೇಜುಗಳಿಗಾಗಿ %s ಸರಿಯಾಗಿ ಕೆಲಸ ಮಾಡುವುದು ಅಗತ್ಯವಾಗಿರುತ್ತದೆ."
+
+#. TRANSLATORS: the repo name is invalid or not found, fall back to this
+#: ../src/gpk-application.c:1109
+msgid "Invalid"
+msgstr "ಅಮಾನ್ಯ"
+
+#. TRANSLATORS: no results were found for this search
+#: ../src/gpk-application.c:1262
+msgid "No results were found."
+msgstr "ಯಾವುದೆ ಫಲಿತಾಂಶಗಳು ಕಂಡುಬಂದಿಲ್ಲ."
+
+#. TRANSLATORS: be helpful, but this shouldn't happen
+#: ../src/gpk-application.c:1270
+#| msgid "Try entering a name in the search bar."
+msgid "Try entering a package name in the search bar."
+msgstr "ಹುಡುಕು ಪಟ್ಟಿಯಲ್ಲಿ ಒಂದು ಹೆಸರನ್ನು ನಮೂದಿಸಲು ಪ್ರಯತ್ನಿಸಿ."
+
+#. TRANSLATORS: nothing in the package queue
+#: ../src/gpk-application.c:1273
+#| msgid "There is no software queued to be installed or removed."
+msgid "There are no packages queued to be installed or removed."
+msgstr "ಅನುಸ್ಥಾಪಿಸಲು ಅಥವ ತೆಗೆದುಹಾಕಲು ಸರತಿಯಲ್ಲಿ ಯಾವುದೆ ಪ್ಯಾಕೇಜುಗಳಿಲ್ಲ."
+
+#. TRANSLATORS: tell the user to switch to details search mode
+#: ../src/gpk-application.c:1278
+#| msgid ""
+#| "Try searching software descriptions by clicking the icon next to the "
+#| "search text."
+msgid ""
+"Try searching package descriptions by clicking the icon next to the search "
+"text."
+msgstr ""
+"ಹುಡುಕು ಪಠ್ಯದ ಎದುರಿನ ಚಿಹ್ನೆಯ ಮೇಲೆ ಕ್ಲಿಕ್ಕಿಸುವ ಮೂಲಕ ಪ್ಯಾಕೇಜಿನ ವಿವರಣೆಗಳನ್ನು "
+"ಹುಡುಕಲು ಪ್ರಯತ್ನಿಸಿ."
+
+#. TRANSLATORS: tell the user to try harder
+#: ../src/gpk-application.c:1281
+msgid "Try again with a different search term."
+msgstr "ಬೇರೊಂದು ಹುಡುಕು ಪದದೊಂದಿಗೆ ಇನ್ನೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ ನೋಡಿ."
+
+#. TRANSLATORS: title: invalid text in the search bar
+#: ../src/gpk-application.c:1545
+msgid "Invalid search text"
+msgstr "ಅಮಾನ್ಯವಾದ ಹುಡುಕು ಪಠ್ಯ"
+
+#. TRANSLATORS: message: tell the user that's not allowed
+#: ../src/gpk-application.c:1547
+msgid "The search text contains invalid characters"
+msgstr "ಹುಡುಕಲಾಗುತ್ತಿರುವ ಪಠ್ಯವು ಅಮಾನ್ಯವಾದ ಅಕ್ಷರಗಳನ್ನು ಹೊಂದಿದೆ"
+
+#. TRANSLATORS: title: we failed to execute the method
+#: ../src/gpk-application.c:1588
+msgid "The search could not be completed"
+msgstr "ಹುಡುಕನ್ನು ಪೂರ್ಣಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#. TRANSLATORS: low level failure, details to follow
+#: ../src/gpk-application.c:1590
+msgid "Running the transaction failed"
+msgstr "ವ್ಯವಹಾರವನ್ನು ಚಲಾಯಿಸುವಾಗ ವಿಫಲಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: title: warn the user they are quitting with unapplied changes
+#: ../src/gpk-application.c:1719
+msgid "Changes not applied"
+msgstr "ಬದಲಾವಣೆಗಳನ್ನು ಅನ್ವಯಿಸಲಾಗಿಲ್ಲ"
+
+#: ../src/gpk-application.c:1720
+msgid "Close _Anyway"
+msgstr "ಪರವಾಗಿಲ್ಲ ಮುಚ್ಚು(_A)"
+
+#. TRANSLATORS: tell the user the problem
+#: ../src/gpk-application.c:1724
+msgid "You have made changes that have not yet been applied."
+msgstr ""
+"ನೀವು ಕೆಲವು ಬದಲಾವಣೆಗಳನ್ನು ಮಾಡಿದ್ದೀರಿ ಹಾಗು ಅವನ್ನು ಇನ್ನೂ ಸಹ ಅನ್ವಯಿಸಲಾಗಿಲ್ಲ."
+
+#: ../src/gpk-application.c:1725
+msgid "These changes will be lost if you close this window."
+msgstr "ಈ ವಿಂಡೋವನ್ನು ನೀವು ಮುಚ್ಚಿದರೆ ಈ ಎಲ್ಲಾ ಬದಲಾವಣೆಗಳು ನಾಶಗೊಳ್ಳುತ್ತವೆ."
+
+#. TRANSLATORS: column for installed status
+#. TRANSLATORS: The state of a package
+#. TRANSLATORS: The action of the package, in past tense
+#: ../src/gpk-application.c:2018 ../src/gpk-enum.c:1075 ../src/gpk-enum.c:1164
+msgid "Installed"
+msgstr "ಅನುಸ್ಥಾಪಿತಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: column for package name
+#. TRANSLATORS: column for group name
+#. TRANSLATORS: column for the package name
+#: ../src/gpk-application.c:2034 ../src/gpk-application.c:2056
+#: ../src/gpk-dialog.c:151 ../src/gpk-modal-dialog.c:703
+msgid "Name"
+msgstr "ಹೆಸರು"
+
+#. TRANSLATORS: the size of the meta package
+#: ../src/gpk-application.c:2223
+msgid "Size"
+msgstr "ಗಾತ್ರ"
+
+#. TRANSLATORS: the installed size in bytes of the package
+#: ../src/gpk-application.c:2226
+msgid "Installed size"
+msgstr "ಅನುಸ್ಥಾಪಿಸಲಾದ ಗಾತ್ರ"
+
+#. TRANSLATORS: the download size of the package
+#: ../src/gpk-application.c:2229
+msgid "Download size"
+msgstr "ಇಳಿಸಿಕೊಂಡ ಗಾತ್ರ"
+
+#. TRANSLATORS: entry tooltip: basic search
+#: ../src/gpk-application.c:2417
+msgid "Searching by name"
+msgstr "ಹೆಸರಿನ ಆಧಾರದ ಮೇಲೆ ಹುಡುಕಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: entry tooltip: detailed search
+#: ../src/gpk-application.c:2443
+msgid "Searching by description"
+msgstr "ವಿವರಣೆಯ ಆಧಾರದ ಮೇಲೆ ಹುಡುಕಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: entry tooltip: file search
+#: ../src/gpk-application.c:2469
+msgid "Searching by file"
+msgstr "ಕಡತದ ಆಧಾರದ ಮೇಲೆ ಹುಡುಕು"
+
+#. TRANSLATORS: context menu item for the search type icon
+#: ../src/gpk-application.c:2492
+msgid "Search by name"
+msgstr "ಹೆಸರಿನ ಆಧಾರದ ಮೇಲೆ ಹುಡುಕು"
+
+#. TRANSLATORS: context menu item for the search type icon
+#: ../src/gpk-application.c:2500
+msgid "Search by description"
+msgstr "ವಿವರಣೆಯ ಆಧಾರದ ಮೇಲೆ ಹುಡುಕು"
+
+#. TRANSLATORS: context menu item for the search type icon
+#: ../src/gpk-application.c:2508
+msgid "Search by file name"
+msgstr "ಕಡತದ ಹೆಸರಿನ ಆಧಾರದ ಮೇಲೆ ಹುಡುಕು"
+
+#: ../src/gpk-application.c:2536
+msgid "Licensed under the GNU General Public License Version 2"
+msgstr "Licensed under the GNU General Public License Version 2"
+
+#: ../src/gpk-application.c:2537
+msgid ""
+"PackageKit is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"PackageKit is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+
+#: ../src/gpk-application.c:2541
+msgid ""
+"PackageKit is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+"PackageKit is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+
+#: ../src/gpk-application.c:2545
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
+msgstr ""
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
+
+#. TRANSLATORS: put your own name here -- you deserve credit!
+#: ../src/gpk-application.c:2551
+msgid "translator-credits"
+msgstr "ಶಂಕರ್ ಪ್ರಸಾದ್ ಎಂ. ವಿ. <svenkate@redhat.com>"
+
+#: ../src/gpk-application.c:2572
+msgid "PackageKit Website"
+msgstr "PackageKit ಜಾಲತಾಣ"
+
+#. TRANSLATORS: description of NULL, gpk-application that is
+#: ../src/gpk-application.c:2575
+#| msgid "Software management for GNOME"
+msgid "Package Manager for GNOME"
+msgstr "GNOME ಗಾಗಿ ಪ್ಯಾಕೇಜ್ ವ್ಯವಸ್ಥಾಪಕ"
+
+#. TRANSLATORS: welcome text if we can click the group array
+#: ../src/gpk-application.c:2767
+msgid "Enter a search word or click a category to get started."
+msgstr ""
+"ಪ್ರಾರಂಭಿಸಲು ಒಂದು ಹುಡುಕು ಪದವನ್ನು ನಮೂದಿಸಿ ಅಥವ ಒಂದು ವರ್ಗವನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ."
+
+#. TRANSLATORS: welcome text if we have to search by name
+#: ../src/gpk-application.c:2770
+msgid "Enter a search word to get started."
+msgstr "ಪ್ರಾರಂಭಿಸಲು ಒಂದು ಹುಡುಕು ಪದವನ್ನು ನಮೂದಿಸಿ."
+
+#. TRANSLATORS: daemon is broken
+#: ../src/gpk-application.c:3009
+msgid "Exiting as properties could not be retrieved"
+msgstr "ಗುಣಗಳನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗಿಲ್ಲದ ಕಾರಣ ನಿರ್ಗಮಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: title: all of the packages on the system and available in sources
+#: ../src/gpk-application.c:3052
+msgid "All packages"
+msgstr "ಎಲ್ಲಾ ಪ್ಯಾಕೇಜುಗಳು"
+
+#. TRANSLATORS: tooltip: all packages
+#: ../src/gpk-application.c:3054
+msgid "Show all packages"
+msgstr "ಎಲ್ಲಾ ಪ್ಯಾಕೇಜುಗಳನ್ನು ತೋರಿಸು"
+
+#. TRANSLATORS: show the program version
+#: ../src/gpk-application.c:3479 ../src/gpk-update-viewer.c:3397
+msgid "Show the program version and exit"
+msgstr "ಪ್ರೊಗ್ರಾಂ ಆವೃತ್ತಿಯನ್ನು ತೋರಿಸಿ ನಿರ್ಗಮಿಸು"
+
+#: ../src/gpk-application.c:3493
+msgid "Install Software"
+msgstr "ತಂತ್ರಾಂಶವನ್ನು ಅನುಸ್ಥಾಪಿಸಿ"
+
+#. are we running privileged
+#: ../src/gpk-application.c:3509
+msgid "Package installer"
+msgstr "ಪ್ಯಾಕೇಜ್ ಅನುಸ್ಥಾಪಕ"
+
+#. TRANSLATORS: a 32 bit package
+#: ../src/gpk-common.c:295
+msgid "32-bit"
+msgstr "32-ಬಿಟ್"
+
+#. TRANSLATORS: a 64 bit package
+#: ../src/gpk-common.c:302
+msgid "64-bit"
+msgstr "64-ಬಿಟ್"
+
+#. TRANSLATORS: these tools cannot run as root (unknown name)
+#: ../src/gpk-common.c:427
+msgid "This application is running as a privileged user"
+msgstr "ಈ ಅನ್ವಯವು ಒಬ್ಬ ಸವಲತ್ತುಳ್ಳ ಬಳಕೆದಾರನಾಗಿ ಚಲಾಯಿತಗೊಳ್ಳುತ್ತಿದೆ"
+
+#. TRANSLATORS: cannot run as root user, and we display the application name
+#: ../src/gpk-common.c:430
+#, c-format
+msgid "%s is running as a privileged user"
+msgstr "%s ವು ಒಬ್ಬ ಸವಲತ್ತುಳ್ಳ ಬಳಕೆದಾರನಾಗಿ ಚಲಾಯಿತಗೊಳ್ಳುತ್ತಿದೆ"
+
+#. TRANSLATORS: tell the user off
+#: ../src/gpk-common.c:433
+msgid "Package management applications are security sensitive."
+msgstr "ಪ್ಯಾಕೇಜ್ ನಿರ್ವಹಣಾ ಅನ್ವಯಗಳು ಸುರಕ್ಷತಾ ಸಂವೇದಿ ಆಗಿರುತ್ತವೆ."
+
+#. TRANSLATORS: and explain why
+#: ../src/gpk-common.c:435
+msgid ""
+"Running graphical applications as a privileged user should be avoided for "
+"security reasons."
+msgstr ""
+"ಚಿತ್ರಾತ್ಮಕ ಅನ್ವಯಗಳನ್ನು ಒಬ್ಬ ಸವಲತ್ತು ಹೊಂದಿರುವ ಬಳಕೆದಾರನಾಗಿ ಚಲಾಯಿಸುವುದು ಸುರಕ್ಷತಾ "
+"ದೃಷ್ಟಿಯಿಂದ ಒಳ್ಳೆಯದಲ್ಲ."
+
+#. TRANSLATORS: button: allow the user to run this, even when insecure
+#: ../src/gpk-common.c:441
+msgid "Continue _Anyway"
+msgstr "ಪರವಾಗಿಲ್ಲ ಮುಂದುವರೆ(_A)"
+
+#. TRANSLATORS: The actions has just literally happened
+#: ../src/gpk-common.c:511 ../src/gpk-common.c:561
+#, c-format
+msgid "Now"
+msgstr "ಈಗ"
+
+#. TRANSLATORS: time
+#: ../src/gpk-common.c:521 ../src/gpk-common.c:571
+#, c-format
+msgid "%i second"
+msgid_plural "%i seconds"
+msgstr[0] "%i ಸೆಕೆಂಡು"
+msgstr[1] "%i ಸೆಕೆಂಡುಗಳು"
+
+#. TRANSLATORS: time
+#: ../src/gpk-common.c:531 ../src/gpk-common.c:584
+#, c-format
+msgid "%i minute"
+msgid_plural "%i minutes"
+msgstr[0] "%i ನಿಮಿಷ"
+msgstr[1] "%i ನಿಮಿಷಗಳು"
+
+#. TRANSLATORS: time
+#: ../src/gpk-common.c:537 ../src/gpk-common.c:603
+#, c-format
+msgid "%i hour"
+msgid_plural "%i hours"
+msgstr[0] "%i ಗಂಟೆ"
+msgstr[1] "%i ಗಂಟೆಗಳು"
+
+#. TRANSLATOR: "%i %s %i %s" are "%i minutes %i seconds"
+#. * Swap order with "%2$s %2$i %1$s %1$i if needed
+#. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
+#. * Swap order with "%2$s %2$i %1$s %1$i if needed
+#: ../src/gpk-common.c:590 ../src/gpk-common.c:609
+#, c-format
+msgid "%i %s %i %s"
+msgstr "%i %s %i %s"
+
+#: ../src/gpk-common.c:591 ../src/gpk-common.c:611
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "ನಿಮಿಷ"
+msgstr[1] "ನಿಮಿಷಗಳು"
+
+#: ../src/gpk-common.c:592
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "ಸೆಕೆಂಡು"
+msgstr[1] "ಸೆಕೆಂಡುಗಳು"
+
+#: ../src/gpk-common.c:610
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "ಗಂಟೆ"
+msgstr[1] "ಗಂಟೆಗಳು"
+
+#. Translators: a list of two things
+#: ../src/gpk-common.c:638
+#, c-format
+msgid "%s and %s"
+msgstr "%s ಹಾಗು %s"
+
+#. Translators: a list of three things
+#: ../src/gpk-common.c:642
+#, c-format
+msgid "%s, %s and %s"
+msgstr "%s, %s ಹಾಗು %s"
+
+#. Translators: a list of four things
+#: ../src/gpk-common.c:646
+#, c-format
+msgid "%s, %s, %s and %s"
+msgstr "%s, %s, %s ಹಾಗು %s"
+
+#. Translators: a list of five things
+#: ../src/gpk-common.c:651
+#, c-format
+msgid "%s, %s, %s, %s and %s"
+msgstr "%s, %s, %s, %s ಹಾಗು %s"
+
+#. TRANSLATORS: we failed to install
+#: ../src/gpk-dbus-task.c:243 ../src/gpk-dbus-task.c:460
+msgid "Failed to install software"
+msgstr "ತಂತ್ರಾಂಶವನ್ನು ಅನುಸ್ಥಾಪಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: we didn't select any applications that were returned
+#: ../src/gpk-dbus-task.c:245
+msgid "No applications were chosen to be installed"
+msgstr "ಆಯ್ಕೆ ಮಾಡಲಾದ ಯಾವುದೆ ಅನ್ವಯಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#. TRANSLATORS: detailed text about the error
+#: ../src/gpk-dbus-task.c:277
+msgid "Error details"
+msgstr "ದೋಷ ವಿವರಗಳು"
+
+#: ../src/gpk-dbus-task.c:277
+#| msgid "Software error details"
+msgid "Package Manager error details"
+msgstr "ಪ್ಯಾಕೇಜ್‌ ವ್ಯವಸ್ಥಾಪಕದ ದೋಷ ವಿವರಗಳು"
+
+#. TRANSLATORS: default fallback error -- this should never happen
+#: ../src/gpk-dbus-task.c:292
+msgid ""
+"Unknown error. Please refer to the detailed report and report in your "
+"distribution bug tracker."
+msgstr ""
+"ಅಜ್ಞಾತ ದೋಷ. ದಯವಿಟ್ಟು ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ವಿವರವಾದ ವರದಿಯನ್ನು ನೋಡಿ ಮತ್ತು ವಿತರಣೆಯ "
+"ನಿಮ್ಮ "
+"ಬಗ್‌ಟ್ರಾಕರಿನಲ್ಲಿ ವರದಿ ಸಲ್ಲಿಸಿ."
+
+#. TRANSLATORS: button: show details about the error
+#: ../src/gpk-dbus-task.c:365
+msgid "Show details"
+msgstr "ವಿವರಗಳನ್ನು ತೋರಿಸು"
+
+#. TRANSLATORS: title: installing packages
+#. TRANSLATORS: transaction state, installing packages
+#: ../src/gpk-dbus-task.c:497 ../src/gpk-enum.c:878
+msgid "Installing packages"
+msgstr "ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: title
+#: ../src/gpk-dbus-task.c:598 ../src/gpk-dbus-task.c:1365
+msgid "Failed to install file"
+msgid_plural "Failed to install files"
+msgstr[0] "ಕಡತವನ್ನು ಅನುಸ್ಥಾಪಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+msgstr[1] "ಕಡತಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: title: confirm the user want's to install a local file
+#: ../src/gpk-dbus-task.c:687
+msgid "Do you want to install this file?"
+msgid_plural "Do you want to install these files?"
+msgstr[0] "ನೀವು ಈ ಕಡತವನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರೆ?"
+msgstr[1] "ನೀವು ಈ ಕಡತಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರೆ?"
+
+#. TRANSLATORS: title: installing local files
+#. TRANSLATORS: button: confirm to search for packages
+#. TRANSLATORS: button: install codecs
+#. TRANSLATORS: button: install a font
+#. TRANSLATORS: button: install Plasma services
+#. TRANSLATORS: button: install printer drivers
+#: ../src/gpk-dbus-task.c:696 ../src/gpk-dbus-task.c:1241
+#: ../src/gpk-dbus-task.c:1458 ../src/gpk-dbus-task.c:1660
+#: ../src/gpk-dbus-task.c:2124 ../src/gpk-dbus-task.c:2464
+#: ../src/gpk-dbus-task.c:2698 ../src/gpk-task.c:394
+msgid "Install"
+msgstr "ಅನುಸ್ಥಾಪಿಸು"
+
+#. TRANSLATORS: title: installing a local file
+#: ../src/gpk-dbus-task.c:1017
+msgid "Install local file"
+msgid_plural "Install local files"
+msgstr[0] "ಸ್ಥಳೀಯ ಕಡತವನ್ನು ಅನುಸ್ಥಾಪಿಸು"
+msgstr[1] "ಸ್ಥಳೀಯ ಕಡತಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸು"
+
+#. TRANSLATORS: couldn't resolve name to package
+#: ../src/gpk-dbus-task.c:1077
+#, c-format
+#| msgid "Could not find package"
+msgid "Could not find packages"
+msgstr "ಪ್ಯಾಕೇಜುಗಳು ಕಂಡುಬಂದಿಲ್ಲ"
+
+#. TRANSLATORS: message: could not find
+#: ../src/gpk-dbus-task.c:1086
+#| msgid "The file could not be found in any packages"
+msgid "The packages could not be found in any package source"
+msgstr "ಪ್ಯಾಕೇಜ್‌ ಆಕರವು ಯಾವುದೆ ಪ್ಯಾಕೇಜುಗಳಲ್ಲಿ ಕಂಡುಬಂದಿಲ್ಲ"
+
+#. TRANSLATORS: button: a link to the help file
+#. TRANSLATORS: button: show the user a button to get more help finding stuff
+#. TRANSLATORS: button text
+#. TRANSLATORS: button: show the user a button to get more help finding stuff
+#. TRANSLATORS: button text
+#: ../src/gpk-dbus-task.c:1088 ../src/gpk-dbus-task.c:1327
+#: ../src/gpk-dbus-task.c:1632 ../src/gpk-dbus-task.c:1840
+#: ../src/gpk-dbus-task.c:2097 ../src/gpk-dbus-task.c:2436
+msgid "More information"
+msgstr "ಇನ್ನಷ್ಟು ಮಾಹಿತಿ"
+
+#: ../src/gpk-dbus-task.c:1125 ../src/gpk-enum.c:310
+#| msgid "The package is already installed"
+msgid "The package is already installed"
+msgid_plural "The packages are already installed"
+msgstr[0] "ಪ್ಯಾಕೇಜನ್ನು ಈಗಾಗಲೆ ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ"
+msgstr[1] "ಪ್ಯಾಕೇಜುಗಳನ್ನು ಈಗಾಗಲೆ ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ"
+
+#. TRANSLATORS: message: package is already installed
+#: ../src/gpk-dbus-task.c:1129
+msgid "Nothing to do."
+msgstr "ಮಾಡಲು ಏನೂ ಇಲ್ಲ."
+
+#. TRANSLATORS: failed to install, shouldn't be shown
+#: ../src/gpk-dbus-task.c:1144
+#| msgid "Failed to find package"
+msgid "Failed to install package"
+msgstr "ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: the search gave us the wrong result. internal error. barf.
+#: ../src/gpk-dbus-task.c:1146
+msgid "Incorrect response from search"
+msgstr "ಹುಡುಕಿದಾಗ ಅಸಮರ್ಪಕವಾದ ಪ್ರತ್ಯತ್ತರವು ಒದಗಿದೆ"
+
+#. TRANSLATORS: a program needs a package, for instance openoffice-clipart
+#: ../src/gpk-dbus-task.c:1225
+#| msgid "Additional software is required"
+msgid "An additional package is required:"
+msgid_plural "Additional packages are required:"
+msgstr[0] "ಒಂದು ಹೆಚ್ಚುವರಿ ಪ್ಯಾಕೇಜಿನ ಅಗತ್ಯವಿದೆ:"
+msgstr[1] "ಹೆಚ್ಚುವರಿ ಪ್ಯಾಕೇಜುಗಳ ಅಗತ್ಯವಿದೆ:"
+
+#. TRANSLATORS: ask the user if it's okay to search
+#: ../src/gpk-dbus-task.c:1228
+#| msgid "Do you want to search for and install this software now?"
+msgid "Do you want to search for and install this package now?"
+msgid_plural "Do you want to search for and install these packages now?"
+msgstr[0] "ನೀವು ಈಗ ಈ ಪ್ಯಾಕೇಜನ್ನು ಹುಡುಕಿ ನಂತರ ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರೆ?"
+msgstr[1] "ನೀವು ಈಗ ಈ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಹುಡುಕಿ ನಂತರ ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರೆ?"
+
+#. TRANSLATORS: string is a program name, e.g. "Movie Player"
+#: ../src/gpk-dbus-task.c:1234
+#, c-format
+#| msgid "%s wants to install a file"
+#| msgid_plural "%s wants to install files"
+msgid "%s wants to install a package"
+msgid_plural "%s wants to install packages"
+msgstr[0] "%s ಕಡತವನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತದೆ"
+msgstr[1] "%s ಕಡತಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತದೆ"
+
+#. TRANSLATORS: a random program which we can't get the name wants to do something
+#: ../src/gpk-dbus-task.c:1237
+#| msgid "A program wants to install a file"
+#| msgid_plural "A program wants to install files"
+msgid "A program wants to install a package"
+msgid_plural "A program wants to install packages"
+msgstr[0] "ಕಡತವನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ ಬಯಸಿದೆ"
+msgstr[1] "ಕಡತಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ ಬಯಸಿದೆ"
+
+#. TRANSLATORS: title, searching
+#: ../src/gpk-dbus-task.c:1254 ../src/gpk-dbus-task.c:2758
+msgid "Searching for packages"
+msgstr "ಪ್ಯಾಕೇಜುಗಳಿಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: failed to fild the package for thefile
+#: ../src/gpk-dbus-task.c:1323
+msgid "Failed to find package"
+msgstr "ಪ್ಯಾಕೇಜನ್ನು ಹುಡುಕುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: nothing found
+#: ../src/gpk-dbus-task.c:1325 ../src/gpk-dbus-task.c:2898
+msgid "The file could not be found in any packages"
+msgstr "ಕಡತವು ಯಾವುದೆ ಪ್ಯಾಕೇಜುಗಳಲ್ಲಿ ಕಂಡುಬಂದಿಲ್ಲ"
+
+#. TRANSLATORS: we've already got a package that provides this file
+#: ../src/gpk-dbus-task.c:1362
+#, c-format
+#| msgid "%s already provides this file"
+msgid "The %s package already provides this file"
+msgstr "%s ಪ್ಯಾಕೇಜ್‌ ಈಗಾಗಲೆ ಈ ಕಡತವನ್ನು ಒದಗಿಸುತ್ತಿದೆ"
+
+#. TRANSLATORS: a program wants to install a file, e.g. /lib/moo.so
+#: ../src/gpk-dbus-task.c:1443
+msgid "The following file is required:"
+msgid_plural "The following files are required:"
+msgstr[0] "ಈ ಕೆಳಗಿನ ಕಡತದ ಅಗತ್ಯವಿದೆ:"
+msgstr[1] "ಈ ಕೆಳಗಿನ ಕಡತಗಳ ಅಗತ್ಯವಿದೆ:"
+
+#. TRANSLATORS: confirm with the user
+#: ../src/gpk-dbus-task.c:1446
+msgid "Do you want to search for this file now?"
+msgid_plural "Do you want to search for these files now?"
+msgstr[0] "ನೀವು ಈ ಕಡತಕ್ಕಾಗಿ ಈಗಲೆ ಹುಡುಕಲು ಬಯಸುತ್ತೀರೆ?"
+msgstr[1] "ನೀವು ಈ ಕಡತಗಳಿಗಾಗಿ ಈಗಲೆ ಹುಡುಕಲು ಬಯಸುತ್ತೀರೆ?"
+
+#. TRANSLATORS: string is a program name, e.g. "Movie Player"
+#: ../src/gpk-dbus-task.c:1451
+#, c-format
+msgid "%s wants to install a file"
+msgid_plural "%s wants to install files"
+msgstr[0] "%s ವು ಕಡತವನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತದೆ"
+msgstr[1] "%s ವು ಕಡತಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತದೆ"
+
+#. TRANSLATORS: a random program which we can't get the name wants to do something
+#: ../src/gpk-dbus-task.c:1454
+msgid "A program wants to install a file"
+msgid_plural "A program wants to install files"
+msgstr[0] "ಕಡತವನ್ನು ಅನುಸ್ಥಾಪಿಸುವಂತೆ ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ ಬಯಸಿದೆ"
+msgstr[1] "ಕಡತಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸುವಂತೆ ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ ಬಯಸಿದೆ"
+
+#. TRANSLATORS: searching for the package that provides the file
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-dbus-task.c:1470 ../src/gpk-dbus-task.c:3000
+#: ../src/gpk-enum.c:1235
+msgid "Searching for file"
+msgstr "ಕಡತಕ್ಕಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: we are listing the plugins in a box
+#: ../src/gpk-dbus-task.c:1513
+msgid "The following plugin is required:"
+msgid_plural "The following plugins are required:"
+msgstr[0] "ಈ ಕೆಳಗಿನ ಪ್ಲಗ್‌ಇನ್‌ನ ಅಗತ್ಯವಿದೆ:"
+msgstr[1] "ಈ ಕೆಳಗಿನ ಪ್ಲಗ್‌ಇನ್‌ಗಳ ಅಗತ್ಯವಿದೆ:"
+
+#. TRANSLATORS: ask for confirmation
+#: ../src/gpk-dbus-task.c:1531 ../src/gpk-dbus-task.c:2365
+msgid "Do you want to search for this now?"
+msgid_plural "Do you want to search for these now?"
+msgstr[0] "ನೀವು ಈಗಲೆ ಇದಕ್ಕಾಗಿ ಹುಡುಕಲು ಬಯಸುತ್ತೀರೆ?"
+msgstr[1] "ನೀವು ಈಗಲೆ ಇವುಗಳಿಗಾಗಿ ಹುಡುಕಲು ಬಯಸುತ್ತೀರೆ?"
+
+#. TRANSLATORS: a program wants to decode something (unknown) -- string is a program name, e.g. "Movie Player"
+#: ../src/gpk-dbus-task.c:1544
+#, c-format
+msgid "%s requires an additional plugin to decode this file"
+msgid_plural "%s requires additional plugins to decode this file"
+msgstr[0] "ಈ ಕಡತವನ್ನು ಡೀಕೋಡ್ ಮಾಡಲು %s ಗೆ ಒಂದು ಹೆಚ್ಚುವರಿ ಪ್ಲಗ್‌ಇನ್‌ನ ಅಗತ್ಯವಿದೆ"
+msgstr[1] "ಈ ಕಡತವನ್ನು ಡೀಕೋಡ್ ಮಾಡಲು %s ಗೆ ಹೆಚ್ಚುವರಿ ಪ್ಲಗ್‌ಇನ್‌ಗಳ ಅಗತ್ಯವಿದೆ"
+
+#. TRANSLATORS: a program wants to encode something (unknown) -- string is a program name, e.g. "Movie Player"
+#: ../src/gpk-dbus-task.c:1548
+#, c-format
+msgid "%s requires an additional plugin to encode this file"
+msgid_plural "%s requires additional plugins to encode this file"
+msgstr[0] ""
+"ಈ ಕಡತವನ್ನು ಎನ್‌ಕೋಡ್ ಮಾಡಲು %s ಗೆ ಒಂದು ಹೆಚ್ಚುವರಿ ಪ್ಲಗ್‌ಇನ್‌ನ ಅಗತ್ಯವಿದೆ"
+msgstr[1] "ಈ ಕಡತವನ್ನು ಎನ್‌ಕೋಡ್ ಮಾಡಲು %s ಗೆ ಹೆಚ್ಚುವರಿ ಪ್ಲಗ್‌ಇನ್‌ಗಳ ಅಗತ್ಯವಿದೆ"
+
+#. TRANSLATORS: a program wants to do something (unknown) -- string is a program name, e.g. "Movie Player"
+#: ../src/gpk-dbus-task.c:1552
+#, c-format
+msgid "%s requires an additional plugin for this operation"
+msgid_plural "%s requires additional plugins for this operation"
+msgstr[0] "ಈ ಕೆಲಸಕ್ಕಾಗಿ %s ಗೆ ಒಂದು ಹೆಚ್ಚುವರಿ ಪ್ಲಗ್‌ಇನ್‌ನ ಅಗತ್ಯವಿದೆ"
+msgstr[1] "ಈ ಕೆಲಸಕ್ಕಾಗಿ %s ಗೆ ಹೆಚ್ಚುವರಿ ಪ್ಲಗ್‌ಇನ್‌ಗಳ ಅಗತ್ಯವಿದೆ"
+
+#. TRANSLATORS: a random program which we can't get the name wants to decode something
+#: ../src/gpk-dbus-task.c:1558
+msgid "A program requires an additional plugin to decode this file"
+msgid_plural "A program requires additional plugins to decode this file"
+msgstr[0] ""
+"ಈ ಕಡತವನ್ನು ಡೀಕೋಡ್ ಮಾಡಲು ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ಗೆ ಹೆಚ್ಚುವರಿ ಪ್ಲಗ್‌ಇನ್‌ನ ಅಗತ್ಯವಿದೆ"
+msgstr[1] ""
+"ಈ ಕಡತವನ್ನು ಡೀಕೋಡ್ ಮಾಡಲು ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ಗೆ ಹೆಚ್ಚುವರಿ ಪ್ಲಗ್‌ಇನ್‌ಗಲ ಅಗತ್ಯವಿದೆ"
+
+#. TRANSLATORS: a random program which we can't get the name wants to encode something
+#: ../src/gpk-dbus-task.c:1562
+msgid "A program requires an additional plugin to encode this file"
+msgid_plural "A program requires additional plugins to encode this file"
+msgstr[0] ""
+"ಈ ಕಡತವನ್ನು ಎನ್‌ಕೋಡ್ ಮಾಡಲು ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ಗೆ ಹೆಚ್ಚುವರಿ ಪ್ಲಗ್‌ಇನ್‌ನ ಅಗತ್ಯವಿದೆ"
+msgstr[1] ""
+"ಈ ಕಡತವನ್ನು ಎನ್‌ಕೋಡ್ ಮಾಡಲು ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ಗೆ ಹೆಚ್ಚುವರಿ ಪ್ಲಗ್‌ಇನ್‌ಗಳ ಅಗತ್ಯವಿದೆ"
+
+#. TRANSLATORS: a random program which we can't get the name wants to do something (unknown)
+#: ../src/gpk-dbus-task.c:1566
+msgid "A program requires an additional plugin for this operation"
+msgid_plural "A program requires additional plugins for this operation"
+msgstr[0] "ಈ ಕಾರ್ಯಕ್ಕಾಗಿ ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ಗೆ ಹೆಚ್ಚುವರಿ ಪ್ಲಗ್‌ಇನ್‌ನ ಅಗತ್ಯವಿದೆ"
+msgstr[1] "ಈ ಕಾರ್ಯಕ್ಕಾಗಿ ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ಗೆ ಹೆಚ್ಚುವರಿ ಪ್ಲಗ್‌ಇನ್‌ಗಳ ಅಗತ್ಯವಿದೆ"
+
+#. TRANSLATORS: button: confirm to search for packages
+#: ../src/gpk-dbus-task.c:1572 ../src/gpk-dbus-task.c:1926
+#: ../src/gpk-dbus-task.c:2301 ../src/gpk-dbus-task.c:2377
+msgid "Search"
+msgstr "ಹುಡುಕು"
+
+#. TRANSLATORS: failed to search for codec
+#: ../src/gpk-dbus-task.c:1627
+msgid "Failed to search for plugin"
+msgstr "ಪ್ಲಗ್‌ಇನ್‌ಗಾಗಿ ಹುಡುಕುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: no package sources have the wanted codec
+#: ../src/gpk-dbus-task.c:1629
+#| msgid "Could not find plugin in any configured software source"
+msgid "Could not find plugin in any configured package source"
+msgstr "ಸಂರಚಿಸಲಾದ ಯಾವುದೆ ಪ್ಯಾಕೇಜ್‌ ಆಕರಕ್ಕಾಗಿನ ಪ್ಲಗ್‌ಇನ್ ಕಂಡು ಬಂದಿಲ್ಲ"
+
+#: ../src/gpk-dbus-task.c:1651 ../src/gpk-dbus-task.c:2455
+msgid "Install the following plugin"
+msgid_plural "Install the following plugins"
+msgstr[0] "ಈ ಕೆಳಗಿನ ಪ್ಲಗ್‌ಇನ್‌ ಅನ್ನು ಅನುಸ್ಥಾಪಿಸು"
+msgstr[1] "ಈ ಕೆಳಗಿನ ಪ್ಲಗ್‌ಇನ್‌ಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸು"
+
+#. TRANSLATORS: title: show a list of fonts
+#: ../src/gpk-dbus-task.c:1652 ../src/gpk-dbus-task.c:2117
+#: ../src/gpk-dbus-task.c:2456 ../src/gpk-dbus-task.c:2690
+#| msgid "Do you want to install this software now?"
+msgid "Do you want to install this package now?"
+msgid_plural "Do you want to install these packages now?"
+msgstr[0] "ನೀವು ಈ ಪ್ಯಾಕೇಜನ್ನು ಈಗಲೆ ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರೆ?"
+msgstr[1] "ನೀವು ಈ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಈಗಲೆ ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರೆ?"
+
+#. TRANSLATORS: search for codec
+#: ../src/gpk-dbus-task.c:1744
+msgid "Searching for plugins"
+msgstr "ಪ್ಲಗ್‌ಇನ್‌ಗಳಿಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ"
+
+#: ../src/gpk-dbus-task.c:1764
+#, c-format
+msgid "Searching for plugin: %s"
+msgstr "ಈ ಪ್ಲಗ್‌ಇನ್‌ಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ: %s"
+
+#: ../src/gpk-dbus-task.c:1807
+msgid "Failed to search for provides"
+msgstr "ಒದಗಿಸುವುವುದನ್ನು ಹುಡುಕುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: title
+#: ../src/gpk-dbus-task.c:1836
+msgid "Failed to find software"
+msgstr "ತಂತ್ರಾಂಶವನ್ನು ಹುಡುಕುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: nothing found in the package sources that helps
+#: ../src/gpk-dbus-task.c:1838
+msgid "No new applications can be found to handle this type of file"
+msgstr "ಈ ಬಗೆಯ ಕಡತವನ್ನು ನಿಭಾಯಿಸಲು ಬಳಸಬಹುದಾದಂತಹ ಯಾವುದೆ ಅನ್ವಯಗಳು ಕಂಡುಬಂದಿಲ್ಲ"
+
+#. TRANSLATORS: message: mime type opener required
+#: ../src/gpk-dbus-task.c:1908
+msgid "An additional program is required to open this type of file:"
+msgstr "ಈ ಬಗೆಯ ಕಡತಗಳನ್ನು ತೆರೆಯಲು ಒಂದು ಹೆಚ್ಚಿನ ಪ್ರೊಗ್ರಾಂನ ಅಗತ್ಯವಿದೆ:"
+
+#. TRANSLATORS: message: confirm with the user
+#: ../src/gpk-dbus-task.c:1911
+msgid "Do you want to search for a program to open this file type now?"
+msgstr "ಈ ಬಗೆಯ ಕಡತಗಳನ್ನು ತೆರೆಯುವಂತಹ ಪ್ರೊಗ್ರಾಂಗಾಗಿ ಈಗಲೆ ಹುಡುಕಲು ಬಯಸುತ್ತೀರೆ?"
+
+#. TRANSLATORS: string is a program name, e.g. "Movie Player"
+#: ../src/gpk-dbus-task.c:1919
+#, c-format
+msgid "%s requires a new mime type"
+msgid_plural "%s requires new mime types"
+msgstr[0] "%s ಗಾಗಿ ಒಂದು ಹೊಸ ಬಗೆಯ ಮೈಮ್‌ನ ಅಗತ್ಯವಿದೆ"
+msgstr[1] "%s ಗಾಗಿ ಒಂದು ಹೊಸ ಬಗೆಯ ಮೈಮ್‌ಗಳ ಅಗತ್ಯವಿದೆ"
+
+#. TRANSLATORS: a random program which we can't get the name wants to do something
+#: ../src/gpk-dbus-task.c:1922
+msgid "A program requires a new mime type"
+msgid_plural "A program requires new mime types"
+msgstr[0] "ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ಗಾಗಿ ಒಂದು ಹೊಸ ಬಗೆಯ ಮೈಮ್‌ನ ಅಗತ್ಯವಿದೆ"
+msgstr[1] "ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ಗಾಗಿ ಒಂದು ಹೊಸ ಬಗೆಯ ಮೈಮ್‌ಗಳ ಅಗತ್ಯವಿದೆ"
+
+#. TRANSLATORS: title: searching for mime type handlers
+#: ../src/gpk-dbus-task.c:1937
+msgid "Searching for file handlers"
+msgstr "ಕಡತವನ್ನು ನಿಭಾಯಿಸುವುದನ್ನು ಹುಡುಕಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: we could not parse the ISO639 code from the fontconfig tag name
+#: ../src/gpk-dbus-task.c:2019
+msgid "Language tag not parsed"
+msgstr "ಭಾಷೆಯ ಟ್ಯಾಗನ್ನು ಪಾರ್ಸ್ ಮಾಡಲಾಗಿಲ್ಲ"
+
+#. TRANSLATORS: we could not find en_US string for ISO639 code
+#: ../src/gpk-dbus-task.c:2027
+msgid "Language code not matched"
+msgstr "ಭಾಷೆಯ ಕೋಡ್ ತಾಳೆಯಾಗಿಲ್ಲ"
+
+#. TRANSLATORS: title: cannot find in sources
+#: ../src/gpk-dbus-task.c:2087
+msgid "Failed to find font"
+msgid_plural "Failed to find fonts"
+msgstr[0] "ಅಕ್ಷರಶೈಲಿಯನ್ನು ಹುಡುಕಲು ವಿಫಲಗೊಂಡಿದೆ"
+msgstr[1] "ಅಕ್ಷರಶೈಲಿಗಳಯನ್ನು ಹುಡುಕಲು ವಿಫಲಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: message: tell the user we suck
+#: ../src/gpk-dbus-task.c:2095
+msgid "No new fonts can be found for this document"
+msgstr "ಈ ದಸ್ತಾವೇಜಿಗಾಗಿ ಯಾವುದೆ ಹೊಸ ಅಕ್ಷರಶೈಲಿಗಳು ಕಂಡುಬಂದಿಲ್ಲ"
+
+#. TRANSLATORS: we need to download a new font package to display a document
+#: ../src/gpk-dbus-task.c:2280
+msgid "An additional font is required to view this document correctly."
+msgid_plural "Additional fonts are required to view this document correctly."
+msgstr[0] "ಈ ಕಡತವನ್ನು ಸರಿಯಾಗಿ ನೋಡಲು ಒಂದು ಹೆಚ್ಚಿನ ಅಕ್ಷರಶೈಲಿಯ ಅಗತ್ಯವಿದೆ."
+msgstr[1] "ಈ ಕಡತವನ್ನು ಸರಿಯಾಗಿ ನೋಡಲು ಒಂದು ಹೆಚ್ಚಿನ ಅಕ್ಷರಶೈಲಿಗಳ ಅಗತ್ಯವಿದೆ."
+
+#. TRANSLATORS: we need to download a new font package to display a document
+#: ../src/gpk-dbus-task.c:2284
+#| msgid "Do you want to search for a suitable font now?"
+#| msgid_plural "Do you want to search for suitable fonts now?"
+msgid "Do you want to search for a suitable package now?"
+msgid_plural "Do you want to search for suitable packages now?"
+msgstr[0] "ನೀವು ಈಗ ಒಂದು ಸೂಕ್ತ ಪ್ಯಾಕೇಜಿಗಾಗಿ ಹುಡುಕಲು ಬಯಸುತ್ತೀರೆ?"
+msgstr[1] "ನೀವು ಈಗ ಸೂಕ್ತ ಪ್ಯಾಕೇಜುಗಳಿಗಾಗಿ ಹುಡುಕಲು ಬಯಸುತ್ತೀರೆ?"
+
+#. TRANSLATORS: string is a program name, e.g. "Movie Player"
+#: ../src/gpk-dbus-task.c:2294
+#, c-format
+msgid "%s wants to install a font"
+msgid_plural "%s wants to install fonts"
+msgstr[0] "%s ಯು ಅಕ್ಷರಶೈಲಿಯನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತದೆ"
+msgstr[1] "%s ಯು ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತದೆ"
+
+#. TRANSLATORS: a random program which we can't get the name wants to do something
+#: ../src/gpk-dbus-task.c:2297
+msgid "A program wants to install a font"
+msgid_plural "A program wants to install fonts"
+msgstr[0] "ಒಂದು ಪ್ರೊಗ್ರಾಮ್ ಅಕ್ಷರಶೈಲಿಯನ್ನು ಅನುಸ್ಥಾಪಿಸುವಂತೆ ಬಯಸುತ್ತದೆ"
+msgstr[1] "ಒಂದು ಪ್ರೊಗ್ರಾಮ್ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸುವಂತೆ ಬಯಸುತ್ತದೆ"
+
+#. TRANSLATORS: title to show when searching for font files
+#: ../src/gpk-dbus-task.c:2313
+msgid "Searching for font"
+msgid_plural "Searching for fonts"
+msgstr[0] "ಅಕ್ಷರಶೈಲಿಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ"
+msgstr[1] "ಅಕ್ಷರಶೈಲಿಗಳಿಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: we are listing the services in a box
+#: ../src/gpk-dbus-task.c:2353
+msgid "The following service is required:"
+msgid_plural "The following services are required:"
+msgstr[0] "ಈ ಕೆಳಗಿನ ಸೇವೆಯ ಅಗತ್ಯವಿದೆ:"
+msgstr[1] "ಈ ಕೆಳಗಿನ ಸೇವೆಗಳ ಅಗತ್ಯವಿದೆ:"
+
+#: ../src/gpk-dbus-task.c:2373
+msgid "Plasma requires an additional service for this operation"
+msgid_plural "Plasma requires additional services for this operation"
+msgstr[0] "ಈ ಕಾರ್ಯಕ್ಕಾಗಿ ಪ್ಲಾಸ್ಮಾಗೆ ಒಂದು ಹೆಚ್ಚುವರಿ ಸೇವೆಯ ಅಗತ್ಯವಿದೆ"
+msgstr[1] "ಈ ಕಾರ್ಯಕ್ಕಾಗಿ ಪ್ಲಾಸ್ಮಾಗೆ ಹೆಚ್ಚುವರಿ ಸೇವೆಗಳ ಅಗತ್ಯವಿದೆ"
+
+#: ../src/gpk-dbus-task.c:2431
+msgid "Failed to search for Plasma service"
+msgstr "ಪ್ಲಾಸ್ಮಾ ಸೇವೆಯನ್ನು ಹುಡುಕುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: no package sources have the wanted Plasma service
+#: ../src/gpk-dbus-task.c:2433
+#| msgid "Could not find service in any configured software source"
+msgid "Could not find service in any configured package source"
+msgstr "ಸಂರಚಿತಗೊಂಡಿರುವ ಯಾವುದೆ ಪ್ಯಾಕೇಜು ಆಕರಕ್ಕಾಗಿನ ಸೇವೆಯು ಕಂಡು ಬಂದಿಲ್ಲ"
+
+#. TRANSLATORS: search for Plasma services
+#: ../src/gpk-dbus-task.c:2538
+msgid "Searching for services"
+msgstr "ಸೇವೆಗಳಿಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ"
+
+#: ../src/gpk-dbus-task.c:2556
+#, c-format
+msgid "Searching for service: %s"
+msgstr "ಸೇವೆಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ: %s"
+
+#: ../src/gpk-dbus-task.c:2613
+msgid "Failed to remove package"
+msgstr "ಪ್ಯಾಕೇಜನ್ನು ತೆಗೆದು ಹಾಕುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-dbus-task.c:2689
+msgid "Install the following driver"
+msgid_plural "Install the following drivers"
+msgstr[0] "ಈ ಕೆಳಗಿನ ಪ್ಲಗ್‌ಇನ್‌ ಅನ್ನು ಅನುಸ್ಥಾಪಿಸು"
+msgstr[1] "ಈ ಕೆಳಗಿನ ಪ್ಲಗ್‌ಇನ್‌ಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸು"
+
+#. TRANSLATORS: title: removing packages
+#. TRANSLATORS: transaction state, removing packages
+#: ../src/gpk-dbus-task.c:2842 ../src/gpk-enum.c:870
+msgid "Removing packages"
+msgstr "ಪ್ಯಾಕೇಜುಗಳನ್ನು ತೆಗೆದು ಹಾಕಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: failed to find the package for the file
+#: ../src/gpk-dbus-task.c:2896
+#| msgid "Failed to find package"
+msgid "Failed to find package for this file"
+msgstr "ಈ ಕಡತಕ್ಕಾಗಿ ಪ್ಯಾಕೇಜನ್ನು ಹುಡುಕುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: a program wants to remove a file, e.g. /lib/moo.so
+#: ../src/gpk-dbus-task.c:2973
+msgid "The following file will be removed:"
+msgid_plural "The following files will be removed:"
+msgstr[0] "ಈ ಕೆಳಗಿನ ಕಡತದ ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ:"
+msgstr[1] "ಈ ಕೆಳಗಿನ ಕಡತಗಳನ್ನು ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ:"
+
+#. TRANSLATORS: confirm with the user
+#: ../src/gpk-dbus-task.c:2976
+msgid "Do you want to remove this file now?"
+msgid_plural "Do you want to remove these files now?"
+msgstr[0] "ನೀವು ಈ ಕಡತವನ್ನು ಈಗಲೆ ತೆಗೆದುಹಾಕಲು ಬಯಸುತ್ತೀರಾ?"
+msgstr[1] "ನೀವು ಈ ಕಡತಗಳನ್ನು ಈಗಲೆ ತೆಗೆದುಹಾಕಲು ಬಯಸುತ್ತೀರಾ?"
+
+#. TRANSLATORS: string is a program name, e.g. "Movie Player"
+#: ../src/gpk-dbus-task.c:2981
+#, c-format
+msgid "%s wants to remove a file"
+msgid_plural "%s wants to remove files"
+msgstr[0] "%s ವು ಒಂದು ಕಡತವನ್ನು ತೆಗೆದುಹಾಕಲು ಬಯಸಿದೆ"
+msgstr[1] "%s ವು ಒಂದು ಕಡತಗಳನ್ನು ತೆಗೆದುಹಾಕಲು ಬಯಸಿದೆ"
+
+#. TRANSLATORS: a random program which we can't get the name wants to do something
+#: ../src/gpk-dbus-task.c:2984
+msgid "A program wants to remove a file"
+msgid_plural "A program wants to remove files"
+msgstr[0] "ಒಂದು ಕಡತವನ್ನು ತೆಗೆದುಹಾಕಲು ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ ಬಯಸಿದೆ"
+msgstr[1] "ಕಡತಗಳನ್ನು ತೆಗೆದುಹಾಕಲು ಒಂದು ಪ್ರೊಗ್ರಾಮ್‌ ಬಯಸಿದೆ"
+
+#. TRANSLATORS: button: confirm to search for packages
+#: ../src/gpk-dbus-task.c:2988 ../src/gpk-task.c:399
+msgid "Remove"
+msgstr "ತೆಗೆದು ಹಾಕು"
+
+#. TRANSLATORS: This is when we have over 5 items, and we're not interested in detail
+#: ../src/gpk-dialog.c:72
+msgid "many packages"
+msgstr "ಹಲವಾರು ಪ್ಯಾಕೇಜುಗಳು"
+
+#: ../src/gpk-dialog.c:241
+msgid "No files"
+msgstr "ಯಾವುದೆ ಕಡತಗಳಿಲ್ಲ"
+
+#. add a checkbutton for deps screen
+#: ../src/gpk-dialog.c:304
+msgid "Do not show this again"
+msgstr "ಇದನ್ನು ಮತ್ತೊಮ್ಮೆ ತೋರಿಸಬೇಡ"
+
+#. TRANSLATORS: this is compact disk (CD) media
+#: ../src/gpk-enum.c:251
+msgid "CD"
+msgstr "CD"
+
+#. TRANSLATORS: this is digital versatile disk (DVD) media
+#: ../src/gpk-enum.c:255
+msgid "DVD"
+msgstr "DVD"
+
+#. TRANSLATORS: this is either CD or DVD media
+#: ../src/gpk-enum.c:259
+msgid "disc"
+msgstr "ಡಿಸ್ಕ್‌"
+
+#. TRANSLATORS: this is generic media of unknown type that we will install from
+#: ../src/gpk-enum.c:263
+msgid "media"
+msgstr "ಮಾಧ್ಯಮ"
+
+#: ../src/gpk-enum.c:280
+msgid "Failed with unknown error code"
+msgstr "ಅಜ್ಞಾತ ದೋಷ ಸಂಕೇತದೊಂದಿಗೆ ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:283
+msgid "No network connection available"
+msgstr "ಯಾವುದೆ ಜಾಲಬಂಧ ಸಂಪರ್ಕವು ಲಭ್ಯವಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:286
+msgid "No package cache is available."
+msgstr "ಯಾವುದೆ ಪ್ಯಾಕೇಜ್ ಕ್ಯಾಶೆಯು ಲಭ್ಯವಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:289
+msgid "Out of memory"
+msgstr "ಮೆಮೊರಿ ಇಲ್ಲ"
+
+#: ../src/gpk-enum.c:292
+msgid "Failed to create a thread"
+msgstr "ಒಂದು ಎಳೆ(ತ್ರೆಡ್) ಅನ್ನು ರಚಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:295
+msgid "Not supported by this backend"
+msgstr "ಈ ಬ್ಯಾಕೆಂಡಿನಿಂದ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:298
+msgid "An internal system error has occurred"
+msgstr "ಒಂದು ಆಂತರಿಕ ದೋಷವು ಎದುರಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:301
+msgid "A security signature is not present"
+msgstr "ಸುರಕ್ಷತಾ ಸಹಿಯು ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:304
+msgid "The package is not installed"
+msgstr "ಪ್ಯಾಕೇಜ್ ಅನುಸ್ಥಾಪಿತಗೊಂಡಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:307
+msgid "The package was not found"
+msgstr "ಪ್ಯಾಕೇಜ್ ಕಂಡುಬಂದಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:313
+msgid "The package download failed"
+msgstr "ಪ್ಯಾಕೇಜ್ ಇಳಿಕೆ ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:316
+msgid "The group was not found"
+msgstr "ಸಮೂಹ ಪಟ್ಟಿಯು ಕಂಡುಬಂದಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:319
+msgid "The group list was invalid"
+msgstr "ಸಮೂಹ ಪಟ್ಟಿಯು ಅಮಾನ್ಯವಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:322
+msgid "Dependency resolution failed"
+msgstr "ಅವಲಂಬನೆ ಪರಿಹರಿಸುವಲ್ಲಿ ವಿಫಲತೆ"
+
+#: ../src/gpk-enum.c:325
+msgid "Search filter was invalid"
+msgstr "ಹುಡುಕು ಸೋಸುಕವು ಅಮಾನ್ಯವಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:328
+msgid "The package identifier was not well formed"
+msgstr "ಪ್ಯಾಕೇಜ್ ಪತ್ತೆಗಾರವು ಸರಿಯಾಗಿ ನಿರ್ಮಾಣಗೊಂಡಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:331
+msgid "Transaction error"
+msgstr "ವ್ಯವಹಾರ ದೋಷ"
+
+#: ../src/gpk-enum.c:334
+msgid "Repository name was not found"
+msgstr "ರೆಪೊಸಿಟರಿ ಹೆಸರು ಕಂಡುಬಂದಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:337
+msgid "Could not remove a protected system package"
+msgstr "ಸಂರಕ್ಷಿತ ವ್ಯವಸ್ಥೆಯ ಪ್ಯಾಕೇಜನ್ನು ತೆಗೆದು ಹಾಕುವಂತಿಲ್"
+
+#: ../src/gpk-enum.c:340
+msgid "The action was canceled"
+msgstr "ಕಾರ್ಯವನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:343
+msgid "The action was forcibly canceled"
+msgstr "ಕಾರ್ಯವನ್ನು ಒತ್ತಾಯಪೂರ್ವಕವಾಗಿ ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:346
+msgid "Reading the configuration file failed"
+msgstr "ಸಂರಚನಾ ಕಡತವನ್ನು ಓದುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:349
+msgid "The action cannot be canceled"
+msgstr "ಕಾರ್ಯವನ್ನು ರದ್ದು ಪಡಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:352
+msgid "Source packages cannot be installed"
+msgstr "ಆಕರ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:355
+msgid "The license agreement failed"
+msgstr "ಲೈಸನ್ಸ್‍ ಒಡಂಬಡಿಕೆ ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:358
+msgid "Local file conflict between packages"
+msgstr "ಪ್ಯಾಕೇಜುಗಳ ನಡುವ ಸ್ಥಳೀಯ ಕಡತ ಸಂದಿಗ್ಧತೆ ಎದುರಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:361
+msgid "Packages are not compatible"
+msgstr "ಪ್ಯಾಕೇಜುಗಳು ಸಹವರ್ತನೀಯವಾಗಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:364
+#| msgid "Problem connecting to a software source"
+msgid "Problem connecting to a package source"
+msgstr "ಪ್ಯಾಕೇಜು ಆಕರಕ್ಕೆ ಸಂಪರ್ಕ ಕಲ್ಪಿಸುವಲ್ಲಿ ತೊಂದರೆ ಉಂಟಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:367
+msgid "Failed to initialize"
+msgstr "ಆರಂಭಿಸಲು ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:370
+msgid "Failed to finalize"
+msgstr "ಅಂತಿಮಗೊಳಿಸಲು ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:373
+msgid "Cannot get lock"
+msgstr "ಲಾಕ್ ಅನ್ನು ಪಡೆಯಲಾಗಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:376
+msgid "No packages to update"
+msgstr "ಅಪ್ಡೇಟ್‌ ಮಾಡಲು ಯಾವುದೆ ಪ್ಯಾಕೇಜ್‌ ಇಲ್ಲ"
+
+#: ../src/gpk-enum.c:379
+msgid "Cannot write repository configuration"
+msgstr "ರೆಪೊಸಿಟರಿ ಸಂರಚನೆಯನ್ನು ಬರೆಯಲಾಗಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:382
+msgid "Local install failed"
+msgstr "ಸ್ಥಳೀಯ ಅನುಸ್ಥಾಪನೆಯು ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:385
+msgid "Bad security signature"
+msgstr "ಸರಿಯಲ್ಲದ ಸುರಕ್ಷತಾ ಸಹಿ"
+
+#: ../src/gpk-enum.c:388
+msgid "Missing security signature"
+msgstr "ಸುರಕ್ಷತಾ ಸಹಿಯು ಕಾಣೆಯಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:391
+msgid "Repository configuration invalid"
+msgstr "ರೆಪೊಸಿಟರಿ ಸಂರಚನೆಯು ಅಮಾನ್ಯವಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:394
+msgid "Invalid package file"
+msgstr "ಅಮಾನ್ಯವಾದ ಪ್ಯಾಕೇಜ್ ಕಡತ"
+
+#: ../src/gpk-enum.c:397
+msgid "Package install blocked"
+msgstr "ಪ್ಯಾಕೇಜ್ ಅನುಸ್ಥಾಪನೆಯನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:400
+msgid "Package is corrupt"
+msgstr "ಪ್ಯಾಕೇಜ್ ಭ್ರಷ್ಟಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:403
+msgid "All packages are already installed"
+msgstr "ಎಲ್ಲಾ ಕಡತಗಳನ್ನೂ ಈಗಾಗಲೆ ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:406
+msgid "The specified file could not be found"
+msgstr "ಸೂಚಿಸಲಾದ ಕಡತವು ಕಂಡುಬಂದಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:409
+msgid "No more mirrors are available"
+msgstr "ಇನ್ಯಾವುದೆ ಮಿರರುಗಳು ಲಭ್ಯವಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:412
+msgid "No distribution upgrade data is available"
+msgstr "ಯಾವುದೆ ವಿತರಣೆಯ ನವೀಕರಣ ದತ್ತಾಂಶವು ಲಭ್ಯವಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:415
+msgid "Package is incompatible with this system"
+msgstr "ಪ್ಯಾಕೇಜ್ ಈ ಗಣಕದೊಂದಿಗೆ ಸಹವರ್ತನೀಯವಾಗಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:418
+msgid "No space is left on the disk"
+msgstr "ಡಿಸ್ಕಿನಲ್ಲಿ ಯಾವುದೆ ಜಾಗ ಉಳಿದಿಲ್ಲ"
+
+#. TRANSLATORS: this is the window title when a new CD or DVD is required
+#: ../src/gpk-enum.c:421 ../src/gpk-task.c:346
+msgid "A media change is required"
+msgstr "ಒಂದು ಮಾಧ್ಯಮದ ಬದಲಾವಣೆಯ ಅಗತ್ಯವಿದೆ"
+
+#: ../src/gpk-enum.c:424
+msgid "Authorization failed"
+msgstr "ದೃಢೀಕರಣವು ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:427
+msgid "Update not found"
+msgstr "ಅಪ್‌ಡೇಟುಗಳನ್ನು ಕಂಡುಬಂದಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:430
+msgid "Cannot install from untrusted source"
+msgstr "ನಂಬಲಾಗದೆ ಇರುವ ಮೂಲದಿಂದ ಅನುಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:433
+msgid "Cannot update from untrusted source"
+msgstr "ನಂಬಲಾಗದೆ ಇರುವ ಮೂಲದಿಂದ ಅಪ್‌ಡೇಟ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:436
+msgid "Cannot get the file list"
+msgstr "ಕಡತದ ಪಟ್ಟಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:439
+msgid "Cannot get package requires"
+msgstr "ಪ್ಯಾಕೇಜಿನ ಆವಶ್ಯಕತೆಗಳನ್ನು ಪಡೆಯಲಾಗಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:442
+msgid "Cannot disable source"
+msgstr "ಆಕರಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:445
+msgid "The download failed"
+msgstr "ಇಳಿಕೆ ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:448
+msgid "Package failed to configure"
+msgstr "ಪ್ಯಾಕೇಜನ್ನು ಸಂರಚಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:451
+msgid "Package failed to build"
+msgstr "ಪ್ಯಾಕೇಜನ್ನು ನಿರ್ಮಿಸಲು ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:454
+msgid "Package failed to install"
+msgstr "ಕಡತವನ್ನು ಅನುಸ್ಥಾಪಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:457
+msgid "Package failed to be removed"
+msgstr "ಪ್ಯಾಕೇಜನ್ನು ತೆಗೆದುಹಾಕುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:460
+msgid "Update failed due to running process"
+msgstr "ಪ್ರಕ್ರಿಯೆ ಚಾಲನೆಯಲ್ಲಿದ್ದರಿಂದ ಅಪ್‌ಡೇಟ್ ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:463
+msgid "The package database was changed"
+msgstr "ಪ್ಯಾಕೇಜ್ ದತ್ತಸಂಚಯವನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:466
+msgid "Virtual provide type is not supported"
+msgstr "ವರ್ಚುವಲ್ ಒದಗಿಸುವಿಕೆಯ ಬಗೆಗೆ ಬೆಂಬಲವಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:469
+msgid "Install root is invalid"
+msgstr "ಅನುಸ್ಥಾಪನಾ ಮೂಲವು ಅಮಾನ್ಯವಾಗಿದೆ"
+
+#: ../src/gpk-enum.c:472
+msgid "Cannot fetch install sources"
+msgstr "ಅನುಸ್ಥಾಪನಾ ಆಕರಗಳನ್ನು ಪಡೆಯಲಾಗಿಲ್ಲ"
+
+#: ../src/gpk-enum.c:475
+msgid "Rescheduled due to priority"
+msgstr "ಆದ್ಯತೆಯ ಕಾರಣದಿಂದಾಗಿ ಮರಳಿ ನಿಯೋಜಿತಗೊಂಡಿದೆ"
+
+#: ../src/gpk-enum.c:478
+msgid "Unfinished transaction"
+msgstr "ಪೂರ್ಣಗೊಂಡಿರದ ವ್ಯವಹಾರ"
+
+#: ../src/gpk-enum.c:481
+msgid "Lock required"
+msgstr "ಲಾಕ್‌ನ ಅಗತ್ಯವಿದೆ"
+
+#: ../src/gpk-enum.c:498
+msgid "Failed with unknown error code."
+msgstr "ಅಜ್ಞಾತ ದೋಷ ಸಂಕೇತದೊಂದಿಗೆ ವಿಫಲಗೊಂಡಿದೆ."
+
+#: ../src/gpk-enum.c:501
+msgid ""
+"There is no network connection available.\n"
+"Please check your connection settings and try again."
+msgstr ""
+"ಯಾವುದೆ ಜಾಲಬಂಧ ಸಂಪರ್ಕವು ಲಭ್ಯವಿಲ್ಲ.\n"
+"ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಂಪರ್ಕ ಸಿದ್ಧತೆಗಳನ್ನು ಪರೀಕ್ಷಿಸಿ ನಂತರ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ"
+
+#: ../src/gpk-enum.c:505
+msgid ""
+"The package list needs to be rebuilt.\n"
+"This should have been done by the backend automatically."
+msgstr ""
+"ಪ್ಯಾಕೇಜ್ ಪಟ್ಟಿಯನ್ನು ಮರಳಿ ನಿರ್ಮಿಸುವ ಅಗತ್ಯವಿದೆ.\n"
+"ಈ ಕೆಲಸವು ಬ್ಯಾಕೆಂಡಿನಿಂದ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆಗಬೇಕಿತ್ತು."
+
+#: ../src/gpk-enum.c:509
+msgid ""
+"The service that is responsible for handling user requests is out of "
+"memory.\n"
+"Please restart your computer."
+msgstr ""
+"ಬಳಕೆದಾರ ಮನವಿಗಳನ್ನು ನಿಭಾಯಿಸುವ ಜವಾಬ್ದಾರಿಯನ್ನು ಹೊತ್ತಿದ್ದ ಸೇವೆಯಲ್ಲಿ ಸಾಕಷ್ಟು "
+"ಮೆಮೊರಿ "
+"ಇಲ್ಲ.\n"
+"ದಯವಿಟ್ಟು ನಿಮ್ಮ ಗಣಕವನ್ನು ಮರು ಆರಂಭಿಸಿ."
+
+#: ../src/gpk-enum.c:513
+msgid "A thread could not be created to service the user request."
+msgstr "ಪೂರೈಕೆಗಣಕ ಮನವಿಗೆ ಸ್ಪಂದಿಸಲು ಒಂದು ಎಳೆ(ತ್ರೆಡ್) ಅನ್ನು ರಚಿಸುವಂತಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:516
+msgid ""
+"The action is not supported by this backend.\n"
+"Please report a bug in your distribution bug tracker as this should not have "
+"happened."
+msgstr ""
+"ಈ ಕಾರ್ಯಕ್ಕೆ ಬ್ಯಾಕೆಂಡಿನಿಂದ ಬೆಂಬಲವಿಲ್ಲ.\n"
+"ಹೀಗೆ ಆಗಬಾರದಾಗಿತ್ತು, ಆದ್ದರಿಂದ ದಯವಿಟ್ಟು  ನಿಮ್ಮ ವಿತರಣೆಯ ಬಗ್‌ ಟ್ರಾಕರಿನಲ್ಲಿ ಒಂದು "
+"ದೋಷದ "
+"ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿ."
+
+#: ../src/gpk-enum.c:520
+msgid ""
+"A problem that we were not expecting has occurred.\n"
+"Please report this bug in your distribution bug tracker with the error "
+"description."
+msgstr ""
+"ನಾವು ನಿರೀಕ್ಷಿಸದೆ ಇರುವ ಒಂದು ತೊಂದರೆಯು ಕಂಡು ಬಂದಿದೆ.\n"
+"ದಯವಿಟ್ಟು ದೋಷದ ವಿವರಣೆಯೊಂದಿಗೆ ನಿಮ್ಮ ವಿತರಣೆಯ ಬಗ್‌ ಟ್ರಾಕರಿನಲ್ಲಿ ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿ."
+
+#: ../src/gpk-enum.c:524
+#| msgid ""
+#| "A security trust relationship could not be made with software source.\n"
+#| "Please check your security settings."
+msgid ""
+"A security trust relationship could not be made with package source.\n"
+"Please check your security settings."
+msgstr ""
+"ಪ್ಯಾಕೇಜು ಆಕರಗಳೊಂದಿಗೆ ಯಾವುದೆ ಸುರಕ್ಷತಾ ನಂಬಿಕಾರ್ಹ ಸಂಬಂಧಗಳನ್ನು ಮಾಡಿಕೊಳ್ಳಲು "
+"ಸಾಧ್ಯವಾಗಿಲ್ಲ.\n"
+"ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸುರಕ್ಷತಾ ಸಿದ್ಧತೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ."
+
+#: ../src/gpk-enum.c:528
+msgid ""
+"The package that is trying to be removed or updated is not already installed."
+msgstr ""
+"ತೆಗೆದು ಹಾಕಲು ಅಥವ ಅಪ್‌ಡೇಟ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಲಾಗುತ್ತಿರುವ ಪ್ಯಾಕೇಜು ಇನ್ನೂ ಸಹ "
+"ಅನುಸ್ಥಾಪಿತಗೊಂಡಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:531
+#| msgid ""
+#| "The package that is being modified was not found on your system or in any "
+#| "software source."
+msgid ""
+"The package that is being modified was not found on your system or in any "
+"package source."
+msgstr ""
+"ಮಾರ್ಪಡಿಸಲಾಗುತ್ತಿರುವ ಪ್ಯಾಕೇಜ್ ನಿಮ್ಮ ಗಣಕದಲ್ಲಾಗಲಿ ಅಥವ ಯಾವುದೆ ಪ್ಯಾಕೇಜು "
+"ಆಕರದಲ್ಲಾಗಲಿ ಕಂಡು "
+"ಬಂದಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:534
+msgid "The package that is trying to be installed is already installed."
+msgstr ""
+"ಅನುಸ್ಥಾಪಿಸಲು ಪ್ರಯತ್ನಿಸಲಾಗುತ್ತಿರುವ ಪ್ಯಾಕೇಜ್ ಅನ್ನು ಈಗಾಗಲೆ ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ."
+
+#: ../src/gpk-enum.c:537
+msgid ""
+"The package download failed.\n"
+"Please check your network connectivity."
+msgstr ""
+"ಪ್ಯಾಕೇಜ್‌ ಇಳಿಕೆ ವಿಫಲಗೊಂಡಿದೆ.\n"
+"ದಯವಿಟ್ಟು ನಿಮ್ಮ ಜಾಲಬಂಧ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ."
+
+#: ../src/gpk-enum.c:541
+msgid ""
+"The group type was not found.\n"
+"Please check your group list and try again."
+msgstr ""
+"ಸಮೂಹದ ಬಗೆಯು ಕಂಡುಬಂದಿಲ್ಲ.\n"
+"ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಮೂಹದ ಪಟ್ಟಿಯನ್ನು ಪರಿಶೀಲಿಸಿ ನಂತರ ಇನ್ನೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ."
+
+#: ../src/gpk-enum.c:545
+msgid ""
+"The group list could not be loaded.\n"
+"Refreshing your cache may help, although this is normally a software source "
+"error."
+msgstr ""
+"ಸಮೂಹ ಪಟ್ಟಿಯನ್ನು ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ.\n"
+"ಇದು ಸಾಮಾನ್ಯವಾಗಿ ಒಂದು ತಂತ್ರಾಂಶ ಆಕರದ ದೋಷವಾಗಿದ್ದರೂ, ಕ್ಯಾಶೆಯನ್ನು "
+"ಪುನಶ್ಚೇತನಗೊಳಿಸುವುದರಿಂದ ನಿಮಗೆ ಸಹಾಯವಾಗಬಹುದು."
+
+#: ../src/gpk-enum.c:550
+msgid ""
+"A package could not be found that allows the action to complete.\n"
+"More information is available in the detailed report."
+msgstr ""
+"ಕಾರ್ಯವನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಅನುವು ಮಾಡಿಕೊಡುವ ಒಂದು ಪ್ಯಾಕೇಜ್ ಕಂಡು ಬಂದಿಲ್ಲ.\n"
+"ಇದರ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಯು ವಿವರವಾದ ವರದಿಯಲ್ಲಿ ಲಭ್ಯವಿದೆ."
+
+#: ../src/gpk-enum.c:554
+msgid "The search filter was not correctly formed."
+msgstr "ಹುಡುಕು ಸೋಸುಕವು ಸರಿಯಾಗಿ ನಿರ್ಮಾಣಗೊಂಡಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:557
+msgid ""
+"The package identifier was not well formed when sent to the server.\n"
+"This normally indicates an internal error and should be reported."
+msgstr ""
+"ಪೂರೈಕೆಗಣಕಕ್ಕೆ ಕಳುಹಿಸಿದಾಗ ಪ್ಯಾಕೇಜ್ ಪತ್ತೆಗಾರವು ಸರಿಯಾಗಿ ನಿರ್ಮಾಣಗೊಂಡಿರಲಿಲ್ಲ.\n"
+"ಇದು ಸಾಮಾನ್ಯವಾದ ಒಂದು ಆಂತರಿಕ ದೋಷವನ್ನು ಸೂಚಿಸುತ್ತದೆ ಹಾಗು ಇದನ್ನು ವರದಿ "
+"ಮಾಡಬೇಕಾಗುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:561
+msgid ""
+"An unspecified transaction error has occurred.\n"
+"More information is available in the detailed report."
+msgstr ""
+"ಸೂಚಿಸಲಾಗದ ಒಂದು ವ್ಯವಹಾರ ದೋಷವು ಎದುರಾಗಿದೆ.\n"
+"ಇದರ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಯು ವಿವರವಾದ ವರದಿಯಲ್ಲಿ ಲಭ್ಯವಿದೆ."
+
+#: ../src/gpk-enum.c:565
+#| msgid ""
+#| "The remote software source name was not found.\n"
+#| "You may need to enable an item in Software Sources."
+msgid ""
+"The remote package source name was not found.\n"
+"You may need to enable an item in Package Sources."
+msgstr ""
+"ದೂರಸ್ಥ ಪ್ಯಾಕೇಜು ಆಕರದ ಹೆಸರು ಕಂಡುಬಂದಿಲ್ಲ.\n"
+"ಪ್ಯಾಕೇಜು ಆಕರಗಳಲ್ಲಿನ ಅಂಶಗಳನ್ನು ನೀವು ಸಕ್ರಿಯಗೊಳಿಸಬೇಕಿರಬಹುದು."
+
+#: ../src/gpk-enum.c:569
+msgid "Removing a protected system package is not allowed."
+msgstr "ಒಂದು ಸಂರಕ್ಷಿತ ವ್ಯವಸ್ಥೆಯ ಪ್ಯಾಕೇಜನ್ನು ತೆಗೆದು ಹಾಕಲು ಅನುಮತಿ ಇಲ್ಲ."
+
+#: ../src/gpk-enum.c:572
+msgid "The action was canceled successfully and no packages were changed."
+msgstr ""
+"ಕಾರ್ಯವನ್ನು ಯಶಸ್ವಿಯಾಗಿ ರದ್ದು ಮಾಡಲಾಯಿತು ಹಾಗು ಯಾವುದೆ ಪ್ಯಾಕೇಜುಗಳನ್ನು "
+"ಬದಲಾಯಿಸಲಾಗಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:575
+msgid ""
+"The action was canceled successfully and no packages were changed.\n"
+"The backend did not exit cleanly."
+msgstr ""
+"ಕಾರ್ಯವನ್ನು ಯಶಸ್ವಿಯಾಗಿ ರದ್ದು ಮಾಡಲಾಯಿತು ಹಾಗು ಯಾವುದೆ ಪ್ಯಾಕೇಜುಗಳನ್ನು "
+"ಅನುಸ್ಥಾಪಿಸಿಲ್ಲ.\n"
+"ಬ್ಯಾಕೆಂಡ್ ಸರಿಯಾಗಿ ನಿರ್ಗಮಿಸಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:579
+msgid ""
+"The native package configuration file could not be opened.\n"
+"Please make sure configuration is valid."
+msgstr ""
+"ಸ್ಥಳೀಯ ಪ್ಯಾಕೇಜ್ ಸಂರಚನಾ ಕಡತವನ್ನು ತೆರೆಯಲಾಗಿಲ್ಲ.\n"
+"ಸಂರಚನೆಯು ಮಾನ್ಯವಾಗಿದೆಯೆ ಎಂದು ದಯವಿಟ್ಟು ಪರೀಕ್ಷಿಸಿ."
+
+#: ../src/gpk-enum.c:583
+msgid "The action cannot be canceled at this time."
+msgstr "ಈ ಸಮಯದಲ್ಲಿ ಕಾರ್ಯವನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:586
+msgid ""
+"Source packages are not normally installed this way.\n"
+"Check the extension of the file you are trying to install."
+msgstr ""
+"ಆಕರ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ಈ ಬಗೆಯಲ್ಲಿ ಅನುಸ್ಥಾಪಿಸುವುದಿಲ್ಲ.\n"
+"ನೀವು ಅನುಸ್ಥಾಪಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿರುವ ಕಡತದ ವಿಸ್ತರಣೆಯನ್ನು ನೋಡಿ."
+
+#: ../src/gpk-enum.c:590
+msgid ""
+"The license agreement was not agreed to.\n"
+"To use this software you have to accept the license."
+msgstr ""
+"ಲೈಸನ್ಸ್‍ ಒಡಂಬಡಿಕೆಯನ್ನು ಒಪ್ಪಿಕೊಳ್ಳಲಾಗಿಲ್ಲ.\n"
+"ಈ ತಂತ್ರಾಂಶವನ್ನು ಬಳಸಲು ನೀವು ಇದರ ಲೈಸನ್ಸ್‍ ಅನ್ನು ಒಪ್ಪಿಕೊಳ್ಳಲೇ ಬೇಕಾಗುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:594
+#| msgid ""
+#| "Two packages provide the same file.\n"
+#| "This is usually due to mixing packages from different software sources."
+msgid ""
+"Two packages provide the same file.\n"
+"This is usually due to mixing packages from different sources."
+msgstr ""
+"ಎರಡು ಪ್ಯಾಕೇಜುಗಳು ಒಂದೇ ಕಡತವನ್ನು ಒದಗಿಸುತ್ತಿವೆ.\n"
+"ಸಾಮಾನ್ಯವಾಗಿ ಬೇರೆ ಬೇರೆ ಆಕರಗಳಿಂದ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಮಿಶ್ರಣ ಮಾಡುವುದರಿಂದ ಇದು "
+"ಉಂಟಾಗುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:598
+#| msgid ""
+#| "Multiple packages exist that are not compatible with each other.\n"
+#| "This is usually due to mixing packages from different software sources."
+msgid ""
+"Multiple packages exist that are not compatible with each other.\n"
+"This is usually due to mixing packages from different sources."
+msgstr ""
+"ಪರಸ್ಪರ ಹೊಂದಿಕೊಳ್ಳದ ಅನೇಕ ಪ್ಯಾಕೇಜುಗಳು ಕಂಡುಬಂದಿವೆ.\n"
+"ಸಾಮಾನ್ಯವಾಗಿ ಬೇರೆ ಬೇರೆ ಆಕರಗಳಿಂದ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಮಿಶ್ರಣ ಮಾಡುವುದರಿಂದ ಇದು "
+"ಉಂಟಾಗುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:602
+#| msgid ""
+#| "There was a (possibly temporary) problem connecting to a software "
+#| "source.\n"
+#| "Please check the detailed error for further details."
+msgid ""
+"There was a (possibly temporary) problem connecting to a package source.\n"
+"Please check the detailed error for further details."
+msgstr ""
+"ಒಂದು ಪ್ಯಾಕೇಜು ಆಕರಕ್ಕೆ ಸಂಪರ್ಕಕಲ್ಪಿಸುವಾಗ ಒಂದು (ಬಹುಷಃ ತಾತ್ಕಾಲಿಕ) ತೊಂದರೆ "
+"ಎದುರಾಗಿದೆ.\n"
+"ಇನ್ನಷ್ಟು ಮಾಹಿತಿಗಳಿಗಾಗಿ ದೋಷದ ವಿವರವನ್ನು ನೋಡಿ."
+
+#: ../src/gpk-enum.c:606
+msgid ""
+"Failed to initialize packaging backend.\n"
+"This may occur if other packaging tools are being used simultaneously."
+msgstr ""
+"ಪ್ಯಾಕೇಜಿಂಗ್ ಬ್ಯಾಕೆಂಡನ್ನು ಆರಂಭಿಸಲು ವಿಫಲಗೊಂಡಿದೆ.\n"
+"ಒಂದೆ ಸಮಯದಲ್ಲಿ ಬೇರೆ ಯಾವುದಾದರೂ ಪ್ಯಾಕೇಜಿಂಗ್ ಉಪಕರಣಗಳನ್ನು ಬಳಸುತ್ತಿದ್ದರೆ ಈ ಆಗುವ "
+"ಸಂಭವವಿದೆ."
+
+#: ../src/gpk-enum.c:610
+msgid ""
+"Failed to close down the backend instance.\n"
+"This error can normally be ignored."
+msgstr ""
+"ಬ್ಯಾಕೆಂಡ್ ಸನ್ನಿವೇಶವನ್ನು ಮುಚ್ಚಲು ವಿಫಲಗೊಂಡಿದೆ.\n"
+"ಸಾಮಾನ್ಯವಾಗಿ ದೋಷವನ್ನು ಆಲಕ್ಷಿಸಲಾಗುವುದು."
+
+#: ../src/gpk-enum.c:614
+msgid ""
+"Cannot get the exclusive lock on the packaging backend.\n"
+"Please close any other legacy packaging tools that may be open."
+msgstr ""
+"ಪ್ಯಾಕೇಜಿಂಗ್ ಬ್ಯಾಕ್‌ಎಂಡ್‌ಗೆ ಒಂದು ಪ್ರತ್ಯೇಕವಾದ ಲಾಕ್ ದೊರೆಯಲಿಲ್ಲ.\n"
+"ದಯವಿಟ್ಟು ತೆರೆಯಲ್ಪಟ್ಟಿರುವ ಬೇರಾವುದೆ ಪಾರಂಪರಿಕ ಪ್ಯಾಕೇಜಿಂಗ್ ಉಪಕರಣಗಳಿದ್ದರೆ ಅವನ್ನು "
+"ಮುಚ್ಚಿ."
+
+#: ../src/gpk-enum.c:618
+msgid "None of the selected packages could be updated."
+msgstr "ಆಯ್ಕೆ ಮಾಡಲಾದ ಯಾವುದೆ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:621
+msgid "The repository configuration could not be modified."
+msgstr "ರೆಪೊಸಿಟರಿ ಸಂರಚನೆಯನ್ನು ಮಾರ್ಪಡಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:624
+msgid ""
+"Installing the local file failed.\n"
+"More information is available in the detailed report."
+msgstr ""
+"ಸ್ಥಳೀಯ ಕಡತವನ್ನು ಅನುಸ್ಥಾಪಿಸುವಾಗ ವಿಫಲಗೊಂಡಿದೆ.\n"
+"ಇದರ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಯು ವಿವರವಾದ ವರದಿಯಲ್ಲಿ ಲಭ್ಯವಿದೆ."
+
+#: ../src/gpk-enum.c:628
+msgid "The package security signature could not be verified."
+msgstr "ಪ್ಯಾಕೇಜ್‌ನ ಸುರಕ್ಷತಾ ಸಹಿಯನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:631
+msgid ""
+"The package security signature is missing and this package is untrusted.\n"
+"This package was not signed when created."
+msgstr ""
+"ಪ್ಯಾಕೇಜಿನ ಸುರಕ್ಷತಾ ಸಹಿಯು ಕಾಣೆಯಾಗಿದೆ ಹಾಗು ಪ್ಯಾಕೇಜನ್ನು ನಂಬಲು ಸಾಧ್ಯವಿಲ್ಲ.\n"
+"ಈ ಪ್ಯಾಕೇಜ್ ಅನ್ನು ನಿರ್ಮಿಸಿದ ಸಂದರ್ಭದಲ್ಲಿ ಅದನ್ನು ಸಹಿ ಮಾಡಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:635
+msgid "Repository configuration was invalid and could not be read."
+msgstr "ರೆಪೊಸಿಟರಿ ಸಂರಚನೆಯು ಅಮಾನ್ಯವಾಗಿದೆ ಹಾಗು ಅದನ್ನು ಓದಲು ಸಾಧ್ಯವಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:638
+msgid ""
+"The package you are attempting to install is not valid.\n"
+"The package file could be corrupt, or not a proper package."
+msgstr ""
+"ನೀವು ಅನುಸ್ಥಾಪಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿರುವ ಪ್ಯಾಕೇಜ್ ಮಾನ್ಯವಾದುದಲ್ಲ.\n"
+"ಪ್ಯಾಕೇಜ್ ಕಡತವು ಭ್ರಷ್ಟಗೊಂಡಿರಬಹುದು, ಇಲ್ಲವೆ ಅದು ಒಂದು ಸರಿಯಾದ ಪ್ಯಾಕೇಜ್ ಆಗಿರದೆ "
+"ಇರಬಹುದು."
+
+#: ../src/gpk-enum.c:642
+msgid ""
+"Installation of this package prevented by your packaging system's "
+"configuration."
+msgstr ""
+"ನಿಮ್ಮ ಪ್ಯಾಕೇಜಿಂಗ್ ವ್ಯವಸ್ಥೆಯ ಸಂರಚನೆಯು ಈ ಪ್ಯಾಕೇಜ್ ಅನ್ನು ಅನುಸ್ಥಾಪಿಸದಂತೆ ತಡೆದಿದೆ."
+
+#: ../src/gpk-enum.c:645
+msgid ""
+"The package that was downloaded is corrupt and needs to be downloaded again."
+msgstr ""
+"ಇಳಿಸಿಕೊಳ್ಳಲಾದ ಪ್ಯಾಕೇಜ್ ಹಾಳಾಗಿದೆ ಹಾಗು ಅದನ್ನು ಪುನಃ ಇಳಿಸಿಕೊಳ್ಳಬೇಕಾಗುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:648
+msgid ""
+"All of the packages selected for install are already installed on the system."
+msgstr ""
+"ಅನುಸ್ಥಾಪಿಸಲು ಆಯ್ಕೆ ಮಾಡಲಾದ ಎಲ್ಲಾ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಈಗಾಗಲೆ ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ."
+
+#: ../src/gpk-enum.c:651
+msgid ""
+"The specified file could not be found on the system.\n"
+"Check the file still exists and has not been deleted."
+msgstr ""
+"ಸೂಚಿಸಲಾದ ಕಡತವು ಗಣಕದಲ್ಲಿ ಕಂಡುಬಂದಿಲ್ಲ.\n"
+"ಕಡತವು ಇನ್ನೂ ಸಹ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆಯೆ ಅಥವ ಅಳಿಸಲ್ಪಟ್ಟಿದೆಯೆ ಎಂದು ಪರಿಶೀಲಿಸಿ."
+
+#: ../src/gpk-enum.c:655
+#| msgid ""
+#| "Required data could not be found on any of the configured software "
+#| "sources.\n"
+#| "There were no more download mirrors that could be tried."
+msgid ""
+"Required data could not be found on any of the configured package sources.\n"
+"There were no more download mirrors that could be tried."
+msgstr ""
+"ಸಂರಚಿಸಲಾದ ಯಾವುದೆ ಪ್ಯಾಕೇಜ್‌ ಆಕರಗಳಲ್ಲಿ ಅಗತ್ಯವಿರುವ ದತ್ತಾಂಶವು ಕಂಡುಬಂದಿಲ್ಲ.\n"
+"ಇನ್ನು ಪ್ರಯತ್ನಿಸಬಹುದಾದ ಯಾವುದೆ ಇಳಿಕೆಯ ಮಿರರ್ ಇಲ್ಲ."
+
+#: ../src/gpk-enum.c:659
+#| msgid ""
+#| "Required upgrade data could not be found in any of the configured "
+#| "software sources.\n"
+#| "The list of distribution upgrades will be unavailable."
+msgid ""
+"Required upgrade data could not be found in any of the configured package "
+"sources.\n"
+"The list of distribution upgrades will be unavailable."
+msgstr ""
+"ಸಂರಚಿಸಲಾದ ಯಾವುದೆ ಪ್ಯಾಕೇಜು ಆಕರಗಳಲ್ಲಿ ಅಗತ್ಯವಿರುವ ನವೀಕರಣ ದತ್ತಾಂಶವು ಕಂಡುಬಂದಿಲ್ಲ.\n"
+"ವಿತರಣೆಯ ನವೀಕರಣಗಳ ಪಟ್ಟಿಯು ಲಭ್ಯವಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:663
+msgid ""
+"The package that is trying to be installed is incompatible with this system."
+msgstr ""
+"ಅನುಸ್ಥಾಪಿಸಲು ಪ್ರಯತ್ನಿಸಲಾಗುತ್ತಿರುವ ಪ್ಯಾಕೇಜ್ ನಿಮ್ಮ ಗಣಕದೊಂದಿಗೆ "
+"ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:666
+msgid ""
+"There is insufficient space on the device.\n"
+"Free some space on the system disk to perform this operation."
+msgstr ""
+"ಗಣಕದಲ್ಲಿ ಸಾಕಷ್ಟು ಜಾಗವಿಲ್ಲ.\n"
+"ಈ ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಒಂದಿಷ್ಟು ಜಾಗವನ್ನು ತೆರವುಗೊಳಿಸಿ."
+
+#: ../src/gpk-enum.c:670
+msgid "Additional media is required to complete the transaction."
+msgstr "ವ್ಯವಹಾರವನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಮಾಧ್ಯಮದ ಅಗತ್ಯವಿದೆ."
+
+#: ../src/gpk-enum.c:673
+msgid ""
+"You have failed to provide correct authentication.\n"
+"Please check any passwords or account settings."
+msgstr ""
+"ನೀವು ಸರಿಯಾದ ದೃಢೀಕರಣವನ್ನು ನೀಡುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದ್ದೀರಿ. \n"
+"ದಯವಿಟ್ಟು ಯಾವುದಾದರೂ ಗುಪ್ತಪದಗಳು ಅಥವ ಖಾತೆ ಸಿದ್ಧತೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ."
+
+#: ../src/gpk-enum.c:677
+msgid ""
+"The specified update could not be found.\n"
+"It could have already been installed or no longer available on the remote "
+"server."
+msgstr ""
+"ಸೂಚಿಸಲಾದ ಅಪ್‌ಡೇಟ್ ಕಂಡುಬಂದಿಲ್ಲ.\n"
+"ಇದು ಬಹುಷಃ ಈಗಾಗಲೆ ಅನುಸ್ಥಾಪಿಸಲಾಗಿರಬಹುದು ಅಥವ ದೂರಸ್ಥ ಪೂರೈಕೆಗಣಕದಲ್ಲಿ ಲಭ್ಯವಿರದೆ "
+"ಇರಬಹುದು."
+
+#: ../src/gpk-enum.c:681
+msgid "The package could not be installed from untrusted source."
+msgstr "ನಂಬಲಾಗದ ಆಕರದಿಂದ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:684
+msgid "The package could not be updated from untrusted source."
+msgstr "ನಂಬಲಾಗದ ಆಕರದಿಂದ ಪ್ಯಾಕೇಜನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:687
+msgid "The file list is not available for this package."
+msgstr "ಈ ಪ್ಯಾಕೇಜಿಗೆ ಯಾವುದೆ ಕಡತಪಟ್ಟಿಯು ಕಂಡುಬಂದಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:690
+msgid "The information about what requires this package could not be obtained."
+msgstr "ಈ ಪ್ಯಾಕೇಜಿಗೆ ಯಾವುದರ ಅಗತ್ಯವಿದೆ ಎಂಬ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:693
+#| msgid "The specified software source could not be disabled."
+msgid "The specified package source could not be disabled."
+msgstr "ಸೂಚಿಸಲಾದ ಪ್ಯಾಕೇಜಿನ ಆಕರವನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:696
+msgid ""
+"The download could not be done automatically and should be done manually.\n"
+"More information is available in the detailed report."
+msgstr ""
+"ಇಳಿಸಿಕೊಳ್ಳುವಿಕೆಯನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನಿರ್ವಹಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ ಹಾಗು ಅದನ್ನು "
+"ಕೈಯಾರೆ "
+"ನಿರ್ವಹಿಸಬೇಕಾಗುತ್ತದೆ.\n"
+"ಇದರ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಯು ವಿವರವಾದ ವರದಿಯಲ್ಲಿ ಲಭ್ಯವಿದೆ."
+
+#: ../src/gpk-enum.c:700
+msgid ""
+"One of the selected packages failed to configure correctly.\n"
+"More information is available in the detailed report."
+msgstr ""
+"ಆಯ್ಕೆ ಮಾಡಲಾದ ಪ್ಯಾಕೇಜುಗಳಲ್ಲಿ ಒಂದನ್ನು ಸರಿಯಾಗಿ ಸಂರಚಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ.\n"
+"ಇದರ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಯು ವಿವರವಾದ ವರದಿಯಲ್ಲಿ ಲಭ್ಯವಿದೆ."
+
+#: ../src/gpk-enum.c:704
+msgid ""
+"One of the selected packages failed to build correctly.\n"
+"More information is available in the detailed report."
+msgstr ""
+"ಆಯ್ಕೆ ಮಾಡಲಾದ ಪ್ಯಾಕೇಜುಗಳಲ್ಲಿ ಒಂದನ್ನು ಸರಿಯಾಗಿ ನಿರ್ಮಿಸುವಲ್ಲಿ ಸಾಧ್ಯವಾಗಿಲ್ಲ.\n"
+"ಇದರ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಯು ವಿವರವಾದ ವರದಿಯಲ್ಲಿ ಲಭ್ಯವಿದೆ."
+
+#: ../src/gpk-enum.c:708
+msgid ""
+"One of the selected packages failed to install correctly.\n"
+"More information is available in the detailed report."
+msgstr ""
+"ಆಯ್ಕೆ ಮಾಡಲಾದ ಪ್ಯಾಕೇಜುಗಳಲ್ಲಿ ಒಂದನ್ನು ಸರಿಯಾಗಿ ಅನುಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ.\n"
+"ಇದರ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಯು ವಿವರವಾದ ವರದಿಯಲ್ಲಿ ಲಭ್ಯವಿದೆ."
+
+#: ../src/gpk-enum.c:712
+msgid ""
+"One of the selected packages failed to be removed correctly.\n"
+"More information is available in the detailed report."
+msgstr ""
+"ಆಯ್ಕೆ ಮಾಡಲಾದ ಪ್ಯಾಕೇಜುಗಳಲ್ಲಿ ಒಂದನ್ನು ಸರಿಯಾಗಿ ತೆಗೆದು ಹಾಕಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ.\n"
+"ಇದರ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಯು ವಿವರವಾದ ವರದಿಯಲ್ಲಿ ಲಭ್ಯವಿದೆ."
+
+#: ../src/gpk-enum.c:716
+msgid ""
+"A program is running that has to be closed before the update can proceed.\n"
+"More information is available in the detailed report."
+msgstr ""
+"ಅಪ್‌ಡೇಟ್ ಅನ್ನು ಮುಂದುವರೆಸುವ ಮೊದಲು ಚಾಲನೆಯಲ್ಲಿರುವ ಒಂದು ಪ್ರೊಗ್ರಾಮ್ ಅನ್ನು "
+"ಮುಚ್ಚಬೇಕಾಗುತ್ತದೆ.\n"
+"ಇದರ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಯು ವಿವರವಾದ ವರದಿಯಲ್ಲಿ ಲಭ್ಯವಿದೆ."
+
+#: ../src/gpk-enum.c:720
+msgid "The package database was changed while the request was running."
+msgstr "ಮನವಿಯು ಚಾಲನೆಯಲ್ಲಿರುವಾಗಲೆ ಪ್ಯಾಕೇಜ್  ದತ್ತಸಂಚಯವನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ."
+
+#: ../src/gpk-enum.c:723
+msgid "The virtual provide type is not supported by this system."
+msgstr "ವರ್ಚುವಲ್ ಒದಗಿಸುವವರ ಬಗೆಯನ್ನು ಈ ವ್ಯವಸ್ಥೆಯಿಂದ ಬೆಂಬಲಿಸಲಾಗುವುದಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:726
+msgid "The install root is invalid. Please contact your administrator."
+msgstr ""
+"ಅನುಸ್ಥಾಪನಾ ಮೂಲವು ಅಮಾನ್ಯವಾಗಿದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ವ್ಯವಸ್ಥಾಪಕರನ್ನು ಸಂಪರ್ಕಿಸಿ."
+
+#: ../src/gpk-enum.c:729
+#| msgid "The list of software sources could not be downloaded."
+msgid "The list of package sources could not be downloaded."
+msgstr "ಪ್ಯಾಕೇಜ್‌ ಆಕರಗಳ ಪಟ್ಟಿಯನ್ನು ಇಳಿಸಿಕೊಳ್ಳಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:732
+msgid "A previous package management transaction was interrupted."
+msgstr "ಹಿಂದಿನ ಒಂದು ಪ್ಯಾಕೇಜು ವ್ಯವಸ್ಥಾಪನಾ ವ್ಯವಹಾರಕ್ಕೆ ತಡೆಯುಂಟಾಗಿದೆ."
+
+#: ../src/gpk-enum.c:735
+msgid ""
+"The transaction has been canceled and will be retried when the system is "
+"idle."
+msgstr ""
+"ವ್ಯವಹಾರವನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ ಮತ್ತು ವ್ಯವಸ್ಥೆಯು ಜಡವಾಗಿದ್ದಾಗ ಅದು "
+"ನಿವೃತ್ತಿಗೊಳ್ಳುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:738
+msgid "A package manager lock is required."
+msgstr "ಒಂದು ಪ್ಯಾಕೇಜು ವ್ಯವಸ್ಥಾಪಕ ಲಾಕ್‌ನ ಅಗತ್ಯವಿದೆ."
+
+#: ../src/gpk-enum.c:755
+msgid "No restart is necessary."
+msgstr "ಮರಳಿ ಆರಂಭಿಸುವ ಅಗತ್ಯವಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:758
+msgid "You will be required to restart this application."
+msgstr "ನೀವು ಅನ್ವಯವನ್ನು ಮರಳಿ ಆರಂಭಿಸಬೇಕಾಗುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:761
+msgid "You will be required to log out and back in."
+msgstr "ನೀವು ಹೊರತೆರಳಿ ನಂತರ ಮರಳಿ ಪ್ರವೇಶಿಸಬೇಕಾಗುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:764
+msgid "A restart will be required."
+msgstr "ಮರಳಿ ಆರಂಭಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:767
+msgid "You will be required to log out and back in due to a security update."
+msgstr ""
+"ಒಂದು ಸುರಕ್ಷತಾ ಅಪ್‌ಡೇಟ್‌ನ ಕಾರಣದಿಂದಾಗಿ ನೀವು ಹೊರತೆರಳಿ ನಂತರ ಮರಳಿ "
+"ಪ್ರವೇಶಿಸಬೇಕಾಗುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:770
+msgid "A restart will be required due to a security update."
+msgstr "ಸುರಕ್ಷತಾ ಅಪ್‌ಡೇಟ್‌ನ ಕಾರಣದಿಂದಾಗಿ ಮರಳಿ ಆರಂಭಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:787
+msgid "No restart is required."
+msgstr "ಮರಳಿ ಆರಂಭಿಸುವ ಅಗತ್ಯವಿರುವುದಿಲ್ಲ."
+
+#: ../src/gpk-enum.c:790
+msgid "A restart is required."
+msgstr "ಮರಳಿ ಆರಂಭಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:793
+msgid "You need to log out and log back in."
+msgstr "ನೀವು ಹೊರತೆರಳಿ ನಂತರ ಮರಳಿ ಪ್ರವೇಶಿಸಬೇಕಾಗುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:796
+msgid "You need to restart the application."
+msgstr "ನೀವು ಅನ್ವಯವನ್ನು ಮರಳಿ ಆರಂಭಿಸಬೇಕಾಗುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:799
+msgid "You need to log out and log back in to remain secure."
+msgstr "ಸುರಕ್ಷಿತವಾಗಿರಲು ನೀವು ಹೊರತೆರಳಿ ನಂತರ ಮರಳಿ ಪ್ರವೇಶಿಸಬೇಕಾಗುತ್ತದೆ."
+
+#: ../src/gpk-enum.c:802
+msgid "A restart is required to remain secure."
+msgstr "ಸುರಕ್ಷಿತವಾಗಿರಲು ಮರಳಿ ಆರಂಭಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ."
+
+#. TRANSLATORS: A distribution stability level
+#: ../src/gpk-enum.c:820
+msgid "Stable"
+msgstr "ಸ್ಥಿರ"
+
+#. TRANSLATORS: A distribution stability level
+#: ../src/gpk-enum.c:824
+msgid "Unstable"
+msgstr "ಅಸ್ಥಿರ"
+
+#. TRANSLATORS: A distribution stability level
+#: ../src/gpk-enum.c:828
+msgid "Testing"
+msgstr "ಪರಿಶೀಲನೆ"
+
+#. TRANSLATORS: This is when the transaction status is not known
+#: ../src/gpk-enum.c:846
+msgid "Unknown state"
+msgstr "ಅಜ್ಞಾತ ಸ್ಥಿತಿ"
+
+#. TRANSLATORS: transaction state, the daemon is in the process of starting
+#: ../src/gpk-enum.c:850
+msgid "Starting"
+msgstr "ಆರಂಭಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, the transaction is waiting for another to complete
+#: ../src/gpk-enum.c:854
+msgid "Waiting in queue"
+msgstr "ಸರತಿಯಲ್ಲಿ ಕಾಯಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, just started
+#: ../src/gpk-enum.c:858
+msgid "Running"
+msgstr "ಚಾಲನೆಯಲ್ಲಿದೆ"
+
+#. TRANSLATORS: transaction state, is querying data
+#: ../src/gpk-enum.c:862
+msgid "Querying"
+msgstr "ಮನವಿ ಮಾಡಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, getting data from a server
+#: ../src/gpk-enum.c:866
+msgid "Getting information"
+msgstr "ಮಾಹಿತಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, downloading package files
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:874 ../src/gpk-enum.c:1312
+msgid "Downloading packages"
+msgstr "ಪ್ಯಾಕೇಜುಗಳನ್ನು ಇಳಿಸಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, refreshing internal lists
+#: ../src/gpk-enum.c:882
+msgid "Refreshing software list"
+msgstr "ತಂತ್ರಾಂಶದ ಪಟ್ಟಿಯನ್ನು ಪುನಶ್ಚೇತನಗೊಳಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, installing updates
+#: ../src/gpk-enum.c:886
+msgid "Installing updates"
+msgstr "ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, removing old packages, and cleaning config files
+#: ../src/gpk-enum.c:890
+msgid "Cleaning up packages"
+msgstr "ಪ್ಯಾಕೇಜುಗಳನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, obsoleting old packages
+#: ../src/gpk-enum.c:894
+msgid "Obsoleting packages"
+msgstr "ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅಪ್ರಚಲಿತಗೊಳಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, checking the transaction before we do it
+#: ../src/gpk-enum.c:898
+msgid "Resolving dependencies"
+msgstr "ಅವಲಂಬನೆಗಳನ್ನು ಪರಿಹರಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, checking if we have all the security keys for the operation
+#: ../src/gpk-enum.c:902
+msgid "Checking signatures"
+msgstr "ಸಹಿಯನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, when we're doing a test transaction
+#: ../src/gpk-enum.c:906
+msgid "Testing changes"
+msgstr "ಬದಲಾವಣೆಗಳನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, when we're writing to the system package database
+#: ../src/gpk-enum.c:910
+msgid "Committing changes"
+msgstr "ಬದಲಾವಣೆಗಳನ್ನು ಸಲ್ಲಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, requesting data from a server
+#: ../src/gpk-enum.c:914
+msgid "Requesting data"
+msgstr "ದತ್ತಾಂಶಕ್ಕಾಗಿ ಮನವಿ ಸಲ್ಲಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, all done!
+#: ../src/gpk-enum.c:918
+msgid "Finished"
+msgstr "ಮುಗಿಸಲಾಗಿದೆ"
+
+#. TRANSLATORS: transaction state, in the process of canceling
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:922 ../src/gpk-enum.c:1267
+msgid "Canceling"
+msgstr "ರದ್ದುಗೊಳಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, downloading metadata
+#: ../src/gpk-enum.c:926
+msgid "Downloading repository information"
+msgstr "ರೆಪೊಸಿಟರಿ ಮಾಹಿತಿಯನ್ನು ಇಳಿಸಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, downloading metadata
+#: ../src/gpk-enum.c:930
+msgid "Downloading list of packages"
+msgstr "ಪ್ಯಾಕೇಜುಗಳ ಪಟ್ಟಿಯನ್ನು ಇಳಿಸಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, downloading metadata
+#: ../src/gpk-enum.c:934
+msgid "Downloading file lists"
+msgstr "ಕಡತದ ಪಟ್ಟಿಗಳನ್ನು ಇಳಿಸಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, downloading metadata
+#: ../src/gpk-enum.c:938
+msgid "Downloading lists of changes"
+msgstr "ಬದಲಾವಣೆಗಳ ಪಟ್ಟಿಯನ್ನು ಇಳಿಸಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, downloading metadata
+#: ../src/gpk-enum.c:942
+msgid "Downloading groups"
+msgstr "ಸಮೂಹಗಳನ್ನು ಇಳಿಸಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, downloading metadata
+#: ../src/gpk-enum.c:946
+msgid "Downloading update information"
+msgstr "ಅಪ್‌ಡೇಟ್ ಮಾಹಿತಿಯನ್ನು ಇಳಿಸಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, repackaging delta files
+#: ../src/gpk-enum.c:950
+msgid "Repackaging files"
+msgstr "ಕಡತಗಳನ್ನು ಮರಳಿ ಜೋಡಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, loading databases
+#: ../src/gpk-enum.c:954
+msgid "Loading cache"
+msgstr "ಕ್ಯಾಶೆಯನ್ನು ಲೋಡ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, scanning for running processes
+#: ../src/gpk-enum.c:958
+msgid "Scanning installed applications"
+msgstr "ಅನುಸ್ಥಾಪಿತಗೊಂಡಿರುವ ಪ್ಯಾಕೇಜುಗಳಿಗಾಗಿ ಶೋಧಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: transaction state, generating a list of packages installed on the system
+#: ../src/gpk-enum.c:962
+msgid "Generating package lists"
+msgstr "ಪ್ಯಾಕೇಜುಗಳ ಪಟ್ಟಿಯನ್ನು ಉತ್ಪಾದಿಸಲಾಗುತ್ತದೆ"
+
+#. TRANSLATORS: transaction state, when we're waiting for the native tools to exit
+#: ../src/gpk-enum.c:966
+msgid "Waiting for package manager lock"
+msgstr "ಪ್ಯಾಕೇಜ್ ವ್ಯವಸ್ಥಾಪಕನ ಲಾಕ್‌ಗಾಗಿ ಕಾಯಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: waiting for user to type in a password
+#: ../src/gpk-enum.c:970
+msgid "Waiting for authentication"
+msgstr "ದೃಢೀಕರಣಕ್ಕಾಗಿ ಕಾಯಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: we are updating the list of processes
+#: ../src/gpk-enum.c:974
+msgid "Updating the list of running applications"
+msgstr "ಚಾಲನೆಗೊಳ್ಳುತ್ತಿರುವ ಅನ್ವಯಗಳ ಪಟ್ಟಿಯನ್ನು ಅಪ್‌ಡೇಟ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: we are checking executable files in use
+#: ../src/gpk-enum.c:978
+msgid "Checking for applications currently in use"
+msgstr "ಪ್ರಸಕ್ತ ಬಳಸಲಾಗುತ್ತಿರುವ ಅನ್ವಯಗಳಿಗಾಗಿ ಹುಡುಕುಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: we are checking for libraries in use
+#: ../src/gpk-enum.c:982
+msgid "Checking for libraries currently in use"
+msgstr "ಪ್ರಸಕ್ತ ಬಳಸಲಾಗುತ್ತಿರುವ ಲೈಬ್ರರಿಗಳಿಗಾಗಿ ಹುಡುಕುಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: we are copying package files to prepare to install
+#: ../src/gpk-enum.c:986
+msgid "Copying files"
+msgstr "ಕಡತವನ್ನು ಪ್ರತಿ ಮಾಡಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: type of update
+#: ../src/gpk-enum.c:1004
+#, c-format
+msgid "%i trivial update"
+msgid_plural "%i trivial updates"
+msgstr[0] "%i ಸಾಮಾನ್ಯ ಅಪ್‌ಡೇಟ್‌"
+msgstr[1] "%i ಸಾಮಾನ್ಯ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: type of update in the case that we don't have any data
+#: ../src/gpk-enum.c:1008
+#, c-format
+msgid "%i update"
+msgid_plural "%i updates"
+msgstr[0] "%i ಅಪ್‌ಡೇಟ್‌"
+msgstr[1] "%i ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: type of update
+#: ../src/gpk-enum.c:1012
+#, c-format
+msgid "%i important update"
+msgid_plural "%i important updates"
+msgstr[0] "%i ಪ್ರಮುಖ ಅಪ್‌ಡೇಟ್‌"
+msgstr[1] "%i ಪ್ರಮುಖ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: type of update
+#: ../src/gpk-enum.c:1016
+#, c-format
+msgid "%i security update"
+msgid_plural "%i security updates"
+msgstr[0] "%i ಸುರಕ್ಷತಾ ಅಪ್‌ಡೇಟ್‌"
+msgstr[1] "%i ಸುರಕ್ಷತಾ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: type of update
+#: ../src/gpk-enum.c:1020
+#, c-format
+msgid "%i bug fix update"
+msgid_plural "%i bug fix updates"
+msgstr[0] "%i ದೋಷ ನಿವಾರಣಾ ಅಪ್‌ಡೇಟ್"
+msgstr[1] "%i ದೋಷ ನಿವಾರಣಾ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: type of update
+#: ../src/gpk-enum.c:1024
+#, c-format
+msgid "%i enhancement update"
+msgid_plural "%i enhancement updates"
+msgstr[0] "%i ವರ್ಧನೆಯ ಅಪ್‌ಡೇಟ್"
+msgstr[1] "%i ವರ್ಧನೆಯ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: number of updates that cannot be installed due to deps
+#: ../src/gpk-enum.c:1028
+#, c-format
+msgid "%i blocked update"
+msgid_plural "%i blocked updates"
+msgstr[0] "%i ನಿರ್ಬಂಧಿಸಲಾದ ಅಪ್‌ಡೇಟ್"
+msgstr[1] "%i ನಿರ್ಬಂಧಿಸಲಾದ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: The type of update
+#: ../src/gpk-enum.c:1046
+msgid "Trivial update"
+msgstr "ಸಾಮಾನ್ಯ ಅಪ್‌ಡೇಟ್‌"
+
+#. TRANSLATORS: The type of update
+#: ../src/gpk-enum.c:1050
+msgid "Normal update"
+msgstr "ಸಾಮಾನ್ಯ ಅಪ್‌ಡೇಟ್‌"
+
+#. TRANSLATORS: The type of update
+#: ../src/gpk-enum.c:1054
+msgid "Important update"
+msgstr "ಪ್ರಮುಖ ಅಪ್‌ಡೇಟ್‌"
+
+#. TRANSLATORS: The type of update
+#: ../src/gpk-enum.c:1058
+msgid "Security update"
+msgstr "ಸುರಕ್ಷತಾ ಅಪ್‌ಡೇಟ್‌"
+
+#. TRANSLATORS: The type of update
+#: ../src/gpk-enum.c:1062
+msgid "Bug fix update"
+msgstr "ದೋಷ ನಿವಾರಣಾ ಅಪ್‌ಡೇಟ್"
+
+#. TRANSLATORS: The type of update
+#: ../src/gpk-enum.c:1066
+msgid "Enhancement update"
+msgstr "ವರ್ಧನೆಯ ಅಪ್‌ಡೇಟ್"
+
+#. TRANSLATORS: The type of update
+#: ../src/gpk-enum.c:1070
+msgid "Blocked update"
+msgstr "ನಿರ್ಬಂಧಿಸಲಾದ ಅಪ್‌ಡೇಟ್"
+
+#. TRANSLATORS: The state of a package, i.e. not installed
+#: ../src/gpk-enum.c:1080
+msgid "Available"
+msgstr "ಲಭ್ಯವಿದೆ"
+
+#. TRANSLATORS: The type of package
+#: ../src/gpk-enum.c:1084
+msgid "Trusted"
+msgstr "ನಂಬಿಕಾರ್ಹ"
+
+#. TRANSLATORS: The type of package
+#: ../src/gpk-enum.c:1088
+msgid "Untrusted"
+msgstr "ನಂಬಲಾಗದ"
+
+#. TRANSLATORS: The action of the package, in present tense
+#: ../src/gpk-enum.c:1106
+msgid "Downloading"
+msgstr "ಇಳಿಸಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The action of the package, in present tense
+#: ../src/gpk-enum.c:1110
+msgid "Updating"
+msgstr "ಅಪ್‌ಡೇಟ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The action of the package, in present tense
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1114 ../src/gpk-enum.c:1251
+msgid "Installing"
+msgstr "ಅನುಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The action of the package, in present tense
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1118 ../src/gpk-enum.c:1247
+msgid "Removing"
+msgstr "ತೆಗೆದು ಹಾಕಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The action of the package, in present tense
+#: ../src/gpk-enum.c:1122
+msgid "Cleaning up"
+msgstr "ಸ್ವಚ್ಛ್ಗಗೊಳಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The action of the package, in present tense
+#: ../src/gpk-enum.c:1126
+msgid "Obsoleting"
+msgstr "ಅಪ್ರಚಲಿತಗೊಳಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The action of the package, in present tense
+#: ../src/gpk-enum.c:1130
+msgid "Reinstalling"
+msgstr "ಮರಳಿ ಅನುಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The action of the package, in present tense
+#: ../src/gpk-enum.c:1134
+msgid "Preparing"
+msgstr "ತಯಾರಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The action of the package, in present tense
+#: ../src/gpk-enum.c:1138
+msgid "Decompressing"
+msgstr "ಡಿಕಂಪ್ರೆಸ್ ಮಾಡಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The action of the package, in past tense
+#: ../src/gpk-enum.c:1156
+msgid "Downloaded"
+msgstr "ಇಳಿಸಿಕೊಳ್ಳಲಾಗಿದೆ"
+
+#. TRANSLATORS: The action of the package, in past tense
+#: ../src/gpk-enum.c:1160
+msgid "Updated"
+msgstr "ಅಪ್‌ಡೇಟ್‌ ಮಾಡಲಾಗಿದೆ"
+
+#. TRANSLATORS: The action of the package, in past tense
+#: ../src/gpk-enum.c:1168
+msgid "Removed"
+msgstr "ತೆಗೆದು ಹಾಕಲಾಗಿದೆ"
+
+#. TRANSLATORS: The action of the package, in past tense
+#: ../src/gpk-enum.c:1172
+msgid "Cleaned up"
+msgstr "ಸ್ವಚ್ಛಗೊಳಿಸಲಾಗಿದೆ"
+
+#. TRANSLATORS: The action of the package, in past tense
+#: ../src/gpk-enum.c:1176 ../src/gpk-task.c:404
+msgid "Obsoleted"
+msgstr "ಅಪ್ರಚಲಿತಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: The action of the package, in past tense
+#: ../src/gpk-enum.c:1180
+msgid "Reinstalled"
+msgstr "ಮರಳಿ ಅನುಸ್ಥಾಪಿತಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: The action of the package, in past tense
+#: ../src/gpk-enum.c:1184
+msgid "Prepared"
+msgstr "ಸಿದ್ಧಗೊಳಿಸಲಾಗಿದೆ"
+
+#. TRANSLATORS: The action of the package, in past tense
+#: ../src/gpk-enum.c:1188
+msgid "Decompressed"
+msgstr "ಡಿಕಂಪ್ರೆಸ್ ಮಾಡಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1206 ../src/gpk-enum.c:1348
+msgid "Unknown role type"
+msgstr "ಗೊತ್ತಿರದ ಪಾತ್ರದ ಬಗೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1210
+msgid "Getting dependencies"
+msgstr "ಅವಲಂಬನೆಗಳನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1214
+msgid "Getting update detail"
+msgstr "ಅಪ್‌ಡೇಟ್‌ ವಿವರವನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1219
+msgid "Getting details"
+msgstr "ವಿವರಗಳನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1223
+msgid "Getting requires"
+msgstr "ಯಾವುದರ ಅಗತ್ಯವಿದೆ ಎನ್ನುವುದನ್ನು ಪಡೆಯಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1227
+msgid "Getting updates"
+msgstr "ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1231
+msgid "Searching details"
+msgstr "ವಿವರಗಳಿಗಾಗಿ ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1239
+msgid "Searching groups"
+msgstr "ಸಮೂಹಕ್ಕಾಗಿ ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1243
+msgid "Searching for package name"
+msgstr "ಪ್ಯಾಕೇಜ್ ಹೆಸರಿಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1255
+msgid "Installing file"
+msgstr "ಕಡತವನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1259
+msgid "Refreshing package cache"
+msgstr "ಪ್ಯಾಕೇಜ್ ಕ್ಯಾಶೆಯನ್ನು ಪುನಶ್ಚೇತನಗೊಳಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1263
+msgid "Updating packages"
+msgstr "ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅಪ್ಡೇಟ್ ಮಾಡಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1271
+msgid "Getting list of repositories"
+msgstr "ರೆಪೊಸಿಟರಿಗಳ ಪಟ್ಟಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1275
+msgid "Enabling repository"
+msgstr "ರೆಪೊಸಿಟರಿಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1279
+#| msgid "Enabling repository"
+msgid "Removing repository"
+msgstr "ರೆಪೊಸಿಟರಿಯನ್ನು ತೆಗೆದುಹಾಕಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1283
+msgid "Setting repository data"
+msgstr "ರೆಪೊಸಿಟರಿ ದತ್ತಾಂಶವನ್ನು ಹೊಂದಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1287
+msgid "Resolving"
+msgstr "ಪರಿಹರಿಸಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1292
+msgid "Getting file list"
+msgstr "ಕಡತದ ಪಟ್ಟಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1296
+msgid "Getting what provides"
+msgstr "ಏನನ್ನು ಒದಗಿಸುತ್ತದೆ ಎಂಬುದನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1300
+msgid "Installing signature"
+msgstr "ಸಹಿಯನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1304
+msgid "Getting package lists"
+msgstr "ಪ್ಯಾಕೇಜುಗಳ ಪಟ್ಟಿಗಳನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1308
+msgid "Accepting EULA"
+msgstr "EULA ಅನ್ನು ಅಂಗೀಕರಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1316
+msgid "Getting distribution upgrade information"
+msgstr "ವಿತರಣಾ ನವೀಕರಣ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1320
+msgid "Getting categories"
+msgstr "ವರ್ಗಗಳನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1324
+msgid "Getting old transactions"
+msgstr "ಹಳೆಯ ವ್ಯವಹಾರವನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in present tense
+#: ../src/gpk-enum.c:1328
+msgid "Repairing the system"
+msgstr "ವ್ಯವಸ್ಥೆಯನ್ನು ದುರಸ್ತಿ ಮಾಡಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1352
+msgid "Got dependencies"
+msgstr "ಅವಲಂಬನೆಗಳನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1356
+msgid "Got update detail"
+msgstr "ಅಪ್‌ಡೇಟ್‌ ವಿವರವನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1361
+msgid "Got details"
+msgstr "ವಿವರಗಳನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1365
+msgid "Got requires"
+msgstr "ಯಾವುದರ ಅಗತ್ಯವಿದೆ ಎನ್ನುವುದನ್ನು ಪಡೆಯಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1369
+msgid "Got updates"
+msgstr "ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1373
+msgid "Searched for package details"
+msgstr "ಪ್ಯಾಕೇಜಿನ ವಿವರಗಳಿಗಾಗಿ ಹುಡುಕಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1377
+msgid "Searched for file"
+msgstr "ಕಡತಕ್ಕಾಗಿ ಹುಡುಕಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1381
+msgid "Searched groups"
+msgstr "ಹುಡುಕಲಾದ ಗುಂಪುಗಳು"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1385
+msgid "Searched for package name"
+msgstr "ಪ್ಯಾಕೇಜಿನ ಹೆಸರಿಗಾಗಿ ಹುಡುಕಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1389
+msgid "Removed packages"
+msgstr "ತೆಗೆದು ಹಾಕಲಾದ ಪ್ಯಾಕೇಜುಗಳು"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1393
+msgid "Installed packages"
+msgstr "ಅನುಸ್ಥಾಪಿಸಲಾದ ಪ್ಯಾಕೇಜ್‌ಗಳು"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1397
+msgid "Installed local files"
+msgstr "ಸ್ಥಳೀಯ ಕಡತಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1401
+msgid "Refreshed package cache"
+msgstr "ಪುನಶ್ಚೇತನಗೊಳಿಸಲಾದ ಪ್ಯಾಕೇಜ್ ಕ್ಯಾಶೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1405
+msgid "Updated packages"
+msgstr "ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾದ ಪ್ಯಾಕೇಜ್"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1409
+msgid "Canceled"
+msgstr "ರದ್ದು ಮಾಡಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1413
+msgid "Got list of repositories"
+msgstr "ರೆಪೊಸಿಟರಿಗಳ ಪಟ್ಟಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1417
+msgid "Enabled repository"
+msgstr "ರೆಪೊಸಿಟರಿಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1421
+#| msgid "Enabled repository"
+msgid "Removed repository"
+msgstr "ತೆಗೆದುಹಾಕಲಾದ ರೆಪೊಸಿಟರಿ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1425
+msgid "Set repository data"
+msgstr "ರೆಪೊಸಿಟರಿ ದತ್ತಾಂಶವನ್ನು ಹೊಂದಿಸಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1429
+msgid "Resolved"
+msgstr "ಪರಿಹರಿಸಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1434
+msgid "Got file list"
+msgstr "ಕಡತದ ಪಟ್ಟಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1438
+msgid "Got what provides"
+msgstr "ಏನನ್ನು ಒದಗಿಸುತ್ತದೆ ಎಂಬುದನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1442
+msgid "Installed signature"
+msgstr "ಅನುಸ್ಥಾಪಿತಗೊಂಡ ಸಹಿ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1446
+msgid "Got package lists"
+msgstr "ಪ್ಯಾಕೇಜ್ ಪಟ್ಟಿಗಳನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1450
+msgid "Accepted EULA"
+msgstr "ಅಂಗೀಕರಿಸಲಾದ EULA"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1454
+msgid "Downloaded packages"
+msgstr "ಇಳಿಸಿಕೊಳ್ಳಲಾದ ಪ್ಯಾಕೇಜ್‌ಗಳು"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1458
+msgid "Got distribution upgrades"
+msgstr "ವಿತರಣಾ ನವೀಕರಣಗಳನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1462
+msgid "Got categories"
+msgstr "ವರ್ಗಗಳನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗಿದೆ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1466
+msgid "Got old transactions"
+msgstr "ಹಳೆಯ ವ್ಯವಹಾರವನ್ನು ಪಡೆದುಕೊ"
+
+#. TRANSLATORS: The role of the transaction, in past tense
+#: ../src/gpk-enum.c:1470
+msgid "Repaired the system"
+msgstr "ವ್ಯವಸ್ಥೆಯನ್ನು ದುರಸ್ಥಿಗೊಳಿಸಲಾಗಿದೆ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1488
+msgid "Accessibility"
+msgstr "ನಿಲುಕಣೆ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1492
+msgid "Accessories"
+msgstr "ಸಲಕರಣೆಗಳು"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1496
+msgid "Education"
+msgstr "ಶಿಕ್ಷಣ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1500
+msgid "Games"
+msgstr "ಆಟಗಳು"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1504
+msgid "Graphics"
+msgstr "ಗ್ರಾಫಿಕ್ಸ್‍"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1508
+msgid "Internet"
+msgstr "ಅಂತರ್ಜಾಲ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1512
+msgid "Office"
+msgstr "ಆಫೀಸ್"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1516 ../src/gpk-task.c:424
+msgid "Other"
+msgstr "ಇತರೆ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1520
+msgid "Programming"
+msgstr "ಪ್ರೊಗ್ರಾಮಿಂಗ್"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1524
+msgid "Multimedia"
+msgstr "ಮಲ್ಟಿಮೀಡಿಯ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1528
+msgid "System"
+msgstr "ಗಣಕ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1532
+msgid "GNOME desktop"
+msgstr "GNOME ಗಣಕತೆರೆ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1536
+msgid "KDE desktop"
+msgstr "KDE ಗಣಕತೆರೆ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1540
+msgid "Xfce desktop"
+msgstr "Xfce ಗಣಕತೆರೆ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1544
+msgid "Other desktops"
+msgstr "ಇತರೆ ಗಣಕತೆರೆಗಳು"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1548
+msgid "Publishing"
+msgstr "ಪ್ರಕಾಶನ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1552
+msgid "Servers"
+msgstr "ಪೂರೈಕೆಗಣಕಗಳು"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1556
+msgid "Fonts"
+msgstr "ಅಕ್ಷರಶೈಲಿಗಳು"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1560
+msgid "Admin tools"
+msgstr "ನಿರ್ವಹಣಾ ಉಪಕರಣಗಳು"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1564
+msgid "Legacy"
+msgstr "ಪರಂಪರೆ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1568
+msgid "Localization"
+msgstr "ಲೋಕಲೈಸೇಶನ್"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1572
+msgid "Virtualization"
+msgstr "ವರ್ಚುವಲೈಸೇಶನ್"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1576
+msgid "Security"
+msgstr "ಸುರಕ್ಷಿತತೆ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1580
+msgid "Power management"
+msgstr "ವಿದ್ಯುಚ್ಛಕ್ತಿ ನಿರ್ವಹಣೆ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1584
+msgid "Communication"
+msgstr "ಸಂವಹನ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1588
+msgid "Network"
+msgstr "ಜಾಲಬಂಧ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1592
+msgid "Maps"
+msgstr "ನಕ್ಷೆಗಳು"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1596
+#| msgid "Package is corrupt"
+msgid "Package sources"
+msgstr "ಪ್ಯಾಕೇಜ್ ಆಕರಗಳು"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1600
+msgid "Science"
+msgstr "ವಿಜ್ಞಾನ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1604
+msgid "Documentation"
+msgstr "ದಸ್ತಾವೇಜೀಕರಣ"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1608
+msgid "Electronics"
+msgstr "ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್‍"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1612
+msgid "Package collections"
+msgstr "ಪ್ಯಾಕೇಜ್‌ ಸಂಗ್ರಹಗಳು"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1616
+msgid "Vendor"
+msgstr "ಒದಗಿಸಿದವರು"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1620
+msgid "Newest packages"
+msgstr "ಹೊಚ್ಚಹೊಸ ಪ್ಯಾಕೇಜುಗಳು"
+
+#. TRANSLATORS: The group type
+#: ../src/gpk-enum.c:1624
+msgid "Unknown group"
+msgstr "ಅಜ್ಞಾತ ಸಮೂಹ"
+
+#. TRANSLATORS: column for the application icon
+#: ../src/gpk-helper-chooser.c:130 ../src/gpk-helper-run.c:193
+msgid "Icon"
+msgstr "ಚಿಹ್ನೆ"
+
+#. TRANSLATORS: column for the application name
+#. TRANSLATORS: column for the package name
+#: ../src/gpk-helper-chooser.c:137 ../src/gpk-helper-run.c:200
+msgid "Package"
+msgstr "ಪ್ಯಾಕೇಜ್"
+
+#: ../src/gpk-helper-chooser.c:276
+msgid "Applications that can open this type of file"
+msgstr "ಈ ಬಗೆಯ ಕಡತಗಳನ್ನು ತೆರೆಯಬಲ್ಲಂತಹ ಅನ್ವಯಗಳು"
+
+#. TRANSLATORS: button label, install
+#: ../src/gpk-helper-chooser.c:286
+msgid "_Install"
+msgstr "ಅನುಸ್ಥಾಪಿಸು(_I)"
+
+#. TRANSLATORS: button tooltip
+#: ../src/gpk-helper-chooser.c:290
+msgid "Install package"
+msgstr "ಅನುಸ್ಥಾಪನಾ ಪ್ಯಾಕೇಜ್"
+
+#. TRANSLATORS: is not GPG signed
+#: ../src/gpk-task.c:130 ../src/gpk-task.c:140 ../src/gpk-task.c:160
+msgid "The software is not signed by a trusted provider."
+msgstr "ತಂತ್ರಾಂಶವನ್ನು ನಂಬಿಕಸ್ತ ಒದಗಿಸುವವರಿಂದ ಸಹಿ ಮಾಡಲ್ಪಟ್ಟಿಲ್ಲ."
+
+#. TRANSLATORS: user has to trust provider -- I know, this sucks
+#: ../src/gpk-task.c:132
+msgid "Do not update this package unless you are sure it is safe to do so."
+msgstr ""
+"ಸುರಕ್ಷಿತವಾಗಿದೆ ಎಂದು ನಿಮಗೆ ಖಚಿತವಾಗಿರದ ಹೊರತು ಈ ಪ್ಯಾಕೇಜನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಬೇಡಿ."
+
+#. TRANSLATORS: warn the user that all bets are off
+#: ../src/gpk-task.c:134 ../src/gpk-task.c:144
+msgid "Malicious software can damage your computer or cause other harm."
+msgstr ""
+"ಅಪಾಯಕಾರಿ ತಂತ್ರಾಂಶಗಳು ನಿಮ್ಮ ಗಣಕವನ್ನು ಹಾಳುಗೆಡವಬಹುದು ಅಥವ ಬೇರಾವುದೆ ತೊಂದರೆ "
+"ನೀಡಬಹುದು."
+
+#. TRANSLATORS: ask if they are absolutely sure they want to do this
+#: ../src/gpk-task.c:136
+msgid "Are you <b>sure</b> you want to update this package?"
+msgstr "ಈ ಪ್ಯಾಕೇಜನ್ನು ಅಪ್‌ಡೇಟ್‌ ಮಾಡಬೇಕೆಂದು ನೀವು <b>ಖಚಿತವೆ</b>?"
+
+#. TRANSLATORS: user has to trust provider -- I know, this sucks
+#: ../src/gpk-task.c:142
+msgid "Do not install this package unless you are sure it is safe to do so."
+msgstr ""
+"ಸುರಕ್ಷಿತವಾಗಿದೆ ಎಂದು ನಿಮಗೆ ಖಚಿತವಾಗಿರದ ಹೊರತು ಈ ಪ್ಯಾಕೇಜನ್ನು ನೀವು ಅನುಸ್ಥಾಪಿಸಬೇಡಿ."
+
+#. TRANSLATORS: ask if they are absolutely sure they want to do this
+#: ../src/gpk-task.c:146
+msgid "Are you <b>sure</b> you want to install this package?"
+msgstr "ಈ ಪ್ಯಾಕೇಜನ್ನು ಖಂಡಿತವಾಗಿಯೂ ಅನುಸ್ಥಾಪಿಸಬೇಕೆಂದು ನೀವು <b>ಖಚಿತವೆ</b>?"
+
+#. TRANSLATORS: dialog body, explains to the user that they need to insert a disk to continue. The first replacement is DVD, CD etc
+#: ../src/gpk-task.c:341
+#, c-format
+msgid ""
+"Additional media is required. Please insert the %s labeled '%s' to continue."
+msgstr ""
+"ಹೆಚ್ಚಿನ ಮಾಧ್ಯಮದ ಅಗತ್ಯವಿದೆ. ಮುಂದುವರೆಯಲು ದಯವಿಟ್ಟು %s ಅನ್ನು  ('%s'ಎಂದು "
+"ಹೆಸರಿಸಲಾದ) "
+"ತೂರಿಸಿ."
+
+#. TRANSLATORS: this is button text
+#: ../src/gpk-task.c:350 ../src/gpk-task.c:553
+msgid "Continue"
+msgstr "ಮುಂದುವರೆ"
+
+#. TRANSLATORS: additional message text for the deps dialog
+#: ../src/gpk-task.c:393
+msgid "The following software also needs to be installed"
+msgstr "ಈ ಕೆಳಗಿನ ತಂತ್ರಾಂಶವನ್ನೂ ಸಹ ಅನುಸ್ಥಾಪಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ"
+
+#. TRANSLATORS: additional message text for the deps dialog
+#: ../src/gpk-task.c:398 ../src/gpk-task.c:403
+msgid "The following software also needs to be removed"
+msgstr "ಈ ಕೆಳಗಿನ ತಂತ್ರಾಂಶವನ್ನೂ ಸಹ ತೆಗೆದುಹಾಕುವ ಅಗತ್ಯವಿರುತ್ತದೆ"
+
+#. TRANSLATORS: additional message text for the deps dialog
+#: ../src/gpk-task.c:408
+msgid "The following software also needs to be updated"
+msgstr "ಈ ಕೆಳಗಿನ ತಂತ್ರಾಂಶವನ್ನೂ ಸಹ ಅಪ್‌ಡೇಟ್ ಮಾಡುವ ಅಗತ್ಯವಿರುತ್ತದೆ"
+
+#: ../src/gpk-task.c:409
+msgid "Update"
+msgstr "ಅಪ್‌ಡೇಟ್"
+
+#. TRANSLATORS: additional message text for the deps dialog
+#: ../src/gpk-task.c:413
+msgid "The following software also needs to be re-installed"
+msgstr "ಈ ಕೆಳಗಿನ ತಂತ್ರಾಂಶವನ್ನೂ ಸಹ ಮರಳಿ-ಅನುಸ್ಥಾಪಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ"
+
+#: ../src/gpk-task.c:414
+msgid "Reinstall"
+msgstr "ಮರಳಿ ಅನುಸ್ಥಾಪಿಸು"
+
+#. TRANSLATORS: additional message text for the deps dialog
+#: ../src/gpk-task.c:418
+msgid "The following software also needs to be downgraded"
+msgstr "ಈ ಕೆಳಗಿನ ತಂತ್ರಾಂಶವನ್ನು ಹಿಂದಿನ ಆವೃತ್ತಿಗೆ ಇಳಿಸಲಾಗುತ್ತದೆ (ಡೌನ್‌ಗ್ರೇಟ್)"
+
+#: ../src/gpk-task.c:419
+msgid "Downgrade"
+msgstr "ಹಿಂದಿನ ಆವೃತ್ತಿಗೆ ಇಳಿಸು"
+
+#. TRANSLATORS: additional message text for the deps dialog (we don't know how it's going to be processed -- eeek)
+#: ../src/gpk-task.c:423
+msgid "The following software also needs to be processed"
+msgstr "ಈ ಕೆಳಗಿನ ತಂತ್ರಾಂಶವನ್ನೂ ಸಹ ಸಂಸ್ಕರಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ"
+
+#. TRANSLATORS: title of a dependency dialog
+#: ../src/gpk-task.c:486
+msgid "Additional confirmation required"
+msgstr "ಹೆಚ್ಚುವರಿ ಖಚಿತಪಡಿಕೆಯ ಅಗತ್ಯವಿದೆ"
+
+#. TRANSLATORS: message text of a dependency dialog
+#: ../src/gpk-task.c:492
+msgid "To install this package, additional software also has to be modified."
+msgid_plural ""
+"To install these packages, additional software also has to be modified."
+msgstr[0] ""
+"ಈ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಲು, ಒಂದು ಹೆಚ್ಚುವರಿ ಪ್ಯಾಕೇಜನ್ನೂ ಸಹ ಮಾರ್ಪಡಿಸುವ "
+"ಅಗತ್ಯವಿದೆ."
+msgstr[1] ""
+"ಈ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲು, ಒಂದು ಹೆಚ್ಚುವರಿ ತಂತ್ರಾಂಶವನ್ನೂ ಸಹ ಮಾರ್ಪಡಿಸುವ "
+"ಅಗತ್ಯವಿದೆ."
+
+#. TRANSLATORS: message text of a dependency dialog
+#: ../src/gpk-task.c:497
+msgid "To remove this package, additional software also has to be modified."
+msgid_plural ""
+"To remove these packages, additional software also has to be modified."
+msgstr[0] ""
+"ಈ ಪ್ಯಾಕೇಜನ್ನು ತೆಗೆದುಹಾಕಲು, ಹೆಚ್ಚುವರಿ ಪ್ಯಾಕೇಜನ್ನೂ ಸಹ  ಮಾರ್ಪಡಿಸುವ ಅಗತ್ಯವಿದೆ."
+msgstr[1] ""
+"ಈ ಪ್ಯಾಕೇಜುಗಳನ್ನು ತೆಗೆದುಹಾಕಲು, ಹೆಚ್ಚುವರಿ ಪ್ಯಾಕೇಜನ್ನೂ ಸಹ  ಮಾರ್ಪಡಿಸುವ ಅಗತ್ಯವಿದೆ."
+
+#. TRANSLATORS: message text of a dependency dialog
+#: ../src/gpk-task.c:502
+msgid "To update this package, additional software also has to be modified."
+msgid_plural ""
+"To update these packages, additional software also has to be modified."
+msgstr[0] ""
+"ಈ  ಪ್ಯಾಕೇಜನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಲು, ಹೆಚ್ಚುವರಿ ಪ್ಯಾಕೇಜನ್ನೂ ಸಹ ಮಾರ್ಪಡಿಸುವ ಅಗತ್ಯವಿದೆ."
+msgstr[1] ""
+"ಈ  ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಲು, ಹೆಚ್ಚುವರಿ ಪ್ಯಾಕೇಜನ್ನೂ ಸಹ ಮಾರ್ಪಡಿಸುವ "
+"ಅಗತ್ಯವಿದೆ."
+
+#. TRANSLATORS: message text of a dependency dialog
+#: ../src/gpk-task.c:507
+msgid "To install this file, additional software also has to be modified."
+msgid_plural ""
+"To install these files, additional software also has to be modified."
+msgstr[0] ""
+"ಈ  ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಲು, ಹೆಚ್ಚುವರಿ ಪ್ಯಾಕೇಜನ್ನೂ ಸಹ ಮಾರ್ಪಡಿಸುವ ಅಗತ್ಯವಿದೆ."
+msgstr[1] ""
+"ಈ  ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲು, ಹೆಚ್ಚುವರಿ ಪ್ಯಾಕೇಜನ್ನೂ ಸಹ ಮಾರ್ಪಡಿಸುವ ಅಗತ್ಯವಿದೆ."
+
+#. TRANSLATORS: message text of a dependency dialog
+#: ../src/gpk-task.c:512
+msgid ""
+"To process this transaction, additional software also has to be modified."
+msgstr ""
+"ಈ ವ್ಯವಹಾರವನ್ನು ನಿರ್ವಹಿಸಲು, ಒಂದು ಹೆಚ್ಚುವರಿ ತಂತ್ರಾಂಶವನ್ನೂ ಸಹ ಮಾರ್ಪಡಿಸುವ "
+"ಅಗತ್ಯವಿದೆ."
+
+#. TRANSLATORS: button label, force the install, even though it's untrusted
+#: ../src/gpk-task.c:603
+msgid "_Force install"
+msgstr "ಒತ್ತಾಯಪೂರ್ವಕ ಅನುಸ್ಥಾಪನೆ(_F)"
+
+#. TRANSLATORS: button tooltip
+#: ../src/gpk-task.c:607
+msgid "Force installing package"
+msgstr "ಪ್ಯಾಕೇಜನ್ನು ಒತ್ತಾಯಪೂರ್ವಕವಾಗಿ ಅನುಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: window title: do we want to execute a program we just installed?
+#: ../src/gpk-helper-run.c:468
+msgid "Run new application?"
+msgstr "ಹೊಸ ಅನ್ವಯವನ್ನು ಚಲಾಯಿಸಬೇಕೆ?"
+
+#. add run button
+#: ../src/gpk-helper-run.c:471
+msgid "_Run"
+msgstr "ಚಲಾಯಿಸು(_R)"
+
+#. TRANSLATORS: command line option: a list of files to install
+#: ../src/gpk-install-local-file.c:54
+msgid "Files to install"
+msgstr "ಅನುಸ್ಥಾಪಿಸ ಬೇಕಿರುವ ಕಡತಗಳು"
+
+#: ../src/gpk-install-local-file.c:69
+msgid "PackageKit File Installer"
+msgstr "PackageKit ಕಡತ ಅನುಸ್ಥಾಪಕ"
+
+#. TRANSLATORS: title to pass to to the user if there are not enough privs
+#: ../src/gpk-install-local-file.c:77
+msgid "Local file installer"
+msgstr "ಸ್ಥಳೀಯ ಕಡತದ ಅನುಸ್ಥಾಪಕ"
+
+#. TRANSLATORS: could not install a package that contained the file we wanted
+#: ../src/gpk-install-local-file.c:83
+msgid "Failed to install a package to provide a file"
+msgstr "ಒಂದು ಕಡತವನ್ನು ಒದಗಿಸುವ ಒಂದು ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ವಿಫಲಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: nothing selected
+#: ../src/gpk-install-local-file.c:85
+msgid "You need to specify a file to install"
+msgstr "ಅನುಸ್ಥಾಪಿಸಲು ನೀವು ಒಂದು ಕಡತವನ್ನು ಸೂಚಿಸಬೇಕು"
+
+#. TRANSLATORS: strftime formatted please
+#: ../src/gpk-log.c:162
+msgid "%d %B %Y"
+msgstr "%d %B %Y"
+
+#. TRANSLATORS: column for the date
+#: ../src/gpk-log.c:277
+msgid "Date"
+msgstr "ದಿನಾಂಕ"
+
+#. TRANSLATORS: column for what was done, e.g. update-system
+#: ../src/gpk-log.c:286
+msgid "Action"
+msgstr "ಕಾರ್ಯ"
+
+#. TRANSLATORS: column for the user name, e.g. Richard Hughes
+#: ../src/gpk-log.c:319
+msgid "User name"
+msgstr "ಬಳಕೆದಾರ ಹೆಸರು"
+
+#. TRANSLATORS: column for the application used for the install, e.g. Add/Remove Programs
+#: ../src/gpk-log.c:326
+msgid "Application"
+msgstr "ಅನ್ವಯ"
+
+#. TRANSLATORS: user-friendly name for pkcon
+#: ../src/gpk-log.c:486
+msgid "Command line client"
+msgstr "ಆಜ್ಞಾ ಸಾಲಿನ ಕ್ಲೈಂಟ್‌"
+
+#. TRANSLATORS: user-friendly name for gpk-update-icon, which used to exist
+#: ../src/gpk-log.c:495
+msgid "Update Icon"
+msgstr "ಅಪ್‌ಡೇಟ್‌ ಚಿಹ್ನೆ"
+
+#. TRANSLATORS: user-friendly name for the command not found plugin
+#: ../src/gpk-log.c:498
+#| msgid "Bash - Command Not Found"
+msgid "Bash – Command Not Found"
+msgstr "Bash - ಆದೇಶವು ಕಂಡುಬಂದಿಲ್ಲ"
+
+#. TRANSLATORS: user-friendly name for gnome-settings-daemon, which used to handle updates
+#: ../src/gpk-log.c:501
+msgid "GNOME Session"
+msgstr "GNOME ಅಧಿವೇಶನ"
+
+#. TRANSLATORS: user-friendly name for gnome-software
+#: ../src/gpk-log.c:504
+#| msgid "Software"
+msgid "GNOME Software"
+msgstr "GNOME ತಂತ್ರಾಂಶ"
+
+#. TRANSLATORS: preset the GtktextBox with this filter text
+#: ../src/gpk-log.c:802
+msgid "Set the filter to this value"
+msgstr "ಸೋಸುಕವನ್ನು ಈ ಮೌಲ್ಯಕ್ಕೆ ಹೊಂದಿಸು"
+
+#. TRANSLATORS: we can make this modal (stay on top of) another window
+#: ../src/gpk-log.c:805 ../src/gpk-prefs.c:613
+msgid "Set the parent window to make this modal"
+msgstr "ಇದನ್ನು ಮೋಡಲ್ ಮಾಡುವಂತೆ ಮೂಲ ವಿಂಡೊವನ್ನು ಹೊಂದಿಸು"
+
+#: ../src/gpk-log.c:818
+msgid "Software Log Viewer"
+msgstr "ತಂತ್ರಾಂಶ ದಿನಚರಿ ವೀಕ್ಷಕ"
+
+#. are we running privileged
+#: ../src/gpk-log.c:826
+msgid "Log viewer"
+msgstr "ದಿನಚರಿ ವೀಕ್ಷಕ"
+
+#: ../src/gpk-modal-dialog.c:435
+#, c-format
+#| msgid "Remaining time : %s"
+msgid "Remaining time: %s"
+msgstr "ಬಾಕಿ ಇರುವ ಸಮಯ: %s"
+
+#. TRANSLATORS: for one reason or another, we could not enable or disable a package source
+#: ../src/gpk-prefs.c:235
+msgid "Failed to change status"
+msgstr "ಸ್ಥಿತಿಯನ್ನು ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
+
+#. TRANSLATORS: column if the source is enabled
+#: ../src/gpk-prefs.c:305
+msgid "Enabled"
+msgstr "ಸಕ್ರಿಯಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: column for the source description
+#: ../src/gpk-prefs.c:314
+#| msgid "Package"
+msgid "Package Source"
+msgstr "ಪ್ಯಾಕೇಜ್ ಆಕರ"
+
+#. TRANSLATORS: for one reason or another, we could not get the list of sources
+#: ../src/gpk-prefs.c:376
+msgid "Failed to get the list of sources"
+msgstr "ಆಕರಗಳ ಪಟ್ಟಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#. TRANSLATORS: backend is broken, and won't tell us what it supports
+#: ../src/gpk-prefs.c:483 ../src/gpk-update-viewer.c:3155
+msgid "Exiting as backend details could not be retrieved"
+msgstr "ಬ್ಯಾಕ್‌ಎಂಡ್ ವಿವರಗಳನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗಿಲ್ಲದ ಕಾರಣ ನಿರ್ಗಮಿಸಲಾಗುತ್ತಿದೆ"
+
+#: ../src/gpk-prefs.c:504
+#| msgid "Getting software source list not supported by backend"
+msgid "Getting package source list not supported by backend"
+msgstr "ಪ್ಯಾಕೇಜ್‌ ಆಕರ ಪಟ್ಟಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳುವುದಕ್ಕೆ ಬ್ಯಾಕೆಂಡಿನಿಂದ ಬೆಂಬಲವಿಲ್ಲ"
+
+#. TRANSLATORS: we don't have a lot to go on here
+#: ../src/gpk-update-viewer.c:183
+msgid "Failed to process request."
+msgstr "ಮನವಿಯನ್ನು ಸಂಸ್ಕರಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ."
+
+#. TRANSLATORS: the message text for the restart
+#: ../src/gpk-update-viewer.c:211
+msgid ""
+"Some of the updates that were installed require the computer to be restarted "
+"before the changes will be applied."
+msgstr ""
+"ಅನುಸ್ಥಾಪಿಸಲಾದ ಕೆಲವು ಅಪ್‌ಡೇಟ್‌ಗಳಿಗೆ ಮಾಡಲಾದ ಬದಲಾವಣೆಗಳು ಕಾರ್ಯರೂಪಕ್ಕೆ ಬರಲು "
+"ಗಣಕವನ್ನು ಒಮ್ಮೆ "
+"ಮರಳಿ ಆರಂಭಿಸಬೇಕಾಗುತ್ತದೆ."
+
+#. TRANSLATORS: the button text for the restart
+#: ../src/gpk-update-viewer.c:213 ../src/gpk-update-viewer.c:219
+msgid "Restart Computer"
+msgstr "ಗಣಕವನ್ನು ಮರಳಿ ಆರಂಭಿಸಿ"
+
+#. TRANSLATORS: the message text for the restart
+#: ../src/gpk-update-viewer.c:217
+msgid ""
+"Some of the updates that were installed require the computer to be restarted "
+"to remain secure."
+msgstr ""
+"ಸುರಕ್ಷಿತವಾಗಿರಲು, ಅನುಸ್ಥಾಪಿಸಲಾದ ಕೆಲವು ಅಪ್‌ಡೇಟ್‌ಗಳ ಸಲುವಾಗಿ ಗಣಕವನ್ನು ಮರಳಿ "
+"ಆರಂಭಿಸಬೇಕಾಗುತ್ತದೆ."
+
+#. TRANSLATORS: the message text for the log out
+#: ../src/gpk-update-viewer.c:223
+msgid ""
+"Some of the updates that were installed require you to log out and back in "
+"before the changes will be applied."
+msgstr ""
+"ಅನುಸ್ಥಾಪಿಸಲಾದ ಕೆಲವು ಅಪ್‌ಡೇಟ್‌ಗಳಿಗೆ ಮಾಡಲಾದ ಬದಲಾವಣೆಗಳು ಕಾರ್ಯರೂಪಕ್ಕೆ ಬರಲು ಒಮ್ಮೆ "
+"ನಿರ್ಗಮಿಸಿ ನಂತರ ಮರಳಿ ಪ್ರವೇಶಿಸಬೇಕಾಗುತ್ತದೆ."
+
+#. TRANSLATORS: the button text for the log out
+#: ../src/gpk-update-viewer.c:225 ../src/gpk-update-viewer.c:231
+msgid "Log Out"
+msgstr "ಹೊರ ನಿರ್ಗಮಿಸು"
+
+#. TRANSLATORS: the message text for the log out
+#: ../src/gpk-update-viewer.c:229
+msgid ""
+"Some of the updates that were installed require you to log out and back in "
+"to remain secure."
+msgstr ""
+"ಸುರಕ್ಷಿತವಾಗಿರಲು, ಅನುಸ್ಥಾಪಿಸಲಾದ ಕೆಲವು ಅಪ್‌ಡೇಟ್‌ಗಳ ಸಲುವಾಗಿ ನೀವು ನಿರ್ಗಮಿಸಿ ಮರಳಿ "
+"ಒಳ "
+"ಪ್ರವೇಶಿಸಬೇಕಾಗುತ್ತದೆ"
+
+#. TRANSLATORS: the PackageKit request did not complete, and it did not send an error
+#: ../src/gpk-update-viewer.c:275
+msgid "Could not restart"
+msgstr "ಮರಳಿ ಆರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#. TRANSLATORS: we failed to install all the updates we requested
+#: ../src/gpk-update-viewer.c:344
+msgid "Some updates were not installed"
+msgstr "ಕೆಲವು ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ"
+
+#. TRANSLATORS: the PackageKit request did not complete, and it did not send an error
+#: ../src/gpk-update-viewer.c:413 ../src/gpk-update-viewer.c:424
+msgid "Could not update packages"
+msgstr "ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಿಲ್ಲ"
+
+#. TRANSLATORS: completed all updates
+#. TRANSLATORS: title: all updates installed okay
+#: ../src/gpk-update-viewer.c:489 ../src/gpk-update-viewer.c:510
+msgid "Updates installed"
+msgstr "ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ"
+
+#. TRANSLATORS: title: all updates for the machine installed okay
+#: ../src/gpk-update-viewer.c:499
+msgid "All updates were installed successfully."
+msgstr "ಎಲ್ಲಾ ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ."
+
+#. TRANSLATORS: title: all the selected updates installed okay
+#: ../src/gpk-update-viewer.c:502
+msgid "The selected updates were installed successfully."
+msgstr "ಆಯ್ಕೆ ಮಾಡಲಾದ ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ."
+
+#. TRANSLATORS: The type of update
+#: ../src/gpk-update-viewer.c:717
+msgid "Trivial updates"
+msgstr "ಸಾಮಾನ್ಯ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: The type of update
+#: ../src/gpk-update-viewer.c:721
+msgid "Important updates"
+msgstr "ಪ್ರಮುಖ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: The type of update
+#: ../src/gpk-update-viewer.c:725
+msgid "Security updates"
+msgstr "ಸುರಕ್ಷತಾ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: The type of update
+#: ../src/gpk-update-viewer.c:729
+msgid "Bug fix updates"
+msgstr "ದೋಷ ನಿವಾರಣಾ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: The type of update
+#: ../src/gpk-update-viewer.c:733
+msgid "Enhancement updates"
+msgstr "ವರ್ಧನೆಯ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: The type of update
+#: ../src/gpk-update-viewer.c:737
+msgid "Blocked updates"
+msgstr "ನಿರ್ಬಂಧಿಸಲಾದ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: The type of update, i.e. unspecified
+#: ../src/gpk-update-viewer.c:741
+msgid "Other updates"
+msgstr "ಇತರೆ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#. TRANSLATORS: querying update array
+#: ../src/gpk-update-viewer.c:1006
+msgid "Getting the list of updates"
+msgstr "ಅಪ್‌ಡೇಟ್‌ಗಳ ಪಟ್ಟಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ"
+
+#. TRANSLATORS: the PackageKit request did not complete, and it did not send an error
+#: ../src/gpk-update-viewer.c:1251
+msgid "Could not run upgrade script"
+msgstr "ನವೀಕರಣದ ಸ್ಕ್ರಿಪ್ಟನ್ನು ಚಲಾಯಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#. TRANSLATORS, are we going to cost the user lots of money?
+#: ../src/gpk-update-viewer.c:1282
+msgid ""
+"Connectivity is being provided by wireless broadband, and it may be "
+"expensive to update this package."
+msgid_plural ""
+"Connectivity is being provided by wireless broadband, and it may be "
+"expensive to update these packages."
+msgstr[0] ""
+"ಬ್ರಾಡ್‌ಬ್ಯಾಂಡಿನ ಮೂಲಕ ಸಂಪರ್ಕವನ್ನು ಒದಗಿಸಲಾಗಿದೆ, ಮತ್ತು ಈ ಪ್ಯಾಕೇಜನ್ನು ಅಪ್‌ಡೇಟ್ "
+"ಮಾಡುವುದು "
+"ದುಬಾರಿ ಎನಿಸಬಹುದು."
+msgstr[1] ""
+"ಬ್ರಾಡ್‌ಬ್ಯಾಂಡಿನ ಮೂಲಕ ಸಂಪರ್ಕವನ್ನು ಒದಗಿಸಲಾಗಿದೆ, ಮತ್ತು ಈ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅಪ್‌ಡೇಟ್ "
+"ಮಾಡುವುದು "
+"ದುಬಾರಿ ಎನಿಸಬಹುದು."
+
+#. TRANSLATORS: there are no updates
+#: ../src/gpk-update-viewer.c:1372
+msgid "There are no updates available"
+msgstr "ಯಾವುದೆ ಅಪ್‌ಡೇಟ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ"
+
+#. TRANSLATORS: title: nothing to do
+#: ../src/gpk-update-viewer.c:1431
+msgid "No updates are available"
+msgstr "ಯಾವುದೆ ಅಪ್‌ಡೇಟ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ"
+
+#. TRANSLATORS: no network connection, according to PackageKit
+#: ../src/gpk-update-viewer.c:1433
+msgid "No network connection was detected."
+msgstr "ಯಾವುದೆ ಜಾಲಬಂಧ ಸಂಪರ್ಕವು ಕಂಡುಬಂದಿಲ್ಲ."
+
+#. TRANSLATORS: this is the button text when we have updates
+#: ../src/gpk-update-viewer.c:1450
+msgid "_Install Update"
+msgid_plural "_Install Updates"
+msgstr[0] "ಅಪ್‌ಡೇಟನ್ನು ಅನುಸ್ಥಾಪಿಸು(_I)"
+msgstr[1] "ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸು(_I)"
+
+#. TRANSLATORS: title: nothing to do
+#: ../src/gpk-update-viewer.c:1459
+#| msgid "All software is up to date"
+msgid "All packages are up to date"
+msgstr "ಎಲ್ಲಾ ಪ್ಯಾಕೇಜುಗಳು ಅಪ್‌ ಟು ಡೇಟ್ ಆಗಿವೆ"
+
+#. TRANSLATORS: tell the user the problem
+#: ../src/gpk-update-viewer.c:1461
+#| msgid ""
+#| "There are no software updates available for your computer at this time."
+msgid "There are no package updates available for your computer at this time."
+msgstr "ನಿಮ್ಮ ಗಣಕಕ್ಕಾಗಿ ಸದ್ಯಕ್ಕೆ ಯಾವುದೆ ಪ್ಯಾಕೇಜು ಅಪ್‌ಡೇಟುಗಳು ಲಭ್ಯವಿಲ್ಲ."
+
+#: ../src/gpk-update-viewer.c:1488
+#, c-format
+msgid "There is %i update available"
+msgid_plural "There are %i updates available"
+msgstr[0] "%i ಅಪ್‌ಡೇಟ್‌ ಲಭ್ಯವಿದೆ"
+msgstr[1] "%i ಅಪ್‌ಡೇಟುಗಳು ಲಭ್ಯವಿವೆ"
+
+#. TRANSLATORS: how many updates are selected in the UI
+#: ../src/gpk-update-viewer.c:1504
+#, c-format
+msgid "%i update selected"
+msgid_plural "%i updates selected"
+msgstr[0] "%i ಅಪ್‌ಡೇಟನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ"
+msgstr[1] "%i ಅಪ್‌ಡೇಟುಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ"
+
+#. TRANSLATORS: how many updates are selected in the UI, and the size of packages to download
+#: ../src/gpk-update-viewer.c:1512
+#, c-format
+msgid "%i update selected (%s)"
+msgid_plural "%i updates selected (%s)"
+msgstr[0] "%i ಅಪ್‌ಡೇಟನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ (%s)"
+msgstr[1] "%i ಅಪ್‌ಡೇಟುಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ (%s)"
+
+#. TRANSLATORS: a column that has state of each package
+#: ../src/gpk-update-viewer.c:1709
+msgid "Status"
+msgstr "ಸ್ಥಿತಿ"
+
+#. TRANSLATORS: this is the update type, e.g. security
+#: ../src/gpk-update-viewer.c:1969
+msgid "This update will add new features and expand functionality."
+msgstr ""
+"ಈ ಅಪ್‌ಡೇಟ್ ಹೊಸ ಸೌಲಭ್ಯಗಳನ್ನು ಸೇರಿಸುತ್ತದೆ ಮತ್ತು ಕಾರ್ಯಶೀಲತೆಯನ್ನು ವಿಸ್ತರಿಸುತ್ತದೆ."
+
+#. TRANSLATORS: this is the update type, e.g. security
+#: ../src/gpk-update-viewer.c:1973
+msgid "This update will fix bugs and other non-critical problems."
+msgstr ""
+"ಈ ಅಪ್‌ಡೇಟ್ ದೋಷಗಳನ್ನು ಹಾಗು ಇತರೆ ಸಂದಿಗ್ಧವಲ್ಲದ ತೊಂದರೆಗಳನ್ನು ಪರಿಹರಿಸುತ್ತದೆ."
+
+#. TRANSLATORS: this is the update type, e.g. security
+#: ../src/gpk-update-viewer.c:1977
+msgid "This update is important as it may solve critical problems."
+msgstr ""
+"ಈ ಅಪ್‌ಡೇಟ್ ಸಂದಿಗ್ಧ ತೊಂದರೆಗಳನ್ನು ಪರಿಹರಿಸುವ ಸಾಧ್ಯವಿರುವುದರಿಂದ ಇದು "
+"ಪ್ರಮುಖವಾಗಿರುತ್ತದೆ."
+
+#. TRANSLATORS: this is the update type, e.g. security
+#: ../src/gpk-update-viewer.c:1981
+msgid ""
+"This update is needed to fix a security vulnerability with this package."
+msgstr ""
+"ಈ ಪ್ಯಾಕೇಜಿನೊಂದಿಗಿನ ಸುರಕ್ಷತಾ ದುರ್ಭಲತೆಯನ್ನು ಸರಿಪಡಿಸಲು ಈ ಅಪ್‌ಡೇಟಿನ "
+"ಅಗತ್ಯವಿರುತ್ತದೆ."
+
+#. TRANSLATORS: this is the update type, e.g. security
+#: ../src/gpk-update-viewer.c:1985
+msgid "This update is blocked."
+msgstr "ಈ ಅಪ್‌ಡೇಟನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ."
+
+#. TRANSLATORS: this is when the notification was issued and then updated
+#: ../src/gpk-update-viewer.c:1997
+#, c-format
+msgid "This notification was issued on %s and last updated on %s."
+msgstr "ಈ ಸೂಚನೆಯನ್ನು %s ನಲ್ಲಿ ಒದಗಿಸಲಾಗಿದೆ ಹಾಗು %s ನಂದು ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಿದೆ."
+
+#. TRANSLATORS: this is when the update was issued
+#: ../src/gpk-update-viewer.c:2004
+#, c-format
+msgid "This notification was issued on %s."
+msgstr "ಈ ಸೂಚನೆಯನ್ನು %s ನಲ್ಲಿ ಒದಗಿಸಲಾಗಿದೆ."
+
+#. TRANSLATORS: this is a array of vendor URLs
+#: ../src/gpk-update-viewer.c:2026 ../src/gpk-update-viewer.c:2050
+msgid "For more information about this update please visit this website:"
+msgid_plural ""
+"For more information about this update please visit these websites:"
+msgstr[0] "ಈ ಅಪ್‌ಡೇಟಿನ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಈ ಜಾಲತಾಣಕ್ಕೆ ಭೇಟಿ ಕೊಡಿ:"
+msgstr[1] "ಈ ಅಪ್‌ಡೇಟಿನ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಈ ಜಾಲತಾಣಗಳಿಗೆ ಭೇಟಿ ಕೊಡಿ:"
+
+#. TRANSLATORS: this is a array of bugzilla URLs
+#: ../src/gpk-update-viewer.c:2033 ../src/gpk-update-viewer.c:2058
+msgid ""
+"For more information about bugs fixed by this update please visit this "
+"website:"
+msgid_plural ""
+"For more information about bugs fixed by this update please visit these "
+"websites:"
+msgstr[0] ""
+"ಈ ಅಪ್‌ಡೇಟಿನಿಂದಾಗಿ ಪರಿಹಾರಗೊಂಡ ದೋಷಗಳ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಈ ಜಾಲತಾಣಕ್ಕೆ "
+"ಭೇಟಿ "
+"ಕೊಡಿ:"
+msgstr[1] ""
+"ಈ ಅಪ್‌ಡೇಟಿನಿಂದಾಗಿ ಪರಿಹಾರಗೊಂಡ ದೋಷಗಳ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಈ ಜಾಲತಾಣಗಳಿಗೆ "
+"ಭೇಟಿ "
+"ಕೊಡಿ:"
+
+#. TRANSLATORS: this is a array of CVE (security) URLs
+#: ../src/gpk-update-viewer.c:2040 ../src/gpk-update-viewer.c:2066
+msgid ""
+"For more information about this security update please visit this website:"
+msgid_plural ""
+"For more information about this security update please visit these websites:"
+msgstr[0] ""
+"ಈ ಸುರಕ್ಷತಾ ಅಪ್‌ಡೇಟುಗಳ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ದಯವಿಟ್ಟು ಈ ಜಾಲತಾಣವನ್ನು ನೋಡಿ:"
+msgstr[1] ""
+"ಈ ಸುರಕ್ಷತಾ ಅಪ್‌ಡೇಟುಗಳ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ದಯವಿಟ್ಟು ಈ ಜಾಲತಾಣಗಳನ್ನು ನೋಡಿ:"
+
+#. TRANSLATORS: reboot required
+#: ../src/gpk-update-viewer.c:2075
+msgid ""
+"The computer will have to be restarted after the update for the changes to "
+"take effect."
+msgstr ""
+"ಈ ಅಪ್‌ಡೇಟಿನ ನಂತರ ಬದಲಾವಣೆಗಳು ಕಾರ್ಯರೂಪಕ್ಕೆ ಬರಲು ಗಣಕವನ್ನು ಮರಳಿ ಆರಂಭಿಸಬೇಕಾಗುತ್ತದೆ."
+
+#. TRANSLATORS: log out required
+#: ../src/gpk-update-viewer.c:2079
+msgid ""
+"You will need to log out and back in after the update for the changes to "
+"take effect."
+msgstr ""
+"ಈ ಅಪ್‌ಡೇಟಿನ ನಂತರ ಬದಲಾವಣೆಗಳು ಕಾರ್ಯರೂಪಕ್ಕೆ ಬರಲು ನೀವು ಹೊರತೆರಳಿ ಮತ್ತೆ ಮರಳಿ "
+"ಪ್ರವೇಶಿಸಬೇಕಾಗುತ್ತದೆ."
+
+#. TRANSLATORS: this is the stability status of the update
+#: ../src/gpk-update-viewer.c:2086
+msgid ""
+"The classification of this update is unstable which means it is not designed "
+"for production use."
+msgstr ""
+"ಈ ಅಪ್‌ಡೇಟಿನ ವರ್ಗೀಕರಣವು ಸ್ಥಿರವಾಗಿಲ್ಲ, ಎಂದರೆ ಇದು ಉತ್ಪಾದನಾ ಬಳಕೆಗೆ ಸೂಕ್ತವಾಗಿಲ್ಲ "
+"ಎಂದರ್ಥ."
+
+#. TRANSLATORS: this is the stability status of the update
+#: ../src/gpk-update-viewer.c:2090
+msgid ""
+"This is a test update, and is not designed for normal use. Please report any "
+"problems or regressions you encounter."
+msgstr ""
+"ಇದು ಒಂದು ಪ್ರಾಯೋಗಿಕ ಅಪ್‌ಡೇಟ್ ಆಗಿದ್ದು, ಸಾಮಾನ್ಯ ಬಳಕೆಗಾಗಿ ನಿರ್ಮಿತವಾಗಿಲ್ಲ. "
+"ದಯವಿಟ್ಟು ನೀವು "
+"ಏನಾದರೂ ತೊಂದರೆ ಅಥವ ಹಿನ್ನಡೆ ಎದುರಿಸಿದಲ್ಲಿ ಅದನ್ನು ವರದಿ ಮಾಡಿ."
+
+#. TRANSLATORS: this is a ChangeLog
+#: ../src/gpk-update-viewer.c:2099
+msgid ""
+"The developer logs will be shown as no description is available for this "
+"update:"
+msgstr ""
+"ಈ ಅಪ್‌ಡೇಟಿಗಾಗಿ ಯಾವುದೆ ವಿವರಣೆ ಲಭ್ಯವಿರದ ಕಾರಣ ವಿಕಸನಗಾರರ ದಾಖಲೆಯನ್ನು "
+"ತೋರಿಸಲಾಗುತ್ತದೆ:"
+
+#: ../src/gpk-update-viewer.c:2153
+msgid "Loading…"
+msgstr "ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ…"
+
+#: ../src/gpk-update-viewer.c:2156
+msgid "No update details available."
+msgstr "ಯಾವುದೆ ಅಪ್‌ಡೇಟ್‌ ವಿವರಗಳು ಲಭ್ಯವಿಲ್ಲ."
+
+#. TRANSLATORS: the PackageKit request did not complete, and it did not send an error
+#. TRANSLATORS: PackageKit did not send any results for the query...
+#: ../src/gpk-update-viewer.c:2188 ../src/gpk-update-viewer.c:2286
+#: ../src/gpk-update-viewer.c:2306
+msgid "Could not get update details"
+msgstr "ಅಪ್‌ಡೇಟ್‌ ವಿವರವನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗಿಲ್ಲ"
+
+#. TRANSLATORS: PackageKit did not send any results for the query...
+#: ../src/gpk-update-viewer.c:2208
+msgid "Could not get package details"
+msgstr "ಪ್ಯಾಕೇಜ್ ವಿವರಣೆಗಳನ್ನು ಬರೆಯಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#: ../src/gpk-update-viewer.c:2208 ../src/gpk-update-viewer.c:2306
+msgid "No results were returned."
+msgstr "ಯಾವುದೆ ಫಲಿತಾಂಶಗಳು ಕಂಡುಬಂದಿಲ್ಲ."
+
+#. TRANSLATORS: right click menu, select all the updates
+#: ../src/gpk-update-viewer.c:2541
+msgid "Select all"
+msgstr "ಎಲ್ಲವನ್ನೂ ಆಯ್ಕೆ ಮಾಡು"
+
+#. TRANSLATORS: right click menu, unselect all the updates
+#: ../src/gpk-update-viewer.c:2549
+msgid "Unselect all"
+msgstr "ಎಲ್ಲವನ್ನೂ ಆಯ್ಕೆ ಮಾಡಬೇಡ"
+
+#. TRANSLATORS: right click menu, select only security updates
+#: ../src/gpk-update-viewer.c:2556
+msgid "Select security updates"
+msgstr "ಸುರಕ್ಷತಾ ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡು"
+
+#. TRANSLATORS: right click option, ignore this update name, not currently used
+#: ../src/gpk-update-viewer.c:2562
+msgid "Ignore this update"
+msgstr "ಈ ಅಪ್‌ಡೇಟ್ ಅನ್ನು ನಿರ್ಲಕ್ಷಿಸು"
+
+#. TRANSLATORS: the PackageKit request did not complete, and it did not send an error
+#: ../src/gpk-update-viewer.c:2671
+msgid "Could not get updates"
+msgstr "ಅಪ್‌ಡೇಟ್‌ಗಳು ಕಂಡುಬಂದಿಲ್ಲ"
+
+#. TRANSLATORS: this is the header
+#: ../src/gpk-update-viewer.c:2809
+msgid "Checking for updates…"
+msgstr "ಅಪ್‌ಡೇಟ್‌ಗಳಿಗಾಗಿ ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ..."
+
+#. TRANSLATORS: the PackageKit request did not complete, and it did not send an error
+#: ../src/gpk-update-viewer.c:3088
+msgid "Could not get list of distribution upgrades"
+msgstr "ವಿತರಣೆಯ ನವೀಕರಣಗಳ ಪಟ್ಟಿಯನ್ನು ಪಡೆಯಲಾಗಿಲ್ಲ"
+
+#. TRANSLATORS: new distro available, e.g. F9 to F10
+#: ../src/gpk-update-viewer.c:3118
+#, c-format
+msgid "New distribution upgrade release '%s' is available"
+msgstr "ಹೊಸ ವಿತರಣಾ ನವೀಕರಣ ಬಿಡುಗಡೆ '%s'ಲಭ್ಯವಿದೆ"
+
+#. TRANSLATORS: this is when some updates are not being shown as other packages need updating first
+#: ../src/gpk-update-viewer.c:3366
+msgid ""
+"Other updates are held back as some important system packages need to be "
+"installed first."
+msgstr ""
+"ಕೆಲವು ಪ್ರಮುಖ ವ್ಯವಸ್ಥೆಯ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಮೊದಲು ಅನುಸ್ಥಾಪಿಸಬೇಕಿರುವ ಕಾರಣ ಇತರೆ "
+"ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು "
+"ತೆಡೆಹಿಡಿಯಲಾಗಿದೆ."
+
+#: ../src/gpk-update-viewer.c:3411
+#| msgid "Updated packages"
+msgid "Update Packages"
+msgstr "ಪ್ಯಾಕೇಜ್ ಅನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡು"
+
+#: ../src/gpk-dbus-service.c:126
+msgid "Do not exit after the request has been processed"
+msgstr "ಮನವಿಯನ್ನು ಸಂಸ್ಕರಿಸಿದ ನಂತರ ನಿರ್ಗಮಿಸಬೇಡಿ"
+
+#: ../src/gpk-dbus-service.c:142
+msgid "Session D-Bus service for PackageKit"
+msgstr "PackageKit ಗಾಗಿ ಅಧಿವೇಶನ D-Bus ಸೇವೆ"
+
+#. TRANSLATORS: turn on all debugging
+#: ../src/gpk-debug.c:131
+msgid "Show debugging information for all files"
+msgstr "ಎಲ್ಲಾ ಕಡತಗಳಿಗಾಗಿ ದೋಷನಿವಾರಣಾ ಮಾಹಿತಿಯನ್ನು ತೋರಿಸು"
+
+#: ../src/gpk-debug.c:189
+msgid "Debugging Options"
+msgstr "ದೋಷ ನಿವಾರಣಾ ಆಯ್ಕೆಗಳು"
+
+#: ../src/gpk-debug.c:189
+msgid "Show debugging options"
+msgstr "ದೋಷ ನಿವಾರಣಾ ಆಯ್ಕೆಗಳನ್ನು ತೋರಿಸು"
+
+#~ msgid "Ask the user if files should be copied to a non-private directory"
+#~ msgstr "ಕಡತಗಳನ್ನು ವೈಯಕ್ತಿಕವಲ್ಲದ ಕೋಶಕ್ಕೆ ಪ್ರತಿ ಮಾಡಬೇಕಿದ್ದರೆ ಬಳಕೆದಾರನನ್ನು ಕೇಳು"
+
+#~ msgid ""
+#~ "Ask the user if files should be copied to a non-private directory when "
+#~ "installing from a FUSE mount."
+#~ msgstr ""
+#~ "ಒಂದು FUSE ಏರಿಕೆಯಿಂದ ಅನುಸ್ಥಾಪಿಸುವಾಗ ಕಡತಗಳನ್ನು ವೈಯಕ್ತಿಕವಲ್ಲದ ಕೋಶಕ್ಕೆ ಪ್ರತಿ "
+#~ "ಮಾಡಬೇಕಿದ್ದರೆ ಬಳಕೆದಾರನನ್ನು ಕೇಳು"
+
+#~ msgid ""
+#~ "Notify the user before a large update is done on a mobile broadband "
+#~ "connection"
+#~ msgstr ""
+#~ "ಒಂದು ಮೊಬೈಲ್ ಬ್ರಾಡ್‌ಬ್ಯಾಂಡ್ ಸಂಪರ್ಕದ ಮೂಲಕ ಒಂದು ದೊಡ್ಡ ಅಪ್‌ಡೇಟ್‌ ಅನ್ನು ನಡೆಸುವ ಮುನ್ನ "
+#~ "ಬಳಕೆದಾರರಿಗೆ ಸೂಚನೆ ನೀಡು"
+
+#~ msgid ""
+#~ "Notify the user before a large update is done on a mobile broadband "
+#~ "connection."
+#~ msgstr ""
+#~ "ಮೊಬೈಲ್ ಬ್ರಾಡ್‌ಬ್ಯಾಂಡ್ ಸಂಪರ್ಕದ ಮುಖಾಂತರ ಒಂದು ದೊಡ್ಡ ಅಪ್‌ಡೇಟ್‌ ಅನ್ನು ನಡೆಸುವ ಮುನ್ನ "
+#~ "ಬಳಕೆದಾರರಿಗೆ ಸೂಚನೆ ನೀಡು."
+
+#~ msgid "Software Sources"
+#~ msgstr "ತಂತ್ರಾಂಶ ಆಕರಗಳು"
+
+#~ msgid "Software Log"
+#~ msgstr "ತಂತ್ರಾಂಶ ದಾಖಲೆ"
+
+#~ msgid "Help"
+#~ msgstr "ಸಹಾಯ"
+
+#~ msgid "About Software Install"
+#~ msgstr "ತಂತ್ರಾಂಶ ಅನುಸ್ಥಾಪನೆಯ ಕುರಿತು"
+
+#~ msgid "Catalog Installer"
+#~ msgstr "ಸೂಚಿ ಅನುಸ್ಥಾಪಕ"
+
+#~ msgid "Install a catalog of software on the system"
+#~ msgstr "ಒಂದು ತಂತ್ರಾಂಶದ ಸೂಚಿಯನ್ನು ಗಣಕದಲ್ಲಿ ಅನುಸ್ಥಾಪಿಸು"
+
+#~ msgid "Software Settings"
+#~ msgstr "ತಂತ್ರಾಂಶ ಸಿದ್ಧತೆಗಳು"
+
+#~ msgid ""
+#~ "Change software update preferences and enable or disable software sources"
+#~ msgstr ""
+#~ "ತಂತ್ರಾಂಶ ಅಪ್‌ಡೇಟ್ ಆದ್ಯತೆಗಳನ್ನು ಬದಲಾಯಿಸು ಮತ್ತು ತಂತ್ರಾಂಶ ಮೂಲಗಳನ್ನು ಸಕ್ರಿಯ ಅಥವ "
+#~ "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು"
+
+#~ msgid "Software Update Preferences"
+#~ msgstr "ತಂತ್ರಾಂಶ ಅಪ್‌ಡೇಟ್ ಆದ್ಯತೆಗಳು"
+
+#~ msgid "_Check Now"
+#~ msgstr "ಈಗ ಪರೀಕ್ಷಿಸು (_C)"
+
+#~ msgid "C_heck for updates:"
+#~ msgstr "ಅಪ್‌ಡೇಟ್‌ಗಳಿಗಾಗಿ ಪರಿಶೀಲಿಸು(_h):"
+
+#~ msgid "Check for major _upgrades:"
+#~ msgstr "ಪ್ರಮುಖ ನವೀಕರಣಗಳಿಗಾಗಿ ಪರಿಶೀಲಿಸು(_u):"
+
+#~ msgid "Check for updates when using mobile broadband"
+#~ msgstr "ಮೊಬೈಲ್ ಬ್ರಾಡ್‌ಬ್ಯಾಂಡನ್ನು ಬಳಸುವಾಗ ಅಪ್‌ಡೇಟಿಗಾಗಿ ಪರಿಶೀಲಿಸು"
+
+#~ msgid "Check for updates on battery power"
+#~ msgstr "ಬ್ಯಾಟರಿ ವಿದ್ಯುಚ್ಛಕ್ತಿಯಲ್ಲಿದ್ದಾಗ ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸು"
+
+#~ msgid "Currently using mobile broadband"
+#~ msgstr "ಪ್ರಸಕ್ರ ಮೊಬೈಲ್ ಬ್ರಾಡ್‌ಬ್ಯಾಂಡನ್ನು ಬಳಸಲಾಗುತ್ತಿದೆ"
+
+#~ msgid "Update Settings"
+#~ msgstr "ಸಿದ್ಧತೆಗಳನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡು"
+
+#~ msgid "Service Pack Creator"
+#~ msgstr "ಸರ್ವಿಸ್ ಪ್ಯಾಕ್‌ ನಿರ್ಮಾಣಗಾರ"
+
+#~ msgid "Create a copy of this computer's package list"
+#~ msgstr "ಈ ಗಣಕದಲ್ಲಿನ ಪ್ಯಾಕೇಜು ಪಟ್ಟಿಯ ಒಂದು ಪ್ರತಿಯನ್ನು ನಿರ್ಮಿಸು"
+
+#~ msgid "Create an archive of all the pending updates"
+#~ msgstr "ಬಾಕಿ ಇರುವ ಎಲ್ಲಾ ಅಪ್‌ಡೇಟ್‌ಗಳ ಒಂದು ಆರ್ಕೈವ್ ಅನ್ನು ನಿರ್ಮಿಸು"
+
+#~ msgid "Create an archive of a specific package"
+#~ msgstr "ಒಂದು ನಿಗದಿತ ಪ್ಯಾಕೇಜಿನ ಆರ್ಕೈವ್ ಅನ್ನು ನಿರ್ಮಿಸು"
+
+#~ msgid "Multiple packages can be specified using a comma delimited list"
+#~ msgstr ""
+#~ "ಅನೇಕ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಪಟ್ಟಿಯಲ್ಲಿ ಸೂಚಿಸಲು ಅವುಗಳ ನಡುವೆ ವಿರಾಮ ಚಿಹ್ನೆಗಳನ್ನು ಬಳಸಬಹುದು"
+
+#~ msgid "Output directory:"
+#~ msgstr "ಔಟ್‌ಪುಟ್ ಕೋಶ:"
+
+#~ msgid "Destination package list:"
+#~ msgstr "ನಿರ್ದೇಶಿತ ಪ್ಯಾಕೇಜ್ ಪಟ್ಟಿ:"
+
+#~ msgid "Select a Package List File"
+#~ msgstr "ಒಂದು ಪ್ಯಾಕೇಜ್ ಪಟ್ಟಿ ಕಡತವನ್ನು ಆಯ್ಕೆ ಮಾಡು"
+
+#~ msgid "Save New Service Pack"
+#~ msgstr "ಹೊಸ ಸರ್ವಿಸ್ ಪ್ಯಾಕ್ ಅನ್ನು ಉಳಿಸು"
+
+#~ msgid "Progress"
+#~ msgstr "ಪ್ರಗತಿ"
+
+#~ msgid "Create"
+#~ msgstr "ನಿರ್ಮಿಸು"
+
+#~ msgid "Software Update"
+#~ msgstr "ತಂತ್ರಾಂಶ ಅಪ್‌ಡೇಟ್‌"
+
+#~ msgid "Operating System Upgrade"
+#~ msgstr "ಕಾರ್ಯವ್ಯವಸ್ಥೆಯ ನವೀಕರಣ"
+
+#~ msgid "Upgrade the operating system to a new version"
+#~ msgstr "ಕಾರ್ಯವ್ಯವಸ್ಥೆಯನ್ನು ಒಂದು ಹೊಸ ಆವೃತ್ತಿಗೆ ನವೀಕರಿಸು"
+
+#~ msgid "_Details"
+#~ msgstr "ವಿವರಗಳು(_D)"
+
+#~ msgid "_Remove"
+#~ msgstr "ತೆಗೆದು ಹಾಕು(_R)"
+
+#~ msgid "Remove %i additional package?"
+#~ msgid_plural "Remove %i additional packages?"
+#~ msgstr[0] "ಹೆಚ್ಚಿನ %i ಪ್ಯಾಕೇಜ್‌ ಅನ್ನು ತೆಗೆದು ಹಾಕ ಬೇಕೆ?"
+#~ msgstr[1] "ಹೆಚ್ಚಿನ %i ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅನ್ನು ತೆಗೆದು ಹಾಕ ಬೇಕೆ?"
+
+#~ msgid ""
+#~ "The software which you want to remove is required to run other software, "
+#~ "which will be removed too."
+#~ msgstr ""
+#~ "ನೀವು ತೆಗೆದು ಹಾಕಲು ಬಯಸುವ ತಂತ್ರಾಂಶವು ಬೇರೆ ತಂತ್ರಾಂಶವನ್ನು ಚಲಾಯಿಸಲು ಅಗತ್ಯವಿರುತ್ತದೆ "
+#~ "ಹಾಗು ಅದನ್ನೂ ಸಹ ತೆಗೆದು ಹಾಕಲಾಗುತ್ತದೆ."
+
+#~ msgid "Install %i additional package?"
+#~ msgid_plural "Install %i additional packages?"
+#~ msgstr[0] "%i ಹೆಚ್ಚುವರಿ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಬೇಕೆ?"
+#~ msgstr[1] "%i ಹೆಚ್ಚುವರಿ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಬೇಕೆ?"
+
+#~ msgid ""
+#~ "The software that you want to install requires additional software to run "
+#~ "correctly."
+#~ msgstr ""
+#~ "ನೀವು ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುವ ತಂತ್ರಾಂಶವು ಸರಿಯಾಗಿ ಕೆಲಸ ಮಾಡಲು ಹೆಚ್ಚುವರಿ ತಂತ್ರಾಂಶವನ್ನು "
+#~ "ಅನುಸ್ಥಾಪಿಸು ಅಗತ್ಯವಿರುತ್ತದೆ."
+
+#~ msgid "No software"
+#~ msgstr "ಯಾವುದೆ ತಂತ್ರಾಂಶವಿಲ್ಲ"
+
+#~ msgid "Software requires %s"
+#~ msgstr "ತಂತ್ರಾಂಶಕ್ಕಾಗಿ %s ಅಗತ್ಯವಿರುತ್ತದೆ"
+
+#~ msgid "%s requires the following additional software to function correctly."
+#~ msgstr ""
+#~ "%s ಸರಿಯಾಗಿ ಕೆಲಸ ಮಾಡಲು ಈ ಕೆಳಗಿನ ಹೆಚ್ಚುವರಿ ತಂತ್ರಾಂಶವನ್ನು ಅನುಸ್ಥಾಪಿಸುವ "
+#~ "ಅಗತ್ಯವಿರುತ್ತದೆ."
+
+#~ msgid "You don't have the necessary privileges to perform this action."
+#~ msgstr "ಈ ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಅಗತ್ಯವಿರುವ ಸವಲತ್ತನ್ನು ನೀವು ಹೊಂದಿಲ್ಲ."
+
+#~ msgid "The software service could not be started."
+#~ msgstr "ತಂತ್ರಾಂಶ ಸೇವೆಯನ್ನು ಆರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#~ msgid "The query is not valid."
+#~ msgstr "ಮನವಿಯು ಅಮಾನ್ಯವಾಗಿದೆ."
+
+#~ msgid "The file is not valid."
+#~ msgstr "ಕಡತವು ಮಾನ್ಯವಾದುದಾಗಿಲ್ಲ."
+
+#~ msgid "Installing software"
+#~ msgstr "ತಂತ್ರಾಂಶವನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ"
+
+#~ msgid "Could not find software"
+#~ msgstr "ತಂತ್ರಾಂಶವನ್ನು ಹುಡುಕಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#~ msgid "The software could not be found in any software source"
+#~ msgstr "ಯಾವುದೆ ತಂತ್ರಾಂಶ ಮೂಲದಲ್ಲಿ ತಂತ್ರಾಂಶವು ಕಂಡುಬಂದಿಲ್ಲ"
+
+#~ msgid "The software is already installed"
+#~ msgstr "ತಂತ್ರಾಂಶವನ್ನು ಈಗಾಗಲೆ ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ"
+
+#~ msgid "%s requires additional software"
+#~ msgstr "%s ಗಾಗಿ ಹೆಚ್ಚುವರಿ ತಂತ್ರಾಂಶದ ಅಗತ್ಯವಿದೆ"
+
+#~ msgid "An application requires additional software"
+#~ msgstr "ಒಂದು ಅನ್ವಯಕ್ಕಾಗಿ ಹೆಚ್ಚುವರಿ ತಂತ್ರಾಂಶದ ಅಗತ್ಯವಿದೆ"
+
+#~ msgid "Could not process catalog"
+#~ msgstr "ಕೆಟಲಾಗ್ ಅನ್ನು ಸಂಸ್ಕರಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#~ msgid "No packages need to be installed"
+#~ msgstr "ಅನುಸ್ಥಾಪಿಸಲು ಯಾವುದೆ ಪ್ಯಾಕೇಜುಗಳಿಲ್ಲ"
+
+#~ msgid "Install packages in catalog?"
+#~ msgstr "ಸೂಚಿಯಲ್ಲಿನ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಬೇಕೆ?"
+
+#~ msgid "The following packages are marked to be installed from the catalog:"
+#~ msgstr "ಈ ಕೆಳಗಿನ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಸೂಚಿಯಿಂದ ಅನುಸ್ಥಾಪಿಸಲು ಗುರುತು ಹಾಕಲಾಗಿದೆ:"
+
+#~ msgid "Do you want to install this driver now?"
+#~ msgid_plural "Do you want to install these drivers now?"
+#~ msgstr[0] "ನೀವು ಈ ಚಾಲಕವನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರೆ?"
+#~ msgstr[1] "ನೀವು ಈ ಚಾಲಕಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರೆ?"
+
+#~ msgid "Failed to find any software"
+#~ msgstr "ಯಾವುದೆ ತಂತ್ರಾಂಶವನ್ನು ಹುಡುಕುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#~ msgid "The file could not be found in any available software"
+#~ msgstr "ಕಡತವು ಲಭ್ಯವಿರುವ ಯಾವುದೆ ತಂತ್ರಾಂಶ ಕಟ್ಟುಗಳಲ್ಲಿ ಕಂಡುಬಂದಿಲ್ಲ"
+
+#~ msgid "Do you want to install this catalog?"
+#~ msgid_plural "Do you want to install these catalogs?"
+#~ msgstr[0] "ನೀವು ಈ ಸೂಚಿಯನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರೆ?"
+#~ msgstr[1] "ನೀವು ಈ ಸೂಚಿಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರೆ?"
+
+#~ msgid "Install catalogs"
+#~ msgstr "ಸೂಚಿಯನ್ನು ಅನುಸ್ಥಾಪಿಸು"
+
+#~ msgid "Could not upgrade the system"
+#~ msgstr "ಕಾರ್ಯವ್ಯವಸ್ಥೆಯನ್ನು ನವೀಕರಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#~ msgid "The upgrade completed successfully"
+#~ msgstr "ಯಶಸ್ವಿಯಾಗಿ ನವೀಕರಣವನ್ನು ಪೂರ್ಣಗೊಳಿಸಲಾಗಿದೆ"
+
+#~ msgid ""
+#~ "Your system now has the required software needed to complete the "
+#~ "operating system upgrade."
+#~ msgstr ""
+#~ "ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯು ಈಗ ಕಾರ್ಯ ವ್ಯವಸ್ಥೆ ನವೀಕರಣಕ್ಕೆ ಅಗತ್ಯವಿರುವ ತಂತ್ರಾಂಶವನ್ನು ಹೊಂದಿದೆ."
+
+#~ msgid ""
+#~ "When you are ready, you can restart your system and continue the upgrade "
+#~ "process."
+#~ msgstr ""
+#~ "ನೀವು ಸಿದ್ಧಗೊಂಡಾಗ, ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯನ್ನು ಮರಳಿ ಆರಂಭಿಸಬಹುದು ಮತ್ತು ನವೀಕರಣ ಪ್ರಕ್ರಿಯೆಯನ್ನು "
+#~ "ಮುಂದವರೆಸಬಹುದು."
+
+#~ msgid "Make sure you have saved any unsaved work before restarting."
+#~ msgstr ""
+#~ "ಮರಳಿ ಆರಂಭಿಸುವ ಮೊದಲು ಎಲ್ಲಾ ಬಾಕಿ ಕೆಲಸಗಳನ್ನು ಉಳಿಸಿಕೊಳ್ಳಲಾಗಿದೆ ಎಂದು "
+#~ "ಖಚಿತಪಡಿಸಕೊಳ್ಳಿ."
+
+#~ msgid "Restart Now"
+#~ msgstr "ಈಗಲೆ ಮರಳಿ ಆರಂಭಿಸು"
+
+#~ msgid "Could not get distribution upgrades"
+#~ msgstr "ವಿತರಣೆಯ ನವೀಕರಣಗಳನ್ನು ಪಡೆಯಲಾಗಲಿಲ್ಲ"
+
+#~ msgid "No releases available for upgrade"
+#~ msgstr "ನವೀಕರಣಕ್ಕಾಗಿ ಯಾವುದೆ ಬಿಡುಗಡೆಗಳು ಲಭ್ಯವಿಲ್ಲ"
+
+#~ msgid "Upgrade your system (%d of %d)"
+#~ msgstr "ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯನ್ನು ನವೀಕರಿಸಿ (%d, %d ಯಲ್ಲಿ)"
+
+#~ msgid ""
+#~ "This assistant will guide you through upgrading your currently installed "
+#~ "operating system to a newer release."
+#~ msgstr ""
+#~ "ಸಹಾಯಕವು ನಿಮ್ಮನ್ನು ಪ್ರಸಕ್ತ ಅನುಸ್ಥಾಪಿಸಲಾದ ವ್ಯವಸ್ಥೆಯನ್ನು ಹೊಸ ಬಿಡುಗಡೆಗೆ ನವೀಕರಿಸುವ "
+#~ "ಹಂತಗಳಲ್ಲಿ ನೆರವನ್ನು ಒದಗಿಸುತ್ತದೆ."
+
+#~ msgid ""
+#~ "This process may take several hours to complete, depending on the speed "
+#~ "of your internet connection and the options selected."
+#~ msgstr ""
+#~ "ಈ ಪ್ರಕ್ರಿಯೆಯು ನಿಮ್ಮ ಅಂತರಜಾಲ ಸಂಪರ್ಕದ ವೇಗ ಮತ್ತು ನೀವು ಆರಿಸಿದ ಆಯ್ಕೆಗಳ ಮೇಲೆ "
+#~ "ಅವಲಂಬಿತವಾಗಿ, ಪೂರ್ಣಗೊಳ್ಳಲು ಹಲವಾರು ಗಂಟೆಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು."
+
+#~ msgid ""
+#~ "You will be able to continue using your system while this assistant "
+#~ "downloads the packages needed to upgrade your system."
+#~ msgstr ""
+#~ "ಈ ಸಹಾಯಕವು ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯನ್ನು ನವೀಕರಿಸಲು ಅಗತ್ಯವಿರುವ ಪ್ಯಾಕೇಜುಗಳನ್ನು ಇಳಿಸಿಕೊಳ್ಳುವಾಗ "
+#~ "ಮಾಡಿಕೊಳ್ಳುವಾಗ ನೀವು ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯನ್ನು ಬಳಸುವುದನ್ನು ಮುಂದುವರೆಸಬಹುದು."
+
+#~ msgid ""
+#~ "When the download has completed, you will be prompted to restart your "
+#~ "system in order to complete the upgrade process."
+#~ msgstr ""
+#~ "ಇಳಿಕೆ ಪೂರ್ಣಗೊಂಡ ನಂತರ, ನವೀಕರಣದ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯನ್ನು ಮರಳಿ "
+#~ "ಆರಂಭಿಸುವಂತೆ ನಿಮಗೆ ತಿಳಿಸಲಾಗುತ್ತದೆ."
+
+#~ msgid "Upgrade your system"
+#~ msgstr "ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯನ್ನು ನವೀಕರಿಸಿ"
+
+#~ msgid "Available operating system _releases:"
+#~ msgstr "ಲಭ್ಯವಿರುವ ಕಾರ್ಯವ್ಯವಸ್ಥೆಯ ಬಿಡುಗಡೆಗಳು (_r):"
+
+#~ msgid "Loading list of upgrades"
+#~ msgstr "ನವೀಕರಣಗಳ ಪಟ್ಟಿಯನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ"
+
+#~ msgid "Choose desired operating system version"
+#~ msgstr "ಇಚ್ಛೆಯ ಕಾರ್ಯ ವ್ಯವಸ್ಥೆಯ ಆವೃತ್ತಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡು"
+
+#~ msgid "The upgrade tool can operate with three different modes:"
+#~ msgstr "ನವೀಕರಣ ಪ್ರಕ್ರಿಯೆಯು ಮೂರು ವಿಭಿನ್ನವಾದ ಸ್ಥಿತಿಗಳಲ್ಲಿ ಕಾರ್ಯನಿರ್ವಹಿಸಬಲ್ಲದು:"
+
+#~ msgid ""
+#~ "The selected option will require the installer to download additional "
+#~ "data."
+#~ msgstr ""
+#~ "ಆರಿಸಲಾದ ಆಯ್ಕೆಗಾಗಿ ಅನುಸ್ಥಾಪಕವು ಹೆಚ್ಚುವರಿ ದತ್ತಾಂಶವನ್ನು ಇಳಿಸಿಕೊಳ್ಳುವ ಅಗತ್ಯವಿರುತ್ತದೆ."
+
+#~ msgid ""
+#~ "Do not continue with this option if the network will not be available at "
+#~ "upgrade time."
+#~ msgstr ""
+#~ "ನವೀಕರಣದ ಸಂದರ್ಭದಲ್ಲಿ ಜಾಲಬಂಧವು ಲಭ್ಯವಿರದೆ ಇದ್ದಲ್ಲಿ ಈ ಆಯ್ಕೆಯೊಂದಿಗೆ ಮುಂದುವರೆಯಬೇಡಿ."
+
+#~ msgid "Choose desired download options"
+#~ msgstr "ಇಚ್ಛೆಯ ಇಳಿಕೆ (ಡೌನ್‌ಲೋಡ್) ಆಯ್ಕೆಗಳನ್ನು ಆರಿಸಿ"
+
+#~ msgid ""
+#~ "The operating system upgrade tool will now perform the following actions:"
+#~ msgstr "ಕಾರ್ಯ ವ್ಯವಸ್ಥೆ ನವೀಕರಣ ಉಪಕರಣವು ಈಗ ಈ ಕೆಳಗಿನ ಕೆಲಸಗಳನ್ನು ನಿರ್ವಹಿಸುತ್ತದೆ:"
+
+#~ msgid "Request authentication from a privileged user"
+#~ msgstr "ಒಬ್ಬ ವಿಶೇಷಾಧಿಕಾರವನ್ನು ಹೊಂದಿರುವ ಬಳಕೆದಾರನಿಂದ ದೃಢೀಕರಣಕ್ಕಾಗಿ ಮನವಿ ಮಾಡು"
+
+#~ msgid "Download installer images"
+#~ msgstr "ಅನುಸ್ಥಾಪಕ ಚಿತ್ರಿಕೆಗಳನ್ನು ಇಳಿಸು"
+
+#~ msgid "Download packages"
+#~ msgstr "ಪ್ಯಾಕೇಜ್‌ಗಳನ್ನು ಇಳಿಸು"
+
+#~ msgid "Prepare and test the upgrade"
+#~ msgstr "ನವೀಕರಣವನ್ನು ಸಿದ್ಧಗೊಳಿಸು ಮತ್ತು ಪರೀಕ್ಷಿಸು"
+
+#~ msgid "You will have to restart your computer at the end of the upgrade."
+#~ msgstr "ನವೀಕರಣವು ಪೂರ್ಣಗೊಂಡ ನಂತರ ನಿಮ್ಮ ಈ ಗಣಕವನ್ನು ಮರಳಿ ಆರಂಭಿಸಬೇಕಾಗುತ್ತದೆ."
+
+#~ msgid "Press 'Apply' to apply changes."
+#~ msgstr "ಬದಲಾವಣೆಗಳನ್ನು ಅಳವಡಿಸಲು 'ಅನ್ವಯಿಸು' ಅನ್ನು ಒತ್ತಿ"
+
+#~ msgid "Confirmation"
+#~ msgstr "ಖಚಿತಪಡಿಕೆ"
+
+#~ msgid "Applying changes"
+#~ msgstr "ಬದಲಾವಣೆಗಳನ್ನು ಅನ್ವಯಿಸಲಾಗುತ್ತಿದೆ"
+
+#~ msgid "Cannot perform operating system upgrade"
+#~ msgstr "ಕಾರ್ಯವ್ಯವಸ್ಥೆಯ ನವೀಕರಣವನ್ನು ಮಾಡಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#~ msgid "Upgrading the operating system is not supported."
+#~ msgstr "ಕಾರ್ಯವ್ಯವಸ್ಥೆಯನ್ನು ನವೀಕರಿಸುವುದನ್ನು ಬೆಂಬಲಿಸಲಾಗುವುದಿಲ್ಲ."
+
+#~ msgid "Cannot get operating system upgrade information."
+#~ msgstr "ಕಾರ್ಯ ವ್ಯವಸ್ಥೆ ನವೀಕರಣ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#~ msgid "Distribution Upgrade Tool"
+#~ msgstr "ವಿತರಣೆಯ ನವೀಕರಣ ಉಪಕರಣ"
+
+#~ msgid "A mirror is possibly broken"
+#~ msgstr "ಒಂದು ಮಿರರ್ ಬಹುಷಃ ಸರಿಯಾಗಿಲ್ಲವೆಂದು ತೋರುತ್ತಿದೆ"
+
+#~ msgid "The connection was refused"
+#~ msgstr "ಸಂಪರ್ಕವನ್ನು ತಿರಸ್ಕರಿಸಲಾಗಿದೆ"
+
+#~ msgid "The parameter was invalid"
+#~ msgstr "ನಿಯತಾಂಕವು ಅಮಾನ್ಯವಾಗಿದೆ"
+
+#~ msgid "The priority was invalid"
+#~ msgstr "ಆದ್ಯತೆಯು ಅಮಾನ್ಯಯವಾಗಿದೆ"
+
+#~ msgid "Backend warning"
+#~ msgstr "ಬ್ಯಾಕೆಂಡ್ ಎಚ್ಚರಿಕೆ"
+
+#~ msgid "Daemon warning"
+#~ msgstr "ಡೀಮನ್ ಎಚ್ಚರಿಕೆ"
+
+#~ msgid "The package list cache is being rebuilt"
+#~ msgstr "ಪ್ಯಾಕೇಜ್ ಪಟ್ಟಿಯ ಕ್ಯಾಶೆಯನ್ನು ಮರಳಿ ನಿರ್ಮಿಸಲಾಗುತ್ತಿದೆ"
+
+#~ msgid "A newer package exists"
+#~ msgstr "ಹೊಸದಾದ ಪ್ಯಾಕೇಜ್‌ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ"
+
+#~ msgid "Configuration files were changed"
+#~ msgstr "ಸಂರಚನಾ ಕಡತಗಳು ಬದಲಾಯಿಸಲ್ಪಟ್ಟಿವೆ"
+
+#~ msgid "Package is already installed"
+#~ msgstr "ಪ್ಯಾಕೇಜ್ ಈಗಾಗಲೆ ಅನುಸ್ಥಾಪಿತಗೊಂಡಿದೆ"
+
+#~ msgid "Automatic cleanup is being ignored"
+#~ msgstr "ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸ್ವಚ್ಛಗೊಳಿಸುವುದನ್ನು ಕಡೆಗಣಿಸಲಾಗಿದೆ"
+
+#~ msgid "Software source download failed"
+#~ msgstr "ತಂತ್ರಾಂಶ ಆಕರ ಇಳಿಸುಕೊಳ್ಳುವಿಕೆಯು ವಿಫಲಗೊಂಡಿದೆ"
+
+#~ msgid "This software source is for developers only"
+#~ msgstr "ತಂತ್ರಾಂಶ ಆಕರವು ಕೇವಲ ವಿಕಸನೆಗಾರರಿಗೆ ಮಾತ್ರವಾಗಿದೆ"
+
+#~ msgid "Other updates have been held back"
+#~ msgstr "ಇತರೆ ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು  ತಡೆಹಿಡಿಯಲಾಗಿದೆ"
+
+#~ msgid "Upgrading system"
+#~ msgstr "ವ್ಯವಸ್ಥೆಯನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡು"
+
+#~ msgid "Upgraded system"
+#~ msgstr "ವ್ಯವಸ್ಥೆಯನ್ನು ನವೀಕರಿಸಲಾಗಿದೆ"
+
+#~ msgid "Software sources"
+#~ msgstr "ತಂತ್ರಾಂಶ ಆಕರಗಳು"
+
+#~ msgid "Catalogs files to install"
+#~ msgstr "ಅನುಸ್ಥಾಪಿಸಬೇಕಿರುವ ಕೆಟಲಾಗುಗಳ ಕಡತಗಳು"
+
+#~ msgid "Catalog installer"
+#~ msgstr "ಸೂಚಿಯ(ಕೆಟಲಾಗ್) ಅನುಸ್ಥಾಪಕ"
+
+#~ msgid "Failed to install catalog"
+#~ msgstr "ಸೂಚಿಯನ್ನು(ಕೆಟಲಾಗ್) ಅನುಸ್ಥಾಪಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#~ msgid "You need to specify a file name to install"
+#~ msgstr "ಅನುಸ್ಥಾಪಿಸಲು ನೀವು ಒಂದು ಕಡತದ ಹೆಸರಸನ್ನು ಸೂಚಿಸಬೇಕು"
+
+#~ msgid "Mime types to install"
+#~ msgstr "ಅನುಸ್ಥಾಪಿಸಬೇಕಿರುವ ಮೈಮ್ ಬಗೆಗಳು"
+
+#~ msgid "Mime Type Installer"
+#~ msgstr "ಮೈಮ್ ಬಗೆಯ ಅನುಸ್ಥಾಪಕ"
+
+#~ msgid "Mime type installer"
+#~ msgstr "ಮೈಮ್ ಬಗೆಯ ಅನುಸ್ಥಾಪಕ"
+
+#~ msgid "Failed to install a program to handle this file type"
+#~ msgstr "ಈ ಬಗೆಯ ಕಡತವನ್ನು ನಿಭಾಯಿಸುವ ಒಂದು ಪ್ರೊಗ್ರಾಮ್ ಅನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ವಿಫಲಗೊಂಡಿದೆ"
+
+#~ msgid "You need to specify a mime type to install"
+#~ msgstr "ಅನುಸ್ಥಾಪಿಸಲು ನೀವು ಒಂದು ಮೈಮ್ ಬಗೆಯನ್ನು ಸೂಚಿಸಬೇಕಾಗುತ್ತದೆ"
+
+#~ msgid "Packages to install"
+#~ msgstr "ಅನುಸ್ಥಾಪಿಸಬೇಕಿರುವ ಪ್ಯಾಕೇಜುಗಳು"
+
+#~ msgid "Package Name Installer"
+#~ msgstr "ಪ್ಯಾಕೇಜು ಹೆಸರಿನ ಅನುಸ್ಥಾಪಕ"
+
+#~ msgid "Failed to install software by name"
+#~ msgstr "ಹೆಸರಿನ ಆಧಾರದಲ್ಲಿ ತಂತ್ರಾಂಶವನ್ನು ಅನುಸ್ಥಾಪಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+
+#~ msgid "You need to specify the name of the software to install"
+#~ msgstr "ಅನುಸ್ಥಾಪಿಸಬೇಕಿರುವ ತಂತ್ರಾಂಶದ ಹೆಸರನ್ನು ನೀವು ಸೂಚಿಸಬೇಕಾಗುತ್ತದೆ"
+
+#~ msgid "Local files to install"
+#~ msgstr "ಅನುಸ್ಥಾಪಿಸಬೇಕಿರುವ ಸ್ಥಳೀಯ ಕಡತಗಳು"
+
+#~ msgid "Single File Installer"
+#~ msgstr "ಏಕ ಕಡತ ಅನುಸ್ಥಾಪಕ"
+
+#~ msgid "Update System"
+#~ msgstr "ಗಣಕವನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡು"
+
+#~ msgid "Hourly"
+#~ msgstr "ಗಂಟೆಗೊಮ್ಮೆ"
+
+#~ msgid "Daily"
+#~ msgstr "ದಿನಕ್ಕೊಮ್ಮೆ"
+
+#~ msgid "Weekly"
+#~ msgstr "ವಾರಕ್ಕೊಮ್ಮೆ"
+
+#~ msgid "Never"
+#~ msgstr "ಎಂದಿಗೂ ಬೇಡ"
+
+#~ msgid "All updates"
+#~ msgstr "ಎಲ್ಲಾ ಅಪ್‌ಡೇಟ್‌ಗಳು"
+
+#~ msgid "Only security updates"
+#~ msgstr "ಕೇವಲ ಸುರಕ್ಷತಾ ಅಪ್‌ಡೇಟ್‌ಗಳು ಮಾತ್ರ"
+
+#~ msgid "Nothing"
+#~ msgstr "ಏನೂ ಇಲ್ಲ"
+
+#~ msgid "Software Source"
+#~ msgstr "ತಂತ್ರಾಂಶ ಆಕರ"
+
+#~ msgid "Could not find any packages named '%s'"
+#~ msgstr "'%s' ಎಂಬ ಹೆಸರಿನ ಯಾವುದೆ ಪ್ಯಾಕೇಜುಗಳು ಕಂಡು ಬಂದಿಲ್ಲ"
+
+#~ msgid "Could not find any valid package names"
+#~ msgstr "ಯಾವುದೆ ಮಾನ್ಯವಾದ ಪ್ಯಾಕೇಜುಗಳ ಹೆಸರುಗಳು ಕಂಡುಬಂದಿಲ್ಲ"
+
+#~ msgid "Could not get array of installed packages: %s"
+#~ msgstr "ಅನುಸ್ಥಾಪಿಸಲಾದ ಪ್ಯಾಕೇಜುಗಳ ವ್ಯೂಹವನ್ನು ಪಡೆಯಲಾಗಿಲ್ಲ: %s"
+
+#~ msgid "Could not save to file: %s"
+#~ msgstr "ಕಡತವನ್ನು ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ: %s"
+
+#~ msgid "Create error"
+#~ msgstr "ನಿರ್ಮಾಣ ದೋಷ"
+
+#~ msgid "Cannot create service pack"
+#~ msgstr "ಸರ್ವಿಸ್ ಪ್ಯಾಕನ್ನು ನಿರ್ಮಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#~ msgid "Cannot copy system package array"
+#~ msgstr "ವ್ಯವಸ್ಥೆಯ ಪ್ಯಾಕೇಜ್ ವ್ಯೂಹವನ್ನು ಪ್ರತಿ ಮಾಡಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#~ msgid "No package name selected"
+#~ msgstr "ಯಾವುದೆ ಪ್ಯಾಕೇಜ್ ಹೆಸರನ್ನು ಆರಿಸಲಾಗಿಲ್ಲ"
+
+#~ msgid "Refreshing system package array"
+#~ msgstr "ವ್ಯವಸ್ಥೆಯ ಪ್ಯಾಕೇಜು ವ್ಯೂಹವನ್ನು ಪುನಶ್ಚೇತನಗೊಳಿಸಲಾಗುತ್ತಿದೆ"
+
+#~ msgid "Refresh error"
+#~ msgstr "ಪುನಶ್ಚೇತನಗೊಳಿಕೆಯ ದೋಷ"
+
+#~ msgid "Could not refresh package array"
+#~ msgstr "ಪ್ಯಾಕೇಜ್ ವ್ಯೂಹವನ್ನು ಪುನಶ್ಚೇತನಗೊಳಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#~ msgid "Cannot read destination package array"
+#~ msgstr "ನಿರ್ದೇಶಿತ ಪ್ಯಾಕೇಜ್ ವ್ಯೂಹವನ್ನು ಓದಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#~ msgid "Package array files"
+#~ msgstr "ಪ್ಯಾಕೇಜ್‌ ವ್ಯೂಹ ಕಡತಗಳು"
+
+#~ msgid "Service pack files"
+#~ msgstr "ಸರ್ವಿಸ್ ಪ್ಯಾಕ್ ಕಡತಗಳು"
+
+#~ msgid ""
+#~ "Set the option, allowable values are 'array', 'updates' and 'package'"
+#~ msgstr ""
+#~ "ಆಯ್ಕೆಯನ್ನು ಹೊಂದಿಸು, ಅನುಮತಿ ಇರುವ ಮೌಲ್ಯಗಳೆಂದರೆ 'array', 'updates' ಹಾಗು "
+#~ "'package' ಆಗಿರುತ್ತದೆ"
+
+#~ msgid "Add the package name to the text entry box"
+#~ msgstr "ಪ್ಯಾಕೇಜ್ ಹೆಸರನ್ನು ಪಠ್ಯ ನಮೂದಿನ ಸ್ಥಳಕ್ಕೆ ಸೇರಿಸು"
+
+#~ msgid "Set the remote package array file name"
+#~ msgstr "ದೂರಸ್ಥ ಪ್ಯಾಕೇಜ್ ವ್ಯೂಹ ಕಡತದ ಹೆಸರನ್ನು ಸಿದ್ಧಗೊಳಿಸು"
+
+#~ msgid "Set the default output directory"
+#~ msgstr "ಪೂರ್ವನಿಯೋಜಿತಔಟ್‌ಪುಟ್ ಕೋಶವನ್ನು ಸಿದ್ಧಗೊಳಿಸು"
+
+#~ msgid "Update Software"
+#~ msgstr "ತಂತ್ರಾಂಶವನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡು"
+
+#~ msgid "Software Update Viewer"
+#~ msgstr "ತಂತ್ರಾಂಶ ಅಪ್‌ಡೇಟ್ ವೀಕ್ಷಕ"

@@ -1,0 +1,102 @@
+<schemalist>
+  <enum id="org.gnome.packagekit.SearchType">
+    <value nick="name" value="0"/>
+    <value nick="details" value="1"/>
+    <value nick="file" value="2"/>
+  </enum>
+  <schema id="org.gnome.packagekit" path="/org/gnome/packagekit/">
+    <key name="enable-autoremove" type="b">
+      <default>false</default>
+      <summary>Automatically remove unused dependencies</summary>
+      <description>When removing a package, also remove those dependencies that are not required by other packages.</description>
+    </key>
+    <key name="show-depends" type="b">
+      <default>false</default>
+      <summary>Ask the user if additional packages should be installed</summary>
+      <description>Ask the user if additional packages should be installed.</description>
+    </key>
+    <key name="autocomplete" type="b">
+      <default>false</default>
+      <summary>If search terms should be completed automatically</summary>
+      <description>If search terms should be completed automatically.</description>
+    </key>
+    <key name="filter-basename" type="b">
+      <default>false</default>
+      <summary>Filter using basename in gpk-application</summary>
+      <description>Filter package lists using basename in gpk-application.</description>
+    </key>
+    <key name="filter-newest" type="b">
+      <default>true</default>
+      <summary>Only show the newest packages in the file lists</summary>
+      <description>Only show the newest packages in the file lists.</description>
+    </key>
+    <key name="filter-supported" type="b">
+      <default>false</default>
+      <summary>Only show supported packages in the file lists</summary>
+      <description>Only show supported packages in the file lists.</description>
+    </key>
+    <key name="filter-arch" type="b">
+      <default>true</default>
+      <summary>Only show native packages in the file lists</summary>
+      <description>Only show native packages matching the machine architecture in the file lists.</description>
+    </key>
+    <key name="category-groups" type="b">
+      <default>false</default>
+      <summary>Show the category group menu</summary>
+      <description>Show the category group menu. This is more complete and custom to the distribution, but takes longer to populate.</description>
+    </key>
+    <key name="show-all-packages" type="b">
+      <default>false</default>
+      <summary>Show the 'All Packages' group menu</summary>
+      <description>Show the all packages menu item. This takes a long time to populate on most backends and is not generally required by end users.</description>
+    </key>
+    <key name="search-mode" enum="org.gnome.packagekit.SearchType">
+      <default>'details'</default>
+      <summary>The search mode used by default</summary>
+      <description>The search mode used by default. Options are "name", "details", or "file".</description>
+    </key>
+    <key name="repo-show-details" type="b">
+      <default>false</default>
+      <summary>Show all repositories in the package source viewer</summary>
+      <description>Show all repositories in the package source viewer.</description>
+    </key>
+    <key name="only-newest" type="b">
+      <default>true</default>
+      <summary>Only show the newest updates in the list</summary>
+      <description>Only show the newest packages in the update list, and filter out older updates that are still available.</description>
+    </key>
+    <key name="scroll-active" type="b">
+      <default>true</default>
+      <summary>Scroll to packages as they are downloaded</summary>
+      <description>Scroll to packages in the update list as they are downloaded or installed.</description>
+    </key>
+    <key name="enable-font-helper" type="b">
+      <default>true</default>
+      <summary>Allow applications to invoke the font installer</summary>
+      <description>Allow applications to invoke the font installer.</description>
+    </key>
+    <key name="ignored-dbus-requests" type="s">
+      <default>'/usr/bin/gnome-terminal,/usr/bin/nm-applet,/usr/bin/xchat-gnome'</default>
+      <summary>Programs that should be ignored when they issue session D-Bus requests</summary>
+      <description>Programs that should be ignored when they issue session D-Bus requests, separated by commas.</description>
+    </key>
+    <key name="enable-codec-helper" type="b">
+      <default>true</default>
+      <summary>Allow applications to invoke the codec installer</summary>
+      <description>Allow applications to invoke the codec installer.</description>
+    </key>
+    <key name="enable-mime-type-helper" type="b">
+      <default>true</default>
+      <summary>Allow applications to invoke the mime type installer</summary>
+      <description>Allow applications to invoke the mime type installer.</description>
+    </key>
+    <key name="dbus-default-interaction" type="s">
+      <default>'show-confirm-search,show-confirm-deps,show-confirm-install,show-progress,show-finished,show-warning'</default>
+      <description>When displaying UI from a session D-Bus request, automatically use these options by default.</description>
+    </key>
+    <key name="dbus-enforced-interaction" type="s">
+      <default>'show-confirm-install'</default>
+      <description>When displaying UI from a session D-Bus request, force these options to be turned on.</description>
+    </key>
+  </schema>
+</schemalist>

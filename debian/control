@@ -1,0 +1,85 @@
+Source: gnome-packagekit
+Section: gnome
+Priority: optional
+Maintainer: Matthias Klumpp <mak@debian.org>
+Vcs-Git: git://anonscm.debian.org/pkg-packagekit/gnome-packagekit.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-packagekit/gnome-packagekit.git
+Build-Depends: debhelper (>= 9.0.0),
+               dh-autoreconf,
+               docbook-utils,
+               intltool (>= 0.40),
+               libcanberra-gtk3-dev,
+               libdbus-glib-1-dev (>= 0.74),
+               libfontconfig1-dev,
+               libglib2.0-dev (>= 2.32),
+               libgtk-3-dev (>= 3.12),
+               libnotify-dev (>= 0.7),
+               libpackagekit-glib2-dev (>= 0.8.16),
+               libpolkit-gobject-1-dev,
+               libsystemd-dev [linux-any],
+               python-dev,
+               rarian-compat,
+               xmlto,
+               yelp-tools
+Standards-Version: 3.9.6
+Homepage: https://help.gnome.org/users/gnome-packagekit/stable/
+
+Package: gnome-packagekit
+Architecture: any
+Depends: gnome-packagekit-session (>= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Replaces: gnome-software-manager (<< 3.6.0-2)
+Breaks: gnome-software-manager (<< 3.6.0-2),
+        update-notifier (<< ${source:Version})
+Provides: update-notifier
+Description: Graphical distribution neutral package manager for GNOME
+ PackageKit allows performing simple software management tasks over a DBus
+ interface  e.g. refreshing the cache, updating, installing and removing
+ software packages or searching for multimedia codecs and file handlers.
+ .
+ This package contains a GTK+ based application for package installation
+ and removal, as well as an application to view system updates.
+
+Package: gnome-packagekit-session
+Architecture: any
+Depends: gnome-packagekit-data (>= ${source:Version}),
+         gnome-settings-daemon (>= 3.4),
+         packagekit (>= 0.8.6),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Suggests: gnome-packagekit
+Replaces: gnome-packagekit (<< 3.6.0-2)
+Breaks: gnome-packagekit (<< 3.6.0-2)
+Description: Provides PackageKit session API for GNOME
+ PackageKit allows performing simple software management tasks over a DBus
+ interface  e.g. refreshing the cache, updating, installing and removing
+ software packages or searching for multimedia codecs and file handlers.
+ .
+ This package contains a GTK+ GUI for PackageKit transactions, a simple
+ repository editor and PackageKit configuration tool and a viewer for
+ package installation history.
+ It implements the PackageKit session API for GNOME, which allows applications
+ to easily install additional software (e.g. extensions), uninstall files and
+ perform simple software package status queries.
+
+Package: gnome-packagekit-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: Data files for GNOME-PackageKit
+ PackageKit allows performing simple software management tasks over a DBus
+ interface  e.g. refreshing the cache, updating, installing and removing
+ software packages or searching for multimedia codecs and file handlers.
+ .
+ This package contains architecture-independent files for all
+ GNOME-PackageKit modules.
+
+Package: update-notifier
+Architecture: all
+Section: oldlibs
+Priority: extra
+Depends: gnome-packagekit (>= ${source:Version}),
+         ${misc:Depends}
+Description: Transitional package (update-notifier -> gnome-packagekit)
+ Transitional dummy package replacing update-notifier with
+ GNOME-PackageKit.

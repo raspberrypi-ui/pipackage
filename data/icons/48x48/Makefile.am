@@ -1,0 +1,2 @@
+SUBDIRS = categories status animations
+

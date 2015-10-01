@@ -1,0 +1,11 @@
+[Desktop Entry]
+_Name=Package Install
+_Comment=Install selected packages on the system
+Categories=System;
+Exec=gpk-install-local-file %F
+Terminal=false
+Type=Application
+Icon=system-software-install
+StartupNotify=true
+NoDisplay=true
+MimeType=application/x-rpm;application/x-redhat-package-manager;application/x-deb;application/x-app-package;

@@ -1,0 +1,11 @@
+[Desktop Entry]
+_Name=Package Log
+_Comment=View past package management tasks
+Icon=gpk-log
+Exec=gpk-log
+Terminal=false
+Type=Application
+NoDisplay=true
+Categories=GNOME;GTK;System;
+StartupNotify=true
+
