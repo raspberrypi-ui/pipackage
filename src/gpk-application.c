@@ -102,6 +102,8 @@ typedef struct {
 	PkPackageSack		*package_sack;
 	PkStatusEnum		 status_last;
 	PkTask			*task;
+	GtkWidget *msg_dlg, *progress_bar, *stat_label, *cancel_btn;
+	gint                     dlg_count;
 } GpkApplicationPrivate;
 
 enum {
@@ -135,6 +137,65 @@ static void gpk_application_perform_search (GpkApplicationPrivate *priv);
 
 static void gpk_application_get_requires_cb (PkClient *client, GAsyncResult *res, GpkApplicationPrivate *priv);
 static void gpk_application_get_depends_cb (PkClient *client, GAsyncResult *res, GpkApplicationPrivate *priv);
+static void gpk_application_cancel_cb (GtkWidget *button_widget, GpkApplicationPrivate *priv);
+
+static void gpk_application_show_wait_dialog (GpkApplicationPrivate *priv, const char *message)
+{
+        GtkWidget *label;
+        priv->dlg_count++;
+        if (priv->dlg_count > 1) return;
+        priv->msg_dlg = (GtkWidget *) gtk_dialog_new ();
+        gtk_window_set_title (GTK_WINDOW (priv->msg_dlg), "");
+        gtk_window_set_modal (GTK_WINDOW (priv->msg_dlg), TRUE);
+        gtk_window_set_decorated (GTK_WINDOW (priv->msg_dlg), FALSE);
+        gtk_window_set_destroy_with_parent (GTK_WINDOW (priv->msg_dlg), TRUE);
+        gtk_window_set_skip_taskbar_hint (GTK_WINDOW (priv->msg_dlg), TRUE);
+        gtk_window_set_transient_for (GTK_WINDOW (priv->msg_dlg), gtk_application_get_active_window (priv->application));
+        label = (GtkWidget *) gtk_label_new (message);
+        gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (priv->msg_dlg))), label);
+        priv->stat_label = gtk_label_new ("");
+        gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (priv->msg_dlg))), priv->stat_label);
+        priv->progress_bar = gtk_progress_bar_new ();
+        gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (priv->progress_bar), 0.0);
+        gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (priv->msg_dlg))), priv->progress_bar);
+        priv->cancel_btn = gtk_button_new_with_label ("Cancel");
+        g_signal_connect (priv->cancel_btn, "clicked", G_CALLBACK (gpk_application_cancel_cb), priv);
+        gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (priv->msg_dlg))), priv->cancel_btn);
+        gtk_widget_show_all (priv->msg_dlg);
+}
+
+static void gpk_application_hide_wait_dialog (GpkApplicationPrivate *priv)
+{
+        priv->dlg_count--;
+        if (priv->dlg_count > 0) return;
+        gtk_widget_destroy (priv->msg_dlg);
+}
+
+static void gpk_application_set_button_sensitivity (GpkApplicationPrivate *priv, gboolean sens, gboolean all)
+{
+	GtkWidget *widget;
+
+        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_homepage"));
+        gtk_widget_set_sensitive (widget, sens);
+
+        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_files"));
+        gtk_widget_set_sensitive (widget, sens);
+
+        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_depends"));
+        gtk_widget_set_sensitive (widget, sens);
+
+        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_requires"));
+        gtk_widget_set_sensitive (widget, sens);
+
+        if (all)
+        {
+	        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_install"));
+	        gtk_widget_set_sensitive (widget, sens);
+
+	        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_remove"));
+	        gtk_widget_set_sensitive (widget, sens);
+	}
+}
 
 /**
  * gpk_application_state_get_icon:
@@ -214,7 +275,7 @@ gpk_application_allow_install (GpkApplicationPrivate *priv, gboolean allow)
 {
 	GtkWidget *widget;
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_install"));
-	gtk_widget_set_visible (widget, allow);
+	gtk_widget_set_sensitive (widget, allow);
 }
 
 /**
@@ -225,7 +286,7 @@ gpk_application_allow_remove (GpkApplicationPrivate *priv, gboolean allow)
 {
 	GtkWidget *widget;
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_remove"));
-	gtk_widget_set_visible (widget, allow);
+	gtk_widget_set_sensitive (widget, allow);
 }
 
 /**
@@ -396,15 +457,17 @@ gpk_application_change_queue_status (GpkApplicationPrivate *priv)
 	if (pk_package_sack_get_size (priv->package_sack) > 0) {
 		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
 		gtk_widget_show (widget);
+		gtk_widget_set_sensitive (widget, TRUE);
 		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_clear"));
 		gtk_widget_show (widget);
+		gtk_widget_set_sensitive (widget, TRUE);
 		gpk_application_group_add_selected (priv);
 	} else {
 		priv->action = GPK_ACTION_NONE;
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
-		gtk_widget_hide (widget);
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_clear"));
-		gtk_widget_hide (widget);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
+		//gtk_widget_hide (widget);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_clear"));
+		//gtk_widget_hide (widget);
 		gpk_application_group_remove_selected (priv);
 	}
 
@@ -543,6 +606,7 @@ gpk_application_get_files_cb (PkClient *client, GAsyncResult *res, GpkApplicatio
 
 	/* get the results */
 	results = pk_client_generic_finish (client, res, &error);
+	gpk_application_hide_wait_dialog (priv);
 	if (results == NULL) {
 		g_warning ("failed to get files: %s", error->message);
 		g_error_free (error);
@@ -624,22 +688,23 @@ out:
 static gboolean
 gpk_application_status_changed_timeout_cb (GpkApplicationPrivate *priv)
 {
-	const gchar *text;
-	GtkWidget *widget;
+	//const gchar *text;
+	//GtkWidget *widget;
 
 	/* set the text and show */
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_status"));
-	text = gpk_status_enum_to_localised_text (priv->status_last);
-	gtk_label_set_label (GTK_LABEL (widget), text);
-	gtk_widget_show (widget);
+	//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_status"));
+	//text = gpk_status_enum_to_localised_text (priv->status_last);
+	//gtk_label_set_label (GTK_LABEL (stat_label), text);
+	//gtk_widget_show (widget);
 
 	/* show cancel button */
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_cancel"));
-	gtk_widget_show (widget);
+	//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_cancel"));
+	//gtk_widget_show (widget);
+	gtk_widget_set_sensitive (priv->cancel_btn, TRUE);
 
 	/* show progressbar */
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "progressbar_progress"));
-	gtk_widget_show (widget);
+	//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "progressbar_progress"));
+	//gtk_widget_show (widget);
 
 	/* never repeat */
 	priv->status_id = 0;
@@ -656,6 +721,7 @@ gpk_application_progress_cb (PkProgress *progress, PkProgressType type, GpkAppli
 	gint percentage;
 	gboolean allow_cancel;
 	GtkWidget *widget;
+	const gchar *text;
 
 	g_object_get (progress,
 		      "status", &status,
@@ -666,14 +732,18 @@ gpk_application_progress_cb (PkProgress *progress, PkProgressType type, GpkAppli
 	if (type == PK_PROGRESS_TYPE_STATUS) {
 		g_debug ("now %s", pk_status_enum_to_string (status));
 
+		text = gpk_status_enum_to_localised_text (status);
+	        gtk_label_set_label (GTK_LABEL (priv->stat_label), text);
+
 		if (status == PK_STATUS_ENUM_FINISHED) {
 			/* re-enable UI */
 			widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "treeview_packages"));
 			gtk_widget_set_sensitive (widget, TRUE);
 
 			/* hide the cancel button */
-			widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_cancel"));
-			gtk_widget_hide (widget);
+			//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_cancel"));
+			//gtk_widget_hide (widget);
+			gtk_widget_set_sensitive (priv->cancel_btn, FALSE);
 
 			/* make apply button sensitive */
 			widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
@@ -685,10 +755,10 @@ gpk_application_progress_cb (PkProgress *progress, PkProgressType type, GpkAppli
 				priv->status_id = 0;
 			}
 
-			widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_status"));
-			gtk_widget_hide (widget);
-			widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "progressbar_progress"));
-			gtk_widget_hide (widget);
+			//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_status"));
+			//gtk_widget_hide (widget);
+			//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "progressbar_progress"));
+			//gtk_widget_hide (widget);
 			goto out;
 		}
 
@@ -708,16 +778,17 @@ gpk_application_progress_cb (PkProgress *progress, PkProgressType type, GpkAppli
 		priv->status_last = status;
 
 	} else if (type == PK_PROGRESS_TYPE_PERCENTAGE) {
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "progressbar_progress"));
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "progressbar_progress"));
 		if (percentage > 0) {
-			gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (widget), (gfloat) percentage / 100.0f);
+			gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (priv->progress_bar), (gfloat) percentage / 100.0f);
 		} else {
-			gtk_widget_hide (widget);
+			//gtk_widget_hide (widget);
 		}
 
 	} else if (type == PK_PROGRESS_TYPE_ALLOW_CANCEL) {
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_cancel"));
-		gtk_widget_set_sensitive (widget, allow_cancel);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_cancel"));
+		//gtk_widget_set_sensitive (widget, allow_cancel);
+		gtk_widget_set_sensitive (priv->cancel_btn, allow_cancel);
 	}
 out:
 	return;
@@ -744,6 +815,7 @@ gpk_application_menu_files_cb (GtkAction *action, GpkApplicationPrivate *priv)
 	g_cancellable_reset (priv->cancellable);
 
 	/* set correct view */
+	gpk_application_show_wait_dialog (priv, _("Getting file list - please wait..."));
 	package_ids = pk_package_ids_from_id (package_id_selected);
 	pk_client_get_files_async (PK_CLIENT (priv->task), package_ids, priv->cancellable,
 				   (PkProgressCallback) gpk_application_progress_cb, priv,
@@ -857,6 +929,7 @@ gpk_application_get_requires_cb (PkClient *client, GAsyncResult *res, GpkApplica
 
 	/* get the results */
 	results = pk_client_generic_finish (client, res, &error);
+	gpk_application_hide_wait_dialog (priv);
 	if (results == NULL) {
 		g_warning ("failed to get requires: %s", error->message);
 		g_error_free (error);
@@ -952,6 +1025,7 @@ gpk_application_menu_requires_cb (GtkAction *action, GpkApplicationPrivate *priv
 	g_cancellable_reset (priv->cancellable);
 
 	/* get the requires */
+	gpk_application_show_wait_dialog (priv, _("Getting package data - please wait..."));
 	package_ids = pk_package_ids_from_id (package_id_selected);
 
 	pk_client_depends_on_async (PK_CLIENT (priv->task),
@@ -986,6 +1060,7 @@ gpk_application_get_depends_cb (PkClient *client, GAsyncResult *res, GpkApplicat
 
 	/* get the results */
 	results = pk_client_generic_finish (client, res, &error);
+	gpk_application_hide_wait_dialog (priv);
 	if (results == NULL) {
 		g_warning ("failed to get depends: %s", error->message);
 		g_error_free (error);
@@ -1081,6 +1156,7 @@ gpk_application_menu_depends_cb (GtkAction *_action, GpkApplicationPrivate *priv
 	g_cancellable_reset (priv->cancellable);
 
 	/* get the depends */
+	gpk_application_show_wait_dialog (priv, _("Getting package data - please wait..."));
 	package_ids = pk_package_ids_from_id (package_id_selected);
 
 	pk_client_required_by_async (PK_CLIENT (priv->task),
@@ -1121,19 +1197,19 @@ gpk_application_get_full_repo_name (GpkApplicationPrivate *priv, const gchar *da
 /**
  * gpk_application_clear_details_cb:
  **/
-static gboolean
-gpk_application_clear_details_cb (GpkApplicationPrivate *priv)
-{
-	GtkWidget *widget;
+//static gboolean
+//gpk_application_clear_details_cb (GpkApplicationPrivate *priv)
+//{
+//	GtkWidget *widget;
 
 	/* hide dead widgets */
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "grid_details"));
-	gtk_widget_hide (widget);
+//	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "grid_details"));
+//	gtk_widget_hide (widget);
 
 	/* never repeat */
-	priv->details_event_id = 0;
-	return FALSE;
-}
+//	priv->details_event_id = 0;
+//	return FALSE;
+//}
 
 /**
  * gpk_application_clear_details:
@@ -1141,13 +1217,29 @@ gpk_application_clear_details_cb (GpkApplicationPrivate *priv)
 static void
 gpk_application_clear_details (GpkApplicationPrivate *priv)
 {
+	GtkWidget *widget;
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "textview_description"));
+	gtk_text_view_set_buffer (GTK_TEXT_VIEW (widget), NULL);
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_licence"));
+	gtk_label_set_label (GTK_LABEL (widget), "");
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_size"));
+	gtk_label_set_label (GTK_LABEL (widget), "");
+
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_source"));
+	gtk_label_set_label (GTK_LABEL (widget), "");
+
+        gpk_application_set_button_sensitivity (priv, FALSE, TRUE);
+
 	/* only clear the last data if it takes a little while, else we flicker the display */
-	if (priv->details_event_id > 0)
-		g_source_remove (priv->details_event_id);
-	priv->details_event_id =
-		g_timeout_add (200, (GSourceFunc) gpk_application_clear_details_cb, priv);
-	g_source_set_name_by_id (priv->details_event_id,
-				 "[GpkApplication] clear-details");
+	//if (priv->details_event_id > 0)
+	//	g_source_remove (priv->details_event_id);
+	//priv->details_event_id =
+	//	g_timeout_add (200, (GSourceFunc) gpk_application_clear_details_cb, priv);
+	//g_source_set_name_by_id (priv->details_event_id,
+	//			 "[GpkApplication] clear-details");
 }
 
 /**
@@ -1448,6 +1540,7 @@ gpk_application_search_cb (PkClient *client, GAsyncResult *res, GpkApplicationPr
 	guint i;
 	GtkWidget *widget;
 	GtkWindow *window;
+	float prog;
 
 	/* get the results */
 	results = pk_client_generic_finish (client, res, &error);
@@ -1471,11 +1564,15 @@ gpk_application_search_cb (PkClient *client, GAsyncResult *res, GpkApplicationPr
 		goto out;
 	}
 
+        gtk_label_set_label (GTK_LABEL (priv->stat_label), "Updating list");
 	/* get data */
 	array = pk_results_get_package_array (results);
 	for (i=0; i<array->len; i++) {
 		item = g_ptr_array_index (array, i);
 		gpk_application_add_item_to_results (priv, item);
+		prog = i;
+		prog /= array->len;
+		gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (priv->progress_bar), prog);
 	}
 
 	/* were there no entries found? */
@@ -1501,6 +1598,7 @@ gpk_application_search_cb (PkClient *client, GAsyncResult *res, GpkApplicationPr
 out:
 	/* mark find button sensitive */
 	priv->search_in_progress = FALSE;
+	gpk_application_hide_wait_dialog (priv);
 	gpk_application_set_button_find_sensitivity (priv);
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "scrolledwindow_groups"));
 	gtk_widget_set_sensitive (widget, TRUE);
@@ -1532,6 +1630,7 @@ gpk_application_perform_search_name_details_file (GpkApplicationPrivate *priv)
 	/* have we got input? */
 	if (egg_strzero (priv->search_text)) {
 		g_debug ("no input");
+	        gpk_application_hide_wait_dialog (priv);
 		goto out;
 	}
 
@@ -1545,6 +1644,7 @@ gpk_application_perform_search_name_details_file (GpkApplicationPrivate *priv)
 					_("Invalid search text"),
 					/* TRANSLATORS: message: tell the user that's not allowed */
 					_("The search text contains invalid characters"), NULL);
+	        gpk_application_hide_wait_dialog (priv);
 		goto out;
 	}
 	g_debug ("find %s", priv->search_text);
@@ -1661,7 +1761,7 @@ gpk_application_perform_search (GpkApplicationPrivate *priv)
 {
 	/*if we are in the middle of a search, just return*/
 	if (priv->search_in_progress == TRUE)
-		return;
+	        return;
 
 	/* just shown the welcome screen */
 	if (priv->search_mode == GPK_MODE_UNKNOWN)
@@ -1670,6 +1770,8 @@ gpk_application_perform_search (GpkApplicationPrivate *priv)
 	g_debug ("CLEAR search");
 	gpk_application_clear_details (priv);
 	gpk_application_clear_packages (priv);
+
+        gpk_application_show_wait_dialog (priv, _("Searching packages - please wait..."));
 
 	if (priv->search_mode == GPK_MODE_NAME_DETAILS_FILE) {
 		gpk_application_perform_search_name_details_file (priv);
@@ -1863,6 +1965,7 @@ gpk_application_install_packages_cb (PkTask *task, GAsyncResult *res, GpkApplica
 
 	/* get the results */
 	results = pk_task_generic_finish (task, res, &error);
+	gpk_application_hide_wait_dialog (priv);
 	if (results == NULL) {
 		g_warning ("failed to install packages: %s", error->message);
 		g_error_free (error);
@@ -1915,6 +2018,7 @@ gpk_application_remove_packages_cb (PkTask *task, GAsyncResult *res, GpkApplicat
 
 	/* get the results */
 	results = pk_task_generic_finish (task, res, &error);
+	gpk_application_hide_wait_dialog (priv);
 	if (results == NULL) {
 		g_warning ("failed to remove packages: %s", error->message);
 		g_error_free (error);
@@ -1965,6 +2069,7 @@ gpk_application_button_apply_cb (GtkWidget *widget, GpkApplicationPrivate *priv)
 	package_ids = pk_package_sack_get_ids (priv->package_sack);
 	if (priv->action == GPK_ACTION_INSTALL) {
 		/* install */
+		gpk_application_show_wait_dialog (priv, _("Installing packages - please wait..."));
 		pk_task_install_packages_async (priv->task, package_ids, priv->cancellable,
 						(PkProgressCallback) gpk_application_progress_cb, priv,
 						(GAsyncReadyCallback) gpk_application_install_packages_cb, priv);
@@ -1974,15 +2079,16 @@ gpk_application_button_apply_cb (GtkWidget *widget, GpkApplicationPrivate *priv)
 		gtk_widget_set_sensitive (widget, FALSE);
 
 		/* make apply button insensitive */
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
-		gtk_widget_set_visible (widget, FALSE);
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_clear"));
-		gtk_widget_set_visible (widget, FALSE);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
+		//gtk_widget_set_sensitive (widget, FALSE);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_clear"));
+		//gtk_widget_set_sensitive (widget, FALSE);
 
 	} else if (priv->action == GPK_ACTION_REMOVE) {
 		autoremove = g_settings_get_boolean (priv->settings, GPK_SETTINGS_ENABLE_AUTOREMOVE);
 
 		/* remove */
+		gpk_application_show_wait_dialog (priv, _("Removing packages - please wait..."));
 		pk_task_remove_packages_async (priv->task, package_ids, TRUE, autoremove, priv->cancellable,
 					       (PkProgressCallback) gpk_application_progress_cb, priv,
 					       (GAsyncReadyCallback) gpk_application_remove_packages_cb, priv);
@@ -1992,10 +2098,10 @@ gpk_application_button_apply_cb (GtkWidget *widget, GpkApplicationPrivate *priv)
 		gtk_widget_set_sensitive (widget, FALSE);
 
 		/* make apply button insensitive */
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
-		gtk_widget_set_visible (widget, FALSE);
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_clear"));
-		gtk_widget_set_visible (widget, FALSE);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
+		//gtk_widget_set_sensitive (widget, FALSE);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_clear"));
+		//gtk_widget_set_sensitive (widget, FALSE);
 	}
 	g_strfreev (package_ids);
 	return;
@@ -2202,10 +2308,10 @@ gpk_application_get_details_cb (PkClient *client, GAsyncResult *res, GpkApplicat
 		gtk_label_set_line_wrap (GTK_LABEL (widget), TRUE);
 		gtk_widget_show (widget);
 	} else {
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_licence_title"));
-		gtk_widget_hide (widget);
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_licence"));
-		gtk_widget_hide (widget);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_licence_title"));
+		//gtk_widget_hide (widget);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_licence"));
+		//gtk_widget_hide (widget);
 	}
 
 	/* set the description */
@@ -2235,10 +2341,10 @@ gpk_application_get_details_cb (PkClient *client, GAsyncResult *res, GpkApplicat
 		gtk_widget_show (widget);
 		g_free (value);
 	} else {
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_size_title"));
-		gtk_widget_hide (widget);
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_size"));
-		gtk_widget_hide (widget);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_size_title"));
+		//gtk_widget_hide (widget);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_size"));
+		//gtk_widget_hide (widget);
 	}
 
 	/* set the repo text, or hide if installed */
@@ -2251,12 +2357,13 @@ gpk_application_get_details_cb (PkClient *client, GAsyncResult *res, GpkApplicat
 		gtk_label_set_label (GTK_LABEL (widget), repo_name);
 		gtk_widget_show (widget);
 	} else {
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_source_title"));
-		gtk_widget_hide (widget);
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_source"));
-		gtk_widget_hide (widget);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_source_title"));
+		//gtk_widget_hide (widget);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_source"));
+		//gtk_widget_hide (widget);
 	}
 out:
+	gpk_application_hide_wait_dialog (priv);
 	g_free (package_id);
 	g_free (url);
 	g_free (license);
@@ -2297,8 +2404,8 @@ gpk_application_packages_treeview_clicked_cb (GtkTreeSelection *selection, GpkAp
 		/* we cannot now add it */
 		gpk_application_allow_install (priv, FALSE);
 		gpk_application_allow_remove (priv, FALSE);
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "hbox_packages"));
-		gtk_widget_hide (widget);
+		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "hbox_packages"));
+		//gtk_widget_hide (widget);
 
 		/* hide details */
 		gpk_application_clear_details (priv);
@@ -2317,8 +2424,8 @@ gpk_application_packages_treeview_clicked_cb (GtkTreeSelection *selection, GpkAp
 	}
 
 	/* set the summary as we know it already */
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_summary"));
-	gtk_label_set_label (GTK_LABEL (widget), summary);
+	//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_summary"));
+	//gtk_label_set_label (GTK_LABEL (widget), summary);
 
 	/* show the menu item */
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "hbox_packages"));
@@ -2337,6 +2444,7 @@ gpk_application_packages_treeview_clicked_cb (GtkTreeSelection *selection, GpkAp
 	/* only show buttons if we are in the correct mode */
 	gpk_application_allow_install (priv, show_install);
 	gpk_application_allow_remove (priv, show_remove);
+	gpk_application_set_button_sensitivity (priv, show_install | show_remove, FALSE);
 
 	/* clear the description text */
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "textview_description"));
@@ -2346,6 +2454,7 @@ gpk_application_packages_treeview_clicked_cb (GtkTreeSelection *selection, GpkAp
 	g_cancellable_reset (priv->cancellable);
 
 	/* get the details */
+	gpk_application_show_wait_dialog (priv, _("Getting package data - please wait..."));
 	package_ids = pk_package_ids_from_id (package_id);
 	pk_client_get_details_async (PK_CLIENT(priv->task), package_ids, priv->cancellable,
 				     (PkProgressCallback) gpk_application_progress_cb, priv,
@@ -2648,6 +2757,7 @@ gpk_application_refresh_cache_cb (PkClient *client, GAsyncResult *res, GpkApplic
 
 	/* get the results */
 	results = pk_client_generic_finish (client, res, &error);
+	gpk_application_hide_wait_dialog (priv);
 	if (results == NULL) {
 		g_warning ("failed to refresh: %s", error->message);
 		g_error_free (error);
@@ -2683,6 +2793,7 @@ gpk_application_activate_refresh_cb (GSimpleAction *action,
 				     gpointer user_data)
 {
 	GpkApplicationPrivate *priv = user_data;
+	gpk_application_show_wait_dialog (priv, _("Refreshing package lists - please wait..."));
 
 	/* ensure new action succeeds */
 	g_cancellable_reset (priv->cancellable);
@@ -2835,6 +2946,7 @@ gpk_application_get_categories_cb (PkClient *client, GAsyncResult *res, GpkAppli
 
 	/* get the results */
 	results = pk_client_generic_finish (client, res, &error);
+	gpk_application_hide_wait_dialog (priv);
 	if (results == NULL) {
 		g_warning ("failed to get list of categories: %s", error->message);
 		g_error_free (error);
@@ -2933,6 +3045,8 @@ out:
 static void
 gpk_application_create_group_array_categories (GpkApplicationPrivate *priv)
 {
+	gpk_application_show_wait_dialog (priv, _("Getting categories - please wait..."));
+	
 	/* ensure new action succeeds */
 	g_cancellable_reset (priv->cancellable);
 
@@ -3021,25 +3135,28 @@ pk_backend_status_get_properties_cb (GObject *object, GAsyncResult *res, GpkAppl
 	/* Remove description/file array if needed. */
 	if (pk_bitfield_contain (priv->roles, PK_ROLE_ENUM_GET_DETAILS) == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "scrolledwindow2"));
-		gtk_widget_hide (widget);
+		//gtk_widget_hide (widget);
 	}
 	if (pk_bitfield_contain (priv->roles, PK_ROLE_ENUM_GET_FILES) == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_files"));
-		gtk_widget_hide (widget);
+		//gtk_widget_hide (widget);
+		gtk_widget_set_sensitive (widget, FALSE);
 	}
 	if (pk_bitfield_contain (priv->roles, PK_ROLE_ENUM_DEPENDS_ON) == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_depends"));
-		gtk_widget_hide (widget);
+		//gtk_widget_hide (widget);
+		gtk_widget_set_sensitive (widget, FALSE);
 	}
 	if (pk_bitfield_contain (priv->roles, PK_ROLE_ENUM_REQUIRED_BY) == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_requires"));
-		gtk_widget_hide (widget);
+		//gtk_widget_hide (widget);
+		gtk_widget_set_sensitive (widget, FALSE);
 	}
 
 	/* hide the group selector if we don't support search-groups */
 	if (pk_bitfield_contain (priv->roles, PK_ROLE_ENUM_SEARCH_GROUP) == FALSE) {
 		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "scrolledwindow_groups"));
-		gtk_widget_hide (widget);
+		//gtk_widget_hide (widget);
 	}
 
 	/* add an "all" entry if we can GetPackages */
@@ -3172,6 +3289,7 @@ gpk_application_get_repo_list_cb (PkClient *client, GAsyncResult *res, GpkApplic
 	}
 
 out:
+	gpk_application_hide_wait_dialog (priv);
 	if (error_code != NULL)
 		g_object_unref (error_code);
 	if (array != NULL)
@@ -3212,6 +3330,7 @@ gpk_application_startup_cb (GtkApplication *application, GpkApplicationPrivate *
 	priv->settings = g_settings_new (GPK_SETTINGS_SCHEMA);
 	priv->cancellable = g_cancellable_new ();
 	priv->repos = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
+	priv->dlg_count = 0;
 
 	priv->markdown = egg_markdown_new ();
 	egg_markdown_set_max_lines (priv->markdown, 50);
@@ -3288,44 +3407,52 @@ gpk_application_startup_cb (GtkApplication *application, GpkApplicationPrivate *
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_clear"));
 	g_signal_connect (widget, "clicked",
 			  G_CALLBACK (gpk_application_button_clear_cb), priv);
+	gtk_widget_set_sensitive (widget, TRUE);
 
 	/* install */
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
 	g_signal_connect (widget, "clicked",
 			  G_CALLBACK (gpk_application_button_apply_cb), priv);
+	gtk_widget_set_sensitive (widget, TRUE);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_homepage"));
 	g_signal_connect (widget, "clicked",
 			  G_CALLBACK (gpk_application_menu_homepage_cb), priv);
+	gtk_widget_set_sensitive (widget, FALSE);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_files"));
 	g_signal_connect (widget, "clicked",
 			  G_CALLBACK (gpk_application_menu_files_cb), priv);
+	gtk_widget_set_sensitive (widget, FALSE);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_install"));
 	g_signal_connect (widget, "clicked",
 			  G_CALLBACK (gpk_application_menu_install_cb), priv);
+	gtk_widget_set_sensitive (widget, FALSE);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_remove"));
 	g_signal_connect (widget, "clicked",
 			  G_CALLBACK (gpk_application_menu_remove_cb), priv);
+	gtk_widget_set_sensitive (widget, FALSE);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_depends"));
 	g_signal_connect (widget, "clicked",
 			  G_CALLBACK (gpk_application_menu_depends_cb), priv);
+	gtk_widget_set_sensitive (widget, FALSE);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_requires"));
 	g_signal_connect (widget, "clicked",
 			  G_CALLBACK (gpk_application_menu_requires_cb), priv);
+	gtk_widget_set_sensitive (widget, FALSE);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "hbox_packages"));
-	gtk_widget_hide (widget);
+	//gtk_widget_hide (widget);
 
 	/* search cancel button */
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_cancel"));
-	g_signal_connect (widget, "clicked",
-			  G_CALLBACK (gpk_application_cancel_cb), priv);
-	gtk_widget_hide (widget);
+	//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_cancel"));
+	//g_signal_connect (widget, "clicked",
+	//		  G_CALLBACK (gpk_application_cancel_cb), priv);
+	//gtk_widget_hide (widget);
 
 	/* the fancy text entry widget */
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "entry_text"));
@@ -3403,7 +3530,11 @@ gpk_application_startup_cb (GtkApplication *application, GpkApplicationPrivate *
 	g_signal_connect (selection, "changed",
 			  G_CALLBACK (gpk_application_groups_treeview_changed_cb), priv);
 
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_size_title"));
+	gtk_label_set_label (GTK_LABEL (widget), _("Download size"));
+
 	/* get repos, so we can show the full name in the package source box */
+	gpk_application_show_wait_dialog (priv, _("Reading repository list - please wait..."));
 	pk_client_get_repo_list_async (PK_CLIENT (priv->task),
 				       pk_bitfield_value (PK_FILTER_ENUM_NONE),
 				       priv->cancellable,
