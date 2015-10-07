@@ -292,19 +292,19 @@ msgstr "Dependent Packages"
 
 #: ../data/gpk-application.ui.h:14
 msgid "Check for Updates"
-msgstr "Check for Updates"
+msgstr "Check for Updates..."
 
 #: ../data/gpk-application.ui.h:15 ../data/gpk-prefs.ui.h:12
-msgid "Software Sources"
-msgstr "Software Sources"
+msgid "Package Sources"
+msgstr "Package Sources..."
 
 #: ../data/gpk-application.ui.h:16
 msgid "Refresh Package Lists"
 msgstr "Refresh Package Lists"
 
 #: ../data/gpk-application.ui.h:17
-msgid "Software Log"
-msgstr "Software Log"
+msgid "Package Log"
+msgstr "Package Log..."
 
 #: ../data/gpk-application.ui.h:18
 msgid "Only Newest Versions"
@@ -319,8 +319,8 @@ msgid "Help"
 msgstr "Help"
 
 #: ../data/gpk-application.ui.h:21
-msgid "About Software Install"
-msgstr "About Software Install"
+msgid "About"
+msgstr "About..."
 
 #: ../data/gpk-application.ui.h:22
 msgid "_Quit"
