@@ -141,7 +141,7 @@ static void gpk_application_cancel_cb (GtkWidget *button_widget, GpkApplicationP
 
 static void gpk_application_show_wait_dialog (GpkApplicationPrivate *priv, const char *message)
 {
-        GtkWidget *label;
+        GtkWidget *label, *box;
         priv->dlg_count++;
         if (priv->dlg_count > 1) return;
         priv->msg_dlg = (GtkWidget *) gtk_dialog_new ();
@@ -151,16 +151,17 @@ static void gpk_application_show_wait_dialog (GpkApplicationPrivate *priv, const
         gtk_window_set_destroy_with_parent (GTK_WINDOW (priv->msg_dlg), TRUE);
         gtk_window_set_skip_taskbar_hint (GTK_WINDOW (priv->msg_dlg), TRUE);
         gtk_window_set_transient_for (GTK_WINDOW (priv->msg_dlg), gtk_application_get_active_window (priv->application));
+        box = (GtkWidget *) gtk_box_new (GTK_ORIENTATION_VERTICAL, 5);
+        gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (priv->msg_dlg))), box);
         label = (GtkWidget *) gtk_label_new (message);
-        gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (priv->msg_dlg))), label);
+        gtk_box_pack_start (GTK_BOX (box), label, FALSE, FALSE, 5);
         priv->stat_label = gtk_label_new ("");
-        gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (priv->msg_dlg))), priv->stat_label);
+        gtk_box_pack_start (GTK_BOX (box), priv->stat_label, FALSE, FALSE, 5);
         priv->progress_bar = gtk_progress_bar_new ();
         gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (priv->progress_bar), 0.0);
-        gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (priv->msg_dlg))), priv->progress_bar);
-        priv->cancel_btn = gtk_button_new_with_label ("Cancel");
+        gtk_box_pack_start (GTK_BOX (box), priv->progress_bar, FALSE, FALSE, 5);
+        priv->cancel_btn = gtk_dialog_add_button (GTK_DIALOG (priv->msg_dlg), _("Cancel"), 0);
         g_signal_connect (priv->cancel_btn, "clicked", G_CALLBACK (gpk_application_cancel_cb), priv);
-        gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (priv->msg_dlg))), priv->cancel_btn);
         gtk_widget_show_all (priv->msg_dlg);
 }
 
