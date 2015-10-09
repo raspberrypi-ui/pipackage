@@ -134,10 +134,10 @@ enum {
 };
 
 static void gpk_application_perform_search (GpkApplicationPrivate *priv);
-
 static void gpk_application_get_requires_cb (PkClient *client, GAsyncResult *res, GpkApplicationPrivate *priv);
 static void gpk_application_get_depends_cb (PkClient *client, GAsyncResult *res, GpkApplicationPrivate *priv);
 static void gpk_application_cancel_cb (GtkWidget *button_widget, GpkApplicationPrivate *priv);
+static void gpk_application_activate_quit_cb (GSimpleAction *action, GVariant *parameter, gpointer user_data);
 
 static void gpk_application_show_wait_dialog (GpkApplicationPrivate *priv, const char *message)
 {
@@ -3236,6 +3236,14 @@ gpk_application_activate_cb (GtkApplication *_application, GpkApplicationPrivate
 	gtk_window_present (window);
 }
 
+static void
+gpk_application_quit_cb (GtkAccelGroup *accel_group, GObject *acceleratable, guint keyval,
+        GdkModifierType modifier, gpointer user_data)
+{
+	GpkApplicationPrivate *priv = user_data;
+	gpk_application_quit (priv);
+}
+
 /**
  * gpk_application_startup_cb:
  **/
@@ -3250,7 +3258,9 @@ gpk_application_startup_cb (GtkApplication *application, GpkApplicationPrivate *
 	GtkStyleContext *context;
 	GtkTreeSelection *selection;
 	GtkWidget *main_window;
-	GtkWidget *widget;
+	GtkWidget *widget, *mmenu, *menubar, *mheader;
+        GClosure *closure;
+        GtkAccelGroup *accel_group;
 	guint retval;
 
 	priv->package_sack = pk_package_sack_new ();
@@ -3315,11 +3325,23 @@ gpk_application_startup_cb (GtkApplication *application, GpkApplicationPrivate *
 
 	/* setup the application menu */
 	menu = G_MENU_MODEL (gtk_builder_get_object (priv->builder, "appmenu"));
-	gtk_application_set_app_menu (priv->application, menu);
+	menubar = GTK_WIDGET (gtk_builder_get_object (priv->builder, "mbar1"));
+	mheader = gtk_menu_item_new_with_label ("Options");
+	mmenu = gtk_menu_new_from_model (menu);
+	gtk_menu_item_set_submenu (GTK_MENU_ITEM (mheader), mmenu);
+	gtk_menu_shell_append (GTK_MENU_SHELL (menubar), mheader);
+	gtk_widget_show_all (menubar);
+
 	action = g_settings_create_action (priv->settings, "filter-newest");
 	g_action_map_add_action (G_ACTION_MAP (priv->application), action);
 	action = g_settings_create_action (priv->settings, "filter-arch");
 	g_action_map_add_action (G_ACTION_MAP (priv->application), action);
+
+        // Set up the accelerator group.
+        closure = g_cclosure_new (G_CALLBACK (gpk_application_quit_cb), priv, NULL);
+        accel_group = gtk_accel_group_new ();
+        gtk_accel_group_connect (accel_group, GDK_KEY_Q, GDK_CONTROL_MASK, 0, closure);
+        gtk_window_add_accel_group (gtk_application_get_active_window (priv->application), accel_group);
 
 	/* helpers */
 	priv->helper_run = gpk_helper_run_new ();
