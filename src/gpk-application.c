@@ -1138,31 +1138,31 @@ static void gpk_application_view_popup_menu (GtkWidget *treeview, GdkEventButton
 
         if (show_install)
         {
-                menuitem = gtk_menu_item_new_with_label ("Install Package");
+                menuitem = gtk_menu_item_new_with_label (_("Install Package"));
 	        g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_install_cb), priv);
 	        gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 	}
         if (show_remove)
         {
-                menuitem = gtk_menu_item_new_with_label ("Remove Package");
+                menuitem = gtk_menu_item_new_with_label (_("Remove Package"));
 	        g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_remove_cb), priv);
 	        gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 	}
 	if (priv->homepage_url)
 	{
-                menuitem = gtk_menu_item_new_with_label ("Visit Project Website");
+                menuitem = gtk_menu_item_new_with_label (_("Visit Project Website"));
 	        g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_homepage_cb), priv);
 	        gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 	}
 #if 0
-        menuitem = gtk_menu_item_new_with_label ("Files");
+        menuitem = gtk_menu_item_new_with_label (_("Files"));
 	g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_files_cb), priv);
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 #endif
-        menuitem = gtk_menu_item_new_with_label ("Required Packages");
+        menuitem = gtk_menu_item_new_with_label (_("Required Packages"));
 	g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_requires_cb), priv);
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
-        menuitem = gtk_menu_item_new_with_label ("Dependent Packages");
+        menuitem = gtk_menu_item_new_with_label (_("Dependent Packages"));
 	g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_depends_cb), priv);
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 
