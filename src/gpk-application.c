@@ -526,7 +526,7 @@ gpk_application_menu_homepage_cb (GtkAction *action, GpkApplicationPrivate *priv
 {
 	gpk_gnome_open (priv->homepage_url);
 }
-
+#if 0
 /**
  * gpk_application_strcmp_indirect:
  **/
@@ -633,7 +633,7 @@ out:
 	if (results != NULL)
 		g_object_unref (results);
 }
-
+#endif
 /**
  * gpk_application_status_changed_timeout_cb:
  **/
@@ -735,6 +735,7 @@ out:
 /**
  * gpk_application_menu_files_cb:
  **/
+#if 0
 static void
 gpk_application_menu_files_cb (GtkAction *action, GpkApplicationPrivate *priv)
 {
@@ -762,7 +763,7 @@ out:
 	g_free (package_id_selected);
 	g_strfreev (package_ids);
 }
-
+#endif
 /**
  * gpk_application_remove:
  **/
@@ -1745,6 +1746,7 @@ gpk_application_populate_selected (GpkApplicationPrivate *priv)
 	}
 
 out:
+        gpk_application_hide_wait_dialog (priv);
 	g_ptr_array_unref (array);
 	return TRUE;
 }
