@@ -179,32 +179,6 @@ static void gpk_application_hide_wait_dialog (GpkApplicationPrivate *priv)
         gtk_widget_destroy (priv->msg_dlg);
 }
 
-static void gpk_application_set_button_sensitivity (GpkApplicationPrivate *priv, gboolean sens, gboolean all)
-{
-	GtkWidget *widget;
-
-        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_homepage"));
-        gtk_widget_set_sensitive (widget, sens);
-
-        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_files"));
-        gtk_widget_set_sensitive (widget, sens);
-
-        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_depends"));
-        gtk_widget_set_sensitive (widget, sens);
-
-        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_requires"));
-        gtk_widget_set_sensitive (widget, sens);
-
-        if (all)
-        {
-	        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_install"));
-	        gtk_widget_set_sensitive (widget, sens);
-
-	        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_remove"));
-	        gtk_widget_set_sensitive (widget, sens);
-	}
-}
-
 /**
  * gpk_application_state_get_icon:
  **/
@@ -273,28 +247,6 @@ gpk_application_set_text_buffer (GtkWidget *widget, const gchar *text)
 		gtk_text_buffer_set_text (buffer, "", -1);
 	}
 	gtk_text_view_set_buffer (GTK_TEXT_VIEW (widget), buffer);
-}
-
-/**
- * gpk_application_allow_install:
- **/
-static void
-gpk_application_allow_install (GpkApplicationPrivate *priv, gboolean allow)
-{
-	GtkWidget *widget;
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_install"));
-	gtk_widget_set_sensitive (widget, allow);
-}
-
-/**
- * gpk_application_allow_remove:
- **/
-static void
-gpk_application_allow_remove (GpkApplicationPrivate *priv, gboolean allow)
-{
-	GtkWidget *widget;
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_remove"));
-	gtk_widget_set_sensitive (widget, allow);
 }
 
 /**
@@ -472,10 +424,6 @@ gpk_application_change_queue_status (GpkApplicationPrivate *priv)
 		gpk_application_group_add_selected (priv);
 	} else {
 		priv->action = GPK_ACTION_NONE;
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
-		//gtk_widget_hide (widget);
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_clear"));
-		//gtk_widget_hide (widget);
 		gpk_application_group_remove_selected (priv);
 	}
 
@@ -530,8 +478,6 @@ gpk_application_install (GpkApplicationPrivate *priv)
 			g_debug ("removed %s from package array", package_id_selected);
 
 			/* correct buttons */
-			gpk_application_allow_install (priv, FALSE);
-			gpk_application_allow_remove (priv, TRUE);
 			gpk_application_packages_checkbox_invert (priv);
 			ret = TRUE;
 			goto out;
@@ -562,8 +508,6 @@ gpk_application_install (GpkApplicationPrivate *priv)
 	g_object_unref (package);
 
 	/* correct buttons */
-	gpk_application_allow_install (priv, FALSE);
-	gpk_application_allow_remove (priv, TRUE);
 	gpk_application_packages_checkbox_invert (priv);
 out:
 	/* add the selected group if there are any packages in the queue */
@@ -748,11 +692,6 @@ gpk_application_progress_cb (PkProgress *progress, PkProgressType type, GpkAppli
 			widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "treeview_packages"));
 			gtk_widget_set_sensitive (widget, TRUE);
 
-			/* hide the cancel button */
-			//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_cancel"));
-			//gtk_widget_hide (widget);
-			gtk_widget_set_sensitive (priv->cancel_btn, FALSE);
-
 			/* make apply button sensitive */
 			widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
 			gtk_widget_set_sensitive (widget, TRUE);
@@ -763,10 +702,6 @@ gpk_application_progress_cb (PkProgress *progress, PkProgressType type, GpkAppli
 				priv->status_id = 0;
 			}
 
-			//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_status"));
-			//gtk_widget_hide (widget);
-			//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "progressbar_progress"));
-			//gtk_widget_hide (widget);
 			goto out;
 		}
 
@@ -786,16 +721,11 @@ gpk_application_progress_cb (PkProgress *progress, PkProgressType type, GpkAppli
 		priv->status_last = status;
 
 	} else if (type == PK_PROGRESS_TYPE_PERCENTAGE) {
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "progressbar_progress"));
 		if (percentage > 0) {
 			gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (priv->progress_bar), (gfloat) percentage / 100.0f);
-		} else {
-			//gtk_widget_hide (widget);
 		}
 
 	} else if (type == PK_PROGRESS_TYPE_ALLOW_CANCEL) {
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_cancel"));
-		//gtk_widget_set_sensitive (widget, allow_cancel);
 		gtk_widget_set_sensitive (priv->cancel_btn, allow_cancel);
 	}
 out:
@@ -858,8 +788,6 @@ gpk_application_remove (GpkApplicationPrivate *priv)
 			g_debug ("removed %s from package array", package_id_selected);
 
 			/* correct buttons */
-			gpk_application_allow_install (priv, TRUE);
-			gpk_application_allow_remove (priv, FALSE);
 			gpk_application_packages_checkbox_invert (priv);
 			ret = TRUE;
 			goto out;
@@ -887,8 +815,6 @@ gpk_application_remove (GpkApplicationPrivate *priv)
 	g_object_unref (package);
 
 	/* correct buttons */
-	gpk_application_allow_install (priv, TRUE);
-	gpk_application_allow_remove (priv, FALSE);
 	gpk_application_packages_checkbox_invert (priv);
 out:
 	/* add the selected group if there are any packages in the queue */
@@ -1178,6 +1104,109 @@ out:
 	g_strfreev (package_ids);
 }
 
+static void gpk_application_view_popup_menu (GtkWidget *treeview, GdkEventButton *event, gpointer userdata)
+{
+        GtkWidget *menu, *menuitem;
+        GpkApplicationPrivate *priv = userdata;
+	GtkTreeModel *model;
+	GtkTreeIter iter;
+	GtkTreeSelection *selection;
+	gboolean show_install = TRUE;
+	gboolean show_remove = TRUE;
+	PkBitfield state;
+	gchar *package_id = NULL;
+	gchar *summary = NULL;
+
+	selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (treeview));
+	if (selection == NULL) return;
+	gtk_tree_selection_get_selected (selection, &model, &iter);
+
+	/* check we aren't a help line */
+	gtk_tree_model_get (model, &iter, PACKAGES_COLUMN_STATE, &state, PACKAGES_COLUMN_ID, &package_id, PACKAGES_COLUMN_SUMMARY, &summary, -1);
+	if (package_id == NULL) return;
+
+	show_install = (state == 0 || state == pk_bitfield_from_enums (GPK_STATE_INSTALLED, GPK_STATE_IN_LIST, -1));
+	show_remove = (state == pk_bitfield_value (GPK_STATE_INSTALLED) || state == pk_bitfield_value (GPK_STATE_IN_LIST));
+
+	if (priv->action == GPK_ACTION_INSTALL && !pk_bitfield_contain (state, GPK_STATE_IN_LIST))
+		show_remove = FALSE;
+	if (priv->action == GPK_ACTION_REMOVE && !pk_bitfield_contain (state, GPK_STATE_IN_LIST))
+		show_install = FALSE;
+
+        menu = gtk_menu_new ();
+
+        if (show_install)
+        {
+                menuitem = gtk_menu_item_new_with_label ("Install Package");
+	        g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_install_cb), priv);
+	        gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+	}
+        if (show_remove)
+        {
+                menuitem = gtk_menu_item_new_with_label ("Remove Package");
+	        g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_remove_cb), priv);
+	        gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+	}
+	if (priv->homepage_url)
+	{
+                menuitem = gtk_menu_item_new_with_label ("Visit Project Website");
+	        g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_homepage_cb), priv);
+	        gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+	}
+#if 0
+        menuitem = gtk_menu_item_new_with_label ("Files");
+	g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_files_cb), priv);
+	gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+#endif
+        menuitem = gtk_menu_item_new_with_label ("Required Packages");
+	g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_requires_cb), priv);
+	gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+        menuitem = gtk_menu_item_new_with_label ("Dependent Packages");
+	g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_depends_cb), priv);
+	gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+
+        gtk_widget_show_all (menu);
+
+        gtk_menu_popup (GTK_MENU (menu), NULL, NULL, NULL, NULL, (event != NULL) ? event->button : 0,
+                   gdk_event_get_time ((GdkEvent*) event));
+}
+
+static gboolean gpk_application_packages_button_pressed (GtkWidget *treeview, GdkEventButton *event, gpointer userdata)
+{
+        GtkTreeSelection *selection;
+        GtkTreePath *path;
+
+        if (event->type == GDK_BUTTON_PRESS && event->button == 3)
+        {
+                if (gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (treeview), (gint) event->x, (gint) event->y, &path, NULL, NULL, NULL))
+                {
+                        selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (treeview));
+
+                        if (gtk_tree_selection_count_selected_rows (selection) == 1 && gtk_tree_selection_path_is_selected (selection, path))
+                        {
+                                // only show the menu if the row was already selected...
+                                gpk_application_view_popup_menu (treeview, event, userdata);
+                        }
+                        else
+                        {
+                                // ...otherwise select the row
+                                gtk_tree_selection_unselect_all (selection);
+                                gtk_tree_selection_select_path (selection, path);
+                        }
+                        gtk_tree_path_free (path);
+                }
+                return TRUE;
+        }
+        return FALSE;
+}
+
+static gboolean gpk_application_packages_popup_menu (GtkWidget *treeview, gpointer userdata)
+{
+        gpk_application_view_popup_menu (treeview, NULL, userdata);
+        return TRUE;
+}
+
+
 /**
  * gpk_application_get_full_repo_name:
  **/
@@ -1203,23 +1232,6 @@ gpk_application_get_full_repo_name (GpkApplicationPrivate *priv, const gchar *da
 }
 
 /**
- * gpk_application_clear_details_cb:
- **/
-//static gboolean
-//gpk_application_clear_details_cb (GpkApplicationPrivate *priv)
-//{
-//	GtkWidget *widget;
-
-	/* hide dead widgets */
-//	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "grid_details"));
-//	gtk_widget_hide (widget);
-
-	/* never repeat */
-//	priv->details_event_id = 0;
-//	return FALSE;
-//}
-
-/**
  * gpk_application_clear_details:
  **/
 static void
@@ -1238,16 +1250,6 @@ gpk_application_clear_details (GpkApplicationPrivate *priv)
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_source"));
 	gtk_label_set_label (GTK_LABEL (widget), "");
-
-        gpk_application_set_button_sensitivity (priv, FALSE, TRUE);
-
-	/* only clear the last data if it takes a little while, else we flicker the display */
-	//if (priv->details_event_id > 0)
-	//	g_source_remove (priv->details_event_id);
-	//priv->details_event_id =
-	//	g_timeout_add (200, (GSourceFunc) gpk_application_clear_details_cb, priv);
-	//g_source_set_name_by_id (priv->details_event_id,
-	//			 "[GpkApplication] clear-details");
 }
 
 /**
@@ -1494,20 +1496,6 @@ out:
 	g_ptr_array_unref (package_ids_array);
 	g_ptr_array_unref (array);
 }
-
-#if 0
-/**
- * gpk_application_finished_cb:
- **/
-static void
-gpk_application_finished_cb (PkClient *client, PkExitEnum exit_enum, guint runtime, GpkApplicationPrivate *priv)
-{
-
-//	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "progressbar_progress"));
-//	gtk_widget_hide (widget);
-
-}
-#endif
 
 /**
  * gpk_application_cancel_cb:
@@ -2302,10 +2290,8 @@ gpk_application_get_details_cb (PkClient *client, GAsyncResult *res, GpkApplicat
 	installed = g_str_has_prefix (split[PK_PACKAGE_ID_DATA], "installed");
 
 	/* homepage */
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_homepage"));
 	g_free (priv->homepage_url);
 	priv->homepage_url = g_strdup (url);
-	gtk_widget_set_visible (widget, url != NULL);
 
 	/* licence */
 	if (license != NULL) {
@@ -2315,11 +2301,6 @@ gpk_application_get_details_cb (PkClient *client, GAsyncResult *res, GpkApplicat
 		gtk_label_set_label (GTK_LABEL (widget), license);
 		gtk_label_set_line_wrap (GTK_LABEL (widget), TRUE);
 		gtk_widget_show (widget);
-	} else {
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_licence_title"));
-		//gtk_widget_hide (widget);
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_licence"));
-		//gtk_widget_hide (widget);
 	}
 
 	/* set the description */
@@ -2348,11 +2329,6 @@ gpk_application_get_details_cb (PkClient *client, GAsyncResult *res, GpkApplicat
 		gtk_label_set_label (GTK_LABEL (widget), value);
 		gtk_widget_show (widget);
 		g_free (value);
-	} else {
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_size_title"));
-		//gtk_widget_hide (widget);
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_size"));
-		//gtk_widget_hide (widget);
 	}
 
 	/* set the repo text, or hide if installed */
@@ -2364,11 +2340,6 @@ gpk_application_get_details_cb (PkClient *client, GAsyncResult *res, GpkApplicat
 		repo_name = gpk_application_get_full_repo_name (priv, split[PK_PACKAGE_ID_DATA]);
 		gtk_label_set_label (GTK_LABEL (widget), repo_name);
 		gtk_widget_show (widget);
-	} else {
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_source_title"));
-		//gtk_widget_hide (widget);
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_source"));
-		//gtk_widget_hide (widget);
 	}
 out:
 	gpk_application_hide_wait_dialog (priv);
@@ -2394,8 +2365,6 @@ gpk_application_packages_treeview_clicked_cb (GtkTreeSelection *selection, GpkAp
 	GtkWidget *widget;
 	GtkTreeModel *model;
 	GtkTreeIter iter;
-	gboolean show_install = TRUE;
-	gboolean show_remove = TRUE;
 	PkBitfield state;
 	gchar **package_ids = NULL;
 	gchar *package_id = NULL;
@@ -2408,12 +2377,6 @@ gpk_application_packages_treeview_clicked_cb (GtkTreeSelection *selection, GpkAp
 	/* This will only work in single or browse selection mode! */
 	if (!gtk_tree_selection_get_selected (selection, &model, &iter)) {
 		g_debug ("no row selected");
-
-		/* we cannot now add it */
-		gpk_application_allow_install (priv, FALSE);
-		gpk_application_allow_remove (priv, FALSE);
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "hbox_packages"));
-		//gtk_widget_hide (widget);
 
 		/* hide details */
 		gpk_application_clear_details (priv);
@@ -2431,28 +2394,9 @@ gpk_application_packages_treeview_clicked_cb (GtkTreeSelection *selection, GpkAp
 		goto out;
 	}
 
-	/* set the summary as we know it already */
-	//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_summary"));
-	//gtk_label_set_label (GTK_LABEL (widget), summary);
-
 	/* show the menu item */
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "hbox_packages"));
 	gtk_widget_show (widget);
-
-	show_install = (state == 0 ||
-			state == pk_bitfield_from_enums (GPK_STATE_INSTALLED, GPK_STATE_IN_LIST, -1));
-	show_remove = (state == pk_bitfield_value (GPK_STATE_INSTALLED) ||
-		       state == pk_bitfield_value (GPK_STATE_IN_LIST));
-
-	if (priv->action == GPK_ACTION_INSTALL && !pk_bitfield_contain (state, GPK_STATE_IN_LIST))
-		show_remove = FALSE;
-	if (priv->action == GPK_ACTION_REMOVE && !pk_bitfield_contain (state, GPK_STATE_IN_LIST))
-		show_install = FALSE;
-
-	/* only show buttons if we are in the correct mode */
-	gpk_application_allow_install (priv, show_install);
-	gpk_application_allow_remove (priv, show_remove);
-	gpk_application_set_button_sensitivity (priv, show_install | show_remove, FALSE);
 
 	/* clear the description text */
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "textview_description"));
@@ -3140,33 +3084,6 @@ pk_backend_status_get_properties_cb (GObject *object, GAsyncResult *res, GpkAppl
 		      "groups", &priv->groups,
 		      NULL);
 
-	/* Remove description/file array if needed. */
-	if (pk_bitfield_contain (priv->roles, PK_ROLE_ENUM_GET_DETAILS) == FALSE) {
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "scrolledwindow2"));
-		//gtk_widget_hide (widget);
-	}
-	if (pk_bitfield_contain (priv->roles, PK_ROLE_ENUM_GET_FILES) == FALSE) {
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_files"));
-		//gtk_widget_hide (widget);
-		gtk_widget_set_sensitive (widget, FALSE);
-	}
-	if (pk_bitfield_contain (priv->roles, PK_ROLE_ENUM_DEPENDS_ON) == FALSE) {
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_depends"));
-		//gtk_widget_hide (widget);
-		gtk_widget_set_sensitive (widget, FALSE);
-	}
-	if (pk_bitfield_contain (priv->roles, PK_ROLE_ENUM_REQUIRED_BY) == FALSE) {
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_requires"));
-		//gtk_widget_hide (widget);
-		gtk_widget_set_sensitive (widget, FALSE);
-	}
-
-	/* hide the group selector if we don't support search-groups */
-	if (pk_bitfield_contain (priv->roles, PK_ROLE_ENUM_SEARCH_GROUP) == FALSE) {
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "scrolledwindow_groups"));
-		//gtk_widget_hide (widget);
-	}
-
 	/* add an "all" entry if we can GetPackages */
 	ret = g_settings_get_boolean (priv->settings, GPK_SETTINGS_SHOW_ALL_PACKAGES);
 	if (ret && pk_bitfield_contain (priv->roles, PK_ROLE_ENUM_GET_PACKAGES)) {
@@ -3422,45 +3339,7 @@ gpk_application_startup_cb (GtkApplication *application, GpkApplicationPrivate *
 	g_signal_connect (widget, "clicked",
 			  G_CALLBACK (gpk_application_button_apply_cb), priv);
 	gtk_widget_set_sensitive (widget, TRUE);
-
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_homepage"));
-	g_signal_connect (widget, "clicked",
-			  G_CALLBACK (gpk_application_menu_homepage_cb), priv);
-	gtk_widget_set_sensitive (widget, FALSE);
-
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_files"));
-	g_signal_connect (widget, "clicked",
-			  G_CALLBACK (gpk_application_menu_files_cb), priv);
-	gtk_widget_set_sensitive (widget, FALSE);
-
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_install"));
-	g_signal_connect (widget, "clicked",
-			  G_CALLBACK (gpk_application_menu_install_cb), priv);
-	gtk_widget_set_sensitive (widget, FALSE);
-
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_remove"));
-	g_signal_connect (widget, "clicked",
-			  G_CALLBACK (gpk_application_menu_remove_cb), priv);
-	gtk_widget_set_sensitive (widget, FALSE);
-
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_depends"));
-	g_signal_connect (widget, "clicked",
-			  G_CALLBACK (gpk_application_menu_depends_cb), priv);
-	gtk_widget_set_sensitive (widget, FALSE);
-
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_requires"));
-	g_signal_connect (widget, "clicked",
-			  G_CALLBACK (gpk_application_menu_requires_cb), priv);
-	gtk_widget_set_sensitive (widget, FALSE);
-
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "hbox_packages"));
-	//gtk_widget_hide (widget);
-
-	/* search cancel button */
-	//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_cancel"));
-	//g_signal_connect (widget, "clicked",
-	//		  G_CALLBACK (gpk_application_cancel_cb), priv);
-	//gtk_widget_hide (widget);
 
 	/* the fancy text entry widget */
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "entry_text"));
@@ -3501,6 +3380,10 @@ gpk_application_startup_cb (GtkApplication *application, GpkApplicationPrivate *
 	gtk_tree_view_columns_autosize (GTK_TREE_VIEW (widget));
 	g_signal_connect (GTK_TREE_VIEW (widget), "row-activated",
 			  G_CALLBACK (gpk_application_package_row_activated_cb), priv);
+        g_signal_connect (GTK_TREE_VIEW (widget), "button-press-event",
+                        G_CALLBACK (gpk_application_packages_button_pressed), priv);
+        g_signal_connect (GTK_TREE_VIEW (widget), "popup-menu",
+                        G_CALLBACK (gpk_application_packages_popup_menu), priv);
 
 	/* sorted */
 	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (priv->packages_store),
