@@ -1129,11 +1129,6 @@ static void gpk_application_view_popup_menu (GtkWidget *treeview, GdkEventButton
 	show_install = (state == 0 || state == pk_bitfield_from_enums (GPK_STATE_INSTALLED, GPK_STATE_IN_LIST, -1));
 	show_remove = (state == pk_bitfield_value (GPK_STATE_INSTALLED) || state == pk_bitfield_value (GPK_STATE_IN_LIST));
 
-	if (priv->action == GPK_ACTION_INSTALL && !pk_bitfield_contain (state, GPK_STATE_IN_LIST))
-		show_remove = FALSE;
-	if (priv->action == GPK_ACTION_REMOVE && !pk_bitfield_contain (state, GPK_STATE_IN_LIST))
-		show_install = FALSE;
-
         menu = gtk_menu_new ();
 
         if (show_install)
@@ -1141,19 +1136,24 @@ static void gpk_application_view_popup_menu (GtkWidget *treeview, GdkEventButton
                 menuitem = gtk_menu_item_new_with_label (_("Install Package"));
 	        g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_install_cb), priv);
 	        gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+	        if (priv->action == GPK_ACTION_REMOVE && !pk_bitfield_contain (state, GPK_STATE_IN_LIST))
+	                gtk_widget_set_sensitive (menuitem, FALSE);
+	        else gtk_widget_set_sensitive (menuitem, TRUE);
 	}
         if (show_remove)
         {
                 menuitem = gtk_menu_item_new_with_label (_("Remove Package"));
 	        g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_remove_cb), priv);
 	        gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+	        if (priv->action == GPK_ACTION_INSTALL && !pk_bitfield_contain (state, GPK_STATE_IN_LIST))
+	                gtk_widget_set_sensitive (menuitem, FALSE);
+	        else gtk_widget_set_sensitive (menuitem, TRUE);
 	}
-	if (priv->homepage_url)
-	{
-                menuitem = gtk_menu_item_new_with_label (_("Visit Project Website"));
-	        g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_homepage_cb), priv);
-	        gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
-	}
+        menuitem = gtk_menu_item_new_with_label (_("Visit Project Website"));
+	g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_homepage_cb), priv);
+	gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+	if (priv->homepage_url) gtk_widget_set_sensitive (menuitem, TRUE);
+	else gtk_widget_set_sensitive (menuitem, FALSE);
 #if 0
         menuitem = gtk_menu_item_new_with_label (_("Files"));
 	g_signal_connect (menuitem, "activate", G_CALLBACK (gpk_application_menu_files_cb), priv);

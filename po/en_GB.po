@@ -284,11 +284,11 @@ msgstr "Files"
 
 #: ../data/gpk-application.ui.h:12
 msgid "Required Packages"
-msgstr "Required Packages"
+msgstr "Required Packages..."
 
 #: ../data/gpk-application.ui.h:13
 msgid "Dependent Packages"
-msgstr "Dependent Packages"
+msgstr "Dependent Packages..."
 
 #: ../data/gpk-application.ui.h:14
 msgid "Check for Updates"
