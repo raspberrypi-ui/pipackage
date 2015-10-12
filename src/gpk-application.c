@@ -93,17 +93,15 @@ typedef struct {
 	GtkBuilder		*builder;
 	GtkListStore		*packages_store;
 	GtkTreeStore		*groups_store;
-	guint			 details_event_id;
-	guint			 status_id;
 	PkBitfield		 filters_current;
 	PkBitfield		 groups;
 	PkBitfield		 roles;
 	PkControl		*control;
 	PkPackageSack		*package_sack;
-	PkStatusEnum		 status_last;
 	PkTask			*task;
 	GtkWidget *msg_dlg, *progress_bar, *stat_label, *cancel_btn;
 	gint                     dlg_count;
+	gboolean                quit_after_install;
 } GpkApplicationPrivate;
 
 enum {
@@ -404,7 +402,6 @@ out:
 static void
 gpk_application_change_queue_status (GpkApplicationPrivate *priv)
 {
-	GtkWidget *widget;
 	GtkTreeView *treeview;
 	gboolean valid;
 	GtkTreeIter iter;
@@ -415,12 +412,6 @@ gpk_application_change_queue_status (GpkApplicationPrivate *priv)
 
 	/* show and hide the action widgets */
 	if (pk_package_sack_get_size (priv->package_sack) > 0) {
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
-		gtk_widget_show (widget);
-		gtk_widget_set_sensitive (widget, TRUE);
-		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_clear"));
-		gtk_widget_show (widget);
-		gtk_widget_set_sensitive (widget, TRUE);
 		gpk_application_group_add_selected (priv);
 	} else {
 		priv->action = GPK_ACTION_NONE;
@@ -634,34 +625,6 @@ out:
 		g_object_unref (results);
 }
 #endif
-/**
- * gpk_application_status_changed_timeout_cb:
- **/
-static gboolean
-gpk_application_status_changed_timeout_cb (GpkApplicationPrivate *priv)
-{
-	//const gchar *text;
-	//GtkWidget *widget;
-
-	/* set the text and show */
-	//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_status"));
-	//text = gpk_status_enum_to_localised_text (priv->status_last);
-	//gtk_label_set_label (GTK_LABEL (stat_label), text);
-	//gtk_widget_show (widget);
-
-	/* show cancel button */
-	//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_cancel"));
-	//gtk_widget_show (widget);
-	gtk_widget_set_sensitive (priv->cancel_btn, TRUE);
-
-	/* show progressbar */
-	//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "progressbar_progress"));
-	//gtk_widget_show (widget);
-
-	/* never repeat */
-	priv->status_id = 0;
-	return FALSE;
-}
 
 /**
  * gpk_application_progress_cb:
@@ -692,33 +655,8 @@ gpk_application_progress_cb (PkProgress *progress, PkProgressType type, GpkAppli
 			widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "treeview_packages"));
 			gtk_widget_set_sensitive (widget, TRUE);
 
-			/* make apply button sensitive */
-			widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
-			gtk_widget_set_sensitive (widget, TRUE);
-
-			/* we've not yet shown, so don't bother */
-			if (priv->status_id > 0) {
-				g_source_remove (priv->status_id);
-				priv->status_id = 0;
-			}
-
 			goto out;
 		}
-
-		/* already pending show */
-		if (priv->status_id > 0)
-			goto out;
-
-		/* only show after some time in the transaction */
-		priv->status_id =
-			g_timeout_add (GPK_UI_STATUS_SHOW_DELAY,
-				       (GSourceFunc) gpk_application_status_changed_timeout_cb,
-				       priv);
-		g_source_set_name_by_id (priv->status_id,
-					 "[GpkApplication] status-changed");
-
-		/* save for the callback */
-		priv->status_last = status;
 
 	} else if (type == PK_PROGRESS_TYPE_PERCENTAGE) {
 		if (percentage > 0) {
@@ -1505,6 +1443,7 @@ static void
 gpk_application_cancel_cb (GtkWidget *button_widget, GpkApplicationPrivate *priv)
 {
 	g_cancellable_cancel (priv->cancellable);
+	priv->quit_after_install = FALSE;
 
 	/* switch buttons around */
 	priv->search_mode = GPK_MODE_UNKNOWN;
@@ -1589,8 +1528,6 @@ gpk_application_search_cb (PkClient *client, GAsyncResult *res, GpkApplicationPr
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "textview_description"));
 	gtk_widget_set_sensitive (widget, TRUE);
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "entry_text"));
-	gtk_widget_set_sensitive (widget, TRUE);
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
 	gtk_widget_set_sensitive (widget, TRUE);
 out:
 	/* mark find button sensitive */
@@ -1797,14 +1734,25 @@ gpk_application_find_cb (GtkWidget *button_widget, GpkApplicationPrivate *priv)
  * gpk_application_quit:
  * @event: The event type, unused.
  **/
+
+static void gpk_application_mb_cancel (GtkWidget *button_widget, GtkWidget *dlg)
+{
+        gtk_dialog_response (GTK_DIALOG (dlg), GTK_RESPONSE_CANCEL);
+}
+
+static void gpk_application_mb_close (GtkWidget *button_widget, GtkWidget *dlg)
+{
+        gtk_dialog_response (GTK_DIALOG (dlg), GTK_RESPONSE_OK);
+}
+
 static gboolean
 gpk_application_quit (GpkApplicationPrivate *priv)
 {
 	GPtrArray *array;
 	gint len;
 	GtkResponseType result;
-	GtkWindow *window;
 	GtkWidget *dialog;
+	GtkWidget *btn1, *btn2, *frame, *label1, *label2, *box1, *box2;
 
 	/* do we have any items queued for removal or installation? */
 	array = pk_package_sack_get_array (priv->package_sack);
@@ -1812,18 +1760,34 @@ gpk_application_quit (GpkApplicationPrivate *priv)
 	g_ptr_array_unref (array);
 
 	if (len != 0) {
-		window = GTK_WINDOW (gtk_builder_get_object (priv->builder, "window_manager"));
-		dialog = gtk_message_dialog_new (window, GTK_DIALOG_MODAL,
-						 GTK_MESSAGE_WARNING, GTK_BUTTONS_CANCEL,
-						 /* TRANSLATORS: title: warn the user they are quitting with unapplied changes */
-						 "%s", _("Changes not applied"));
-		gtk_dialog_add_button (GTK_DIALOG (dialog), _("Close _Anyway"), GTK_RESPONSE_OK);
-		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG(dialog),
-							  "%s\n%s",
-							  /* TRANSLATORS: tell the user the problem */
-							  _("You have made changes that have not yet been applied."),
-							  _("These changes will be lost if you close this window."));
-		gtk_window_set_icon_name (GTK_WINDOW (dialog), GPK_ICON_SOFTWARE_INSTALLER);
+                dialog = (GtkWidget *) gtk_dialog_new ();
+                gtk_window_set_title (GTK_WINDOW (dialog), "");
+                gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
+                gtk_window_set_decorated (GTK_WINDOW (dialog), FALSE);
+                gtk_window_set_destroy_with_parent (GTK_WINDOW (dialog), TRUE);
+                gtk_window_set_skip_taskbar_hint (GTK_WINDOW (dialog), TRUE);
+                gtk_window_set_transient_for (GTK_WINDOW (dialog), gtk_application_get_active_window (priv->application));
+                frame = gtk_frame_new (NULL);
+                gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), frame);
+                box1 = (GtkWidget *) gtk_box_new (GTK_ORIENTATION_VERTICAL, 5);
+                gtk_container_set_border_width (GTK_CONTAINER (box1), 10);
+                gtk_container_add (GTK_CONTAINER (frame), box1);
+                label1 = (GtkWidget *) gtk_label_new (_("You have made changes that have not yet been applied."));
+                gtk_widget_set_halign (label1, GTK_ALIGN_CENTER);
+                gtk_box_pack_start (GTK_BOX (box1), label1, FALSE, FALSE, 5);
+                label2 = (GtkWidget *) gtk_label_new (_("These changes will be lost if you close this window."));
+                gtk_widget_set_halign (label2, GTK_ALIGN_CENTER);
+                gtk_box_pack_start (GTK_BOX (box1), label2, FALSE, FALSE, 5);
+                box2 = (GtkWidget *) gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 5);
+                gtk_box_set_homogeneous (GTK_BOX (box2), TRUE);
+                gtk_box_pack_start (GTK_BOX (box1), box2, FALSE, FALSE, 5);
+                btn1 = gtk_button_new_with_label (_("Cancel"));
+                gtk_box_pack_start (GTK_BOX (box2), btn1, TRUE, TRUE, 5);
+                g_signal_connect (btn1, "clicked", G_CALLBACK (gpk_application_mb_cancel), dialog);
+                btn2 = gtk_button_new_with_label (_("Close Anyway"));
+                gtk_box_pack_start (GTK_BOX (box2), btn2, TRUE, TRUE, 5);
+                g_signal_connect (btn2, "clicked", G_CALLBACK (gpk_application_mb_close), dialog);
+                gtk_widget_show_all (dialog);
 		result = gtk_dialog_run (GTK_DIALOG (dialog));
 		gtk_widget_destroy (dialog);
 
@@ -1896,7 +1860,7 @@ gpk_application_packages_installed_clicked_cb (GtkCellRendererToggle *cell, gcha
 }
 
 static void gpk_application_packages_treeview_clicked_cb (GtkTreeSelection *selection, GpkApplicationPrivate *priv);
-
+#if 0
 /**
  * gpk_application_button_clear_cb:
  **/
@@ -1948,7 +1912,7 @@ gpk_application_button_clear_cb (GtkWidget *widget_button, GpkApplicationPrivate
 	priv->action = GPK_ACTION_NONE;
 	gpk_application_change_queue_status (priv);
 }
-
+#endif
 /**
  * gpk_application_install_packages_cb:
  **/
@@ -1983,6 +1947,13 @@ gpk_application_install_packages_cb (PkTask *task, GAsyncResult *res, GpkApplica
 		}
 		goto out;
 	}
+
+	if (priv->quit_after_install)
+	{
+	        pk_package_sack_clear (priv->package_sack);
+	        priv->action = GPK_ACTION_NONE;
+	        gpk_application_quit (priv);
+        }
 
 	/* idle add in the background */
 	idle_id = g_idle_add ((GSourceFunc) gpk_application_perform_search_idle_cb, priv);
@@ -2037,6 +2008,13 @@ gpk_application_remove_packages_cb (PkTask *task, GAsyncResult *res, GpkApplicat
 		goto out;
 	}
 
+	if (priv->quit_after_install)
+	{
+	        pk_package_sack_clear (priv->package_sack);
+	        priv->action = GPK_ACTION_NONE;
+	        gpk_application_quit (priv);
+        }
+
 	/* idle add in the background */
 	idle_id = g_idle_add ((GSourceFunc) gpk_application_perform_search_idle_cb, priv);
 	g_source_set_name_by_id (idle_id, "[GpkApplication] search");
@@ -2075,13 +2053,6 @@ gpk_application_button_apply_cb (GtkWidget *widget, GpkApplicationPrivate *priv)
 		/* make package array insensitive */
 		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "treeview_packages"));
 		gtk_widget_set_sensitive (widget, FALSE);
-
-		/* make apply button insensitive */
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
-		//gtk_widget_set_sensitive (widget, FALSE);
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_clear"));
-		//gtk_widget_set_sensitive (widget, FALSE);
-
 	} else if (priv->action == GPK_ACTION_REMOVE) {
 		autoremove = g_settings_get_boolean (priv->settings, GPK_SETTINGS_ENABLE_AUTOREMOVE);
 
@@ -2094,16 +2065,23 @@ gpk_application_button_apply_cb (GtkWidget *widget, GpkApplicationPrivate *priv)
 		/* make package array insensitive */
 		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "treeview_packages"));
 		gtk_widget_set_sensitive (widget, FALSE);
-
-		/* make apply button insensitive */
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_apply"));
-		//gtk_widget_set_sensitive (widget, FALSE);
-		//widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_clear"));
-		//gtk_widget_set_sensitive (widget, FALSE);
 	}
+	else if (priv->quit_after_install) gpk_application_quit (priv);
 	g_strfreev (package_ids);
 	return;
 }
+
+static void gpk_application_button_ok_cb (GtkWidget *widget, GpkApplicationPrivate *priv)
+{
+        priv->quit_after_install = TRUE;
+        gpk_application_button_apply_cb (widget, priv);
+}
+
+static void gpk_application_button_cancel_cb (GtkWidget *widget, GpkApplicationPrivate *priv)
+{
+	gpk_application_quit (priv);
+}
+
 
 static void
 gpk_application_packages_add_columns (GpkApplicationPrivate *priv)
@@ -3268,6 +3246,7 @@ gpk_application_startup_cb (GtkApplication *application, GpkApplicationPrivate *
 	priv->cancellable = g_cancellable_new ();
 	priv->repos = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
 	priv->dlg_count = 0;
+	priv->quit_after_install = FALSE;
 
 	priv->markdown = egg_markdown_new ();
 	egg_markdown_set_max_lines (priv->markdown, 50);
@@ -3355,7 +3334,7 @@ gpk_application_startup_cb (GtkApplication *application, GpkApplicationPrivate *
 	/* clear */
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_clear"));
 	g_signal_connect (widget, "clicked",
-			  G_CALLBACK (gpk_application_button_clear_cb), priv);
+			  G_CALLBACK (gpk_application_button_cancel_cb), priv);
 	gtk_widget_set_sensitive (widget, TRUE);
 
 	/* install */
@@ -3363,7 +3342,12 @@ gpk_application_startup_cb (GtkApplication *application, GpkApplicationPrivate *
 	g_signal_connect (widget, "clicked",
 			  G_CALLBACK (gpk_application_button_apply_cb), priv);
 	gtk_widget_set_sensitive (widget, TRUE);
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "hbox_packages"));
+
+	/* install */
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_ok"));
+	g_signal_connect (widget, "clicked",
+			  G_CALLBACK (gpk_application_button_ok_cb), priv);
+	gtk_widget_set_sensitive (widget, TRUE);
 
 	/* the fancy text entry widget */
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "entry_text"));
@@ -3580,9 +3564,6 @@ main (int argc, char *argv[])
 	status = g_application_run (G_APPLICATION (priv->application), argc, argv);
 	g_object_unref (priv->application);
 
-	if (priv->details_event_id > 0)
-		g_source_remove (priv->details_event_id);
-
 	if (priv->packages_store != NULL)
 		g_object_unref (priv->packages_store);
 	if (priv->control != NULL)
@@ -3603,8 +3584,6 @@ main (int argc, char *argv[])
 		g_object_unref (priv->package_sack);
 	if (priv->repos != NULL)
 		g_hash_table_destroy (priv->repos);
-	if (priv->status_id > 0)
-		g_source_remove (priv->status_id);
 	g_free (priv->homepage_url);
 	g_free (priv->search_group);
 	g_free (priv->search_text);
