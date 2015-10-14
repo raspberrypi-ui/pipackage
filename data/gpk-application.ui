@@ -357,7 +357,7 @@
         <attribute name="action">app.updates</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">Package Sources</attribute>
+        <attribute name="label" translatable="yes">Package Sources...</attribute>
         <attribute name="action">app.sources</attribute>
       </item>
       <item>
@@ -365,7 +365,7 @@
         <attribute name="action">app.refresh</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">Package Log</attribute>
+        <attribute name="label" translatable="yes">Package Log...</attribute>
         <attribute name="action">app.log</attribute>
       </item>
     </section>
