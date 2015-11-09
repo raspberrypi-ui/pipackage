@@ -2,7 +2,7 @@
 _Name=Package Log
 _Comment=View past package management tasks
 Icon=gpk-log
-Exec=gpk-log
+Exec=pi-gpk-log
 Terminal=false
 Type=Application
 NoDisplay=true

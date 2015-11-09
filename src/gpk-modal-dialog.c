@@ -774,7 +774,7 @@ gpk_modal_dialog_init (GpkModalDialog *dialog)
 
 	/* get UI */
 	dialog->priv->builder = gtk_builder_new ();
-	retval = gtk_builder_add_from_file (dialog->priv->builder, GPK_DATA "/gpk-client.ui", &error);
+	retval = gtk_builder_add_from_file (dialog->priv->builder, GPK_DATA "/pi-gpk-client.ui", &error);
 	if (retval == 0) {
 		g_warning ("failed to load ui: %s", error->message);
 		g_error_free (error);

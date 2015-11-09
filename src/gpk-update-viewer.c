@@ -3244,7 +3244,7 @@ gpk_update_viewer_application_startup_cb (GtkApplication *_application, gpointer
 
 	/* get UI */
 	builder = gtk_builder_new ();
-	retval = gtk_builder_add_from_file (builder, GPK_DATA "/gpk-update-viewer.ui", &error);
+	retval = gtk_builder_add_from_file (builder, GPK_DATA "/pi-gpk-update-viewer.ui", &error);
 	if (retval == 0) {
 		g_warning ("failed to load ui: %s", error->message);
 		g_error_free (error);

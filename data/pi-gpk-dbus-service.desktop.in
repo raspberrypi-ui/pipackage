@@ -2,7 +2,7 @@
 _Name=Software Install
 _Comment=Install selected software on the system
 Categories=System;
-Exec=gpk-dbus-service
+Exec=pi-gpk-dbus-service
 Terminal=false
 Type=Application
 Icon=system-software-install

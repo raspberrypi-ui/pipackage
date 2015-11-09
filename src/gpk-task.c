@@ -577,7 +577,7 @@ gpk_task_setup_dialog_untrusted (GpkTask *task)
 
 	/* get UI */
 	task->priv->builder_untrusted = gtk_builder_new ();
-	retval = gtk_builder_add_from_file (task->priv->builder_untrusted, GPK_DATA "/gpk-error.ui", &error);
+	retval = gtk_builder_add_from_file (task->priv->builder_untrusted, GPK_DATA "/pi-gpk-error.ui", &error);
 	if (retval == 0) {
 		g_warning ("failed to load ui: %s", error->message);
 		g_error_free (error);
@@ -625,7 +625,7 @@ gpk_task_setup_dialog_signature (GpkTask *task)
 
 	/* get UI */
 	task->priv->builder_signature = gtk_builder_new ();
-	retval = gtk_builder_add_from_file (task->priv->builder_signature, GPK_DATA "/gpk-signature.ui", &error);
+	retval = gtk_builder_add_from_file (task->priv->builder_signature, GPK_DATA "/pi-gpk-signature.ui", &error);
 	if (retval == 0) {
 		g_warning ("failed to load ui: %s", error->message);
 		g_error_free (error);
@@ -658,7 +658,7 @@ gpk_task_setup_dialog_eula (GpkTask *task)
 
 	/* get UI */
 	task->priv->builder_eula = gtk_builder_new ();
-	retval = gtk_builder_add_from_file (task->priv->builder_eula, GPK_DATA "/gpk-eula.ui", &error);
+	retval = gtk_builder_add_from_file (task->priv->builder_eula, GPK_DATA "/pi-gpk-eula.ui", &error);
 	if (retval == 0) {
 		g_warning ("failed to load ui: %s", error->message);
 		g_error_free (error);

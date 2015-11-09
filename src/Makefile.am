@@ -29,12 +29,12 @@ AM_CPPFLAGS =						\
 	$(NULL)
 
 bin_PROGRAMS =						\
-	gpk-application					\
-	gpk-prefs					\
-	gpk-install-local-file				\
-	gpk-update-viewer				\
-	gpk-log						\
-	gpk-dbus-service				\
+	pi-packages					\
+	pi-gpk-prefs					\
+	pi-gpk-install-local-file				\
+	pi-gpk-update-viewer				\
+	pi-gpk-log						\
+	pi-gpk-dbus-service				\
 	$(NULL)
 
 noinst_LIBRARIES = libgpkshared.a
@@ -97,16 +97,16 @@ shared_LIBS =						\
 	$(X11_LIBS)					\
 	$(NULL)
 
-gpk_install_local_file_SOURCES =			\
+pi_gpk_install_local_file_SOURCES =			\
 	gpk-install-local-file.c			\
 	$(NULL)
 
-gpk_install_local_file_LDADD =				\
+pi_gpk_install_local_file_LDADD =				\
 	libgpkshared.a					\
 	$(shared_LIBS)					\
 	$(NULL)
 
-gpk_dbus_service_SOURCES =				\
+pi_gpk_dbus_service_SOURCES =				\
 	gpk-dbus-service.c				\
 	gpk-dbus.c					\
 	gpk-dbus.h					\
@@ -114,21 +114,21 @@ gpk_dbus_service_SOURCES =				\
 	gpk-dbus-task.h					\
 	$(NULL)
 
-gpk_dbus_service_LDADD =				\
+pi_gpk_dbus_service_LDADD =				\
 	libgpkshared.a					\
 	$(shared_LIBS)					\
 	$(NULL)
 
-gpk_application_SOURCES =				\
+pi_packages_SOURCES =				\
 	gpk-application.c				\
 	$(NULL)
 
-gpk_application_LDADD =					\
+pi_packages_LDADD =					\
 	libgpkshared.a					\
 	$(shared_LIBS)					\
 	$(NULL)
 
-gpk_prefs_SOURCES =					\
+pi_gpk_prefs_SOURCES =					\
 	gpk-debug.h					\
 	gpk-debug.c					\
 	gpk-animated-icon.c				\
@@ -142,12 +142,12 @@ gpk_prefs_SOURCES =					\
 	gpk-prefs.c					\
 	$(NULL)
 
-gpk_prefs_LDADD =					\
+pi_gpk_prefs_LDADD =					\
 	libgpkshared.a					\
 	$(shared_LIBS)					\
 	-lm
 
-gpk_update_viewer_SOURCES =				\
+pi_gpk_update_viewer_SOURCES =				\
 	gpk-update-viewer.c				\
 	gpk-cell-renderer-size.c			\
 	gpk-cell-renderer-size.h			\
@@ -157,16 +157,16 @@ gpk_update_viewer_SOURCES =				\
 	gpk-cell-renderer-restart.h			\
 	$(NULL)
 
-gpk_update_viewer_LDADD =				\
+pi_gpk_update_viewer_LDADD =				\
 	libgpkshared.a					\
 	$(shared_LIBS)					\
 	$(NULL)
 
-gpk_log_SOURCES =					\
+pi_gpk_log_SOURCES =					\
 	gpk-log.c					\
 	$(NULL)
 
-gpk_log_LDADD =						\
+pi_gpk_log_LDADD =						\
 	libgpkshared.a					\
 	$(shared_LIBS)					\
 	$(NULL)

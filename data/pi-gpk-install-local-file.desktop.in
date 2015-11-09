@@ -2,7 +2,7 @@
 _Name=Package Install
 _Comment=Install selected packages on the system
 Categories=System;
-Exec=gpk-install-local-file %F
+Exec=pi-gpk-install-local-file %F
 Terminal=false
 Type=Application
 Icon=system-software-install

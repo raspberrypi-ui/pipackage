@@ -250,7 +250,7 @@ gpk_helper_chooser_init (GpkHelperChooser *helper)
 
 	/* get UI */
 	helper->priv->builder = gtk_builder_new ();
-	retval = gtk_builder_add_from_file (helper->priv->builder, GPK_DATA "/gpk-log.ui", &error);
+	retval = gtk_builder_add_from_file (helper->priv->builder, GPK_DATA "/pi-gpk-log.ui", &error);
 	if (retval == 0) {
 		g_warning ("failed to load ui: %s", error->message);
 		g_error_free (error);

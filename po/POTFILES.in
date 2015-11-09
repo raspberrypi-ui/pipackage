@@ -3,20 +3,20 @@
 # Please keep this file sorted alphabetically.
 data/appdata/gpk-application.appdata.xml.in
 data/appdata/gpk-update-viewer.appdata.xml.in
-data/gpk-application.desktop.in
-[type: gettext/glade]data/gpk-application.ui
-[type: gettext/glade]data/gpk-client.ui
-data/gpk-dbus-service.desktop.in
-[type: gettext/glade]data/gpk-error.ui
-[type: gettext/glade]data/gpk-eula.ui
-data/gpk-install-local-file.desktop.in
-data/gpk-log.desktop.in
-[type: gettext/glade]data/gpk-log.ui
-data/gpk-prefs.desktop.in
-[type: gettext/glade]data/gpk-prefs.ui
-[type: gettext/glade]data/gpk-signature.ui
-data/gpk-update-viewer.desktop.in
-[type: gettext/glade]data/gpk-update-viewer.ui
+data/pi-packages.desktop.in
+[type: gettext/glade]data/pi-packages.ui
+[type: gettext/glade]data/pi-gpk-client.ui
+data/pi-gpk-dbus-service.desktop.in
+[type: gettext/glade]data/pi-gpk-error.ui
+[type: gettext/glade]data/pi-gpk-eula.ui
+data/pi-gpk-install-local-file.desktop.in
+data/pi-gpk-log.desktop.in
+[type: gettext/glade]data/pi-gpk-log.ui
+data/pi-gpk-prefs.desktop.in
+[type: gettext/glade]data/pi-gpk-prefs.ui
+[type: gettext/glade]data/pi-gpk-signature.ui
+data/pi-gpk-update-viewer.desktop.in
+[type: gettext/glade]data/pi-gpk-update-viewer.ui
 data/org.gnome.packagekit.gschema.xml
 src/gpk-application.c
 src/gpk-common.c

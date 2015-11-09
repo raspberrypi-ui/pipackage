@@ -2,10 +2,12 @@
 _Name=Package Updater
 _Comment=Update software installed on the system
 Icon=system-software-update
-Exec=gpk-update-viewer
+Exec=pi-gpk-update-viewer
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;System;
 NotShowIn=KDE;
 StartupNotify=true
 X-GNOME-UsesNotifications=true
+NoDisplay=true
+

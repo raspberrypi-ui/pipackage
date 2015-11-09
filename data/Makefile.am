@@ -8,12 +8,12 @@ dist_migration_DATA = org.gnome.packagekit.gschema.migrate
 @INTLTOOL_DESKTOP_RULE@
 desktopdir = $(datadir)/applications
 desktop_in_files =					\
-	gpk-install-local-file.desktop.in		\
-	gpk-dbus-service.desktop.in			\
-	gpk-prefs.desktop.in				\
-	gpk-application.desktop.in			\
-	gpk-update-viewer.desktop.in			\
-	gpk-log.desktop.in				\
+	pi-gpk-install-local-file.desktop.in		\
+	pi-gpk-dbus-service.desktop.in			\
+	pi-gpk-prefs.desktop.in				\
+	pi-packages.desktop.in			\
+	pi-gpk-update-viewer.desktop.in			\
+	pi-gpk-log.desktop.in				\
 	$(NULL)
 
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
@@ -21,14 +21,14 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 pkgdata_DATA =						\
-	gpk-eula.ui					\
-	gpk-application.ui				\
-	gpk-update-viewer.ui				\
-	gpk-prefs.ui					\
-	gpk-signature.ui				\
-	gpk-error.ui					\
-	gpk-log.ui					\
-	gpk-client.ui					\
+	pi-gpk-eula.ui					\
+	pi-packages.ui				\
+	pi-gpk-update-viewer.ui				\
+	pi-gpk-prefs.ui					\
+	pi-gpk-signature.ui				\
+	pi-gpk-error.ui					\
+	pi-gpk-log.ui					\
+	pi-gpk-client.ui					\
 	$(NULL)
 
 servicedir = $(datadir)/dbus-1/services
@@ -53,12 +53,12 @@ clean-local :
 	rm -f *~
 
 DISTCLEANFILES =					\
-	gpk-prefs.desktop				\
-	gpk-update-viewer.desktop			\
-	gpk-install-local-file.desktop			\
-	gpk-dbus-service.desktop			\
-	gpk-log.desktop					\
-	gpk-application.desktop				\
+	pi-gpk-prefs.desktop				\
+	pi-gpk-update-viewer.desktop			\
+	pi-gpk-install-local-file.desktop			\
+	pi-gpk-dbus-service.desktop			\
+	pi-gpk-log.desktop					\
+	pi-packages.desktop				\
 	org.freedesktop.PackageKit.service		\
 	$(NULL)
 

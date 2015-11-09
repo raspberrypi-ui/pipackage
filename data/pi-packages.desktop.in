@@ -2,7 +2,7 @@
 _Name=Add / Remove Software
 _Comment=Add or remove software installed on the system
 Icon=system-software-install
-Exec=gpk-application
+Exec=pi-packages
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;System;Settings;PackageManager;

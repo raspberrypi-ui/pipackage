@@ -79,9 +79,10 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-bin_PROGRAMS = gpk-application$(EXEEXT) gpk-prefs$(EXEEXT) \
-	gpk-install-local-file$(EXEEXT) gpk-update-viewer$(EXEEXT) \
-	gpk-log$(EXEEXT) gpk-dbus-service$(EXEEXT) $(am__EXEEXT_1)
+bin_PROGRAMS = pi-packages$(EXEEXT) pi-gpk-prefs$(EXEEXT) \
+	pi-gpk-install-local-file$(EXEEXT) \
+	pi-gpk-update-viewer$(EXEEXT) pi-gpk-log$(EXEEXT) \
+	pi-gpk-dbus-service$(EXEEXT) $(am__EXEEXT_1)
 @WITH_SYSTEMD_TRUE@am__append_1 = \
 @WITH_SYSTEMD_TRUE@	systemd-proxy.c					\
 @WITH_SYSTEMD_TRUE@	systemd-proxy.h
@@ -137,40 +138,6 @@ libgpkshared_a_OBJECTS = $(am_libgpkshared_a_OBJECTS)
 am__EXEEXT_1 =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
-am_gpk_application_OBJECTS = gpk-application.$(OBJEXT) \
-	$(am__objects_1)
-gpk_application_OBJECTS = $(am_gpk_application_OBJECTS)
-am__DEPENDENCIES_1 =
-am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-gpk_application_DEPENDENCIES = libgpkshared.a $(am__DEPENDENCIES_2) \
-	$(am__DEPENDENCIES_1)
-AM_V_lt = $(am__v_lt_@AM_V@)
-am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
-am__v_lt_0 = --silent
-am__v_lt_1 = 
-am_gpk_dbus_service_OBJECTS = gpk-dbus-service.$(OBJEXT) \
-	gpk-dbus.$(OBJEXT) gpk-dbus-task.$(OBJEXT) $(am__objects_1)
-gpk_dbus_service_OBJECTS = $(am_gpk_dbus_service_OBJECTS)
-gpk_dbus_service_DEPENDENCIES = libgpkshared.a $(am__DEPENDENCIES_2) \
-	$(am__DEPENDENCIES_1)
-am_gpk_install_local_file_OBJECTS = gpk-install-local-file.$(OBJEXT) \
-	$(am__objects_1)
-gpk_install_local_file_OBJECTS = $(am_gpk_install_local_file_OBJECTS)
-gpk_install_local_file_DEPENDENCIES = libgpkshared.a \
-	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1)
-am_gpk_log_OBJECTS = gpk-log.$(OBJEXT) $(am__objects_1)
-gpk_log_OBJECTS = $(am_gpk_log_OBJECTS)
-gpk_log_DEPENDENCIES = libgpkshared.a $(am__DEPENDENCIES_2) \
-	$(am__DEPENDENCIES_1)
-am_gpk_prefs_OBJECTS = gpk-debug.$(OBJEXT) gpk-animated-icon.$(OBJEXT) \
-	gpk-enum.$(OBJEXT) gpk-common.$(OBJEXT) gpk-error.$(OBJEXT) \
-	gpk-prefs.$(OBJEXT) $(am__objects_1)
-gpk_prefs_OBJECTS = $(am_gpk_prefs_OBJECTS)
-gpk_prefs_DEPENDENCIES = libgpkshared.a $(am__DEPENDENCIES_2)
 am__gpk_self_test_SOURCES_DIST = gpk-self-test.c egg-string.c \
 	egg-string.h egg-markdown.c egg-markdown.h gpk-debug.c \
 	gpk-debug.h gpk-enum.c gpk-enum.h gpk-common.c gpk-common.h \
@@ -205,18 +172,53 @@ am__gpk_self_test_SOURCES_DIST = gpk-self-test.c egg-string.c \
 @EGG_BUILD_TESTS_TRUE@	gpk_self_test-gpk-dialog.$(OBJEXT) \
 @EGG_BUILD_TESTS_TRUE@	$(am__objects_1)
 gpk_self_test_OBJECTS = $(am_gpk_self_test_OBJECTS)
+am__DEPENDENCIES_1 =
+am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 @EGG_BUILD_TESTS_TRUE@gpk_self_test_DEPENDENCIES =  \
 @EGG_BUILD_TESTS_TRUE@	$(am__DEPENDENCIES_2) \
 @EGG_BUILD_TESTS_TRUE@	$(am__DEPENDENCIES_1)
+AM_V_lt = $(am__v_lt_@AM_V@)
+am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+am__v_lt_0 = --silent
+am__v_lt_1 = 
 gpk_self_test_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(gpk_self_test_CFLAGS) \
 	$(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-am_gpk_update_viewer_OBJECTS = gpk-update-viewer.$(OBJEXT) \
+am_pi_gpk_dbus_service_OBJECTS = gpk-dbus-service.$(OBJEXT) \
+	gpk-dbus.$(OBJEXT) gpk-dbus-task.$(OBJEXT) $(am__objects_1)
+pi_gpk_dbus_service_OBJECTS = $(am_pi_gpk_dbus_service_OBJECTS)
+pi_gpk_dbus_service_DEPENDENCIES = libgpkshared.a \
+	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1)
+am_pi_gpk_install_local_file_OBJECTS =  \
+	gpk-install-local-file.$(OBJEXT) $(am__objects_1)
+pi_gpk_install_local_file_OBJECTS =  \
+	$(am_pi_gpk_install_local_file_OBJECTS)
+pi_gpk_install_local_file_DEPENDENCIES = libgpkshared.a \
+	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1)
+am_pi_gpk_log_OBJECTS = gpk-log.$(OBJEXT) $(am__objects_1)
+pi_gpk_log_OBJECTS = $(am_pi_gpk_log_OBJECTS)
+pi_gpk_log_DEPENDENCIES = libgpkshared.a $(am__DEPENDENCIES_2) \
+	$(am__DEPENDENCIES_1)
+am_pi_gpk_prefs_OBJECTS = gpk-debug.$(OBJEXT) \
+	gpk-animated-icon.$(OBJEXT) gpk-enum.$(OBJEXT) \
+	gpk-common.$(OBJEXT) gpk-error.$(OBJEXT) gpk-prefs.$(OBJEXT) \
+	$(am__objects_1)
+pi_gpk_prefs_OBJECTS = $(am_pi_gpk_prefs_OBJECTS)
+pi_gpk_prefs_DEPENDENCIES = libgpkshared.a $(am__DEPENDENCIES_2)
+am_pi_gpk_update_viewer_OBJECTS = gpk-update-viewer.$(OBJEXT) \
 	gpk-cell-renderer-size.$(OBJEXT) \
 	gpk-cell-renderer-info.$(OBJEXT) \
 	gpk-cell-renderer-restart.$(OBJEXT) $(am__objects_1)
-gpk_update_viewer_OBJECTS = $(am_gpk_update_viewer_OBJECTS)
-gpk_update_viewer_DEPENDENCIES = libgpkshared.a $(am__DEPENDENCIES_2) \
+pi_gpk_update_viewer_OBJECTS = $(am_pi_gpk_update_viewer_OBJECTS)
+pi_gpk_update_viewer_DEPENDENCIES = libgpkshared.a \
+	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1)
+am_pi_packages_OBJECTS = gpk-application.$(OBJEXT) $(am__objects_1)
+pi_packages_OBJECTS = $(am_pi_packages_OBJECTS)
+pi_packages_DEPENDENCIES = libgpkshared.a $(am__DEPENDENCIES_2) \
 	$(am__DEPENDENCIES_1)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -252,15 +254,17 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(libgpkshared_a_SOURCES) $(gpk_application_SOURCES) \
-	$(gpk_dbus_service_SOURCES) $(gpk_install_local_file_SOURCES) \
-	$(gpk_log_SOURCES) $(gpk_prefs_SOURCES) \
-	$(gpk_self_test_SOURCES) $(gpk_update_viewer_SOURCES)
+SOURCES = $(libgpkshared_a_SOURCES) $(gpk_self_test_SOURCES) \
+	$(pi_gpk_dbus_service_SOURCES) \
+	$(pi_gpk_install_local_file_SOURCES) $(pi_gpk_log_SOURCES) \
+	$(pi_gpk_prefs_SOURCES) $(pi_gpk_update_viewer_SOURCES) \
+	$(pi_packages_SOURCES)
 DIST_SOURCES = $(am__libgpkshared_a_SOURCES_DIST) \
-	$(gpk_application_SOURCES) $(gpk_dbus_service_SOURCES) \
-	$(gpk_install_local_file_SOURCES) $(gpk_log_SOURCES) \
-	$(gpk_prefs_SOURCES) $(am__gpk_self_test_SOURCES_DIST) \
-	$(gpk_update_viewer_SOURCES)
+	$(am__gpk_self_test_SOURCES_DIST) \
+	$(pi_gpk_dbus_service_SOURCES) \
+	$(pi_gpk_install_local_file_SOURCES) $(pi_gpk_log_SOURCES) \
+	$(pi_gpk_prefs_SOURCES) $(pi_gpk_update_viewer_SOURCES) \
+	$(pi_packages_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -612,7 +616,6 @@ SYSTEMD_CFLAGS = @SYSTEMD_CFLAGS@
 SYSTEMD_LIBS = @SYSTEMD_LIBS@
 USE_NLS = @USE_NLS@
 VERSION = @VERSION@
-WARN_CFLAGS = @WARN_CFLAGS@
 X11_CFLAGS = @X11_CFLAGS@
 X11_LIBS = @X11_LIBS@
 XGETTEXT = @XGETTEXT@
@@ -724,16 +727,16 @@ shared_LIBS = \
 	$(X11_LIBS)					\
 	$(NULL)
 
-gpk_install_local_file_SOURCES = \
+pi_gpk_install_local_file_SOURCES = \
 	gpk-install-local-file.c			\
 	$(NULL)
 
-gpk_install_local_file_LDADD = \
+pi_gpk_install_local_file_LDADD = \
 	libgpkshared.a					\
 	$(shared_LIBS)					\
 	$(NULL)
 
-gpk_dbus_service_SOURCES = \
+pi_gpk_dbus_service_SOURCES = \
 	gpk-dbus-service.c				\
 	gpk-dbus.c					\
 	gpk-dbus.h					\
@@ -741,21 +744,21 @@ gpk_dbus_service_SOURCES = \
 	gpk-dbus-task.h					\
 	$(NULL)
 
-gpk_dbus_service_LDADD = \
+pi_gpk_dbus_service_LDADD = \
 	libgpkshared.a					\
 	$(shared_LIBS)					\
 	$(NULL)
 
-gpk_application_SOURCES = \
+pi_packages_SOURCES = \
 	gpk-application.c				\
 	$(NULL)
 
-gpk_application_LDADD = \
+pi_packages_LDADD = \
 	libgpkshared.a					\
 	$(shared_LIBS)					\
 	$(NULL)
 
-gpk_prefs_SOURCES = \
+pi_gpk_prefs_SOURCES = \
 	gpk-debug.h					\
 	gpk-debug.c					\
 	gpk-animated-icon.c				\
@@ -769,12 +772,12 @@ gpk_prefs_SOURCES = \
 	gpk-prefs.c					\
 	$(NULL)
 
-gpk_prefs_LDADD = \
+pi_gpk_prefs_LDADD = \
 	libgpkshared.a					\
 	$(shared_LIBS)					\
 	-lm
 
-gpk_update_viewer_SOURCES = \
+pi_gpk_update_viewer_SOURCES = \
 	gpk-update-viewer.c				\
 	gpk-cell-renderer-size.c			\
 	gpk-cell-renderer-size.h			\
@@ -784,16 +787,16 @@ gpk_update_viewer_SOURCES = \
 	gpk-cell-renderer-restart.h			\
 	$(NULL)
 
-gpk_update_viewer_LDADD = \
+pi_gpk_update_viewer_LDADD = \
 	libgpkshared.a					\
 	$(shared_LIBS)					\
 	$(NULL)
 
-gpk_log_SOURCES = \
+pi_gpk_log_SOURCES = \
 	gpk-log.c					\
 	$(NULL)
 
-gpk_log_LDADD = \
+pi_gpk_log_LDADD = \
 	libgpkshared.a					\
 	$(shared_LIBS)					\
 	$(NULL)
@@ -974,33 +977,33 @@ clean-noinstPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
-gpk-application$(EXEEXT): $(gpk_application_OBJECTS) $(gpk_application_DEPENDENCIES) $(EXTRA_gpk_application_DEPENDENCIES) 
-	@rm -f gpk-application$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(gpk_application_OBJECTS) $(gpk_application_LDADD) $(LIBS)
-
-gpk-dbus-service$(EXEEXT): $(gpk_dbus_service_OBJECTS) $(gpk_dbus_service_DEPENDENCIES) $(EXTRA_gpk_dbus_service_DEPENDENCIES) 
-	@rm -f gpk-dbus-service$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(gpk_dbus_service_OBJECTS) $(gpk_dbus_service_LDADD) $(LIBS)
-
-gpk-install-local-file$(EXEEXT): $(gpk_install_local_file_OBJECTS) $(gpk_install_local_file_DEPENDENCIES) $(EXTRA_gpk_install_local_file_DEPENDENCIES) 
-	@rm -f gpk-install-local-file$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(gpk_install_local_file_OBJECTS) $(gpk_install_local_file_LDADD) $(LIBS)
-
-gpk-log$(EXEEXT): $(gpk_log_OBJECTS) $(gpk_log_DEPENDENCIES) $(EXTRA_gpk_log_DEPENDENCIES) 
-	@rm -f gpk-log$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(gpk_log_OBJECTS) $(gpk_log_LDADD) $(LIBS)
-
-gpk-prefs$(EXEEXT): $(gpk_prefs_OBJECTS) $(gpk_prefs_DEPENDENCIES) $(EXTRA_gpk_prefs_DEPENDENCIES) 
-	@rm -f gpk-prefs$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(gpk_prefs_OBJECTS) $(gpk_prefs_LDADD) $(LIBS)
-
 gpk-self-test$(EXEEXT): $(gpk_self_test_OBJECTS) $(gpk_self_test_DEPENDENCIES) $(EXTRA_gpk_self_test_DEPENDENCIES) 
 	@rm -f gpk-self-test$(EXEEXT)
 	$(AM_V_CCLD)$(gpk_self_test_LINK) $(gpk_self_test_OBJECTS) $(gpk_self_test_LDADD) $(LIBS)
 
-gpk-update-viewer$(EXEEXT): $(gpk_update_viewer_OBJECTS) $(gpk_update_viewer_DEPENDENCIES) $(EXTRA_gpk_update_viewer_DEPENDENCIES) 
-	@rm -f gpk-update-viewer$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(gpk_update_viewer_OBJECTS) $(gpk_update_viewer_LDADD) $(LIBS)
+pi-gpk-dbus-service$(EXEEXT): $(pi_gpk_dbus_service_OBJECTS) $(pi_gpk_dbus_service_DEPENDENCIES) $(EXTRA_pi_gpk_dbus_service_DEPENDENCIES) 
+	@rm -f pi-gpk-dbus-service$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(pi_gpk_dbus_service_OBJECTS) $(pi_gpk_dbus_service_LDADD) $(LIBS)
+
+pi-gpk-install-local-file$(EXEEXT): $(pi_gpk_install_local_file_OBJECTS) $(pi_gpk_install_local_file_DEPENDENCIES) $(EXTRA_pi_gpk_install_local_file_DEPENDENCIES) 
+	@rm -f pi-gpk-install-local-file$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(pi_gpk_install_local_file_OBJECTS) $(pi_gpk_install_local_file_LDADD) $(LIBS)
+
+pi-gpk-log$(EXEEXT): $(pi_gpk_log_OBJECTS) $(pi_gpk_log_DEPENDENCIES) $(EXTRA_pi_gpk_log_DEPENDENCIES) 
+	@rm -f pi-gpk-log$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(pi_gpk_log_OBJECTS) $(pi_gpk_log_LDADD) $(LIBS)
+
+pi-gpk-prefs$(EXEEXT): $(pi_gpk_prefs_OBJECTS) $(pi_gpk_prefs_DEPENDENCIES) $(EXTRA_pi_gpk_prefs_DEPENDENCIES) 
+	@rm -f pi-gpk-prefs$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(pi_gpk_prefs_OBJECTS) $(pi_gpk_prefs_LDADD) $(LIBS)
+
+pi-gpk-update-viewer$(EXEEXT): $(pi_gpk_update_viewer_OBJECTS) $(pi_gpk_update_viewer_DEPENDENCIES) $(EXTRA_pi_gpk_update_viewer_DEPENDENCIES) 
+	@rm -f pi-gpk-update-viewer$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(pi_gpk_update_viewer_OBJECTS) $(pi_gpk_update_viewer_LDADD) $(LIBS)
+
+pi-packages$(EXEEXT): $(pi_packages_OBJECTS) $(pi_packages_DEPENDENCIES) $(EXTRA_pi_packages_DEPENDENCIES) 
+	@rm -f pi-packages$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(pi_packages_OBJECTS) $(pi_packages_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)

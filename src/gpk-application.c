@@ -2569,6 +2569,7 @@ gpk_application_activate_about_cb (GSimpleAction *action,
 	GtkWidget *main_window;
 	const char *authors[] = {
 		"Richard Hughes <richard@hughsie.com>",
+		"Simon Long <simon@raspberrypi.org>",
 		NULL};
 	const char *artists[] = {
 		"Richard Hughes <richard@hughsie.com>",
@@ -2605,15 +2606,15 @@ gpk_application_activate_about_cb (GSimpleAction *action,
 
 	gtk_window_set_default_icon_name (GPK_ICON_SOFTWARE_INSTALLER);
 	gtk_show_about_dialog (GTK_WINDOW (main_window),
-                               "program-name", _("Packages"),
+                               "program-name", _("PiPackages"),
 			       "version", PACKAGE_VERSION,
-			       "copyright", "Copyright \xc2\xa9 2007-2009 Richard Hughes",
+			       "copyright", "Copyright \xc2\xa9 2007-2009 Richard Hughes, 2015 Simon Long",
 			       "license", license_trans,
 			       "wrap-license", TRUE,
 			       "website-label", _("PackageKit Website"),
 			       "website", "http://www.packagekit.org",
 				/* TRANSLATORS: description of NULL, gpk-application that is */
-			       "comments", _("Package Manager for GNOME"),
+			       "comments", _("Based on Packages, a Package Manager for GNOME"),
 			       "authors", authors,
 			       "artists", artists,
 			       "translator-credits", translators,
@@ -2640,7 +2641,7 @@ gpk_application_activate_sources_cb (GSimpleAction *action,
 	window = GTK_WIDGET (gtk_builder_get_object (priv->builder, "window_manager"));
 	xid = gdk_x11_window_get_xid (gtk_widget_get_window (window));
 
-	command = g_strdup_printf ("%s/gpk-prefs --parent-window %u", BINDIR, xid);
+	command = g_strdup_printf ("%s/pi-gpk-prefs --parent-window %u", BINDIR, xid);
 	g_debug ("running: %s", command);
 	ret = g_spawn_command_line_async (command, NULL);
 	if (!ret) {
@@ -2667,7 +2668,7 @@ gpk_application_activate_log_cb (GSimpleAction *action,
 	window = GTK_WIDGET (gtk_builder_get_object (priv->builder, "window_manager"));
 	xid = gdk_x11_window_get_xid (gtk_widget_get_window (window));
 
-	command = g_strdup_printf ("%s/gpk-log --parent-window %u", BINDIR, xid);
+	command = g_strdup_printf ("%s/pi-gpk-log --parent-window %u", BINDIR, xid);
 	g_debug ("running: %s", command);
 	ret = g_spawn_command_line_async (command, NULL);
 	if (!ret) {
@@ -3291,7 +3292,7 @@ gpk_application_startup_cb (GtkApplication *application, GpkApplicationPrivate *
 
 	/* get UI */
 	priv->builder = gtk_builder_new ();
-	retval = gtk_builder_add_from_file (priv->builder, GPK_DATA "/gpk-application.ui", &error);
+	retval = gtk_builder_add_from_file (priv->builder, GPK_DATA "/pi-packages.ui", &error);
 	if (retval == 0) {
 		g_warning ("failed to load ui: %s", error->message);
 		g_error_free (error);
@@ -3470,7 +3471,7 @@ gpk_application_activate_updates_cb (GSimpleAction *action,
 	gchar *command;
 	GError *error = NULL;
 
-	command = g_build_filename (BINDIR, "gpk-update-viewer", NULL);
+	command = g_build_filename (BINDIR, "pi-gpk-update-viewer", NULL);
 	g_debug ("running: %s", command);
 	ret = g_spawn_command_line_async (command, &error);
 	if (!ret) {
@@ -3553,7 +3554,7 @@ main (int argc, char *argv[])
 					 G_N_ELEMENTS (gpk_menu_app_entries),
 					 priv);
 
-	filename = g_build_filename (BINDIR, "gpk-update-viewer", NULL);
+	filename = g_build_filename (BINDIR, "pi-gpk-update-viewer", NULL);
 	if (!g_file_test (filename, G_FILE_TEST_IS_EXECUTABLE)) {
 		GAction *action = g_action_map_lookup_action (G_ACTION_MAP (priv->application), "updates");
 		g_simple_action_set_enabled (G_SIMPLE_ACTION (action), FALSE);

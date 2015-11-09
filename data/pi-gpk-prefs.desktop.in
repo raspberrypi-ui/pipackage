@@ -2,7 +2,7 @@
 _Name=Package Sources
 _Comment=Enable or disable package repositories
 Icon=gpk-prefs
-Exec=gpk-prefs
+Exec=pi-gpk-prefs
 Terminal=false
 Type=Application
 Categories=Settings;X-GNOME-SystemSettings;
