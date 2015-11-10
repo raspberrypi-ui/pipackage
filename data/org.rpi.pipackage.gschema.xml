@@ -1,10 +1,10 @@
 <schemalist>
-  <enum id="org.gnome.packagekit.SearchType">
+  <enum id="org.rpi.pipackage.SearchType">
     <value nick="name" value="0"/>
     <value nick="details" value="1"/>
     <value nick="file" value="2"/>
   </enum>
-  <schema id="org.gnome.packagekit" path="/org/gnome/packagekit/">
+  <schema id="org.rpi.pipackage" path="/org/rpi/pipackage/">
     <key name="enable-autoremove" type="b">
       <default>false</default>
       <summary>Automatically remove unused dependencies</summary>
@@ -50,7 +50,7 @@
       <summary>Show the 'All Packages' group menu</summary>
       <description>Show the all packages menu item. This takes a long time to populate on most backends and is not generally required by end users.</description>
     </key>
-    <key name="search-mode" enum="org.gnome.packagekit.SearchType">
+    <key name="search-mode" enum="org.rpi.pipackage.SearchType">
       <default>'details'</default>
       <summary>The search mode used by default</summary>
       <description>The search mode used by default. Options are "name", "details", or "file".</description>

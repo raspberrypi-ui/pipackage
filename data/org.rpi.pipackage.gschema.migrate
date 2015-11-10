@@ -1,0 +1,18 @@
+[org.rpi.pipackage]
+enable-autoremove = /apps/pi-packages/enable_autoremove
+show-depends = /apps/pi-packages/show_depends
+autocomplete = /apps/pi-packages/autocomplete
+filter-basename = /apps/pi-packages/application/filter_basename
+filter-newest = /apps/pi-packages/application/filter_newest
+filter-arch = /apps/pi-packages/application/filter_arch
+category-groups = /apps/pi-packages/application/category_groups
+show-all-packages = /apps/pi-packages/application/show_all_packages
+repo-show-details = /apps/pi-packages/repo/show_details
+only-newest = /apps/pi-packages/update-viewer/only_newest
+scroll-active = /apps/pi-packages/update-viewer/scroll_active
+enable-font-helper = /apps/pi-packages/enable_font_helper
+ignored-dbus-requests = /apps/pi-packages/ignored_dbus_requests
+enable-codec-helper = /apps/pi-packages/enable_codec_helper
+enable-mime-type-helper = /apps/pi-packages/enable_mime_type_helper
+dbus-default-interaction = /apps/pi-packages/dbus_default_interaction
+dbus-enforced-interaction = /apps/pi-packages/dbus_enforced_interaction

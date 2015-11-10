@@ -17,7 +17,7 @@ data/pi-gpk-prefs.desktop.in
 [type: gettext/glade]data/pi-gpk-signature.ui
 data/pi-gpk-update-viewer.desktop.in
 [type: gettext/glade]data/pi-gpk-update-viewer.ui
-data/org.gnome.packagekit.gschema.xml
+data/org.rpi.pipackage.gschema.xml
 src/gpk-application.c
 src/gpk-common.c
 src/gpk-dbus-service.c

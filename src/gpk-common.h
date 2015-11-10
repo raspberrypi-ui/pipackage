@@ -31,7 +31,7 @@
 
 G_BEGIN_DECLS
 
-#define GPK_SETTINGS_SCHEMA				"org.gnome.packagekit"
+#define GPK_SETTINGS_SCHEMA				"org.rpi.pipackage"
 #define GPK_SETTINGS_AUTOCOMPLETE			"autocomplete"
 #define GPK_SETTINGS_CATEGORY_GROUPS			"category-groups"
 #define GPK_SETTINGS_DBUS_DEFAULT_INTERACTION		"dbus-default-interaction"

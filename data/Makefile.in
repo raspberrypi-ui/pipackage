@@ -390,7 +390,7 @@ top_srcdir = @top_srcdir@
 NULL = 
 SUBDIRS = appdata icons
 migrationdir = $(datadir)/GConf/gsettings
-dist_migration_DATA = org.gnome.packagekit.gschema.migrate
+dist_migration_DATA = org.rpi.pipackage.gschema.migrate
 desktopdir = $(datadir)/applications
 desktop_in_files = \
 	pi-gpk-install-local-file.desktop.in		\
@@ -416,7 +416,7 @@ pkgdata_DATA = \
 servicedir = $(datadir)/dbus-1/services
 service_in_files = org.freedesktop.PackageKit.service.in
 service_DATA = $(service_in_files:.service.in=.service)
-gsettings_SCHEMAS = org.gnome.packagekit.gschema.xml
+gsettings_SCHEMAS = org.rpi.pipackage.gschema.xml
 EXTRA_DIST = \
 	$(gsettings_SCHEMAS)				\
 	$(autostart_in_files)				\

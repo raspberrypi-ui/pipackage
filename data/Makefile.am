@@ -3,7 +3,7 @@ NULL =
 SUBDIRS = appdata icons
 
 migrationdir = $(datadir)/GConf/gsettings
-dist_migration_DATA = org.gnome.packagekit.gschema.migrate
+dist_migration_DATA = org.rpi.pipackage.gschema.migrate
 
 @INTLTOOL_DESKTOP_RULE@
 desktopdir = $(datadir)/applications
@@ -39,7 +39,7 @@ $(service_DATA): $(service_in_files) Makefile
 	@sed -e "s|\@servicedir\@|$(bindir)|" $< > $@
 
 @GSETTINGS_RULES@
-gsettings_SCHEMAS = org.gnome.packagekit.gschema.xml
+gsettings_SCHEMAS = org.rpi.pipackage.gschema.xml
 
 EXTRA_DIST =						\
 	$(gsettings_SCHEMAS)				\
