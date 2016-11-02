@@ -1179,7 +1179,7 @@ gpk_application_clear_details (GpkApplicationPrivate *priv)
 	GtkWidget *widget;
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "textview_description"));
-	gtk_text_view_set_buffer (GTK_TEXT_VIEW (widget), NULL);
+	gpk_application_set_text_buffer (widget, NULL);
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_licence"));
 	gtk_label_set_label (GTK_LABEL (widget), "");
