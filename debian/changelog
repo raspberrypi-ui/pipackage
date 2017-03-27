@@ -1,3 +1,9 @@
+pi-package (0.3) stretch; urgency=medium
+
+  * Fix scrollbar behaiour under stretch
+
+ --  <pi@raspberrypi>  Mon, 27 Mar 2017 14:09:37 +0000
+
 pi-package (0.2) jessie; urgency=medium
 
   * Fix for intermittent crash when category list is clicked
