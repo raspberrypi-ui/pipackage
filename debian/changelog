@@ -1,3 +1,15 @@
+pi-package (0.2) jessie; urgency=medium
+
+  * Fix for intermittent crash when category list is clicked
+
+ -- Simon Long <simon@raspberrypi.org>  Wed, 02 Nov 2016 13:37:08 +0000
+
+pi-package (0.1.0-1) jessie; urgency=low
+
+  * Forked from gnome-packagekit
+
+ -- Serge Schneider <serge@raspberrypi.org>  Tue, 10 Nov 2015 15:00:44 +0000
+
 gnome-packagekit (3.14.0-1) unstable; urgency=medium
 
   * New upstream release: 3.14.0 (Closes: #763860)

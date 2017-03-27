@@ -1,9 +1,7 @@
-Source: gnome-packagekit
+Source: pi-package
 Section: gnome
 Priority: optional
-Maintainer: Matthias Klumpp <mak@debian.org>
-Vcs-Git: git://anonscm.debian.org/pkg-packagekit/gnome-packagekit.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-packagekit/gnome-packagekit.git
+Maintainer: Serge Schneider <serge@raspberrypi.org>
 Build-Depends: debhelper (>= 9.0.0),
                dh-autoreconf,
                docbook-utils,
@@ -22,16 +20,12 @@ Build-Depends: debhelper (>= 9.0.0),
                xmlto,
                yelp-tools
 Standards-Version: 3.9.6
-Homepage: https://help.gnome.org/users/gnome-packagekit/stable/
 
-Package: gnome-packagekit
+Package: pi-package
 Architecture: any
-Depends: gnome-packagekit-session (>= ${source:Version}),
+Depends: pi-package-session (>= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Replaces: gnome-software-manager (<< 3.6.0-2)
-Breaks: gnome-software-manager (<< 3.6.0-2),
-        update-notifier (<< ${source:Version})
 Provides: update-notifier
 Description: Graphical distribution neutral package manager for GNOME
  PackageKit allows performing simple software management tasks over a DBus
@@ -41,16 +35,13 @@ Description: Graphical distribution neutral package manager for GNOME
  This package contains a GTK+ based application for package installation
  and removal, as well as an application to view system updates.
 
-Package: gnome-packagekit-session
+Package: pi-package-session
 Architecture: any
-Depends: gnome-packagekit-data (>= ${source:Version}),
-         gnome-settings-daemon (>= 3.4),
+Depends: pi-package-data (>= ${source:Version}),
          packagekit (>= 0.8.6),
          ${misc:Depends},
          ${shlibs:Depends}
-Suggests: gnome-packagekit
-Replaces: gnome-packagekit (<< 3.6.0-2)
-Breaks: gnome-packagekit (<< 3.6.0-2)
+Suggests: pi-package
 Description: Provides PackageKit session API for GNOME
  PackageKit allows performing simple software management tasks over a DBus
  interface  e.g. refreshing the cache, updating, installing and removing
@@ -63,7 +54,7 @@ Description: Provides PackageKit session API for GNOME
  to easily install additional software (e.g. extensions), uninstall files and
  perform simple software package status queries.
 
-Package: gnome-packagekit-data
+Package: pi-package-data
 Architecture: all
 Depends: ${misc:Depends}
 Description: Data files for GNOME-PackageKit
@@ -73,13 +64,3 @@ Description: Data files for GNOME-PackageKit
  .
  This package contains architecture-independent files for all
  GNOME-PackageKit modules.
-
-Package: update-notifier
-Architecture: all
-Section: oldlibs
-Priority: extra
-Depends: gnome-packagekit (>= ${source:Version}),
-         ${misc:Depends}
-Description: Transitional package (update-notifier -> gnome-packagekit)
- Transitional dummy package replacing update-notifier with
- GNOME-PackageKit.

@@ -706,6 +706,7 @@ GTKDOC_CHECK
 PKG_CONFIG_LIBDIR
 PKG_CONFIG_PATH
 PKG_CONFIG
+WARN_CFLAGS
 DATADIRNAME
 ALL_LINGUAS
 INTLTOOL_PERL
@@ -867,6 +868,8 @@ with_gnu_ld
 with_sysroot
 enable_libtool_lock
 enable_nls
+enable_compile_warnings
+enable_iso_c
 with_html_dir
 enable_gtk_doc
 enable_gtk_doc_html
@@ -1539,6 +1542,9 @@ Optional Features:
                           optimize for fast installation [default=yes]
   --disable-libtool-lock  avoid locking (might break parallel builds)
   --disable-nls           do not use Native Language Support
+  --enable-compile-warnings=[no/minimum/yes/maximum/error]
+                          Turn on compiler warnings
+  --enable-iso-c          Try to warn if code is not ISO C
   --enable-gtk-doc        use gtk-doc to build documentation [[default=no]]
   --enable-gtk-doc-html   build documentation in html format [[default=yes]]
   --enable-gtk-doc-pdf    build documentation in pdf format [[default=no]]
@@ -12367,7 +12373,127 @@ fi
 
 
 
-GNOME_COMPILE_WARNINGS
+
+
+    # Check whether --enable-compile-warnings was given.
+if test "${enable_compile_warnings+set}" = set; then :
+  enableval=$enable_compile_warnings;
+else
+  enable_compile_warnings="yes"
+fi
+
+
+    if test "x$GCC" != xyes; then
+	enable_compile_warnings=no
+    fi
+
+    warning_flags=
+    realsave_CFLAGS="$CFLAGS"
+
+            base_warn_flags=" \
+        -Wall \
+        -Wstrict-prototypes \
+        -Wnested-externs \
+    "
+
+                    base_error_flags=" \
+        -Werror=missing-prototypes \
+        -Werror=implicit-function-declaration \
+        -Werror=pointer-arith \
+        -Werror=init-self \
+        -Werror=format-security \
+        -Werror=format=2 \
+        -Werror=missing-include-dirs \
+    "
+
+                additional_flags=""
+
+    case "$enable_compile_warnings" in
+    no)
+        warning_flags="-w"
+        ;;
+    minimum)
+        warning_flags="-Wall"
+        ;;
+    yes|maximum|error)
+        warning_flags="$base_warn_flags $base_error_flags $additional_flags"
+        ;;
+    *)
+        as_fn_error $? "Unknown argument '$enable_compile_warnings' to --enable-compile-warnings" "$LINENO" 5
+        ;;
+    esac
+
+    if test "$enable_compile_warnings" = "error" ; then
+        warning_flags="$warning_flags -Werror"
+    fi
+
+        for option in $warning_flags; do
+	save_CFLAGS="$CFLAGS"
+	CFLAGS="$CFLAGS $option"
+	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether gcc understands $option" >&5
+$as_echo_n "checking whether gcc understands $option... " >&6; }
+	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+/* end confdefs.h.  */
+
+int
+main ()
+{
+
+  ;
+  return 0;
+}
+_ACEOF
+if ac_fn_c_try_compile "$LINENO"; then :
+  has_option=yes
+else
+  has_option=no
+fi
+rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+	CFLAGS="$save_CFLAGS"
+	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $has_option" >&5
+$as_echo "$has_option" >&6; }
+	if test $has_option = yes; then
+	    tested_warning_flags="$tested_warning_flags $option"
+	fi
+	unset has_option
+	unset save_CFLAGS
+    done
+    unset option
+    CFLAGS="$realsave_CFLAGS"
+    { $as_echo "$as_me:${as_lineno-$LINENO}: checking what warning flags to pass to the C compiler" >&5
+$as_echo_n "checking what warning flags to pass to the C compiler... " >&6; }
+    { $as_echo "$as_me:${as_lineno-$LINENO}: result: $tested_warning_flags" >&5
+$as_echo "$tested_warning_flags" >&6; }
+
+    # Check whether --enable-iso-c was given.
+if test "${enable_iso_c+set}" = set; then :
+  enableval=$enable_iso_c;
+else
+  enable_iso_c=no
+fi
+
+
+    { $as_echo "$as_me:${as_lineno-$LINENO}: checking what language compliance flags to pass to the C compiler" >&5
+$as_echo_n "checking what language compliance flags to pass to the C compiler... " >&6; }
+    complCFLAGS=
+    if test "x$enable_iso_c" != "xno"; then
+	if test "x$GCC" = "xyes"; then
+	case " $CFLAGS " in
+	    *\ \	-ansi\ \	*) ;;
+	    *) complCFLAGS="$complCFLAGS -ansi" ;;
+	esac
+	case " $CFLAGS " in
+	    *\ \	-pedantic\ \	*) ;;
+	    *) complCFLAGS="$complCFLAGS -pedantic" ;;
+	esac
+	fi
+    fi
+    { $as_echo "$as_me:${as_lineno-$LINENO}: result: $complCFLAGS" >&5
+$as_echo "$complCFLAGS" >&6; }
+
+    WARN_CFLAGS="$tested_warning_flags $complCFLAGS"
+
+
 
 # set up gtk-doc
 
