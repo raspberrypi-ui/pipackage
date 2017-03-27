@@ -188,7 +188,7 @@ gpk_dialog_embed_package_list_widget (GtkDialog *dialog, GPtrArray *array)
 	scroll = gtk_scrolled_window_new (NULL, NULL);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
 #if GTK_CHECK_VERSION(3,16,0)
-//    gtk_scrolled_window_set_overlay_scrolling (GTK_SCROLLED_WINDOW (scroll), FALSE);
+    gtk_scrolled_window_set_overlay_scrolling (GTK_SCROLLED_WINDOW (scroll), FALSE);
 #endif
 	gtk_container_add (GTK_CONTAINER (scroll), widget);
 	gtk_widget_show (scroll);
@@ -248,7 +248,7 @@ gpk_dialog_embed_file_list_widget (GtkDialog *dialog, GPtrArray *files)
 	scroll = gtk_scrolled_window_new (NULL, NULL);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
 #if GTK_CHECK_VERSION(3,16,0)
-//    gtk_scrolled_window_set_overlay_scrolling (GTK_SCROLLED_WINDOW (scroll), FALSE);
+    gtk_scrolled_window_set_overlay_scrolling (GTK_SCROLLED_WINDOW (scroll), FALSE);
 #endif
 	gtk_container_add (GTK_CONTAINER (scroll), widget);
 	gtk_widget_show (scroll);
@@ -362,7 +362,7 @@ gpk_dialog_tabbed_package_list_widget (GtkWidget *tab_page, GPtrArray *array)
 	scroll = gtk_scrolled_window_new (NULL, NULL);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
 #if GTK_CHECK_VERSION(3,16,0)
-//    gtk_scrolled_window_set_overlay_scrolling (GTK_SCROLLED_WINDOW (scroll), FALSE);
+    gtk_scrolled_window_set_overlay_scrolling (GTK_SCROLLED_WINDOW (scroll), FALSE);
 #endif
 	gtk_container_add (GTK_CONTAINER (scroll), widget);
 	gtk_widget_show (scroll);
