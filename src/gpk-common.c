@@ -95,7 +95,7 @@ pk_strv_to_ptr_array (gchar **array)
  * @markup: nul-terminated UTF-8 text with pango markup to insert
  **/
 void
-gtk_text_buffer_insert_markup (GtkTextBuffer *buffer, GtkTextIter *iter, const gchar *markup)
+_gtk_text_buffer_insert_markup (GtkTextBuffer *buffer, GtkTextIter *iter, const gchar *markup)
 {
 	PangoAttrIterator *paiter;
 	PangoAttrList *attrlist;
