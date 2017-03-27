@@ -100,6 +100,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="shadow_type">in</property>
+                        <property name="overlay_scrolling">False</property>
                         <child>
                           <object class="GtkTextView" id="textview_details">
                             <property name="visible">True</property>

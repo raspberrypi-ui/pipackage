@@ -73,6 +73,7 @@
                 <property name="can_focus">True</property>
                 <property name="hscrollbar_policy">never</property>
                 <property name="shadow_type">in</property>
+                <property name="overlay_scrolling">False</property>
                 <child>
                   <object class="GtkTreeView" id="treeview_repo">
                     <property name="visible">True</property>
