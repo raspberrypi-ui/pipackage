@@ -1,8 +1,8 @@
-pi-package (0.3) stretch; urgency=medium
+pi-package (0.3) jessie; urgency=medium
 
-  * Fix scrollbar behaiour under stretch
+  * Fix scrollbar behaviour under stretch
 
- --  <pi@raspberrypi>  Mon, 27 Mar 2017 14:09:37 +0000
+ -- Simon Long <simon@raspberrypi.org>  Thu, 15 Jun 2017 06:54:03 +0000
 
 pi-package (0.2) jessie; urgency=medium
 

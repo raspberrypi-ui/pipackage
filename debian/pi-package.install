@@ -1,0 +1,7 @@
+usr/bin/pi-packages
+usr/bin/pi-gpk-install-local-file
+usr/bin/pi-gpk-update-viewer
+usr/share/appdata/*
+usr/share/applications/pi-packages.desktop
+usr/share/applications/pi-gpk-install-local-file.desktop
+usr/share/applications/pi-gpk-update-viewer.desktop

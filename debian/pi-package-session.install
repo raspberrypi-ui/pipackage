@@ -1,0 +1,9 @@
+usr/bin/pi-gpk-dbus-service
+usr/bin/pi-gpk-log
+usr/bin/pi-gpk-prefs
+usr/share/GConf/gsettings/org.rpi.pipackage.gschema.migrate
+usr/share/applications/pi-gpk-dbus-service.desktop
+usr/share/applications/pi-gpk-log.desktop
+usr/share/applications/pi-gpk-prefs.desktop
+usr/share/dbus-1/services/org.freedesktop.PackageKit.service
+usr/share/glib-2.0/schemas/org.rpi.pipackage.gschema.xml
