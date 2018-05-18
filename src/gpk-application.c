@@ -139,21 +139,28 @@ static void gpk_application_activate_quit_cb (GSimpleAction *action, GVariant *p
 
 static void gpk_application_show_wait_dialog (GpkApplicationPrivate *priv, const char *message)
 {
-        GtkWidget *label, *box, *frame;
+        GtkWidget *label, *box, *frame, *eb;
+        GdkRGBA col;
+
         priv->dlg_count++;
         if (priv->dlg_count > 1) return;
-        priv->msg_dlg = (GtkWidget *) gtk_dialog_new ();
+        priv->msg_dlg = (GtkWidget *) gtk_window_new (GTK_WINDOW_TOPLEVEL);
         gtk_window_set_title (GTK_WINDOW (priv->msg_dlg), "");
         gtk_window_set_modal (GTK_WINDOW (priv->msg_dlg), TRUE);
+        gtk_window_set_position (GTK_WINDOW (priv->msg_dlg), GTK_WIN_POS_CENTER_ON_PARENT);
         gtk_window_set_decorated (GTK_WINDOW (priv->msg_dlg), FALSE);
         gtk_window_set_destroy_with_parent (GTK_WINDOW (priv->msg_dlg), TRUE);
         gtk_window_set_skip_taskbar_hint (GTK_WINDOW (priv->msg_dlg), TRUE);
         gtk_window_set_transient_for (GTK_WINDOW (priv->msg_dlg), gtk_application_get_active_window (priv->application));
         frame = gtk_frame_new (NULL);
-        gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (priv->msg_dlg))), frame);
+        gtk_container_add (GTK_CONTAINER (GTK_WINDOW (priv->msg_dlg)), frame);
+        eb = gtk_event_box_new ();
+        gdk_rgba_parse (&col, "#FFFFFF");
+        gtk_widget_override_background_color (eb, GTK_STATE_NORMAL, &col);
+        gtk_container_add (GTK_CONTAINER (frame), eb);
         box = (GtkWidget *) gtk_box_new (GTK_ORIENTATION_VERTICAL, 5);
         gtk_container_set_border_width (GTK_CONTAINER (box), 10);
-        gtk_container_add (GTK_CONTAINER (frame), box);
+        gtk_container_add (GTK_CONTAINER (eb), box);
         label = (GtkWidget *) gtk_label_new (message);
         gtk_widget_set_halign (label, GTK_ALIGN_CENTER);
         gtk_box_pack_start (GTK_BOX (box), label, FALSE, FALSE, 5);

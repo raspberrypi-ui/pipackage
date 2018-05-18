@@ -1,3 +1,9 @@
+pi-package (0.4) stretch; urgency=medium
+
+  * Apply new style to message box
+
+ -- Simon Long <simon@raspberrypi.org>  Fri, 18 May 2018 11:14:49 +0100
+
 pi-package (0.3) jessie; urgency=medium
 
   * Fix scrollbar behaviour under stretch
