@@ -6,19 +6,19 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-packagekit 3.14\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-08 07:36+0000\n"
-"PO-Revision-Date: 2017-09-10 12:32+0200\n"
-"Last-Translator: Gianvito Cavasoli <gianvito@gmx.it>\n"
+"Project-Id-Version: gnome-packagekit\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"packagekit&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-05-31 07:00+0000\n"
+"PO-Revision-Date: 2020-04-26 13:21+0200\n"
+"Last-Translator: Emanuele Goldoni <emanuele.goldoni@gmail.com>\n"
 "Language-Team: Italiano <gnome-it-list@gnome.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
-"X-Project-Style: gnome\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: ../data/org.gnome.packagekit.gschema.xml.h:1
 msgid "Automatically remove unused dependencies"
@@ -263,7 +263,7 @@ msgstr ""
 
 #: ../data/gpk-application.desktop.in.h:1 ../data/gpk-application.ui.h:1
 msgid "Add / Remove Software"
-msgstr ""
+msgstr "Aggiungi / Rimuovi software"
 
 #: ../data/gpk-application.desktop.in.h:2
 msgid "Add or remove software installed on the system"
@@ -283,35 +283,32 @@ msgid "Source"
 msgstr "Sorgente"
 
 #: ../data/gpk-application.ui.h:4
-#, fuzzy
 msgid "_Cancel"
-msgstr "Annullato"
+msgstr "A_nnulla"
 
 #: ../data/gpk-application.ui.h:5
 msgid "_Apply"
-msgstr ""
+msgstr "_Applica"
 
 #: ../data/gpk-application.ui.h:6
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #: ../data/gpk-application.ui.h:7
 msgid "Check for Updates"
 msgstr "Controlla aggiornamenti"
 
 #: ../data/gpk-application.ui.h:8
-#, fuzzy
 msgid "Package Sources..."
-msgstr "Sorgenti dei pacchetti"
+msgstr "Sorgenti dei pacchetti..."
 
 #: ../data/gpk-application.ui.h:9
 msgid "Refresh Package Lists"
 msgstr "Ricarica elenco pacchetti"
 
 #: ../data/gpk-application.ui.h:10
-#, fuzzy
 msgid "Package Log..."
-msgstr "Registro del pacchetto"
+msgstr "Registro del pacchetto..."
 
 #: ../data/gpk-application.ui.h:11
 msgid "Only Newest Versions"
@@ -463,9 +460,8 @@ msgid "Details"
 msgstr "Dettagli"
 
 #: ../src/gpk-application.c:166 ../src/gpk-application.c:1784
-#, fuzzy
 msgid "Cancel"
-msgstr "Annullato"
+msgstr "Annulla"
 
 #. TRANSLATORS: this is a menu group of packages in the queue
 #: ../src/gpk-application.c:366
@@ -482,9 +478,8 @@ msgstr[1] "%i file installati da %s"
 
 #. set correct view
 #: ../src/gpk-application.c:695
-#, fuzzy
 msgid "Getting file list - please wait..."
-msgstr "Recupero elenco dei file"
+msgstr "Recupero elenco dei file..."
 
 # tooltip
 #. TRANSLATORS: no packages returned
@@ -521,9 +516,8 @@ msgstr[1] ""
 #. get the details
 #: ../src/gpk-application.c:901 ../src/gpk-application.c:1032
 #: ../src/gpk-application.c:2389
-#, fuzzy
 msgid "Getting package data - please wait..."
-msgstr "Recupero elenchi dei pacchetti"
+msgstr "Recupero elenchi dei pacchetti..."
 
 #. TRANSLATORS: this package does not depend on any others
 #: ../src/gpk-application.c:974
@@ -626,9 +620,8 @@ msgid "Running the transaction failed"
 msgstr "Esecuzione della transazione non riuscita"
 
 #: ../src/gpk-application.c:1709
-#, fuzzy
 msgid "Searching packages - please wait..."
-msgstr "Ricerca del nome del pacchetto"
+msgstr "Ricerca del nome del pacchetto..."
 
 #: ../src/gpk-application.c:1775
 msgid "You have made changes that have not yet been applied."
@@ -639,21 +632,18 @@ msgid "These changes will be lost if you close this window."
 msgstr "Queste modifiche saranno perse se si chiude la finestra."
 
 #: ../src/gpk-application.c:1787
-#, fuzzy
 msgid "Close Anyway"
-msgstr "Chiudi comun_que"
+msgstr "Chiudi comunque"
 
 #. install
 #: ../src/gpk-application.c:2048
-#, fuzzy
 msgid "Installing packages - please wait..."
-msgstr "Installazione dei pacchetti"
+msgstr "Installazione dei pacchetti..."
 
 #. remove
 #: ../src/gpk-application.c:2060
-#, fuzzy
 msgid "Removing packages - please wait..."
-msgstr "Rimozione pacchetti"
+msgstr "Rimozione pacchetti..."
 
 #. TRANSLATORS: column for installed status
 #. TRANSLATORS: The state of a package
@@ -757,7 +747,9 @@ msgstr ""
 #: ../src/gpk-application.c:2592
 msgid "translator-credits"
 msgstr ""
+"Luca Ferretti <lferrett@gnome.org>\n"
 "Gianvito Cavasoli <janvitus@ubuntu-it.org>\n"
+"Emanuele Goldoni <emanuele.goldoni@gmail.com>\n"
 "\n"
 "...e un ringraziamento ai revisori del Translation Project."
 
@@ -775,9 +767,8 @@ msgid "Package Manager for GNOME"
 msgstr "Gestore di pacchetti per GNOME"
 
 #: ../src/gpk-application.c:2728
-#, fuzzy
 msgid "Refreshing package lists - please wait..."
-msgstr "Ricarica della cache dei pacchetti"
+msgstr "Ricarica della cache dei pacchetti..."
 
 #. TRANSLATORS: welcome text if we can click the group array
 #: ../src/gpk-application.c:2810
@@ -791,9 +782,8 @@ msgid "Enter a search word to get started."
 msgstr "Immettere una parola da ricercare per iniziare."
 
 #: ../src/gpk-application.c:2980
-#, fuzzy
 msgid "Getting categories - please wait..."
-msgstr "Recupero categorie"
+msgstr "Recupero categorie..."
 
 #. TRANSLATORS: daemon is broken
 #: ../src/gpk-application.c:3055
@@ -815,7 +805,7 @@ msgstr "Mostra tutti i pacchetti"
 #. get repos, so we can show the full name in the package source box
 #: ../src/gpk-application.c:3436
 msgid "Reading repository list - please wait..."
-msgstr ""
+msgstr "Lettura lista dei repository..."
 
 #. TRANSLATORS: show the program version
 #: ../src/gpk-application.c:3509 ../src/gpk-update-viewer.c:3397
@@ -1057,13 +1047,10 @@ msgid "More information"
 msgstr "Maggiori informazioni"
 
 #: ../src/gpk-dbus-task.c:1123 ../src/gpk-enum.c:310
-#, fuzzy
 msgid "The package is already installed"
 msgid_plural "The packages are already installed"
-msgstr[0] ""
-"Il pacchetto è già installato\n"
-msgstr[1] ""
-"I pacchetti sono già installati"
+msgstr[0] "Il pacchetto è già installato"
+msgstr[1] "I pacchetti sono già installati"
 
 #. TRANSLATORS: message: package is already installed
 #: ../src/gpk-dbus-task.c:1127
@@ -2992,10 +2979,8 @@ msgstr "Vecchie transazioni recuperate"
 
 #. TRANSLATORS: The role of the transaction, in past tense
 #: ../src/gpk-enum.c:1470
-#, fuzzy
 msgid "Repaired the system"
-msgstr ""
-"Sistema riparato\n"
+msgstr "Sistema riparato"
 
 #. TRANSLATORS: The group type
 #: ../src/gpk-enum.c:1488
@@ -3429,9 +3414,8 @@ msgstr "Icona di aggiornamento"
 
 #. TRANSLATORS: user-friendly name for the command not found plugin
 #: ../src/gpk-log.c:498
-#, fuzzy
-msgid "Bash  Command Not Found"
-msgstr "Bash - Comando non trovato"
+msgid "Bash – Command Not Found"
+msgstr "Bash – Comando non trovato"
 
 #. TRANSLATORS: user-friendly name for gnome-settings-daemon, which used to handle updates
 #: ../src/gpk-log.c:501
@@ -3834,9 +3818,8 @@ msgstr ""
 "disponibile per questo aggiornamento:"
 
 #: ../src/gpk-update-viewer.c:2153
-#, fuzzy
 msgid "Loading"
-msgstr "Caricamento..."
+msgstr "Caricamento"
 
 #: ../src/gpk-update-viewer.c:2156
 msgid "No update details available."
@@ -3885,9 +3868,8 @@ msgstr "Impossibile recuperare gli aggiornamenti"
 
 #. TRANSLATORS: this is the header
 #: ../src/gpk-update-viewer.c:2809
-#, fuzzy
 msgid "Checking for updates"
-msgstr "Controllo degli aggiornamenti..."
+msgstr "Controllo degli aggiornamenti"
 
 #. TRANSLATORS: the PackageKit request did not complete, and it did not send an error
 #: ../src/gpk-update-viewer.c:3088
