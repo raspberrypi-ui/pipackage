@@ -1,3 +1,9 @@
+pi-package (0.6) buster; urgency=medium
+
+  * Italian translation updated
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 28 Apr 2020 10:11:03 +0100
+
 pi-package (0.5) stretch; urgency=medium
 
   * Remove unnecessary build dependency
