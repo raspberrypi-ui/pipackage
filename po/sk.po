@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "packagekit&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2014-09-09 19:09+0000\n"
-"PO-Revision-Date: 2014-09-09 21:25+0100\n"
+"PO-Revision-Date: 2020-12-12 16:44+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -798,7 +798,7 @@ msgid ""
 "this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
-"SKópiu licencie GNU General Public License by ste mali dostať spolu s týmto "
+"Kópiu licencie GNU General Public License by ste mali dostať spolu s týmto "
 "programom. Ak sa tak nestalo, napíšte na adresu Free Software Foundation, "
 "Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
 
@@ -1020,7 +1020,7 @@ msgid ""
 "Unknown error. Please refer to the detailed report and report in your "
 "distribution bug tracker."
 msgstr ""
-"Neznáma chyba. Prosím, pozrite si podrobnú správu a ohláste ju do systému "
+"Neznáma chyba. Prosím, pozrite si podrobnú správu a nahláste ju v systéme "
 "sledovania chýb vašej distribúcie."
 
 #. TRANSLATORS: button: show details about the error
@@ -3030,7 +3030,7 @@ msgstr "Opravený systém"
 #. TRANSLATORS: The group type
 #: ../src/gpk-enum.c:1488
 msgid "Accessibility"
-msgstr "zjednodušenie ovládania"
+msgstr "Zjednodušenie ovládania"
 
 #. TRANSLATORS: The group type
 #: ../src/gpk-enum.c:1492
@@ -3302,7 +3302,7 @@ msgstr "Ikona aktualizácie"
 #: ../src/gpk-log.c:498
 #| msgid "Bash - Command Not Found"
 msgid "Bash – Command Not Found"
-msgstr "Bash - Príkaz nenájdený"
+msgstr "Bash – Príkaz nenájdený"
 
 #. TRANSLATORS: user-friendly name for gnome-settings-daemon, which used to handle updates
 #: ../src/gpk-log.c:501
@@ -3379,7 +3379,7 @@ msgstr "Softvér nepodpísal dôveryhodný poskytovateľ."
 #. TRANSLATORS: user has to trust provider -- I know, this sucks
 #: ../src/gpk-task.c:132
 msgid "Do not update this package unless you are sure it is safe to do so."
-msgstr "Neaktualizujte tento balík ak si nie ste istý, že je to bezpečné."
+msgstr "Neaktualizujte tento balík, ak si nie ste istý, že je to bezpečné."
 
 #. TRANSLATORS: warn the user that all bets are off
 #: ../src/gpk-task.c:134 ../src/gpk-task.c:144
