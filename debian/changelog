@@ -1,3 +1,9 @@
+pi-package (0.8) buster; urgency=medium
+
+  * Added Slovak translation
+
+ -- Simon Long <simon@raspberrypi.com>  Sun, 13 Dec 2020 12:19:15 +0000
+
 pi-package (0.7) buster; urgency=medium
 
   * Add conflict with gnome-software
