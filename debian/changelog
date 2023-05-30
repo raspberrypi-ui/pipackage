@@ -1,3 +1,9 @@
+pi-package (0.9) bookworm; urgency=medium
+
+  * Correct display of message box under Wayland
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 30 May 2023 07:51:42 +0100
+
 pi-package (0.8) buster; urgency=medium
 
   * Added Slovak translation

@@ -148,7 +148,6 @@ static void gpk_application_show_wait_dialog (GpkApplicationPrivate *priv, const
         gtk_window_set_title (GTK_WINDOW (priv->msg_dlg), "");
         gtk_window_set_modal (GTK_WINDOW (priv->msg_dlg), TRUE);
         gtk_window_set_position (GTK_WINDOW (priv->msg_dlg), GTK_WIN_POS_CENTER_ON_PARENT);
-        gtk_window_set_decorated (GTK_WINDOW (priv->msg_dlg), FALSE);
         gtk_window_set_destroy_with_parent (GTK_WINDOW (priv->msg_dlg), TRUE);
         gtk_window_set_skip_taskbar_hint (GTK_WINDOW (priv->msg_dlg), TRUE);
         gtk_window_set_transient_for (GTK_WINDOW (priv->msg_dlg), gtk_application_get_active_window (priv->application));
@@ -175,6 +174,7 @@ static void gpk_application_show_wait_dialog (GpkApplicationPrivate *priv, const
         gtk_box_pack_start (GTK_BOX (box), priv->cancel_btn, FALSE, FALSE, 5);
         g_signal_connect (priv->cancel_btn, "clicked", G_CALLBACK (gpk_application_cancel_cb), priv);
         gtk_widget_show_all (priv->msg_dlg);
+        gtk_window_set_decorated (GTK_WINDOW (priv->msg_dlg), FALSE);
 }
 
 static void gpk_application_hide_wait_dialog (GpkApplicationPrivate *priv)
