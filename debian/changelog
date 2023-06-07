@@ -1,3 +1,9 @@
+pi-package (0.10) bookworm; urgency=medium
+
+  * Fit windows correctly onto screen under Wayland
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 07 Jun 2023 12:52:06 +0100
+
 pi-package (0.9) bookworm; urgency=medium
 
   * Correct display of message box under Wayland

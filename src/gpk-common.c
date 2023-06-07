@@ -218,17 +218,18 @@ _gtk_text_buffer_insert_markup (GtkTextBuffer *buffer, GtkTextIter *iter, const 
 gboolean
 gpk_window_set_size_request (GtkWindow *window, guint width, guint height)
 {
-#ifdef PK_BUILD_SMALL_FORM_FACTOR
 	GdkScreen *screen;
 	guint screen_w;
 	guint screen_h;
-	guint percent_w;
-	guint percent_h;
 
 	/* check for tiny screen, like for instance a OLPC or EEE */
 	screen = gdk_screen_get_default ();
 	screen_w = gdk_screen_get_width (screen);
 	screen_h = gdk_screen_get_height (screen);
+
+#ifdef PK_BUILD_SMALL_FORM_FACTOR
+	guint percent_w;
+	guint percent_h;
 
 	/* find percentage of screen area */
 	percent_w = (width * 100) / screen_w;
@@ -250,7 +251,11 @@ gpk_window_set_size_request (GtkWindow *window, guint width, guint height)
 #endif
 	/* normal size laptop panel */
 	g_debug ("using native mode: %ix%i", width, height);
-	gtk_window_set_default_size (window, width, height);
+
+	if (getenv ("WAYFIRE_CONFIG_FILE"))
+		gtk_window_set_default_size (window, width > screen_w ? screen_w : width, height > screen_h ? screen_h - 100 : height);
+	else
+		gtk_window_set_default_size (window, width, height);
 	small_form_factor_mode = FALSE;
 out:
 	return !small_form_factor_mode;
