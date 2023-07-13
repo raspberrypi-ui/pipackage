@@ -1,3 +1,9 @@
+pi-package (0.11) bookworm; urgency=medium
+
+  * Check WAYLAND_DISPLAY instead of WAYFIRE_CONFIG_FILE
+
+ -- Simon Long <simon@raspberrypi.com>  Thu, 13 Jul 2023 13:40:49 +0100
+
 pi-package (0.10) bookworm; urgency=medium
 
   * Fit windows correctly onto screen under Wayland
