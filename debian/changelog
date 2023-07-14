@@ -1,3 +1,9 @@
+pi-package (0.11) bookworm; urgency=medium
+
+  * Update conflicts to gnome-packagekit as well as gnome-software
+
+ -- Simon Long <simon@raspberrypi.com>  Fri, 14 Jul 2023 11:43:29 +0100
+
 pi-package (0.10) bookworm; urgency=medium
 
   * Fit windows correctly onto screen under Wayland

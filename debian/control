@@ -26,7 +26,7 @@ Depends: pi-package-session (>= ${source:Version}),
          ${shlibs:Depends},
          libgtk-3-0 (>= 3.16.0)
 Provides: update-notifier
-Conflicts: gnome-software
+Conflicts: gnome-software, gnome-packagekit
 Description: Graphical distribution neutral package manager for GNOME
  PackageKit allows performing simple software management tasks over a DBus
  interface  e.g. refreshing the cache, updating, installing and removing
@@ -42,7 +42,7 @@ Depends: pi-package-data (>= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Suggests: pi-package
-Conflicts: gnome-software
+Conflicts: gnome-software, gnome-packagekit
 Description: Provides PackageKit session API for GNOME
  PackageKit allows performing simple software management tasks over a DBus
  interface  e.g. refreshing the cache, updating, installing and removing
@@ -59,7 +59,7 @@ Package: pi-package-data
 Architecture: all
 Depends: ${misc:Depends},
          libgtk-3-0 (>= 3.16.0)
-Conflicts: gnome-software
+Conflicts: gnome-software, gnome-packagekit
 Description: Data files for GNOME-PackageKit
  PackageKit allows performing simple software management tasks over a DBus
  interface  e.g. refreshing the cache, updating, installing and removing
