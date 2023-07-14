@@ -26,7 +26,7 @@ Depends: pi-package-session (>= ${source:Version}),
          ${shlibs:Depends},
          libgtk-3-0 (>= 3.16.0)
 Provides: update-notifier
-Conflicts: gnome-software, gnome-packagekit
+Conflicts: gnome-packagekit-data, packagekit
 Description: Graphical distribution neutral package manager for GNOME
  PackageKit allows performing simple software management tasks over a DBus
  interface  e.g. refreshing the cache, updating, installing and removing
