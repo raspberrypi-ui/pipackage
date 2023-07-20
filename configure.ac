@@ -2,7 +2,7 @@ AC_PREREQ(2.65)
 
 AC_INIT([pi-package],[0.1.0])
 AC_CONFIG_SRCDIR(src)
-AM_INIT_AUTOMAKE([1.9 no-dist-gzip dist-xz tar-ustar])
+AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz tar-ustar])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
@@ -177,15 +177,6 @@ AC_SUBST(BINDIR, $bindir)
 AC_SUBST(SBINDIR, $sbindir)
 
 dnl ---------------------------------------------------------------------------
-dnl - Is docbook2man available?
-dnl ---------------------------------------------------------------------------
-AC_PATH_PROG(DOCBOOK2MAN, docbook2man, no)
-if test "$DOCBOOK2MAN" = "no" ; then
-	AC_MSG_WARN([docbook2man not found, will not be able to build man documentation])
-fi
-AM_CONDITIONAL(HAVE_DOCBOOK2MAN, [test "$DOCBOOK2MAN" != "no"])
-
-dnl ---------------------------------------------------------------------------
 dnl - Build self tests
 dnl ---------------------------------------------------------------------------
 AC_ARG_ENABLE(tests, AS_HELP_STRING([--enable-tests],[enable unit test code]),
@@ -201,7 +192,6 @@ dnl ---------------------------------------------------------------------------
 AC_CONFIG_FILES([
 Makefile
 src/Makefile
-man/Makefile
 po/Makefile.in
 data/Makefile
 data/appdata/Makefile
