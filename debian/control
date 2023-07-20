@@ -16,7 +16,8 @@ Build-Depends: debhelper (>= 9.0.0),
                libsystemd-dev [linux-any],
                python3-dev,
                xmlto,
-               yelp-tools
+               yelp-tools,
+               gtk-doc-tools
 Standards-Version: 3.9.6
 
 Package: pi-package
