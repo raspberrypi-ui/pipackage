@@ -1,4 +1,4 @@
 [D-BUS Service]
-Name=org.freedesktop.PackageKit
+Name=org.rpi.pipackage
 Exec=@servicedir@/pi-gpk-dbus-service
 

@@ -53,10 +53,10 @@ G_BEGIN_DECLS
 #define GPK_SETTINGS_SHOW_DEPENDS			"show-depends"
 
 #define GPK_ICON_SOFTWARE_UPDATE		"system-software-update"
-#define GPK_ICON_SOFTWARE_SOURCES		"gpk-repo"
+#define GPK_ICON_SOFTWARE_SOURCES		"pk-package-sources"
 #define GPK_ICON_SOFTWARE_INSTALLER		"system-software-install"
-#define GPK_ICON_SOFTWARE_LOG			"gpk-log"
-#define GPK_ICON_SOFTWARE_UPDATE_PREFS		"gpk-prefs"
+#define GPK_ICON_SOFTWARE_LOG			"pk-package-info"
+#define GPK_ICON_SOFTWARE_UPDATE_PREFS		"pk-update-high"
 
 /* any status that is slower than this will not be shown in the UI */
 #define GPK_UI_STATUS_SHOW_DELAY		750 /* ms */
