@@ -1759,7 +1759,7 @@ gpk_application_quit (GpkApplicationPrivate *priv)
 	gint len;
 	GtkResponseType result;
 	GtkWidget *dialog;
-	GtkWidget *btn1, *btn2, *frame, *label1, *label2, *box1, *box2;
+	GtkWidget *btn1, *btn2, *label1, *label2, *box1, *box2;
 
 	/* do we have any items queued for removal or installation? */
 	array = pk_package_sack_get_array (priv->package_sack);
@@ -1768,17 +1768,15 @@ gpk_application_quit (GpkApplicationPrivate *priv)
 
 	if (len != 0) {
                 dialog = (GtkWidget *) gtk_dialog_new ();
+                gtk_widget_set_name (dialog, "pixbox");
                 gtk_window_set_title (GTK_WINDOW (dialog), "");
                 gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
-                gtk_window_set_decorated (GTK_WINDOW (dialog), FALSE);
                 gtk_window_set_destroy_with_parent (GTK_WINDOW (dialog), TRUE);
                 gtk_window_set_skip_taskbar_hint (GTK_WINDOW (dialog), TRUE);
                 gtk_window_set_transient_for (GTK_WINDOW (dialog), gtk_application_get_active_window (priv->application));
-                frame = gtk_frame_new (NULL);
-                gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), frame);
                 box1 = (GtkWidget *) gtk_box_new (GTK_ORIENTATION_VERTICAL, 5);
                 gtk_container_set_border_width (GTK_CONTAINER (box1), 10);
-                gtk_container_add (GTK_CONTAINER (frame), box1);
+                gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), box1);
                 label1 = (GtkWidget *) gtk_label_new (_("You have made changes that have not yet been applied."));
                 gtk_widget_set_halign (label1, GTK_ALIGN_CENTER);
                 gtk_box_pack_start (GTK_BOX (box1), label1, FALSE, FALSE, 5);
@@ -1795,6 +1793,7 @@ gpk_application_quit (GpkApplicationPrivate *priv)
                 gtk_box_pack_start (GTK_BOX (box2), btn2, TRUE, TRUE, 5);
                 g_signal_connect (btn2, "clicked", G_CALLBACK (gpk_application_mb_close), dialog);
                 gtk_widget_show_all (dialog);
+                gtk_window_set_decorated (GTK_WINDOW (dialog), FALSE);
 		result = gtk_dialog_run (GTK_DIALOG (dialog));
 		gtk_widget_destroy (dialog);
 

@@ -1,3 +1,9 @@
+pi-package (0.13) bookworm; urgency=medium
+
+  * Fix themeing on cancel dialog
+
+ -- Simon Long <simon@raspberrypi.com>  Fri, 21 Jul 2023 10:28:25 +0100
+
 pi-package (0.12) bookworm; urgency=medium
 
   * Fix conflicts with gnome-packagekit and gnome-software
