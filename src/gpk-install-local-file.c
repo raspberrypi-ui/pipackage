@@ -107,9 +107,9 @@ main (int argc, char *argv[])
 
 	/* get a connection */
 	proxy = dbus_g_proxy_new_for_name (connection,
-					   "org.freedesktop.PackageKit",
-					   "/org/freedesktop/PackageKit",
-					   "org.freedesktop.PackageKit.Modify");
+					   "org.rpi.pipackage",
+					   "/org/rpi/pipackage",
+					   "org.rpi.pipackage.Modify");
 	if (proxy == NULL) {
 		g_warning ("Cannot connect to session service");
 		goto out;

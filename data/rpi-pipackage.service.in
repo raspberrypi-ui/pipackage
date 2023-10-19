@@ -1,0 +1,10 @@
+[Unit]
+Description=Raspberry Pi Package Installer Service
+
+[Service]
+ExecStart=@servicedir@/pi-gpk-dbus-service
+Type=dbus
+BusName=org.rpi.pipackage
+
+[Install]
+WantedBy=default.target

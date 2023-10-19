@@ -32,7 +32,7 @@
 #include "gpk-dbus.h"
 #include "gpk-debug.h"
 
-#include "org.freedesktop.PackageKit.h"
+#include "org.rpi.pipackage.h"
 
 static GMainLoop *loop = NULL;
 
@@ -59,7 +59,7 @@ gpk_dbus_service_object_register (DBusGConnection *connection, GObject *object)
 
 	/* get our name */
 	ret = dbus_g_proxy_call (bus_proxy, "RequestName", &error,
-				 G_TYPE_STRING, PK_DBUS_SERVICE,
+				 G_TYPE_STRING, "org.rpi.pipackage",
 				 G_TYPE_UINT, DBUS_NAME_FLAG_ALLOW_REPLACEMENT |
 					      DBUS_NAME_FLAG_REPLACE_EXISTING |
 					      DBUS_NAME_FLAG_DO_NOT_QUEUE,
@@ -82,7 +82,7 @@ gpk_dbus_service_object_register (DBusGConnection *connection, GObject *object)
 
 	dbus_g_object_type_install_info (GPK_TYPE_DBUS, &dbus_glib_gpk_dbus_object_info);
 	dbus_g_error_domain_register (GPK_DBUS_ERROR, NULL, GPK_DBUS_TYPE_ERROR);
-	dbus_g_connection_register_g_object (connection, PK_DBUS_PATH, object);
+	dbus_g_connection_register_g_object (connection, "/org/rpi/pipackage", object);
 
 	return TRUE;
 }

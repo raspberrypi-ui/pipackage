@@ -38,6 +38,13 @@ service_DATA = $(service_in_files:.service.in=.service)
 $(service_DATA): $(service_in_files) Makefile
 	@sed -e "s|\@servicedir\@|$(bindir)|" $< > $@
 
+sdservicedir = /usr/lib/systemd/user
+sdservice_in_files = rpi-pipackage.service.in
+sdservice_DATA = $(sdservice_in_files:.service.in=.service)
+
+$(sdservice_DATA): $(sdservice_in_files) Makefile
+	@sed -e "s|\@servicedir\@|$(bindir)|" $< > $@
+
 @GSETTINGS_RULES@
 gsettings_SCHEMAS = org.rpi.pipackage.gschema.xml
 
@@ -47,6 +54,7 @@ EXTRA_DIST =						\
 	$(desktop_in_files)				\
 	$(pkgdata_DATA)					\
 	$(service_in_files)				\
+	$(sdservice_in_files)				\
 	$(NULL)
 
 clean-local :
@@ -59,6 +67,7 @@ DISTCLEANFILES =					\
 	pi-gpk-dbus-service.desktop			\
 	pi-gpk-log.desktop					\
 	pi-packages.desktop				\
-	org.freedesktop.PackageKit.service		\
+	org.rpi.pipackage.service		        \
+	rpi-pipackage.service
 	$(NULL)
 

@@ -174,7 +174,7 @@ pi_gpk_log_LDADD =						\
 BUILT_SOURCES = 					\
 	gpk-marshal.c					\
 	gpk-marshal.h					\
-	org.freedesktop.PackageKit.h			\
+	org.rpi.pipackage.h			        \
 	$(NULL)
 
 gpk-marshal.c: gpk-marshal.list
@@ -184,12 +184,12 @@ gpk-marshal.c: gpk-marshal.list
 gpk-marshal.h: gpk-marshal.list
 	glib-genmarshal $< --prefix=gpk_marshal --header > $@
 
-org.freedesktop.PackageKit.h: org.freedesktop.PackageKit.xml
+org.rpi.pipackage.h: org.rpi.pipackage.xml
 	$(LIBTOOL) --mode=execute dbus-binding-tool	\
 		--prefix=gpk_dbus			\
 		--mode=glib-server			\
-		--output=org.freedesktop.PackageKit.h	\
-		$(srcdir)/org.freedesktop.PackageKit.xml
+		--output=org.rpi.pipackage.h	        \
+		$(srcdir)/org.rpi.pipackage.xml
 
 if EGG_BUILD_TESTS
 
@@ -253,7 +253,7 @@ endif
 
 EXTRA_DIST =						\
 	gpk-marshal.list				\
-	org.freedesktop.PackageKit.xml			\
+	org.rpi.pipackage.xml		        	\
 	$(NULL)
 
 clean-local:
