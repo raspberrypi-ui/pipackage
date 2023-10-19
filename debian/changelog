@@ -1,3 +1,9 @@
+pi-package (0.14) bookworm; urgency=medium
+
+  * Fix pi-gpk-install-local-file
+
+ -- Simon Long <simon@raspberrypi.com>  Thu, 19 Oct 2023 19:19:05 +0100
+
 pi-package (0.13) bookworm; urgency=medium
 
   * Fix themeing on cancel dialog
