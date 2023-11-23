@@ -1,3 +1,9 @@
+pi-package (0.15) bookworm; urgency=medium
+
+  * Stop overriding colours
+
+ -- Simon Long <simon@raspberrypi.com>  Thu, 23 Nov 2023 12:00:40 +0000
+
 pi-package (0.14) bookworm; urgency=medium
 
   * Fix pi-gpk-install-local-file

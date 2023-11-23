@@ -154,8 +154,8 @@ static void gpk_application_show_wait_dialog (GpkApplicationPrivate *priv, const
         frame = gtk_frame_new (NULL);
         gtk_container_add (GTK_CONTAINER (GTK_WINDOW (priv->msg_dlg)), frame);
         eb = gtk_event_box_new ();
-        gdk_rgba_parse (&col, "#FFFFFF");
-        gtk_widget_override_background_color (eb, GTK_STATE_NORMAL, &col);
+        //gdk_rgba_parse (&col, "#FFFFFF");
+        //gtk_widget_override_background_color (eb, GTK_STATE_NORMAL, &col);
         gtk_container_add (GTK_CONTAINER (frame), eb);
         box = (GtkWidget *) gtk_box_new (GTK_ORIENTATION_VERTICAL, 5);
         gtk_container_set_border_width (GTK_CONTAINER (box), 10);
@@ -1268,7 +1268,7 @@ gpk_application_add_item_to_results (GpkApplicationPrivate *priv, PkPackage *ite
 		pk_bitfield_add (state, GPK_STATE_COLLECTION);
 
 	/* use two lines */
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "window_manager"));
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "button_ok"));
 	text = gpk_package_id_format_twoline (gtk_widget_get_style_context (widget),
 					      package_id,
 					      summary_markup);

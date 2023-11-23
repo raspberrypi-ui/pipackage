@@ -332,6 +332,7 @@ gpk_package_id_format_twoline (GtkStyleContext *style,
 	g_return_val_if_fail (package_id != NULL, NULL);
 
 	/* get style color */
+	//style = NULL; //!!!!!
 	if (style != NULL) {
 		gtk_style_context_get_color (style,
 					     GTK_STATE_FLAG_INSENSITIVE,
