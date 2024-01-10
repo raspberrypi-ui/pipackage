@@ -252,7 +252,7 @@ gpk_window_set_size_request (GtkWindow *window, guint width, guint height)
 	/* normal size laptop panel */
 	g_debug ("using native mode: %ix%i", width, height);
 
-	if (getenv ("WAYFIRE_CONFIG_FILE"))
+	if (getenv ("WAYLAND_DISPLAY"))
 		gtk_window_set_default_size (window, width > screen_w ? screen_w : width, height > screen_h ? screen_h - 100 : height);
 	else
 		gtk_window_set_default_size (window, width, height);
