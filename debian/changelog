@@ -1,3 +1,9 @@
+pi-package (0.16) bookworm; urgency=medium
+
+  * Add labwc compatibility
+
+ -- Simon Long <simon@raspberrypi.com>  Thu, 11 Jan 2024 14:13:20 +0000
+
 pi-package (0.15) bookworm; urgency=medium
 
   * Stop overriding colours
