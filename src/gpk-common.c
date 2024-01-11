@@ -335,7 +335,7 @@ gpk_package_id_format_twoline (GtkStyleContext *style,
 	//style = NULL; //!!!!!
 	if (style != NULL) {
 		gtk_style_context_get_color (style,
-					     GTK_STATE_FLAG_INSENSITIVE,
+					     GTK_STATE_FLAG_PRELIGHT,
 					     &inactive);
 		color = g_strdup_printf ("#%02x%02x%02x",
 					 (guint) (inactive.red * 255.0f),
