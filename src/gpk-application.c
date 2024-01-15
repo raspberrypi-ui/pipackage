@@ -173,8 +173,9 @@ static void gpk_application_show_wait_dialog (GpkApplicationPrivate *priv, const
         gtk_widget_set_halign (priv->cancel_btn, GTK_ALIGN_CENTER);
         gtk_box_pack_start (GTK_BOX (box), priv->cancel_btn, FALSE, FALSE, 5);
         g_signal_connect (priv->cancel_btn, "clicked", G_CALLBACK (gpk_application_cancel_cb), priv);
-        gtk_widget_show_all (priv->msg_dlg);
+        gtk_window_set_titlebar (GTK_WINDOW (priv->msg_dlg), gtk_header_bar_new ());
         gtk_window_set_decorated (GTK_WINDOW (priv->msg_dlg), FALSE);
+        gtk_widget_show_all (priv->msg_dlg);
 }
 
 static void gpk_application_hide_wait_dialog (GpkApplicationPrivate *priv)
@@ -1792,8 +1793,9 @@ gpk_application_quit (GpkApplicationPrivate *priv)
                 btn2 = gtk_button_new_with_label (_("Close Anyway"));
                 gtk_box_pack_start (GTK_BOX (box2), btn2, TRUE, TRUE, 5);
                 g_signal_connect (btn2, "clicked", G_CALLBACK (gpk_application_mb_close), dialog);
-                gtk_widget_show_all (dialog);
+                gtk_window_set_titlebar (GTK_WINDOW (dialog), gtk_header_bar_new ());
                 gtk_window_set_decorated (GTK_WINDOW (dialog), FALSE);
+                gtk_widget_show_all (dialog);
 		result = gtk_dialog_run (GTK_DIALOG (dialog));
 		gtk_widget_destroy (dialog);
 
