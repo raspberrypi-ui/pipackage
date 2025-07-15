@@ -1,3 +1,9 @@
+pi-package (0.17) trixie; urgency=medium
+
+  * Fix dependencies
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 15 Jul 2025 16:06:30 +0100
+
 pi-package (0.16) bookworm; urgency=medium
 
   * Add labwc compatibility
