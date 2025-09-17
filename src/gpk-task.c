@@ -426,11 +426,6 @@ gpk_task_add_dialog_deps_section (PkTask *task,
 	}
 
 	/* get the size */
-	ret = pk_package_sack_get_details (sack_tmp, NULL, &error);
-	if (!ret) {
-		g_warning ("failed to get details about packages: %s", error->message);
-		g_error_free (error);
-	}
 	size = pk_package_sack_get_total_bytes (sack_tmp);
 
 	/* embed title */
@@ -472,7 +467,6 @@ gpk_task_simulate_question (PkTask *task, guint request, PkResults *results)
 		      NULL);
 
 	/* allow skipping of deps except when we remove other packages */
-	if (role != PK_ROLE_ENUM_REMOVE_PACKAGES) {
 		/* have we previously said we don't want to be shown the confirmation */
 		ret = g_settings_get_boolean (priv->settings, GPK_SETTINGS_SHOW_DEPENDS);
 		if (!ret) {
@@ -480,7 +474,6 @@ gpk_task_simulate_question (PkTask *task, guint request, PkResults *results)
 			pk_task_user_accepted (PK_TASK(task), priv->request);
 			goto out;
 		}
-	}
 
 	/* TRANSLATORS: title of a dependency dialog */
 	title = _("Additional confirmation required");
