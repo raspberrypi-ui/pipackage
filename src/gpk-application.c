@@ -145,6 +145,7 @@ static void gpk_application_show_wait_dialog (GpkApplicationPrivate *priv, const
         priv->dlg_count++;
         if (priv->dlg_count > 1) return;
         priv->msg_dlg = (GtkWidget *) gtk_window_new (GTK_WINDOW_TOPLEVEL);
+        gtk_widget_set_name (priv->msg_dlg, "pixbox");
         gtk_window_set_title (GTK_WINDOW (priv->msg_dlg), "");
         gtk_window_set_modal (GTK_WINDOW (priv->msg_dlg), TRUE);
         gtk_window_set_position (GTK_WINDOW (priv->msg_dlg), GTK_WIN_POS_CENTER_ON_PARENT);
@@ -174,8 +175,9 @@ static void gpk_application_show_wait_dialog (GpkApplicationPrivate *priv, const
         gtk_box_pack_start (GTK_BOX (box), priv->cancel_btn, FALSE, FALSE, 5);
         g_signal_connect (priv->cancel_btn, "clicked", G_CALLBACK (gpk_application_cancel_cb), priv);
         gtk_window_set_titlebar (GTK_WINDOW (priv->msg_dlg), gtk_header_bar_new ());
-        gtk_window_set_decorated (GTK_WINDOW (priv->msg_dlg), FALSE);
-        gtk_widget_show_all (priv->msg_dlg);
+        gtk_widget_hide (gtk_window_get_titlebar (GTK_WINDOW (priv->msg_dlg)));
+        gtk_widget_show_all (frame);
+        gtk_widget_show (priv->msg_dlg);
 }
 
 static void gpk_application_hide_wait_dialog (GpkApplicationPrivate *priv)
