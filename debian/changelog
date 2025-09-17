@@ -1,3 +1,9 @@
+pi-package (0.18) trixie; urgency=medium
+
+  * Fix crash; fix appearance of progress dialog
+
+ -- Simon Long <simon@raspberrypi.com>  Wed, 17 Sep 2025 08:15:54 +0100
+
 pi-package (0.17) trixie; urgency=medium
 
   * Fix dependencies
