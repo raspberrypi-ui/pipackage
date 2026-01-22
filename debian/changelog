@@ -1,3 +1,9 @@
+pi-package (0.19) trixie; urgency=medium
+
+  * Remove from system tools category
+
+ -- Simon Long <simon@raspberrypi.com>  Thu, 22 Jan 2026 12:46:53 +0000
+
 pi-package (0.18) trixie; urgency=medium
 
   * Fix crash; fix appearance of progress dialog
